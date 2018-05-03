@@ -10,10 +10,10 @@ namespace Cogito.Json.Schema
 {
 
     /// <summary>
-    /// Visitor implementation that applies a series of reductions to a <see cref="JSchema"/>.
+    /// Transformor implementation that applies a series of reductions to a <see cref="JSchema"/>.
     /// </summary>
-    class JSchemaReducingVisitor :
-        JSchemaVisitor
+    class JSchemaReducingTransformor :
+        JSchemaTransformor
     {
 
         readonly IList<JSchemaReduction> reductions;
@@ -22,19 +22,19 @@ namespace Cogito.Json.Schema
         /// Initializes a new instance.
         /// </summary>
         /// <param name="reductions"></param>
-        public JSchemaReducingVisitor(IList<JSchemaReduction> reductions)
+        public JSchemaReducingTransformor(IList<JSchemaReduction> reductions)
         {
             this.reductions = reductions ?? throw new ArgumentNullException(nameof(reductions));
         }
 
-        public override JSchema Visit(JSchema schema)
+        public override JSchema Transform(JSchema schema)
         {
             // null input
             if (schema == null)
                 return null;
 
             // depth first
-            var a = JObject.FromObject(base.Visit(schema));
+            var a = JObject.FromObject(base.Transform(schema));
             if (a == null)
                 return null;
 

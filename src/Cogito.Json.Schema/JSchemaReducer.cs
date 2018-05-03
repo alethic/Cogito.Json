@@ -20,7 +20,7 @@ namespace Cogito.Json.Schema
         /// Default set of reductions.
         /// </summary>
         readonly static ImmutableList<JSchemaReduction> DefaultReductions =
-            typeof(JSchemaReducingVisitor).Assembly.GetTypes()
+            typeof(JSchemaReducingTransformor).Assembly.GetTypes()
                 .Where(i => typeof(JSchemaReduction).IsAssignableFrom(i))
                 .Where(i => i.IsAbstract == false)
                 .Select(i => (JSchemaReduction)Activator.CreateInstance(i))
@@ -57,7 +57,7 @@ namespace Cogito.Json.Schema
         /// <returns></returns>
         public JSchema Reduce(JSchema schema)
         {
-            return new JSchemaReducingVisitor(reductions).Visit(schema);
+            return new JSchemaReducingTransformor(reductions).Transform(schema);
         }
 
     }
