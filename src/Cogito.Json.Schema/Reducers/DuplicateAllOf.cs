@@ -22,8 +22,13 @@ namespace Cogito.Json.Schema.Reducers
                     if (h.Add(JToken.FromObject(i)))
                         l.Add(i);
 
-                schema.AllOf.Clear();
-                schema.AllOf.AddRange(l);
+                // number of items were changed
+                if (l.Count != schema.AllOf.Count)
+                {
+                    schema = JSchema.Load(JObject.FromObject(schema).CreateReader());
+                    schema.AllOf.Clear();
+                    schema.AllOf.AddRange(l);
+                }
             }
 
             return schema;

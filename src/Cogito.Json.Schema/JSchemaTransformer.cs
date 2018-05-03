@@ -23,6 +23,9 @@ namespace Cogito.Json.Schema
         /// <returns></returns>
         public virtual JSchema Transform(JSchema schema)
         {
+            if (schema == null)
+                return null;
+
             var s = new JSchema();
             s.AdditionalItems = TransformAdditionalItems(schema, schema.AdditionalItems);
             s.AdditionalProperties = TransformAdditionalProperties(schema, schema.AdditionalProperties);

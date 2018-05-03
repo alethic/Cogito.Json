@@ -29,13 +29,13 @@ namespace Cogito.Json.Schema
 
         public override JSchema Transform(JSchema schema)
         {
-            // null input
+            // nothing to possibly transform
             if (schema == null)
                 return null;
 
             // depth first
-            var a = JObject.FromObject(base.Transform(schema));
-            if (a == null)
+            var s1 = base.Transform(schema);
+            if (s1 == null)
                 return null;
 
             // apply reductions
@@ -46,19 +46,26 @@ namespace Cogito.Json.Schema
                     continue;
 
                 // reduce current schema
-                var b = JObject.FromObject(r.Reduce(JSchema.Load(a.CreateReader())));
+                var s2 = r.Reduce(s1);
 
-                // resulting schema has been changed?
-                if (!JTokenEquals(a, b))
+                // reference equality means absolutely no possibility of change
+                if (!ReferenceEquals(s1, s2))
                 {
-                    // start over using changed
-                    a = b;
-                    i = 0;
+                    // going to need this for comparison
+                    var j1 = JObject.FromObject(s1);
+                    var j2 = JObject.FromObject(s2);
+
+                    if (!JTokenEquals(j1, j2))
+                    {
+                        // start over using changed
+                        s1 = s2;
+                        i = 0;
+                    }
                 }
             }
 
             // resulting schema has been fully reduced
-            return JSchema.Load(a.CreateReader());
+            return s1;
         }
 
         /// <summary>

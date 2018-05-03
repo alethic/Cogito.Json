@@ -2,7 +2,7 @@ using Cogito.Json.Schema;
 using FluentAssertions;
 using FluentAssertions.Json;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
 namespace Cogito.Json.Tests
@@ -19,6 +19,8 @@ namespace Cogito.Json.Tests
             {
                 Const = "123"
             });
+
+            JToken.DeepEquals(s, s).Should().BeTrue();
         }
 
         [TestMethod]
@@ -44,10 +46,23 @@ namespace Cogito.Json.Tests
                 }
             });
 
-            s.Title.Should().Be("Test");
-            s.AllOf.Should().HaveCount(2);
-            s.AllOf.Should().Contain(i => (string)i.Const == "Foo");
-            s.AllOf.Should().Contain(i => (string)i.Const == "Bar");
+            var t = new JSchema()
+            {
+                Title = "Test",
+                AllOf =
+                {
+                    new JSchema()
+                    {
+                        Const = "Foo",
+                    },
+                    new JSchema()
+                    {
+                        Const = "Bar",
+                    }
+                }
+            };
+
+            JToken.DeepEquals(s, t).Should().BeTrue();
         }
 
     }
