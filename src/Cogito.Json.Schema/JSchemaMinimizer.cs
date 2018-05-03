@@ -55,7 +55,7 @@ namespace Cogito.Json.Schema
         /// </summary>
         /// <param name="schema"></param>
         /// <returns></returns>
-        public JSchema Reduce(JSchema schema)
+        public JSchema Minimize(JSchema schema)
         {
             return new JSchemaMinimizingTransformer(reductions).Transform(schema);
         }

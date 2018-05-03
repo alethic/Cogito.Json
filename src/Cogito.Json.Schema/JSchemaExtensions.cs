@@ -1,4 +1,8 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using System.Collections.Generic;
+
+using Cogito.Json.Schema.Reducers;
+
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
 namespace Cogito.Json.Schema
@@ -15,6 +19,27 @@ namespace Cogito.Json.Schema
         public static JSchema Clone(this JSchema schema)
         {
             return schema != null ? new JSchemaCopyTransformer().Transform(schema) : null;
+        }
+
+        /// <summary>
+        /// Minimizes the JSON schema.
+        /// </summary>
+        /// <param name="schema"></param>
+        /// <returns></returns>
+        public static JSchema Minimize(this JSchema schema)
+        {
+            return schema != null ? new JSchemaMinimizer().Minimize(schema) : null;
+        }
+
+        /// <summary>
+        /// Minimizes the JSON schema using the specified reducers.
+        /// </summary>
+        /// <param name="schema"></param>
+        /// <param name="reducers"></param>
+        /// <returns></returns>
+        public static JSchema Minimize(this JSchema schema, IEnumerable<JSchemaReducer> reducers)
+        {
+            return schema != null ? new JSchemaMinimizer(reducers).Minimize(schema) : null;
         }
 
         /// <summary>
