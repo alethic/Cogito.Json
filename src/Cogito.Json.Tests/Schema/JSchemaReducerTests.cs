@@ -66,6 +66,48 @@ namespace Cogito.Json.Tests
         }
 
         [TestMethod]
+        public void Should_remove_duplicate_anyof()
+        {
+            var s = new JSchemaReducer().Reduce(new JSchema()
+            {
+                Title = "Test",
+                AnyOf =
+                {
+                    new JSchema()
+                    {
+                        Const = "Foo",
+                    },
+                    new JSchema()
+                    {
+                        Const = "Bar",
+                    },
+                    new JSchema()
+                    {
+                        Const = "Foo",
+                    },
+                }
+            });
+
+            var t = new JSchema()
+            {
+                Title = "Test",
+                AnyOf =
+                {
+                    new JSchema()
+                    {
+                        Const = "Foo",
+                    },
+                    new JSchema()
+                    {
+                        Const = "Bar",
+                    }
+                }
+            };
+
+            JToken.DeepEquals(s, t).Should().BeTrue();
+        }
+
+        [TestMethod]
         public void Should_remove_duplicate_enum()
         {
             var s = new JSchemaReducer().Reduce(new JSchema()
