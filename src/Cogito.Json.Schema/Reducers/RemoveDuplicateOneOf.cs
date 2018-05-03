@@ -8,26 +8,26 @@ using Newtonsoft.Json.Schema;
 namespace Cogito.Json.Schema.Reducers
 {
 
-    class DuplicateAllOf : JSchemaReduction
+    class RemoveDuplicateOneOf : JSchemaReduction
     {
 
         public override JSchema Reduce(JSchema schema)
         {
-            if (schema.AllOf.Count > 0)
+            if (schema.OneOf.Count > 0)
             {
                 var l = new List<JSchema>();
                 var h = new HashSet<JToken>(new JTokenEqualityComparer());
 
-                foreach (var i in schema.AllOf)
+                foreach (var i in schema.OneOf)
                     if (h.Add(JToken.FromObject(i)))
                         l.Add(i);
 
                 // number of items were changed
-                if (l.Count != schema.AllOf.Count)
+                if (l.Count != schema.OneOf.Count)
                 {
-                    schema = JSchema.Load(JObject.FromObject(schema).CreateReader());
-                    schema.AllOf.Clear();
-                    schema.AllOf.AddRange(l);
+                    schema = schema.Clone();
+                    schema.OneOf.Clear();
+                    schema.OneOf.AddRange(l);
                 }
             }
 

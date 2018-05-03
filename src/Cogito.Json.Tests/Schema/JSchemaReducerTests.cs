@@ -24,7 +24,7 @@ namespace Cogito.Json.Tests
         }
 
         [TestMethod]
-        public void Should_reduce_duplicate_allof()
+        public void Should_remove_duplicate_allof()
         {
             var s = new JSchemaReducer().Reduce(new JSchema()
             {
@@ -66,7 +66,25 @@ namespace Cogito.Json.Tests
         }
 
         [TestMethod]
-        public void Should_reduce_duplicate_oneof()
+        public void Should_remove_duplicate_enum()
+        {
+            var s = new JSchemaReducer().Reduce(new JSchema()
+            {
+                Title = "Test",
+                Enum = { "A", "B", "C", "C" }
+            });
+
+            var t = new JSchema()
+            {
+                Title = "Test",
+                Enum = { "A", "B", "C" }
+            };
+
+            JToken.DeepEquals(s, t).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_remove_duplicate_oneof()
         {
             var s = new JSchemaReducer().Reduce(new JSchema()
             {
@@ -101,6 +119,122 @@ namespace Cogito.Json.Tests
                     {
                         Const = "Bar",
                     }
+                }
+            };
+
+            JToken.DeepEquals(s, t).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_promote_allof_with_oneof_to_oneof_if_oneof_is_empty()
+        {
+            var s = new JSchemaReducer().Reduce(new JSchema()
+            {
+                Title = "Test",
+                AllOf =
+                {
+                    new JSchema()
+                    {
+                        OneOf =
+                        {
+                            new JSchema()
+                            {
+                                Const = "Foo",
+                            },
+                            new JSchema()
+                            {
+                                Const = "Bar",
+                            },
+                        }
+                    }
+                }
+            });
+
+            var t = new JSchema()
+            {
+                Title = "Test",
+                OneOf =
+                {
+                    new JSchema()
+                    {
+                        Const = "Foo",
+                    },
+                    new JSchema()
+                    {
+                        Const = "Bar",
+                    }
+                }
+            };
+
+            JToken.DeepEquals(s, t).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_promote_allof_inside_allof_to_parent()
+        {
+            var s = new JSchemaReducer().Reduce(new JSchema()
+            {
+                Title = "Test",
+                AllOf =
+                {
+                    new JSchema()
+                    {
+                        Title = "A",
+                        AllOf =
+                        {
+                            new JSchema()
+                            {
+                                Title = "B",
+                                Const = "DO NOT MOVE"
+                            }
+                        }
+                    },
+                    new JSchema()
+                    {
+                        AllOf =
+                        {
+                            new JSchema()
+                            {
+                                Title = "C",
+                                Const = "Foo",
+                            },
+                            new JSchema()
+                            {
+                                Title = "D",
+                                Const = "Bar"
+                            },
+                        }
+                    }
+                }
+            });
+
+            var t = new JSchema()
+            {
+                Title = "Test",
+                AllOf =
+                {
+                    new JSchema()
+                    {
+                        Title = "A",
+                        AllOf =
+                        {
+                            new JSchema()
+                            {
+                                Title = "B",
+                                Const = "DO NOT MOVE"
+                            }
+                        }
+                    },
+                    new JSchema()
+                    {
+                        Title = "C",
+                        Const = "Foo",
+                    },
+                    new JSchema()
+                    {
+                        Title = "D",
+                        Const = "Bar"
+                    },
                 }
             };
 
