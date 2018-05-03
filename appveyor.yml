@@ -13,8 +13,12 @@ before_build:
   - ps: $env:InformationalVersion=$env:GitVersion_InformationalVersion
   - dotnet restore src
 
-build_script:
-  - dotnet publish src
+test:
+  assemblies:
+    - '**/Tests.dll'
+
+after_build:
+  - dotnet publish src --output %appveyor_build_folder%\dist
 
 artifacts:
   - path: src\Cogito.Json\bin\**\*.nupkg
