@@ -31,7 +31,7 @@ namespace Cogito.Json.Schema.Reducers
                 {
                     // nested schema has allOf and nothing else
                     if (s.AllOf.Count > 0 &&
-                        JObject.FromObject(s).Count == 1)
+                        s.ToJObject().Count == 1)
                     {
                         l.AddRange(s.AllOf);
                         l.Remove(s);

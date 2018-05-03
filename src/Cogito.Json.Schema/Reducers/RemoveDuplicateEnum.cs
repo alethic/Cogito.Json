@@ -18,7 +18,7 @@ namespace Cogito.Json.Schema.Reducers
                 var l = schema.Enum.Distinct(new JTokenEqualityComparer()).ToList();
                 if (l.Count != schema.Enum.Count)
                 {
-                    schema = JSchema.Load(JObject.FromObject(schema).CreateReader());
+                    schema = schema.Clone();
                     schema.Enum.Clear();
                     schema.Enum.AddRange(l);
                 }

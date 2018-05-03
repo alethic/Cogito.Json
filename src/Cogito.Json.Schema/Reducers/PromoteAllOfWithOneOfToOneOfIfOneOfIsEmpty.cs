@@ -18,7 +18,7 @@ namespace Cogito.Json.Schema.Reducers
                 schema.AllOf.Count == 1 &&
                 schema.AllOf[0].OneOf.Count > 0)
             {
-                if (JObject.FromObject(schema.AllOf[0]).Count == 1)
+                if (schema.AllOf[0].ToJObject().Count == 1)
                 {
                     var s = schema.Clone();
                     s.OneOf.AddRange(schema.AllOf[0].OneOf);

@@ -17,6 +17,16 @@ namespace Cogito.Json.Schema
             return schema != null ? JSchema.Load(JObject.FromObject(schema).CreateReader()) : null;
         }
 
+        /// <summary>
+        /// Converts a <see cref="JSchema"/> to a <see cref="JObject"/>.
+        /// </summary>
+        /// <param name="schema"></param>
+        /// <returns></returns>
+        public static JObject ToJObject(this JSchema schema)
+        {
+            return schema != null ? JObject.FromObject(schema) : null;
+        }
+
     }
 
 }
