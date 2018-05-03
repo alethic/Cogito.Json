@@ -14,7 +14,7 @@ namespace Cogito.Json.Schema
         /// <returns></returns>
         public static JSchema Clone(this JSchema schema)
         {
-            return schema != null ? JSchema.Load(JObject.FromObject(schema).CreateReader()) : null;
+            return schema != null ? new JSchemaCopyTransformer().Transform(schema) : null;
         }
 
         /// <summary>
