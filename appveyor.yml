@@ -21,7 +21,7 @@ test:
     - '**/Tests.dll'
 
 after_build:
-  - dotnet publish src --output dist
+  - dotnet pack src --output dist
 
 artifacts:
   - path: dist\**\*.nupkg
