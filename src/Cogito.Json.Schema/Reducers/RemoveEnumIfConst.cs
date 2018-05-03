@@ -12,7 +12,7 @@ namespace Cogito.Json.Schema.Reducers
         public override JSchema Reduce(JSchema schema)
         {
             if (schema.Const != null &&
-                schema.Enum.Count > 1 &&
+                schema.Enum.Count > 0 &&
                 schema.Enum.Contains(schema.Const))
             {
                 schema = schema.Clone();

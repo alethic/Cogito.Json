@@ -16,31 +16,31 @@ namespace Cogito.Json.Schema
     {
 
         /// <summary>
-        /// Default set of reductions.
+        /// Default set of reducers.
         /// </summary>
-        readonly static JSchemaReducer[] DefaultReductions =
-            typeof(JSchemaMinimizingTransformer).Assembly.GetTypes()
+        public readonly static IReadOnlyCollection<JSchemaReducer> DefaultReducers =
+            typeof(JSchemaReducingTransformer).Assembly.GetTypes()
                 .Where(i => typeof(JSchemaReducer).IsAssignableFrom(i))
                 .Where(i => i.IsAbstract == false)
                 .Select(i => (JSchemaReducer)Activator.CreateInstance(i))
                 .ToArray();
 
-        readonly List<JSchemaReducer> reductions;
+        readonly List<JSchemaReducer> reducers;
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="reductions"></param>
-        public JSchemaMinimizer(IEnumerable<JSchemaReducer> reductions)
+        /// <param name="reducers"></param>
+        public JSchemaMinimizer(IEnumerable<JSchemaReducer> reducers)
         {
-            this.reductions = new List<JSchemaReducer>(reductions);
+            this.reducers = new List<JSchemaReducer>(reducers);
         }
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
         public JSchemaMinimizer() :
-            this(DefaultReductions)
+            this(DefaultReducers)
         {
 
         }
@@ -48,7 +48,7 @@ namespace Cogito.Json.Schema
         /// <summary>
         /// Gets the set of reductions to use when reducing.
         /// </summary>
-        public ICollection<JSchemaReducer> Reductions => reductions;
+        public ICollection<JSchemaReducer> Reducers => reducers;
 
         /// <summary>
         /// Reduces the given <see cref="JSchema"/>.
@@ -57,7 +57,7 @@ namespace Cogito.Json.Schema
         /// <returns></returns>
         public JSchema Minimize(JSchema schema)
         {
-            return new JSchemaMinimizingTransformer(reductions).Transform(schema);
+            return new JSchemaReducingTransformer(reducers).Transform(schema);
         }
 
     }

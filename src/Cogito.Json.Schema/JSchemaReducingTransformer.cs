@@ -12,19 +12,19 @@ namespace Cogito.Json.Schema
     /// <summary>
     /// Transformor implementation that applies a series of reductions to a <see cref="JSchema"/>.
     /// </summary>
-    class JSchemaMinimizingTransformer :
+    class JSchemaReducingTransformer :
         JSchemaTransformor
     {
 
-        readonly IList<JSchemaReducer> reductions;
+        readonly IList<JSchemaReducer> reducers;
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        /// <param name="reductions"></param>
-        public JSchemaMinimizingTransformer(IList<JSchemaReducer> reductions)
+        /// <param name="reducers"></param>
+        public JSchemaReducingTransformer(IList<JSchemaReducer> reducers)
         {
-            this.reductions = reductions ?? throw new ArgumentNullException(nameof(reductions));
+            this.reducers = reducers ?? throw new ArgumentNullException(nameof(reducers));
         }
 
         public override JSchema Transform(JSchema schema)
@@ -39,9 +39,9 @@ namespace Cogito.Json.Schema
                 return null;
 
             // apply reductions
-            for (int i = 0; i < reductions.Count; i++)
+            for (int i = 0; i < reducers.Count; i++)
             {
-                var r = reductions[i];
+                var r = reducers[i];
                 if (r == null)
                     continue;
 
