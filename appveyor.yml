@@ -14,7 +14,7 @@ before_build:
   - dotnet restore src
 
 build:
-  project: src/Cogito.Json.sln
+  - dotnet build src
 
 test:
   assemblies:
@@ -24,5 +24,5 @@ after_build:
   - dotnet pack src --output dist
 
 artifacts:
-  - path: dist\**\*.nupkg
+  - path: dist\*.nupkg
     name: Cogito.Json
