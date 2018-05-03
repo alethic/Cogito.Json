@@ -13,15 +13,16 @@ before_build:
   - ps: $env:InformationalVersion=$env:GitVersion_InformationalVersion
   - dotnet restore src
 
+build:
+  project: src/Cogito.Json.sln
+
 test:
   assemblies:
     - '**/Tests.dll'
 
 after_build:
-  - dotnet publish src --output %appveyor_build_folder%\dist
+  - dotnet publish src --output dist
 
 artifacts:
-  - path: %appveyor_build_folder%\dist\**\*.nupkg
+  - path: dist\**\*.nupkg
     name: Cogito.Json
-  - path: %appveyor_build_folder%\dist\**\*.nupkg
-    name: Cogito.Json.Schema
