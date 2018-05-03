@@ -16,10 +16,10 @@ before_build:
 
 build:
   verbosity: minimal
-  project: Cogito.Json.sln
+  project: src\Cogito.Json.sln
 
 artifacts:
-  - path: Cogito.Json\bin\**\*.nupkg
+  - path: src\Cogito.Json\bin\**\*.nupkg
     name: Cogito.Json
-  - path: Cogito.Json.Schema\bin\**\*.nupkg
+  - path: src\Cogito.Json.Schema\bin\**\*.nupkg
     name: Cogito.Json.Schema
