@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 using Cogito.Collections;
 
@@ -15,12 +16,15 @@ namespace Cogito.Json.Schema.Reducers
         {
             if (schema.Enum.Count > 0)
             {
-                var l = schema.Enum.Distinct(new JTokenEqualityComparer()).ToList();
-                if (l.Count != schema.Enum.Count)
+                var h = new HashSet<JToken>(new JTokenEqualityComparer());
+                foreach (var i in schema.Enum)
+                    h.Add(i);
+
+                if (h.Count != schema.Enum.Count)
                 {
                     schema = schema.Clone();
                     schema.Enum.Clear();
-                    schema.Enum.AddRange(l);
+                    schema.Enum.AddRange(h);
                 }
             }
 

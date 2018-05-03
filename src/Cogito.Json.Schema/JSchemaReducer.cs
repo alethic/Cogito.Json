@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Linq;
 
 using Cogito.Json.Schema.Reducers;
@@ -19,14 +18,14 @@ namespace Cogito.Json.Schema
         /// <summary>
         /// Default set of reductions.
         /// </summary>
-        readonly static ImmutableList<JSchemaReduction> DefaultReductions =
+        readonly static JSchemaReduction[] DefaultReductions =
             typeof(JSchemaReducingTransformor).Assembly.GetTypes()
                 .Where(i => typeof(JSchemaReduction).IsAssignableFrom(i))
                 .Where(i => i.IsAbstract == false)
                 .Select(i => (JSchemaReduction)Activator.CreateInstance(i))
-                .ToImmutableList();
+                .ToArray();
 
-        readonly ImmutableList<JSchemaReduction> reductions;
+        readonly List<JSchemaReduction> reductions;
 
         /// <summary>
         /// Initializes a new instance.
@@ -34,15 +33,16 @@ namespace Cogito.Json.Schema
         /// <param name="reductions"></param>
         public JSchemaReducer(IEnumerable<JSchemaReduction> reductions)
         {
-            this.reductions = ImmutableList<JSchemaReduction>.Empty.AddRange(reductions);
+            this.reductions = new List<JSchemaReduction>(reductions);
         }
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public JSchemaReducer()
+        public JSchemaReducer() :
+            this(DefaultReductions)
         {
-            this.reductions = DefaultReductions;
+
         }
 
         /// <summary>

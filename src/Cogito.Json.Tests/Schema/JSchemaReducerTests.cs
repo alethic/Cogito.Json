@@ -1,7 +1,10 @@
 using Cogito.Json.Schema;
+
 using FluentAssertions;
 using FluentAssertions.Json;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
@@ -278,6 +281,113 @@ namespace Cogito.Json.Tests
                         Const = "Bar"
                     },
                 }
+            };
+
+            JToken.DeepEquals(s, t).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_remove_impossible_enum_solutions_if_const_specified()
+        {
+            var s = new JSchemaReducer().Reduce(new JSchema()
+            {
+                Title = "Test",
+                Const = "BOB",
+                Enum = { "A", "BOB" }
+            });
+
+            var t = new JSchema()
+            {
+                Title = "Test",
+                Const = "BOB"
+            };
+
+            JToken.DeepEquals(s, t).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_remove_empty_schema_from_allof()
+        {
+            var s = new JSchemaReducer().Reduce(new JSchema()
+            {
+                Title = "Test",
+                AllOf =
+                {
+                    new JSchema(),
+                }
+            });
+
+            var t = new JSchema()
+            {
+                Title = "Test",
+            };
+
+            JToken.DeepEquals(s, t).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_remove_oneOf_if_empty_schema_allowed()
+        {
+            var s = new JSchemaReducer().Reduce(new JSchema()
+            {
+                Title = "Test",
+                OneOf =
+                {
+                    new JSchema(),
+                    new JSchema()
+                    {
+                        Title = "Foo"
+                    }
+                }
+            });
+
+            var t = new JSchema()
+            {
+                Title = "Test",
+            };
+
+            JToken.DeepEquals(s, t).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_remove_allof_if_only_item_is_empty_schema()
+        {
+            var s = new JSchemaReducer().Reduce(new JSchema()
+            {
+                Title = "Test",
+                AllOf =
+                {
+                    new JSchema(),
+                }
+            });
+
+            var t = new JSchema()
+            {
+                Title = "Test",
+            };
+
+            JToken.DeepEquals(s, t).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_promote_type_from_allof_to_allof_if_not_specified()
+        {
+            var s = new JSchemaReducer().Reduce(new JSchema()
+            {
+                Title = "Test",
+                AllOf =
+                {
+                    new JSchema()
+                    {
+                        Type = JSchemaType.String
+                    }
+                }
+            });
+
+            var t = new JSchema()
+            {
+                Title = "Test",
+                Type = JSchemaType.String
             };
 
             JToken.DeepEquals(s, t).Should().BeTrue();
