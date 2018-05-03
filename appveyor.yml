@@ -21,7 +21,7 @@ after_build:
   - dotnet publish src --output %appveyor_build_folder%\dist
 
 artifacts:
-  - path: src\Cogito.Json\bin\**\*.nupkg
+  - path: %appveyor_build_folder%\dist\**\*.nupkg
     name: Cogito.Json
-  - path: src\Cogito.Json.Schema\bin\**\*.nupkg
+  - path: %appveyor_build_folder%\dist\**\*.nupkg
     name: Cogito.Json.Schema
