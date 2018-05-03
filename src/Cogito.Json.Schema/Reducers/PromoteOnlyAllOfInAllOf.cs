@@ -12,7 +12,7 @@ namespace Cogito.Json.Schema.Reducers
     /// <summary>
     /// Promotes allOfs inside schemas inside of allOf to the parent.
     /// </summary>
-    class PromoteOnlyAllOfInAllOf : JSchemaReduction
+    class PromoteOnlyAllOfInAllOf : JSchemaReducer
     {
 
         public override JSchema Reduce(JSchema schema)

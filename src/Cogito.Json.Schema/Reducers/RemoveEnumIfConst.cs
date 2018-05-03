@@ -6,7 +6,7 @@ namespace Cogito.Json.Schema.Reducers
     /// <summary>
     /// If const is specified, and enum contains const, then only possible value is const; remove enum
     /// </summary>
-    class RemoveEnumIfConst : JSchemaReduction
+    class RemoveEnumIfConst : JSchemaReducer
     {
 
         public override JSchema Reduce(JSchema schema)

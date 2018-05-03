@@ -1,64 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Newtonsoft.Json.Schema;
 
-using Cogito.Json.Schema.Reducers;
-
-using Newtonsoft.Json.Schema;
-
-namespace Cogito.Json.Schema
+namespace Cogito.Json.Schema.Reducers
 {
 
     /// <summary>
-    /// Provides methods to reduce <see cref="JSchema"/>.
+    /// Implementation of a particular reducer algorithm.
     /// </summary>
-    public class JSchemaReducer
+    public abstract class JSchemaReducer
     {
 
         /// <summary>
-        /// Default set of reductions.
-        /// </summary>
-        readonly static JSchemaReduction[] DefaultReductions =
-            typeof(JSchemaReducingTransformor).Assembly.GetTypes()
-                .Where(i => typeof(JSchemaReduction).IsAssignableFrom(i))
-                .Where(i => i.IsAbstract == false)
-                .Select(i => (JSchemaReduction)Activator.CreateInstance(i))
-                .ToArray();
-
-        readonly List<JSchemaReduction> reductions;
-
-        /// <summary>
-        /// Initializes a new instance.
-        /// </summary>
-        /// <param name="reductions"></param>
-        public JSchemaReducer(IEnumerable<JSchemaReduction> reductions)
-        {
-            this.reductions = new List<JSchemaReduction>(reductions);
-        }
-
-        /// <summary>
-        /// Initializes a new instance.
-        /// </summary>
-        public JSchemaReducer() :
-            this(DefaultReductions)
-        {
-
-        }
-
-        /// <summary>
-        /// Gets the set of reductions to use when reducing.
-        /// </summary>
-        public ICollection<JSchemaReduction> Reductions => reductions;
-
-        /// <summary>
-        /// Reduces the given <see cref="JSchema"/>.
+        /// Produces a reduction of the given <see cref="JSchema"/>, if possible.
         /// </summary>
         /// <param name="schema"></param>
         /// <returns></returns>
-        public JSchema Reduce(JSchema schema)
-        {
-            return new JSchemaReducingTransformor(reductions).Transform(schema);
-        }
+        public abstract JSchema Reduce(JSchema schema);
 
     }
 

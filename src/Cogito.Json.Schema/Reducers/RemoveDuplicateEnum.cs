@@ -9,7 +9,7 @@ using Newtonsoft.Json.Schema;
 namespace Cogito.Json.Schema.Reducers
 {
 
-    public class RemoveDuplicateEnum : JSchemaReduction
+    public class RemoveDuplicateEnum : JSchemaReducer
     {
 
         public override JSchema Reduce(JSchema schema)

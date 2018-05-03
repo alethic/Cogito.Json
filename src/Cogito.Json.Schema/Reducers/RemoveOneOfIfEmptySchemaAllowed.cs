@@ -8,7 +8,7 @@ namespace Cogito.Json.Schema.Reducers
     /// <summary>
     /// Removes the entire oneOf if the oneOf allows an empty schema: everything would validate
     /// </summary>
-    class RemoveOneOfIfEmptySchemaAllowed : JSchemaReduction
+    class RemoveOneOfIfEmptySchemaAllowed : JSchemaReducer
     {
 
         public override JSchema Reduce(JSchema schema)

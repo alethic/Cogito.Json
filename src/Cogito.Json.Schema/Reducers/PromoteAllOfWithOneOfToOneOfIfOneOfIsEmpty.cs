@@ -9,7 +9,7 @@ namespace Cogito.Json.Schema.Reducers
     /// <summary>
     /// Schema contains no oneOf references, but does contain a single allOf reference, copy to oneOf.
     /// </summary>
-    class PromoteAllOfWithOneOfToOneOfIfOneOfIsEmpty : JSchemaReduction
+    class PromoteAllOfWithOneOfToOneOfIfOneOfIsEmpty : JSchemaReducer
     {
 
         public override JSchema Reduce(JSchema schema)

@@ -7,7 +7,7 @@ using Newtonsoft.Json.Schema;
 namespace Cogito.Json.Schema.Reducers
 {
 
-    class RemoveEmptySchemaFromAllOf : JSchemaReduction
+    class RemoveEmptySchemaFromAllOf : JSchemaReducer
     {
 
         public override JSchema Reduce(JSchema schema)

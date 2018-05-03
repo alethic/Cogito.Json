@@ -3,7 +3,7 @@
 namespace Cogito.Json.Schema.Reducers
 {
 
-    public class PromoteSingleEnumToConstIfConstIsEmpty : JSchemaReduction
+    public class PromoteSingleEnumToConstIfConstIsEmpty : JSchemaReducer
     {
 
         public override JSchema Reduce(JSchema schema)

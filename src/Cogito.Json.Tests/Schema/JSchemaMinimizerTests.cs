@@ -12,13 +12,13 @@ namespace Cogito.Json.Tests
 {
 
     [TestClass]
-    public class JSchemaReducerTests
+    public class JSchemaMinimizerTests
     {
 
         [TestMethod]
         public void Should_not_alter_single_const()
         {
-            var s = new JSchemaReducer().Reduce(new JSchema()
+            var s = new JSchemaMinimizer().Reduce(new JSchema()
             {
                 Const = "123"
             });
@@ -29,7 +29,7 @@ namespace Cogito.Json.Tests
         [TestMethod]
         public void Should_remove_duplicate_allof()
         {
-            var s = new JSchemaReducer().Reduce(new JSchema()
+            var s = new JSchemaMinimizer().Reduce(new JSchema()
             {
                 Title = "Test",
                 AllOf =
@@ -71,7 +71,7 @@ namespace Cogito.Json.Tests
         [TestMethod]
         public void Should_remove_duplicate_anyof()
         {
-            var s = new JSchemaReducer().Reduce(new JSchema()
+            var s = new JSchemaMinimizer().Reduce(new JSchema()
             {
                 Title = "Test",
                 AnyOf =
@@ -113,7 +113,7 @@ namespace Cogito.Json.Tests
         [TestMethod]
         public void Should_remove_duplicate_enum()
         {
-            var s = new JSchemaReducer().Reduce(new JSchema()
+            var s = new JSchemaMinimizer().Reduce(new JSchema()
             {
                 Title = "Test",
                 Enum = { "A", "B", "C", "C" }
@@ -131,7 +131,7 @@ namespace Cogito.Json.Tests
         [TestMethod]
         public void Should_remove_duplicate_oneof()
         {
-            var s = new JSchemaReducer().Reduce(new JSchema()
+            var s = new JSchemaMinimizer().Reduce(new JSchema()
             {
                 Title = "Test",
                 OneOf =
@@ -173,7 +173,7 @@ namespace Cogito.Json.Tests
         [TestMethod]
         public void Should_promote_allof_with_oneof_to_oneof_if_oneof_is_empty()
         {
-            var s = new JSchemaReducer().Reduce(new JSchema()
+            var s = new JSchemaMinimizer().Reduce(new JSchema()
             {
                 Title = "Test",
                 AllOf =
@@ -217,7 +217,7 @@ namespace Cogito.Json.Tests
         [TestMethod]
         public void Should_promote_allof_inside_allof_to_parent()
         {
-            var s = new JSchemaReducer().Reduce(new JSchema()
+            var s = new JSchemaMinimizer().Reduce(new JSchema()
             {
                 Title = "Test",
                 AllOf =
@@ -289,7 +289,7 @@ namespace Cogito.Json.Tests
         [TestMethod]
         public void Should_remove_impossible_enum_solutions_if_const_specified()
         {
-            var s = new JSchemaReducer().Reduce(new JSchema()
+            var s = new JSchemaMinimizer().Reduce(new JSchema()
             {
                 Title = "Test",
                 Const = "BOB",
@@ -308,7 +308,7 @@ namespace Cogito.Json.Tests
         [TestMethod]
         public void Should_remove_empty_schema_from_allof()
         {
-            var s = new JSchemaReducer().Reduce(new JSchema()
+            var s = new JSchemaMinimizer().Reduce(new JSchema()
             {
                 Title = "Test",
                 AllOf =
@@ -328,7 +328,7 @@ namespace Cogito.Json.Tests
         [TestMethod]
         public void Should_remove_oneOf_if_empty_schema_allowed()
         {
-            var s = new JSchemaReducer().Reduce(new JSchema()
+            var s = new JSchemaMinimizer().Reduce(new JSchema()
             {
                 Title = "Test",
                 OneOf =
@@ -352,7 +352,7 @@ namespace Cogito.Json.Tests
         [TestMethod]
         public void Should_remove_allof_if_only_item_is_empty_schema()
         {
-            var s = new JSchemaReducer().Reduce(new JSchema()
+            var s = new JSchemaMinimizer().Reduce(new JSchema()
             {
                 Title = "Test",
                 AllOf =
@@ -372,7 +372,7 @@ namespace Cogito.Json.Tests
         [TestMethod]
         public void Should_promote_type_from_allof_to_allof_if_not_specified()
         {
-            var s = new JSchemaReducer().Reduce(new JSchema()
+            var s = new JSchemaMinimizer().Reduce(new JSchema()
             {
                 Title = "Test",
                 AllOf =
