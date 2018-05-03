@@ -65,6 +65,48 @@ namespace Cogito.Json.Tests
             JToken.DeepEquals(s, t).Should().BeTrue();
         }
 
+        [TestMethod]
+        public void Should_reduce_duplicate_oneof()
+        {
+            var s = new JSchemaReducer().Reduce(new JSchema()
+            {
+                Title = "Test",
+                OneOf =
+                {
+                    new JSchema()
+                    {
+                        Const = "Foo",
+                    },
+                    new JSchema()
+                    {
+                        Const = "Bar",
+                    },
+                    new JSchema()
+                    {
+                        Const = "Foo",
+                    },
+                }
+            });
+
+            var t = new JSchema()
+            {
+                Title = "Test",
+                OneOf =
+                {
+                    new JSchema()
+                    {
+                        Const = "Foo",
+                    },
+                    new JSchema()
+                    {
+                        Const = "Bar",
+                    }
+                }
+            };
+
+            JToken.DeepEquals(s, t).Should().BeTrue();
+        }
+
     }
 
 }
