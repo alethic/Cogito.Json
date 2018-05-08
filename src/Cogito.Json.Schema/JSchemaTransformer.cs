@@ -13,7 +13,7 @@ namespace Cogito.Json.Schema
     /// <summary>
     /// Provides methods that transforms each node in a <see cref="JSchema"/> rewriting it as they go.
     /// </summary>
-    public abstract class JSchemaTransformor
+    public abstract class JSchemaTransformer
     {
 
         /// <summary>
