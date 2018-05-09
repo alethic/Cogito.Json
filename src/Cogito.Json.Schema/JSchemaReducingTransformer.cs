@@ -10,7 +10,7 @@ namespace Cogito.Json.Schema
 {
 
     /// <summary>
-    /// Transformor implementation that applies a series of reductions to a <see cref="JSchema"/>.
+    /// Transformer implementation that applies a series of reductions to a <see cref="JSchema"/>.
     /// </summary>
     class JSchemaReducingTransformer
     {
