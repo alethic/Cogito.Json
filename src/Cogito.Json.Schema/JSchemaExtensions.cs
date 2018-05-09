@@ -11,6 +11,8 @@ namespace Cogito.Json.Schema
     public static class JSchemaExtensions
     {
 
+        static readonly JSchemaCopyTransformer copy = new JSchemaCopyTransformer();
+
         /// <summary>
         /// Creates a copy of the given <see cref="JSchema"/>.
         /// </summary>
@@ -18,7 +20,7 @@ namespace Cogito.Json.Schema
         /// <returns></returns>
         public static JSchema Clone(this JSchema schema)
         {
-            return schema != null ? new JSchemaCopyTransformer().Transform(schema) : null;
+            return schema != null ? copy.Transform(schema) : null;
         }
 
         /// <summary>
