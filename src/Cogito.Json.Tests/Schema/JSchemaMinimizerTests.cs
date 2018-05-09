@@ -565,6 +565,23 @@ namespace Cogito.Json.Tests
             JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
+        [TestMethod]
+        public void Should_remove_type_if_const()
+        {
+            var s = new JSchemaMinimizer().Minimize(new JSchema()
+            {
+                Type = JSchemaType.String,
+                Const = "HELLO",
+            });
+
+            var t = new JSchema()
+            {
+                Const = "HELLO",
+            };
+
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
+        }
+
     }
 
 }
