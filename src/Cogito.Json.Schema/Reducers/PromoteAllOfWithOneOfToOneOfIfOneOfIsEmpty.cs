@@ -18,12 +18,12 @@ namespace Cogito.Json.Schema.Reducers
                 schema.AllOf.Count == 1 &&
                 schema.AllOf[0].OneOf.Count > 0)
             {
-                if (schema.AllOf[0].ToJObject().Count == 1)
+                if (schema.AllOf[0].ToJObject().Count == 1 ||
+                    schema.AllOf[0].ToJObject().Count == 2 && schema.AllOf[0].Type == schema.Type)
                 {
-                    var s = schema.Clone();
-                    s.OneOf.AddRange(schema.AllOf[0].OneOf);
-                    s.AllOf.Clear();
-                    return s;
+                    schema = schema.Clone();
+                    schema.OneOf.AddRange(schema.AllOf[0].OneOf);
+                    schema.AllOf.Clear();
                 }
             }
 

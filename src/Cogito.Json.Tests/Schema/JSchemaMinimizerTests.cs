@@ -520,6 +520,51 @@ namespace Cogito.Json.Tests
             JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
+        [TestMethod]
+        public void Should_promote_oneof_in_nested_allof_if_allof_type_matches()
+        {
+            var s = new JSchemaMinimizer().Minimize(new JSchema()
+            {
+                Type = JSchemaType.String,
+                AllOf =
+                {
+                    new JSchema()
+                    {
+                        Type = JSchemaType.String,
+                        OneOf =
+                        {
+                            new JSchema()
+                            {
+                                Const = "Value1"
+                            },
+                            new JSchema()
+                            {
+                                Const = "Value2"
+                            }
+                        }
+                    }
+                }
+            });
+
+            var t = new JSchema()
+            {
+                Type = JSchemaType.String,
+                OneOf =
+                {
+                    new JSchema()
+                    {
+                        Const = "Value1"
+                    },
+                    new JSchema()
+                    {
+                        Const = "Value2"
+                    }
+                }
+            };
+
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
+        }
+
     }
 
 }
