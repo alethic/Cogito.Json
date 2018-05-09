@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+
 using Cogito.Collections;
-using Newtonsoft.Json.Linq;
+
 using Newtonsoft.Json.Schema;
 
 namespace Cogito.Json.Schema.Reducers

@@ -59,7 +59,7 @@ namespace Cogito.Json.Schema
                     {
                         // start over using changed
                         s1 = s2;
-                        i = 0;
+                        i = -1;
                     }
                 }
             }

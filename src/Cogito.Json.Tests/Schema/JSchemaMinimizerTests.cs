@@ -23,7 +23,13 @@ namespace Cogito.Json.Tests
                 Const = "123"
             });
 
-            JToken.DeepEquals(s, s).Should().BeTrue();
+            var t = new JSchema()
+            {
+                Const = "123"
+            };
+
+
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
         [TestMethod]
@@ -65,7 +71,7 @@ namespace Cogito.Json.Tests
                 }
             };
 
-            JToken.DeepEquals(s, t).Should().BeTrue();
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
         [TestMethod]
@@ -107,7 +113,7 @@ namespace Cogito.Json.Tests
                 }
             };
 
-            JToken.DeepEquals(s, t).Should().BeTrue();
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
         [TestMethod]
@@ -125,7 +131,7 @@ namespace Cogito.Json.Tests
                 Enum = { "A", "B", "C" }
             };
 
-            JToken.DeepEquals(s, t).Should().BeTrue();
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
         [TestMethod]
@@ -167,7 +173,7 @@ namespace Cogito.Json.Tests
                 }
             };
 
-            JToken.DeepEquals(s, t).Should().BeTrue();
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
         [TestMethod]
@@ -211,7 +217,7 @@ namespace Cogito.Json.Tests
                 }
             };
 
-            JToken.DeepEquals(s, t).Should().BeTrue();
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
         [TestMethod]
@@ -283,7 +289,7 @@ namespace Cogito.Json.Tests
                 }
             };
 
-            JToken.DeepEquals(s, t).Should().BeTrue();
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
         [TestMethod]
@@ -302,7 +308,7 @@ namespace Cogito.Json.Tests
                 Const = "BOB"
             };
 
-            JToken.DeepEquals(s, t).Should().BeTrue();
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
         [TestMethod]
@@ -322,7 +328,7 @@ namespace Cogito.Json.Tests
                 Title = "Test",
             };
 
-            JToken.DeepEquals(s, t).Should().BeTrue();
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
         [TestMethod]
@@ -346,7 +352,7 @@ namespace Cogito.Json.Tests
                 Title = "Test",
             };
 
-            JToken.DeepEquals(s, t).Should().BeTrue();
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
         [TestMethod]
@@ -366,11 +372,11 @@ namespace Cogito.Json.Tests
                 Title = "Test",
             };
 
-            JToken.DeepEquals(s, t).Should().BeTrue();
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
         [TestMethod]
-        public void Should_promote_type_from_allof_to_allof_if_not_specified()
+        public void Should_promote_type_from_allof_to_parent_if_not_specified()
         {
             var s = new JSchemaMinimizer().Minimize(new JSchema()
             {
@@ -390,7 +396,128 @@ namespace Cogito.Json.Tests
                 Type = JSchemaType.String
             };
 
-            JToken.DeepEquals(s, t).Should().BeTrue();
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_remove_allof_item_with_same_type_as_parent()
+        {
+            var s = new JSchemaMinimizer().Minimize(new JSchema()
+            {
+                Title = "Test",
+                Type = JSchemaType.String,
+                AllOf =
+                {
+                    new JSchema()
+                    {
+                        Type = JSchemaType.String
+                    }
+                }
+            });
+
+            var t = new JSchema()
+            {
+                Title = "Test",
+                Type = JSchemaType.String
+            };
+
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_promote_allof_with_duplicate_type()
+        {
+            var s = new JSchemaMinimizer().Minimize(new JSchema()
+            {
+                Type = JSchemaType.String,
+                AllOf =
+                {
+                    new JSchema()
+                    {
+                        Type = JSchemaType.String
+                    },
+                    new JSchema()
+                    {
+                        AllOf =
+                        {
+                            new JSchema()
+                            {
+                                Const = "Value"
+                            },
+                            new JSchema()
+                            {
+                                Const = "Value2"
+                            }
+                        }
+                    }
+                }
+            });
+
+            var t = new JSchema()
+            {
+                Type = JSchemaType.String,
+                AllOf =
+                {
+                    new JSchema()
+                    {
+                        Const = "Value"
+                    },
+                    new JSchema()
+                    {
+                        Const = "Value2"
+                    }
+                }
+            };
+
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_promote_oneof_in_nested_allof_and_duplicate_type()
+        {
+            var s = new JSchemaMinimizer().Minimize(new JSchema()
+            {
+                Type = JSchemaType.String,
+                AllOf =
+                {
+                    new JSchema()
+                    {
+                        Type = JSchemaType.String
+                    },
+                    new JSchema()
+                    {
+                        OneOf =
+                        {
+                            new JSchema()
+                            {
+                                Const = "Value"
+                            },
+                            new JSchema()
+                            {
+                                Const = "Value2"
+                            }
+                        }
+                    }
+                }
+            });
+
+            var t = new JSchema()
+            {
+                Type = JSchemaType.String,
+                OneOf =
+                {
+                    new JSchema()
+                    {
+                        Const = "Value"
+                    },
+                    new JSchema()
+                    {
+                        Const = "Value2"
+                    }
+                }
+            };
+
+            JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
     }
