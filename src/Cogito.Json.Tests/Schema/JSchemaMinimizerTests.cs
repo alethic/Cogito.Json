@@ -582,6 +582,30 @@ namespace Cogito.Json.Tests
             JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
 
+        [TestMethod]
+        public void Should_not_fail_on_invalid_schema()
+        {
+            var s = new JSchemaMinimizer().Minimize(new JSchema()
+            {
+                Valid = false
+            });
+        }
+
+        [TestMethod]
+        public void Should_not_fail_on_nested_invalid_schema()
+        {
+            var s = new JSchemaMinimizer().Minimize(new JSchema()
+            {
+                AllOf =
+                {
+                    new JSchema()
+                    {
+                        Valid = false,
+                    }
+                }
+            });
+        }
+
     }
 
 }
