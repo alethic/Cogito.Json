@@ -592,11 +592,41 @@ namespace Cogito.Json.Tests
         }
 
         [TestMethod]
-        public void Should_not_fail_on_nested_invalid_schema()
+        public void Should_not_fail_on_allof_invalid_schema()
         {
             var s = new JSchemaMinimizer().Minimize(new JSchema()
             {
                 AllOf =
+                {
+                    new JSchema()
+                    {
+                        Valid = false,
+                    }
+                }
+            });
+        }
+
+        [TestMethod]
+        public void Should_not_fail_on_anyof_invalid_schema()
+        {
+            var s = new JSchemaMinimizer().Minimize(new JSchema()
+            {
+                AnyOf =
+                {
+                    new JSchema()
+                    {
+                        Valid = false,
+                    }
+                }
+            });
+        }
+
+        [TestMethod]
+        public void Should_not_fail_on_oneof_invalid_schema()
+        {
+            var s = new JSchemaMinimizer().Minimize(new JSchema()
+            {
+                OneOf =
                 {
                     new JSchema()
                     {
