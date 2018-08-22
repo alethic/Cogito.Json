@@ -19,7 +19,7 @@ namespace Cogito.Json.Schema.Reducers
                 var h = new HashSet<JToken>(new JTokenEqualityComparer());
 
                 foreach (var i in schema.AllOf)
-                    if (h.Add(i.ToJObject()))
+                    if (h.Add(i.AsJToken()))
                         l.Add(i);
 
                 // number of items were changed

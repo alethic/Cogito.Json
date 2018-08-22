@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
 namespace Cogito.Json.Schema.Reducers
@@ -13,7 +13,7 @@ namespace Cogito.Json.Schema.Reducers
 
         public override JSchema Reduce(JSchema schema)
         {
-            if (schema.OneOf.Any(i => i.ToJObject().Count == 0))
+            if (schema.OneOf.Any(i => i.Valid == true || i.AsJToken() is JObject o && o.Count == 0))
             {
                 schema = schema.Clone();
                 schema.OneOf.Clear();

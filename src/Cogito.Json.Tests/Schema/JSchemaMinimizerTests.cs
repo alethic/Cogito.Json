@@ -636,6 +636,41 @@ namespace Cogito.Json.Tests
             });
         }
 
+        [TestMethod]
+        public void Should_not_fail_on_if_invalid_schema()
+        {
+            var s = new JSchemaMinimizer().Minimize(new JSchema()
+            {
+                If = new JSchema()
+                {
+                    Valid = true,
+                },
+                Then = new JSchema()
+                {
+                    Valid = false
+                },
+                Else = new JSchema()
+                {
+                    Valid = true
+                }
+            });
+        }
+
+        [TestMethod]
+        public void Should_not_fail_on_not_invalid_schema()
+        {
+            var s = new JSchemaMinimizer().Minimize(new JSchema()
+            {
+                Not = new JSchema()
+                {
+                    Not = new JSchema()
+                    {
+                        Valid = true,
+                    }
+                }
+            });
+        }
+
     }
 
 }

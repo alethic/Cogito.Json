@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 
 using Cogito.Collections;
-
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
 namespace Cogito.Json.Schema.Reducers
@@ -14,7 +14,8 @@ namespace Cogito.Json.Schema.Reducers
         {
             if (schema.AllOf.Count > 0)
             {
-                var l = schema.AllOf.Where(i => i.ToJObject().Count != 0).ToList();
+                var r = schema.AllOf.Where(i => i.Valid == true || i.AsJToken() is JObject o && o.Count == 0);
+                var l = schema.AllOf.Except(r).ToList();
                 if (l.Count != schema.AllOf.Count)
                 {
                     schema = schema.Clone();
