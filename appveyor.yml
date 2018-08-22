@@ -26,3 +26,4 @@ after_build:
 artifacts:
   - path: dist/*.nupkg
     name: packages
+ 
