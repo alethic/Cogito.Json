@@ -49,7 +49,7 @@ namespace Cogito.Json.Schema
         /// </summary>
         /// <param name="schema"></param>
         /// <returns></returns>
-        public static JToken AsJToken(this JSchema schema)
+        public static JToken ToJToken(this JSchema schema)
         {
             return schema != null ? JToken.FromObject(schema) : null;
         }

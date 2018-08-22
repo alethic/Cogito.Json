@@ -14,7 +14,7 @@ namespace Cogito.Json.Schema.Reducers
         {
             if (schema.AllOf.Count > 0)
             {
-                var r = schema.AllOf.Where(i => i.Valid == true || i.AsJToken() is JObject o && o.Count == 0);
+                var r = schema.AllOf.Where(i => i.Valid == true || i.ToJToken() is JObject o && o.Count == 0);
                 var l = schema.AllOf.Except(r).ToList();
                 if (l.Count != schema.AllOf.Count)
                 {
