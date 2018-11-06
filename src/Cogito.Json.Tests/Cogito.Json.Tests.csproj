@@ -28,4 +28,8 @@
     <ProjectReference Include="..\Cogito.Json\Cogito.Json.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Schema\TestSuite\" />
+  </ItemGroup>
+
 </Project>

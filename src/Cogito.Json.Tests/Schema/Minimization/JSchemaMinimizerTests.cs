@@ -1,5 +1,3 @@
-using Cogito.Json.Schema;
-
 using FluentAssertions;
 using FluentAssertions.Json;
 
@@ -8,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
-namespace Cogito.Json.Tests
+namespace Cogito.Json.Schema.Minimization.Tests
 {
 
     [TestClass]
@@ -27,7 +25,6 @@ namespace Cogito.Json.Tests
             {
                 Const = "123"
             };
-
 
             JToken.DeepEquals(s.ToJObject(), t.ToJObject()).Should().BeTrue();
         }
