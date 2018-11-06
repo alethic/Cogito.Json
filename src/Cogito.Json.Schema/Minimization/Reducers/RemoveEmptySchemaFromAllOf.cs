@@ -1,23 +1,21 @@
 ﻿using System.Linq;
 
 using Cogito.Collections;
-using Cogito.Json.Schema;
-using Cogito.Json.Schema.Reducers;
-
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
-namespace FileAndServe.Efm.Components.Schema.Reducers
+namespace Cogito.Json.Schema.Minimization.Reducers
 {
 
-    class RemoveTypeOnlyAllOfIsParentIsSame : JSchemaReducer
+    class RemoveEmptySchemaFromAllOf : JSchemaReducer
     {
 
         public override JSchema Reduce(JSchema schema)
         {
-            if (schema.Type != null &&
-                schema.AllOf.Count > 0)
+            if (schema.AllOf.Count > 0)
             {
-                var l = schema.AllOf.Except(schema.AllOf.Where(i => i.Type == schema.Type && i.ToJObject().Count == 1)).ToList();
+                var r = schema.AllOf.Where(i => i.Valid == true || i.ToJToken() is JObject o && o.Count == 0);
+                var l = schema.AllOf.Except(r).ToList();
                 if (l.Count != schema.AllOf.Count)
                 {
                     schema = schema.Clone();

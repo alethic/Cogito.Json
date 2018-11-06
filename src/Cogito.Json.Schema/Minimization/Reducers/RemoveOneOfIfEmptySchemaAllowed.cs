@@ -1,8 +1,9 @@
 ﻿using System.Linq;
+
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
-namespace Cogito.Json.Schema.Reducers
+namespace Cogito.Json.Schema.Minimization.Reducers
 {
 
     /// <summary>

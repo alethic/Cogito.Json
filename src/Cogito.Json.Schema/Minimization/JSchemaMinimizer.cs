@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 
-using Cogito.Json.Schema.Reducers;
-
 using Newtonsoft.Json.Schema;
 
-namespace Cogito.Json.Schema
+namespace Cogito.Json.Schema.Minimization
 {
 
     /// <summary>
