@@ -81,6 +81,7 @@ void WriteTestFile(FileInfo file, string suiteName, string categoryName)
             var v2 = (bool)test["valid"];
 #>
 
+        [Ignore]
         [TestMethod]
         [TestCategory("<#= suiteName #>")]
         [TestCategory("<#= categoryName #>")]
@@ -92,13 +93,13 @@ void WriteTestFile(FileInfo file, string suiteName, string categoryName)
             if (v2)
             {
 #>
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
 <#+
             }
             else
             {
 #>
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
 <#+
             }
 #>

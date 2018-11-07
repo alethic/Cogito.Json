@@ -1,4 +1,5 @@
-﻿using Cogito.Json.Schema;
+﻿using System.IO;
+using Cogito.Json.Schema;
 
 using FluentAssertions;
 
@@ -19,7 +20,7 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = new JSchema() { Const = 1 };
             var o = new JValue(1);
-            var r = JSchemaValidatorBuilder.Build(s).Compile().Invoke(o);
+            var r = new JSchemaValidatorBuilder().Build(s).Compile().Invoke(o);
             r.Should().BeTrue();
         }
 
@@ -28,7 +29,7 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = new JSchema() { Const = 1 };
             var o = new JValue(2);
-            var r = JSchemaValidatorBuilder.Build(s).Compile().Invoke(o);
+            var r = new JSchemaValidatorBuilder().Build(s).Compile().Invoke(o);
             r.Should().BeFalse();
         }
 
@@ -37,7 +38,7 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = new JSchema() { Properties = { ["Prop"] = new JSchema() { Const = 1 } } };
             var o = new JObject() { ["Prop"] = 1 };
-            var r = JSchemaValidatorBuilder.Build(s).Compile().Invoke(o);
+            var r = new JSchemaValidatorBuilder().Build(s).Compile().Invoke(o);
             r.Should().BeTrue();
         }
 
@@ -46,7 +47,7 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = new JSchema() { Properties = { ["Prop"] = new JSchema() { Const = 1 } } };
             var o = new JObject() { ["Prop"] = 2 };
-            var r = JSchemaValidatorBuilder.Build(s).Compile().Invoke(o);
+            var r = new JSchemaValidatorBuilder().Build(s).Compile().Invoke(o);
             r.Should().BeFalse();
         }
 
@@ -55,8 +56,17 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = new JSchema() { Properties = { ["Prop1"] = new JSchema() { Const = 1 } } };
             var o = new JObject() { ["Prop2"] = 2 };
-            var r = JSchemaValidatorBuilder.Build(s).Compile().Invoke(o);
+            var r = new JSchemaValidatorBuilder().Build(s).Compile().Invoke(o);
             r.Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Can_load_really_big_schema()
+        {
+            var s = JSchema.Parse(File.ReadAllText(Path.Combine(Path.GetDirectoryName(typeof(JSchemaValidatorBuilderTests).Assembly.Location), "Schema", "ecourt_com_151.json")));
+            var o = new JObject { };
+            var v = new JSchemaValidatorBuilder().Build(s).Compile();
+            var r = v.Invoke(o);
         }
 
     }

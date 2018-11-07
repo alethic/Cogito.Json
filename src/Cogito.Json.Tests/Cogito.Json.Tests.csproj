@@ -49,6 +49,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Schema\ecourt_com_151.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Schema\JSchemaValidatorBuilderTestSuiteTests.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>JSchemaValidatorBuilderTestSuiteTests.cs</LastGenOutput>

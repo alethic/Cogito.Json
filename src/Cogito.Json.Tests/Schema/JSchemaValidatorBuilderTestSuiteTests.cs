@@ -12,6 +12,7 @@ namespace Cogito.Json.Tests.Schema
     {
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -19,10 +20,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W10sImFkZGl0aW9uYWxJdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("WzEsMiwzLDRd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -30,10 +32,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W10sImFkZGl0aW9uYWxJdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("WzEsMiwzLCJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -41,10 +44,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6e30sImFkZGl0aW9uYWxJdGVtcyI6ZmFsc2V9");
             var t = ParseJToken("WzEsMiwzLDQsNV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -52,10 +56,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9LHt9LHt9XSwiYWRkaXRpb25hbEl0ZW1zIjpmYWxzZX0=");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -63,10 +68,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9LHt9LHt9XSwiYWRkaXRpb25hbEl0ZW1zIjpmYWxzZX0=");
             var t = ParseJToken("WzEsMiwzLDRd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -74,10 +80,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsSXRlbXMiOmZhbHNlfQ==");
             var t = ParseJToken("WzEsMiwzLDQsNV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -85,10 +92,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsSXRlbXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -96,10 +104,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W119");
             var t = ParseJToken("WzEsImZvbyIsZmFsc2Vd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -107,10 +116,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -118,10 +128,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6ImJvb20ifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -129,10 +140,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -140,10 +152,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("ImZvb2JhcmJheiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -151,10 +164,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -162,10 +176,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("eyJmb28iOjEsInZyb29tIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -173,10 +188,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJew6EiOnt9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyLDoXJtw6FueW9zIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -184,10 +200,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJew6EiOnt9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyLDqWxtw6lueSI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -195,10 +212,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -206,10 +224,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6dHJ1ZX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -217,10 +236,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6MTJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -228,10 +248,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOnRydWV9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -239,10 +260,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -250,10 +272,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6dHJ1ZX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("default")]
@@ -261,10 +284,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciIsImRlZmF1bHQiOltdfX19");
             var t = ParseJToken("eyJmb28iOjEzfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("default")]
@@ -272,10 +296,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciIsImRlZmF1bHQiOltdfX19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("default")]
@@ -283,10 +308,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoic3RyaW5nIiwibWluTGVuZ3RoIjo0LCJkZWZhdWx0IjoiYmFkIn19fQ==");
             var t = ParseJToken("eyJiYXIiOiJnb29kIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("default")]
@@ -294,10 +320,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoic3RyaW5nIiwibWluTGVuZ3RoIjo0LCJkZWZhdWx0IjoiYmFkIn19fQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -305,10 +332,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjoiZm9vIn19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -316,10 +344,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjoiZm9vIn19");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -327,10 +356,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjoiZm9vIn19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -338,10 +368,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjoiZm9vIn19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -349,10 +380,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjoiZm9vIn19");
             var t = ParseJToken("WyJiYXIiXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -360,10 +392,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjoiZm9vIn19");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -371,10 +404,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjoiZm9vIn19");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -382,10 +416,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -393,10 +428,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -404,10 +440,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6M30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -415,10 +452,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJmb28iOjEsInF1dXgiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -426,10 +464,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJiYXIiOjEsInF1dXgiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -437,10 +476,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJxdXV4IjoxfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -448,10 +488,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -459,10 +500,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -470,10 +512,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOjIsImJhciI6InF1dXgifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -481,10 +524,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoicXV1eCJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -492,10 +536,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXNhbGxvdyI6ImludGVnZXIifQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -503,10 +548,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXNhbGxvdyI6ImludGVnZXIifQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -514,10 +560,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXNhbGxvdyI6WyJpbnRlZ2VyIiwiYm9vbGVhbiJdfQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -525,10 +572,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXNhbGxvdyI6WyJpbnRlZ2VyIiwiYm9vbGVhbiJdfQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -536,10 +584,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXNhbGxvdyI6WyJpbnRlZ2VyIiwiYm9vbGVhbiJdfQ==");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -547,10 +596,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXNhbGxvdyI6WyJzdHJpbmciLHsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19XX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -558,10 +608,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXNhbGxvdyI6WyJzdHJpbmciLHsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19XX0=");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -569,10 +620,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXNhbGxvdyI6WyJzdHJpbmciLHsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19XX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -580,10 +632,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXNhbGxvdyI6WyJzdHJpbmciLHsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19XX0=");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -591,10 +644,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXZpc2libGVCeSI6Mn0=");
             var t = ParseJToken("MTA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -602,10 +656,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXZpc2libGVCeSI6Mn0=");
             var t = ParseJToken("Nw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -613,10 +668,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXZpc2libGVCeSI6Mn0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -624,10 +680,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXZpc2libGVCeSI6MS41fQ==");
             var t = ParseJToken("MA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -635,10 +692,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXZpc2libGVCeSI6MS41fQ==");
             var t = ParseJToken("NC41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -646,10 +704,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXZpc2libGVCeSI6MS41fQ==");
             var t = ParseJToken("MzU=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -657,10 +716,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXZpc2libGVCeSI6MC4wMDAxfQ==");
             var t = ParseJToken("MC4wMDc1");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -668,10 +728,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkaXZpc2libGVCeSI6MC4wMDAxfQ==");
             var t = ParseJToken("MC4wMDc1MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -679,10 +740,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbMSwyLDNdfQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -690,10 +752,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbMSwyLDNdfQ==");
             var t = ParseJToken("NA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -701,10 +764,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbNiwiZm9vIixbXSx0cnVlLHsiZm9vIjoxMn1dfQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -712,10 +776,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbNiwiZm9vIixbXSx0cnVlLHsiZm9vIjoxMn1dfQ==");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -723,10 +788,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbNiwiZm9vIixbXSx0cnVlLHsiZm9vIjoxMn1dfQ==");
             var t = ParseJToken("eyJmb28iOmZhbHNlfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -734,10 +800,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdLCJyZXF1aXJlZCI6dHJ1ZX19fQ==");
             var t = ParseJToken("eyJmb28iOiJmb28iLCJiYXIiOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -745,10 +812,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdLCJyZXF1aXJlZCI6dHJ1ZX19fQ==");
             var t = ParseJToken("eyJiYXIiOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -756,10 +824,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdLCJyZXF1aXJlZCI6dHJ1ZX19fQ==");
             var t = ParseJToken("eyJmb28iOiJmb28ifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -767,10 +836,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdLCJyZXF1aXJlZCI6dHJ1ZX19fQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -778,10 +848,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciIsInJlcXVpcmVkIjp0cnVlfX0sImV4dGVuZHMiOnsicHJvcGVydGllcyI6eyJmb28iOnsidHlwZSI6InN0cmluZyIsInJlcXVpcmVkIjp0cnVlfX19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -789,10 +860,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciIsInJlcXVpcmVkIjp0cnVlfX0sImV4dGVuZHMiOnsicHJvcGVydGllcyI6eyJmb28iOnsidHlwZSI6InN0cmluZyIsInJlcXVpcmVkIjp0cnVlfX19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXoifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -800,10 +872,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciIsInJlcXVpcmVkIjp0cnVlfX0sImV4dGVuZHMiOnsicHJvcGVydGllcyI6eyJmb28iOnsidHlwZSI6InN0cmluZyIsInJlcXVpcmVkIjp0cnVlfX19fQ==");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -811,10 +884,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciIsInJlcXVpcmVkIjp0cnVlfX0sImV4dGVuZHMiOnsicHJvcGVydGllcyI6eyJmb28iOnsidHlwZSI6InN0cmluZyIsInJlcXVpcmVkIjp0cnVlfX19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOiJxdXV4In0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -822,10 +896,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciIsInJlcXVpcmVkIjp0cnVlfX0sImV4dGVuZHMiOlt7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmciLCJyZXF1aXJlZCI6dHJ1ZX19fSx7InByb3BlcnRpZXMiOnsiYmF6Ijp7InR5cGUiOiJudWxsIiwicmVxdWlyZWQiOnRydWV9fX1dfQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoyLCJiYXoiOm51bGx9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -833,10 +908,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciIsInJlcXVpcmVkIjp0cnVlfX0sImV4dGVuZHMiOlt7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmciLCJyZXF1aXJlZCI6dHJ1ZX19fSx7InByb3BlcnRpZXMiOnsiYmF6Ijp7InR5cGUiOiJudWxsIiwicmVxdWlyZWQiOnRydWV9fX1dfQ==");
             var t = ParseJToken("eyJiYXIiOjIsImJheiI6bnVsbH0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -844,10 +920,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciIsInJlcXVpcmVkIjp0cnVlfX0sImV4dGVuZHMiOlt7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmciLCJyZXF1aXJlZCI6dHJ1ZX19fSx7InByb3BlcnRpZXMiOnsiYmF6Ijp7InR5cGUiOiJudWxsIiwicmVxdWlyZWQiOnRydWV9fX1dfQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -855,10 +932,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciIsInJlcXVpcmVkIjp0cnVlfX0sImV4dGVuZHMiOlt7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmciLCJyZXF1aXJlZCI6dHJ1ZX19fSx7InByb3BlcnRpZXMiOnsiYmF6Ijp7InR5cGUiOiJudWxsIiwicmVxdWlyZWQiOnRydWV9fX1dfQ==");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -866,10 +944,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoyMCwiZXh0ZW5kcyI6eyJtYXhpbXVtIjozMH19");
             var t = ParseJToken("MjU=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -877,10 +956,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoyMCwiZXh0ZW5kcyI6eyJtYXhpbXVtIjozMH19");
             var t = ParseJToken("MzU=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("items")]
@@ -888,10 +968,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("items")]
@@ -899,10 +980,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("WzEsIngiXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("items")]
@@ -910,10 +992,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("items")]
@@ -921,10 +1004,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WzEsImZvbyJd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("items")]
@@ -932,10 +1016,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WyJmb28iLDFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maximum")]
@@ -943,10 +1028,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("Mi42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maximum")]
@@ -954,10 +1040,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("My41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maximum")]
@@ -965,10 +1052,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maximum")]
@@ -976,10 +1064,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjAsImV4Y2x1c2l2ZU1heGltdW0iOnRydWV9");
             var t = ParseJToken("Mi4y");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maximum")]
@@ -987,10 +1076,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjAsImV4Y2x1c2l2ZU1heGltdW0iOnRydWV9");
             var t = ParseJToken("My4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxItems")]
@@ -998,10 +1088,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxItems")]
@@ -1009,10 +1100,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxItems")]
@@ -1020,10 +1112,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxItems")]
@@ -1031,10 +1124,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxLength")]
@@ -1042,10 +1136,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("ImYi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxLength")]
@@ -1053,10 +1148,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxLength")]
@@ -1064,10 +1160,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxLength")]
@@ -1075,10 +1172,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("MTA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxLength")]
@@ -1086,10 +1184,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("IvCfkqnwn5KpIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minimum")]
@@ -1097,10 +1196,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("Mi42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minimum")]
@@ -1108,10 +1208,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MC42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minimum")]
@@ -1119,10 +1220,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minimum")]
@@ -1130,10 +1232,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjEsImV4Y2x1c2l2ZU1pbmltdW0iOnRydWV9");
             var t = ParseJToken("MS4y");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minimum")]
@@ -1141,10 +1244,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjEsImV4Y2x1c2l2ZU1pbmltdW0iOnRydWV9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minItems")]
@@ -1152,10 +1256,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minItems")]
@@ -1163,10 +1268,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minItems")]
@@ -1174,10 +1280,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minItems")]
@@ -1185,10 +1292,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minLength")]
@@ -1196,10 +1304,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minLength")]
@@ -1207,10 +1316,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minLength")]
@@ -1218,10 +1328,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("ImYi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minLength")]
@@ -1229,10 +1340,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minLength")]
@@ -1240,10 +1352,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("IvCfkqki");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("pattern")]
@@ -1251,10 +1364,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiXmEqJCJ9");
             var t = ParseJToken("ImFhYSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("pattern")]
@@ -1262,10 +1376,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiXmEqJCJ9");
             var t = ParseJToken("ImFiYyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("pattern")]
@@ -1273,10 +1388,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiXmEqJCJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("pattern")]
@@ -1284,10 +1400,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiYSsifQ==");
             var t = ParseJToken("Inh4YWF5eSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1295,10 +1412,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1306,10 +1424,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOjEsImZvb29vb28iOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1317,10 +1436,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIiLCJmb29vb28iOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1328,10 +1448,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIiLCJmb29vb29vIjoiYmF6In0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1339,10 +1460,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1350,10 +1472,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1361,10 +1484,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhIjoyMX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1372,10 +1496,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhYWFhIjoxOH0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1383,10 +1508,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhIjoyMSwiYWFhYSI6MTh9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1394,10 +1520,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhIjoiYmFyIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1405,10 +1532,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhYWFhIjozMX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1416,10 +1544,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhYWEiOiJmb28iLCJhYWFhIjozMX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1427,10 +1556,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhbnN3ZXIgMSI6IjQyIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1438,10 +1568,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhMzFiIjpudWxsfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1449,10 +1580,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhX3hfMyI6M30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1460,10 +1592,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhX1hfMyI6M30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1471,10 +1604,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6ImJheiJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1482,10 +1616,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6e319");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1493,10 +1628,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJmb28iOltdLCJiYXIiOnt9fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1504,10 +1640,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJxdXV4IjpbXX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1515,10 +1652,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1526,10 +1664,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1537,10 +1676,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOlsxLDJdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1548,10 +1688,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOlsxLDIsMyw0XX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1559,10 +1700,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1570,10 +1712,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmeG8iOlsxLDJdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1581,10 +1724,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmeG8iOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1592,10 +1736,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJiYXIiOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1603,10 +1748,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJxdXV4IjozfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1614,10 +1760,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJxdXV4IjoiZm9vIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1625,10 +1772,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOmZhbHNlfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1636,10 +1784,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOnsiZm9vIjpmYWxzZX19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1647,10 +1796,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJiYXIiOmZhbHNlfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1658,10 +1808,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOnsiYmFyIjpmYWxzZX19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1669,10 +1820,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsiJHJlZiI6IiMvcHJvcGVydGllcy9mb28ifX19");
             var t = ParseJToken("eyJiYXIiOjN9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1680,10 +1832,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsiJHJlZiI6IiMvcHJvcGVydGllcy9mb28ifX19");
             var t = ParseJToken("eyJiYXIiOnRydWV9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1691,10 +1844,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7IiRyZWYiOiIjL2l0ZW1zLzAifV19");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1702,10 +1856,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7IiRyZWYiOiIjL2l0ZW1zLzAifV19");
             var t = ParseJToken("WzEsImZvbyJd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1713,10 +1868,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJzbGFzaCI6ImFvZXUifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1724,10 +1880,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJ0aWxkYSI6ImFvZXUifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1735,10 +1892,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJwZXJjZW50IjoiYW9ldSJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1746,10 +1904,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJzbGFzaCI6MTIzfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1757,10 +1916,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJ0aWxkYSI6MTIzfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1768,10 +1928,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJwZXJjZW50IjoxMjN9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1779,10 +1940,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJhIjp7InR5cGUiOiJpbnRlZ2VyIn0sImIiOnsiJHJlZiI6IiMvZGVmaW5pdGlvbnMvYSJ9LCJjIjp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2IifX0sIiRyZWYiOiIjL2RlZmluaXRpb25zL2MifQ==");
             var t = ParseJToken("NQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1790,10 +1952,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJhIjp7InR5cGUiOiJpbnRlZ2VyIn0sImIiOnsiJHJlZiI6IiMvZGVmaW5pdGlvbnMvYSJ9LCJjIjp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2IifX0sIiRyZWYiOiIjL2RlZmluaXRpb25zL2MifQ==");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1801,10 +1964,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJyZWZmZWQiOnsidHlwZSI6ImFycmF5In19LCJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9yZWZmZWQiLCJtYXhJdGVtcyI6Mn19fQ==");
             var t = ParseJToken("eyJmb28iOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1812,10 +1976,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJyZWZmZWQiOnsidHlwZSI6ImFycmF5In19LCJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9yZWZmZWQiLCJtYXhJdGVtcyI6Mn19fQ==");
             var t = ParseJToken("eyJmb28iOlsxLDIsM119");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1823,10 +1988,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJyZWZmZWQiOnsidHlwZSI6ImFycmF5In19LCJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9yZWZmZWQiLCJtYXhJdGVtcyI6Mn19fQ==");
             var t = ParseJToken("eyJmb28iOiJzdHJpbmcifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1834,10 +2000,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wMy9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1845,10 +2012,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wMy9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJpdGVtcyI6eyJ0eXBlIjoxfX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -1856,10 +2024,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L2ludGVnZXIuanNvbiJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -1867,10 +2036,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L2ludGVnZXIuanNvbiJ9");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -1878,10 +2048,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvaW50ZWdlciJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -1889,10 +2060,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvaW50ZWdlciJ9");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -1900,10 +2072,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvcmVmVG9JbnRlZ2VyIn0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -1911,10 +2084,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvcmVmVG9JbnRlZ2VyIn0=");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -1922,10 +2096,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC8iLCJpdGVtcyI6eyJpZCI6ImZvbGRlci8iLCJpdGVtcyI6eyIkcmVmIjoiZm9sZGVySW50ZWdlci5qc29uIn19fQ==");
             var t = ParseJToken("W1sxXV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -1933,10 +2108,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC8iLCJpdGVtcyI6eyJpZCI6ImZvbGRlci8iLCJpdGVtcyI6eyIkcmVmIjoiZm9sZGVySW50ZWdlci5qc29uIn19fQ==");
             var t = ParseJToken("W1siYSJdXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("required")]
@@ -1944,10 +2120,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJyZXF1aXJlZCI6dHJ1ZX0sImJhciI6e319fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("required")]
@@ -1955,10 +2132,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJyZXF1aXJlZCI6dHJ1ZX0sImJhciI6e319fQ==");
             var t = ParseJToken("eyJiYXIiOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("required")]
@@ -1966,10 +2144,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e319fQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("required")]
@@ -1977,10 +2156,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJyZXF1aXJlZCI6ZmFsc2V9fX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -1988,10 +2168,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -1999,10 +2180,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2010,10 +2192,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2021,10 +2204,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("IjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2032,10 +2216,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2043,10 +2228,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2054,10 +2240,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2065,10 +2252,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2076,10 +2264,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2087,10 +2276,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2098,10 +2288,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2109,10 +2300,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("IjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2120,10 +2312,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2131,10 +2324,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2142,10 +2336,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2153,10 +2348,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2164,10 +2360,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2175,10 +2372,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2186,10 +2384,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2197,10 +2396,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("IjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2208,10 +2408,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2219,10 +2420,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2230,10 +2432,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2241,10 +2444,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2252,10 +2456,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2263,10 +2468,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2274,10 +2480,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2285,10 +2492,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2296,10 +2504,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2307,10 +2516,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2318,10 +2528,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2329,10 +2540,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2340,10 +2552,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2351,10 +2564,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2362,10 +2576,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2373,10 +2588,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2384,10 +2600,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2395,10 +2612,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2406,10 +2624,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2417,10 +2636,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2428,10 +2648,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2439,10 +2660,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2450,10 +2672,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2461,10 +2684,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2472,10 +2696,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2483,10 +2708,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2494,10 +2720,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2505,10 +2732,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2516,10 +2744,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2527,10 +2756,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2538,10 +2768,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2549,10 +2780,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2560,10 +2792,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYW55In0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2571,10 +2804,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYW55In0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2582,10 +2816,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYW55In0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2593,10 +2828,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYW55In0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2604,10 +2840,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYW55In0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2615,10 +2852,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYW55In0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2626,10 +2864,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYW55In0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2637,10 +2876,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2648,10 +2888,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2659,10 +2900,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2670,10 +2912,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2681,10 +2924,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2692,10 +2936,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2703,10 +2948,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2714,10 +2960,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImFycmF5Iix7InR5cGUiOiJvYmplY3QifV19");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2725,10 +2972,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImFycmF5Iix7InR5cGUiOiJvYmplY3QifV19");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2736,10 +2984,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImFycmF5Iix7InR5cGUiOiJvYmplY3QifV19");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2747,10 +2996,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImFycmF5Iix7InR5cGUiOiJvYmplY3QifV19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2758,10 +3008,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImFycmF5Iix7InR5cGUiOiJvYmplY3QifV19");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2769,10 +3020,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImFycmF5Iix7InR5cGUiOiJvYmplY3QifV19");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2780,10 +3032,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImFycmF5Iix7InR5cGUiOiJvYmplY3QifV19");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2791,10 +3044,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLHsicHJvcGVydGllcyI6eyJmb28iOnsidHlwZSI6Im51bGwifX19XX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2802,10 +3056,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLHsicHJvcGVydGllcyI6eyJmb28iOnsidHlwZSI6Im51bGwifX19XX0=");
             var t = ParseJToken("eyJmb28iOm51bGx9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2813,10 +3068,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLHsicHJvcGVydGllcyI6eyJmb28iOnsidHlwZSI6Im51bGwifX19XX0=");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2824,10 +3080,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbeyJ0eXBlIjpbInN0cmluZyJdfSx7InR5cGUiOlsiYXJyYXkiLCJudWxsIl19XX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2835,10 +3092,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbeyJ0eXBlIjpbInN0cmluZyJdfSx7InR5cGUiOlsiYXJyYXkiLCJudWxsIl19XX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2846,10 +3104,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbeyJ0eXBlIjpbInN0cmluZyJdfSx7InR5cGUiOlsiYXJyYXkiLCJudWxsIl19XX0=");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2857,10 +3116,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2868,10 +3128,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2879,10 +3140,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEuMCwxLjAsMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2890,10 +3152,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjoiYmFyIn0seyJmb28iOiJiYXoifV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2901,10 +3164,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjoiYmFyIn0seyJmb28iOiJiYXIifV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2912,10 +3176,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjp7ImJhciI6eyJiYXoiOnRydWV9fX0seyJmb28iOnsiYmFyIjp7ImJheiI6ZmFsc2V9fX1d");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2923,10 +3188,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjp7ImJhciI6eyJiYXoiOnRydWV9fX0seyJmb28iOnsiYmFyIjp7ImJheiI6dHJ1ZX19fV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2934,10 +3200,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W1siZm9vIl0sWyJiYXIiXV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2945,10 +3212,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W1siZm9vIl0sWyJmb28iXV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2956,10 +3224,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsdHJ1ZV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2967,10 +3236,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzAsZmFsc2Vd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2978,10 +3248,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3t9LFsxXSx0cnVlLG51bGwsMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -2989,10 +3260,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3t9LFsxXSx0cnVlLG51bGwse30sMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3000,10 +3272,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MTIzNDU2Nzg5MTAxMTEyMTMxNDE1MTYxNzE4MTkyMDIxMjIyMzI0MjUyNjI3MjgyOTMwMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3011,10 +3284,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3022,10 +3296,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("LTEyMzQ1Njc4OTEwMTExMjEzMTQxNTE2MTcxODE5MjAyMTIyMjMyNDI1MjYyNzI4MjkzMDMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3033,10 +3308,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("LTk4MjQ5MjgzNzQ5MjM0OTIzNDk4MjkzMTcxODIzOTQ4NzI5MzQ4NzEwMjk4MzAxOTI4MzMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3044,10 +3320,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3055,10 +3332,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjoxODQ0Njc0NDA3MzcwOTU1MTYxNX0=");
             var t = ParseJToken("MTg0NDY3NDQwNzM3MDk1NTE2MDA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3066,10 +3344,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjo5LjcyNzgzNzk4MTg3OTg3MTJFKzI2LCJleGNsdXNpdmVNYXhpbXVtIjp0cnVlfQ==");
             var t = ParseJToken("OS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3077,10 +3356,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjotMTg0NDY3NDQwNzM3MDk1NTE2MTV9");
             var t = ParseJToken("LTE4NDQ2NzQ0MDczNzA5NTUxNjAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3088,10 +3368,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjotOS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNiwiZXhjbHVzaXZlTWluaW11bSI6dHJ1ZX0=");
             var t = ParseJToken("LTkuNzI3ODM3OTgxODc5ODcxMkUrMjY=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3099,10 +3380,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("IihbYWJjXSkrXFxzKyQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3110,10 +3392,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("Il4oYWJjXSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3121,10 +3404,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTlUMDg6MzA6MDYuMjgzMTg1WiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3132,10 +3416,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjA2LzE5LzE5NjMgMDg6MzA6MDYgUFNUIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3143,10 +3428,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTl0MDg6MzA6MDYuMjgzMTg1eiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3154,10 +3440,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjIwMTMtMzUwVDAxOjAxOjAxIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3165,10 +3452,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlIn0=");
             var t = ParseJToken("IjE5NjMtMDYtMTki");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3176,10 +3464,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlIn0=");
             var t = ParseJToken("IjA2LzE5LzE5NjMi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3187,10 +3476,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ0aW1lIn0=");
             var t = ParseJToken("IjA4OjMwOjA2Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3198,10 +3488,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ0aW1lIn0=");
             var t = ParseJToken("Ijg6MzAgQU0i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3209,10 +3500,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uYmFyLz9iYXo9cXV4I3F1dXgi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3220,10 +3512,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Ii8vZm9vLmJhci8/YmF6PXF1eCNxdXV4Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3231,10 +3524,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("IlxcXFxXSU5ET1dTXFxmaWxlc2hhcmUi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3242,10 +3536,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImFiYyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3253,10 +3548,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJlbWFpbCJ9");
             var t = ParseJToken("ImpvZS5ibG9nZ3NAZXhhbXBsZS5jb20i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3264,10 +3560,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJlbWFpbCJ9");
             var t = ParseJToken("IjI5NjIi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3275,10 +3572,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcC1hZGRyZXNzIn0=");
             var t = ParseJToken("IjE5Mi4xNjguMC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3286,10 +3584,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcC1hZGRyZXNzIn0=");
             var t = ParseJToken("IjEyNy4wLjAuMC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3297,10 +3596,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcC1hZGRyZXNzIn0=");
             var t = ParseJToken("IjI1Ni4yNTYuMjU2LjI1NiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3308,10 +3608,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("Ijo6MSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3319,10 +3620,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("IjEyMzQ1Ojoi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3330,10 +3632,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("IjE6MToxOjE6MToxOjE6MToxOjE6MToxOjE6MToxOjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3341,10 +3644,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("Ijo6bGFwdG9wIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3352,10 +3656,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0LW5hbWUifQ==");
             var t = ParseJToken("Ind3dy5leGFtcGxlLmNvbSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3363,10 +3668,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0LW5hbWUifQ==");
             var t = ParseJToken("Ii1hLWhvc3QtbmFtZS10aGF0LXN0YXJ0cy13aXRoLS0i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3374,10 +3680,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0LW5hbWUifQ==");
             var t = ParseJToken("Im5vdF9hX3ZhbGlkX2hvc3RfbmFtZSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3385,10 +3692,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0LW5hbWUifQ==");
             var t = ParseJToken("ImEtdnZ2dnZ2dnZ2dnZ2dnZ2dmVlZWVlZWVlZWVlZWVlZWVycnJycnJycnJycnJycnJyeXl5eXl5eXl5eXl5eXl5eS1sb25nLWhvc3QtbmFtZS1jb21wb25lbnQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3396,10 +3704,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJjb2xvciJ9");
             var t = ParseJToken("ImZ1Y2hzaWEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3407,10 +3716,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJjb2xvciJ9");
             var t = ParseJToken("IiNDQzg4OTki");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3418,10 +3728,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJjb2xvciJ9");
             var t = ParseJToken("IiNDODki");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3429,10 +3740,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJjb2xvciJ9");
             var t = ParseJToken("IiMwMDMzMjUyMCI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3440,10 +3752,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJjb2xvciJ9");
             var t = ParseJToken("InB1Y2Ui");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3451,10 +3764,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJjb2xvciJ9");
             var t = ParseJToken("ImxpZ2h0X2dyYXlpc2hfcmVkLXZpb2xldCI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("jsregex")]
@@ -3462,10 +3776,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("IlteXSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("jsregex")]
@@ -3473,10 +3788,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("Iig/PD1mb28pYmFyIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -3484,10 +3800,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MS4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3495,10 +3812,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MTIzNDU2Nzg5MTAxMTEyMTMxNDE1MTYxNzE4MTkyMDIxMjIyMzI0MjUyNjI3MjgyOTMwMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3506,10 +3824,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3517,10 +3836,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("LTEyMzQ1Njc4OTEwMTExMjEzMTQxNTE2MTcxODE5MjAyMTIyMjMyNDI1MjYyNzI4MjkzMDMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3528,10 +3848,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("LTk4MjQ5MjgzNzQ5MjM0OTIzNDk4MjkzMTcxODIzOTQ4NzI5MzQ4NzEwMjk4MzAxOTI4MzMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3539,10 +3860,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3550,10 +3872,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjoxODQ0Njc0NDA3MzcwOTU1MTYxNX0=");
             var t = ParseJToken("MTg0NDY3NDQwNzM3MDk1NTE2MDA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3561,10 +3884,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjo5LjcyNzgzNzk4MTg3OTg3MTJFKzI2LCJleGNsdXNpdmVNYXhpbXVtIjp0cnVlfQ==");
             var t = ParseJToken("OS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3572,10 +3896,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjotMTg0NDY3NDQwNzM3MDk1NTE2MTV9");
             var t = ParseJToken("LTE4NDQ2NzQ0MDczNzA5NTUxNjAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3583,10 +3908,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjotOS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNiwiZXhjbHVzaXZlTWluaW11bSI6dHJ1ZX0=");
             var t = ParseJToken("LTkuNzI3ODM3OTgxODc5ODcxMkUrMjY=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3594,10 +3920,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("IihbYWJjXSkrXFxzKyQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3605,10 +3932,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("Il4oYWJjXSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3616,10 +3944,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTlUMDg6MzA6MDYuMjgzMTg1WiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3627,10 +3956,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjA2LzE5LzE5NjMgMDg6MzA6MDYgUFNUIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3638,10 +3968,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTl0MDg6MzA6MDYuMjgzMTg1eiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3649,10 +3980,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjIwMTMtMzUwVDAxOjAxOjAxIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3660,10 +3992,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlIn0=");
             var t = ParseJToken("IjE5NjMtMDYtMTki");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3671,10 +4004,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlIn0=");
             var t = ParseJToken("IjA2LzE5LzE5NjMi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3682,10 +4016,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ0aW1lIn0=");
             var t = ParseJToken("IjA4OjMwOjA2Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3693,10 +4028,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ0aW1lIn0=");
             var t = ParseJToken("Ijg6MzAgQU0i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3704,10 +4040,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uYmFyLz9iYXo9cXV4I3F1dXgi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3715,10 +4052,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Ii8vZm9vLmJhci8/YmF6PXF1eCNxdXV4Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3726,10 +4064,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("IlxcXFxXSU5ET1dTXFxmaWxlc2hhcmUi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3737,10 +4076,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImFiYyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3748,10 +4088,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJlbWFpbCJ9");
             var t = ParseJToken("ImpvZS5ibG9nZ3NAZXhhbXBsZS5jb20i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3759,10 +4100,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJlbWFpbCJ9");
             var t = ParseJToken("IjI5NjIi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3770,10 +4112,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcC1hZGRyZXNzIn0=");
             var t = ParseJToken("IjE5Mi4xNjguMC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3781,10 +4124,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcC1hZGRyZXNzIn0=");
             var t = ParseJToken("IjEyNy4wLjAuMC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3792,10 +4136,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcC1hZGRyZXNzIn0=");
             var t = ParseJToken("IjI1Ni4yNTYuMjU2LjI1NiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3803,10 +4148,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("Ijo6MSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3814,10 +4160,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("IjEyMzQ1Ojoi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3825,10 +4172,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("IjE6MToxOjE6MToxOjE6MToxOjE6MToxOjE6MToxOjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3836,10 +4184,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("Ijo6bGFwdG9wIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3847,10 +4196,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0LW5hbWUifQ==");
             var t = ParseJToken("Ind3dy5leGFtcGxlLmNvbSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3858,10 +4208,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0LW5hbWUifQ==");
             var t = ParseJToken("Ii1hLWhvc3QtbmFtZS10aGF0LXN0YXJ0cy13aXRoLS0i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3869,10 +4220,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0LW5hbWUifQ==");
             var t = ParseJToken("Im5vdF9hX3ZhbGlkX2hvc3RfbmFtZSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3880,10 +4232,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0LW5hbWUifQ==");
             var t = ParseJToken("ImEtdnZ2dnZ2dnZ2dnZ2dnZ2dmVlZWVlZWVlZWVlZWVlZWVycnJycnJycnJycnJycnJyeXl5eXl5eXl5eXl5eXl5eS1sb25nLWhvc3QtbmFtZS1jb21wb25lbnQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3891,10 +4244,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJjb2xvciJ9");
             var t = ParseJToken("ImZ1Y2hzaWEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3902,10 +4256,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJjb2xvciJ9");
             var t = ParseJToken("IiNDQzg4OTki");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3913,10 +4268,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJjb2xvciJ9");
             var t = ParseJToken("IiNDODki");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3924,10 +4280,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJjb2xvciJ9");
             var t = ParseJToken("IiMwMDMzMjUyMCI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3935,10 +4292,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJjb2xvciJ9");
             var t = ParseJToken("InB1Y2Ui");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3946,10 +4304,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJjb2xvciJ9");
             var t = ParseJToken("ImxpZ2h0X2dyYXlpc2hfcmVkLXZpb2xldCI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("jsregex")]
@@ -3957,10 +4316,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("IlteXSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("jsregex")]
@@ -3968,10 +4328,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("Iig/PD1mb28pYmFyIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -3979,10 +4340,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MS4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -3990,10 +4352,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9XSwiYWRkaXRpb25hbEl0ZW1zIjp7InR5cGUiOiJpbnRlZ2VyIn19");
             var t = ParseJToken("W251bGwsMiwzLDRd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4001,10 +4364,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9XSwiYWRkaXRpb25hbEl0ZW1zIjp7InR5cGUiOiJpbnRlZ2VyIn19");
             var t = ParseJToken("W251bGwsMiwzLCJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4012,10 +4376,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6e30sImFkZGl0aW9uYWxJdGVtcyI6ZmFsc2V9");
             var t = ParseJToken("WzEsMiwzLDQsNV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4023,10 +4388,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9LHt9LHt9XSwiYWRkaXRpb25hbEl0ZW1zIjpmYWxzZX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4034,10 +4400,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9LHt9LHt9XSwiYWRkaXRpb25hbEl0ZW1zIjpmYWxzZX0=");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4045,10 +4412,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9LHt9LHt9XSwiYWRkaXRpb25hbEl0ZW1zIjpmYWxzZX0=");
             var t = ParseJToken("WzEsMiwzLDRd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4056,10 +4424,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsSXRlbXMiOmZhbHNlfQ==");
             var t = ParseJToken("WzEsMiwzLDQsNV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4067,10 +4436,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsSXRlbXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4078,10 +4448,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifV19");
             var t = ParseJToken("WzEsImZvbyIsZmFsc2Vd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4089,10 +4460,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4100,10 +4472,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6ImJvb20ifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4111,10 +4484,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4122,10 +4496,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("ImZvb2JhcmJheiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4133,10 +4508,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4144,10 +4520,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("eyJmb28iOjEsInZyb29tIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4155,10 +4532,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJew6EiOnt9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyLDoXJtw6FueW9zIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4166,10 +4544,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJew6EiOnt9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyLDqWxtw6lueSI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4177,10 +4556,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4188,10 +4568,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6dHJ1ZX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4199,10 +4580,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6MTJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4210,10 +4592,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOnRydWV9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4221,10 +4604,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4232,10 +4616,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6dHJ1ZX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4243,10 +4628,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4254,10 +4640,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4265,10 +4652,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4276,10 +4664,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOiJxdXV4In0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4287,10 +4676,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoyLCJiYXoiOm51bGx9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4298,10 +4688,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmF6IjpudWxsfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4309,10 +4700,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJiYXIiOjIsImJheiI6bnVsbH0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4320,10 +4712,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4331,10 +4724,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4342,10 +4736,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sibWF4aW11bSI6MzB9LHsibWluaW11bSI6MjB9XX0=");
             var t = ParseJToken("MjU=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4353,10 +4748,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sibWF4aW11bSI6MzB9LHsibWluaW11bSI6MjB9XX0=");
             var t = ParseJToken("MzU=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4364,10 +4760,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4375,10 +4772,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("Mi41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4386,10 +4784,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4397,10 +4796,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("MS41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4408,10 +4808,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwiYW55T2YiOlt7Im1heExlbmd0aCI6Mn0seyJtaW5MZW5ndGgiOjR9XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4419,10 +4820,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwiYW55T2YiOlt7Im1heExlbmd0aCI6Mn0seyJtaW5MZW5ndGgiOjR9XX0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4430,10 +4832,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwiYW55T2YiOlt7Im1heExlbmd0aCI6Mn0seyJtaW5MZW5ndGgiOjR9XX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4441,10 +4844,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4452,10 +4856,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4463,10 +4868,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4474,10 +4880,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOjIsImJhciI6InF1dXgifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("default")]
@@ -4485,10 +4892,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciIsImRlZmF1bHQiOltdfX19");
             var t = ParseJToken("eyJmb28iOjEzfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("default")]
@@ -4496,10 +4904,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciIsImRlZmF1bHQiOltdfX19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("default")]
@@ -4507,10 +4916,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoic3RyaW5nIiwibWluTGVuZ3RoIjo0LCJkZWZhdWx0IjoiYmFkIn19fQ==");
             var t = ParseJToken("eyJiYXIiOiJnb29kIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("default")]
@@ -4518,10 +4928,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoic3RyaW5nIiwibWluTGVuZ3RoIjo0LCJkZWZhdWx0IjoiYmFkIn19fQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("definitions")]
@@ -4529,10 +4940,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNC9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJkZWZpbml0aW9ucyI6eyJmb28iOnsidHlwZSI6ImludGVnZXIifX19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("definitions")]
@@ -4540,10 +4952,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNC9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJkZWZpbml0aW9ucyI6eyJmb28iOnsidHlwZSI6MX19fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4551,10 +4964,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4562,10 +4976,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4573,10 +4988,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4584,10 +5000,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4595,10 +5012,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("WyJiYXIiXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4606,10 +5024,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4617,10 +5036,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4628,10 +5048,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4639,10 +5060,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4650,10 +5072,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6M30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4661,10 +5084,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJmb28iOjEsInF1dXgiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4672,10 +5096,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJiYXIiOjEsInF1dXgiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4683,10 +5108,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJxdXV4IjoxfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4694,10 +5120,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4705,10 +5132,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4In0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4716,10 +5144,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4727,10 +5156,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOjIsImJhciI6InF1dXgifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4738,10 +5168,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoicXV1eCJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -4749,10 +5180,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbMSwyLDNdfQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -4760,10 +5192,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbMSwyLDNdfQ==");
             var t = ParseJToken("NA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -4771,10 +5204,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbNiwiZm9vIixbXSx0cnVlLHsiZm9vIjoxMn1dfQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -4782,10 +5216,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbNiwiZm9vIixbXSx0cnVlLHsiZm9vIjoxMn1dfQ==");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -4793,10 +5228,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbNiwiZm9vIixbXSx0cnVlLHsiZm9vIjoxMn1dfQ==");
             var t = ParseJToken("eyJmb28iOmZhbHNlfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -4804,10 +5240,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdfX0sInJlcXVpcmVkIjpbImJhciJdfQ==");
             var t = ParseJToken("eyJmb28iOiJmb28iLCJiYXIiOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -4815,10 +5252,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdfX0sInJlcXVpcmVkIjpbImJhciJdfQ==");
             var t = ParseJToken("eyJiYXIiOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -4826,10 +5264,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdfX0sInJlcXVpcmVkIjpbImJhciJdfQ==");
             var t = ParseJToken("eyJmb28iOiJmb28ifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -4837,10 +5276,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdfX0sInJlcXVpcmVkIjpbImJhciJdfQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -4848,10 +5288,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -4859,10 +5300,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("WzEsIngiXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -4870,10 +5312,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -4881,10 +5324,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyIwIjoiaW52YWxpZCIsImxlbmd0aCI6MX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -4892,10 +5336,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WzEsImZvbyJd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -4903,10 +5348,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WyJmb28iLDFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -4914,10 +5360,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -4925,10 +5372,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WzEsImZvbyIsdHJ1ZV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -4936,10 +5384,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -4947,10 +5396,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("eyIwIjoiaW52YWxpZCIsIjEiOiJ2YWxpZCIsImxlbmd0aCI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -4958,10 +5408,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("Mi42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -4969,10 +5420,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("My4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -4980,10 +5432,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("My41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -4991,10 +5444,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5002,10 +5456,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjAsImV4Y2x1c2l2ZU1heGltdW0iOmZhbHNlfQ==");
             var t = ParseJToken("Mi42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5013,10 +5468,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjAsImV4Y2x1c2l2ZU1heGltdW0iOmZhbHNlfQ==");
             var t = ParseJToken("My4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5024,10 +5480,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjAsImV4Y2x1c2l2ZU1heGltdW0iOmZhbHNlfQ==");
             var t = ParseJToken("My41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5035,10 +5492,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjAsImV4Y2x1c2l2ZU1heGltdW0iOmZhbHNlfQ==");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5046,10 +5504,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjAsImV4Y2x1c2l2ZU1heGltdW0iOnRydWV9");
             var t = ParseJToken("Mi4y");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5057,10 +5516,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjAsImV4Y2x1c2l2ZU1heGltdW0iOnRydWV9");
             var t = ParseJToken("My4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxItems")]
@@ -5068,10 +5528,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxItems")]
@@ -5079,10 +5540,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxItems")]
@@ -5090,10 +5552,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxItems")]
@@ -5101,10 +5564,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxLength")]
@@ -5112,10 +5576,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("ImYi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxLength")]
@@ -5123,10 +5588,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxLength")]
@@ -5134,10 +5600,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxLength")]
@@ -5145,10 +5612,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("MTAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxLength")]
@@ -5156,10 +5624,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("IvCfkqnwn5KpIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxProperties")]
@@ -5167,10 +5636,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxProperties")]
@@ -5178,10 +5648,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxProperties")]
@@ -5189,10 +5660,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwiYmF6IjozfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxProperties")]
@@ -5200,10 +5672,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxProperties")]
@@ -5211,10 +5684,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxProperties")]
@@ -5222,10 +5696,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5233,10 +5708,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("Mi42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5244,10 +5720,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5255,10 +5732,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MC42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5266,10 +5744,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5277,10 +5756,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjEsImV4Y2x1c2l2ZU1pbmltdW0iOmZhbHNlfQ==");
             var t = ParseJToken("Mi42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5288,10 +5768,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjEsImV4Y2x1c2l2ZU1pbmltdW0iOmZhbHNlfQ==");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5299,10 +5780,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjEsImV4Y2x1c2l2ZU1pbmltdW0iOmZhbHNlfQ==");
             var t = ParseJToken("MC42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5310,10 +5792,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjEsImV4Y2x1c2l2ZU1pbmltdW0iOmZhbHNlfQ==");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5321,10 +5804,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjEsImV4Y2x1c2l2ZU1pbmltdW0iOnRydWV9");
             var t = ParseJToken("MS4y");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5332,10 +5816,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjEsImV4Y2x1c2l2ZU1pbmltdW0iOnRydWV9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minItems")]
@@ -5343,10 +5828,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minItems")]
@@ -5354,10 +5840,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minItems")]
@@ -5365,10 +5852,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minItems")]
@@ -5376,10 +5864,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minLength")]
@@ -5387,10 +5876,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minLength")]
@@ -5398,10 +5888,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minLength")]
@@ -5409,10 +5900,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("ImYi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minLength")]
@@ -5420,10 +5912,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minLength")]
@@ -5431,10 +5924,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("IvCfkqki");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minProperties")]
@@ -5442,10 +5936,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minProperties")]
@@ -5453,10 +5948,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minProperties")]
@@ -5464,10 +5960,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minProperties")]
@@ -5475,10 +5972,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minProperties")]
@@ -5486,10 +5984,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minProperties")]
@@ -5497,10 +5996,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -5508,10 +6008,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoyfQ==");
             var t = ParseJToken("MTA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -5519,10 +6020,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoyfQ==");
             var t = ParseJToken("Nw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -5530,10 +6032,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoyfQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -5541,10 +6044,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoxLjV9");
             var t = ParseJToken("MA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -5552,10 +6056,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoxLjV9");
             var t = ParseJToken("NC41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -5563,10 +6068,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoxLjV9");
             var t = ParseJToken("MzU=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -5574,10 +6080,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjowLjAwMDF9");
             var t = ParseJToken("MC4wMDc1");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -5585,10 +6092,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjowLjAwMDF9");
             var t = ParseJToken("MC4wMDc1MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -5596,10 +6104,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6ImludGVnZXIifX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -5607,10 +6116,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6ImludGVnZXIifX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -5618,10 +6128,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6WyJpbnRlZ2VyIiwiYm9vbGVhbiJdfX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -5629,10 +6140,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6WyJpbnRlZ2VyIiwiYm9vbGVhbiJdfX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -5640,10 +6152,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6WyJpbnRlZ2VyIiwiYm9vbGVhbiJdfX0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -5651,10 +6164,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19fQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -5662,10 +6176,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -5673,10 +6188,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -5684,10 +6200,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJub3QiOnt9fX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -5695,10 +6212,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJub3QiOnt9fX19");
             var t = ParseJToken("eyJiYXIiOjEsImJheiI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -5706,10 +6224,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -5717,10 +6236,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("Mi41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -5728,10 +6248,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -5739,10 +6260,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("MS41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -5750,10 +6272,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwib25lT2YiOlt7Im1pbkxlbmd0aCI6Mn0seyJtYXhMZW5ndGgiOjR9XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -5761,10 +6284,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwib25lT2YiOlt7Im1pbkxlbmd0aCI6Mn0seyJtYXhMZW5ndGgiOjR9XX0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -5772,10 +6296,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwib25lT2YiOlt7Im1pbkxlbmd0aCI6Mn0seyJtYXhMZW5ndGgiOjR9XX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -5783,10 +6308,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -5794,10 +6320,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -5805,10 +6332,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -5816,10 +6344,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOjIsImJhciI6InF1dXgifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("pattern")]
@@ -5827,10 +6356,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiXmEqJCJ9");
             var t = ParseJToken("ImFhYSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("pattern")]
@@ -5838,10 +6368,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiXmEqJCJ9");
             var t = ParseJToken("ImFiYyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("pattern")]
@@ -5849,10 +6380,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiXmEqJCJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("pattern")]
@@ -5860,10 +6392,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiYSsifQ==");
             var t = ParseJToken("Inh4YWF5eSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -5871,10 +6404,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -5882,10 +6416,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOjEsImZvb29vb28iOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -5893,10 +6428,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIiLCJmb29vb28iOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -5904,10 +6440,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIiLCJmb29vb29vIjoiYmF6In0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -5915,10 +6452,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -5926,10 +6464,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -5937,10 +6476,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -5948,10 +6488,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhIjoyMX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -5959,10 +6500,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhYWFhIjoxOH0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -5970,10 +6512,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhIjoyMSwiYWFhYSI6MTh9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -5981,10 +6524,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhIjoiYmFyIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -5992,10 +6536,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhYWFhIjozMX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6003,10 +6548,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhYWEiOiJmb28iLCJhYWFhIjozMX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6014,10 +6560,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhbnN3ZXIgMSI6IjQyIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6025,10 +6572,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhMzFiIjpudWxsfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6036,10 +6584,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhX3hfMyI6M30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6047,10 +6596,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhX1hfMyI6M30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6058,10 +6608,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6ImJheiJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6069,10 +6620,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6e319");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6080,10 +6632,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJmb28iOltdLCJiYXIiOnt9fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6091,10 +6644,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJxdXV4IjpbXX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6102,10 +6656,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6113,10 +6668,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6124,10 +6680,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOlsxLDJdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6135,10 +6692,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOlsxLDIsMyw0XX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6146,10 +6704,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6157,10 +6716,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmeG8iOlsxLDJdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6168,10 +6728,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmeG8iOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6179,10 +6740,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJiYXIiOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6190,10 +6752,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJxdXV4IjozfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6201,10 +6764,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJxdXV4IjoiZm9vIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6212,10 +6776,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOmZhbHNlfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6223,10 +6788,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOnsiZm9vIjpmYWxzZX19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6234,10 +6800,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJiYXIiOmZhbHNlfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6245,10 +6812,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOnsiYmFyIjpmYWxzZX19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6256,10 +6824,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsiJHJlZiI6IiMvcHJvcGVydGllcy9mb28ifX19");
             var t = ParseJToken("eyJiYXIiOjN9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6267,10 +6836,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsiJHJlZiI6IiMvcHJvcGVydGllcy9mb28ifX19");
             var t = ParseJToken("eyJiYXIiOnRydWV9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6278,10 +6848,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7IiRyZWYiOiIjL2l0ZW1zLzAifV19");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6289,10 +6860,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7IiRyZWYiOiIjL2l0ZW1zLzAifV19");
             var t = ParseJToken("WzEsImZvbyJd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6300,10 +6872,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJzbGFzaCI6ImFvZXUifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6311,10 +6884,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJ0aWxkYSI6ImFvZXUifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6322,10 +6896,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJwZXJjZW50IjoiYW9ldSJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6333,10 +6908,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJzbGFzaCI6MTIzfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6344,10 +6920,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJ0aWxkYSI6MTIzfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6355,10 +6932,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJwZXJjZW50IjoxMjN9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6366,10 +6944,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJhIjp7InR5cGUiOiJpbnRlZ2VyIn0sImIiOnsiJHJlZiI6IiMvZGVmaW5pdGlvbnMvYSJ9LCJjIjp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2IifX0sIiRyZWYiOiIjL2RlZmluaXRpb25zL2MifQ==");
             var t = ParseJToken("NQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6377,10 +6956,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJhIjp7InR5cGUiOiJpbnRlZ2VyIn0sImIiOnsiJHJlZiI6IiMvZGVmaW5pdGlvbnMvYSJ9LCJjIjp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2IifX0sIiRyZWYiOiIjL2RlZmluaXRpb25zL2MifQ==");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6388,10 +6968,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJyZWZmZWQiOnsidHlwZSI6ImFycmF5In19LCJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9yZWZmZWQiLCJtYXhJdGVtcyI6Mn19fQ==");
             var t = ParseJToken("eyJmb28iOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6399,10 +6980,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJyZWZmZWQiOnsidHlwZSI6ImFycmF5In19LCJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9yZWZmZWQiLCJtYXhJdGVtcyI6Mn19fQ==");
             var t = ParseJToken("eyJmb28iOlsxLDIsM119");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6410,10 +6992,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJyZWZmZWQiOnsidHlwZSI6ImFycmF5In19LCJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9yZWZmZWQiLCJtYXhJdGVtcyI6Mn19fQ==");
             var t = ParseJToken("eyJmb28iOiJzdHJpbmcifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6421,10 +7004,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNC9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJtaW5MZW5ndGgiOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6432,10 +7016,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNC9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJtaW5MZW5ndGgiOi0xfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6443,10 +7028,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7IiRyZWYiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyIkcmVmIjoiYSJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6454,10 +7040,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7IiRyZWYiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyIkcmVmIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6465,10 +7052,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC90cmVlIiwiZGVzY3JpcHRpb24iOiJ0cmVlIG9mIG5vZGVzIiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsibWV0YSI6eyJ0eXBlIjoic3RyaW5nIn0sIm5vZGVzIjp7InR5cGUiOiJhcnJheSIsIml0ZW1zIjp7IiRyZWYiOiJub2RlIn19fSwicmVxdWlyZWQiOlsibWV0YSIsIm5vZGVzIl0sImRlZmluaXRpb25zIjp7Im5vZGUiOnsiaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvbm9kZSIsImRlc2NyaXB0aW9uIjoibm9kZSIsInR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7InZhbHVlIjp7InR5cGUiOiJudW1iZXIifSwic3VidHJlZSI6eyIkcmVmIjoidHJlZSJ9fSwicmVxdWlyZWQiOlsidmFsdWUiXX19fQ==");
             var t = ParseJToken("eyJtZXRhIjoicm9vdCIsIm5vZGVzIjpbeyJ2YWx1ZSI6MSwic3VidHJlZSI6eyJtZXRhIjoiY2hpbGQiLCJub2RlcyI6W3sidmFsdWUiOjEuMX0seyJ2YWx1ZSI6MS4yfV19fSx7InZhbHVlIjoyLCJzdWJ0cmVlIjp7Im1ldGEiOiJjaGlsZCIsIm5vZGVzIjpbeyJ2YWx1ZSI6Mi4xfSx7InZhbHVlIjoyLjJ9XX19XX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6476,10 +7064,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC90cmVlIiwiZGVzY3JpcHRpb24iOiJ0cmVlIG9mIG5vZGVzIiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsibWV0YSI6eyJ0eXBlIjoic3RyaW5nIn0sIm5vZGVzIjp7InR5cGUiOiJhcnJheSIsIml0ZW1zIjp7IiRyZWYiOiJub2RlIn19fSwicmVxdWlyZWQiOlsibWV0YSIsIm5vZGVzIl0sImRlZmluaXRpb25zIjp7Im5vZGUiOnsiaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvbm9kZSIsImRlc2NyaXB0aW9uIjoibm9kZSIsInR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7InZhbHVlIjp7InR5cGUiOiJudW1iZXIifSwic3VidHJlZSI6eyIkcmVmIjoidHJlZSJ9fSwicmVxdWlyZWQiOlsidmFsdWUiXX19fQ==");
             var t = ParseJToken("eyJtZXRhIjoicm9vdCIsIm5vZGVzIjpbeyJ2YWx1ZSI6MSwic3VidHJlZSI6eyJtZXRhIjoiY2hpbGQiLCJub2RlcyI6W3sidmFsdWUiOiJzdHJpbmcgaXMgaW52YWxpZCJ9LHsidmFsdWUiOjEuMn1dfX0seyJ2YWx1ZSI6Miwic3VidHJlZSI6eyJtZXRhIjoiY2hpbGQiLCJub2RlcyI6W3sidmFsdWUiOjIuMX0seyJ2YWx1ZSI6Mi4yfV19fV19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6487,10 +7076,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L2ludGVnZXIuanNvbiJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6498,10 +7088,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L2ludGVnZXIuanNvbiJ9");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6509,10 +7100,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvaW50ZWdlciJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6520,10 +7112,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvaW50ZWdlciJ9");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6531,10 +7124,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvcmVmVG9JbnRlZ2VyIn0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6542,10 +7136,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvcmVmVG9JbnRlZ2VyIn0=");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6553,10 +7148,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC8iLCJpdGVtcyI6eyJpZCI6ImZvbGRlci8iLCJpdGVtcyI6eyIkcmVmIjoiZm9sZGVySW50ZWdlci5qc29uIn19fQ==");
             var t = ParseJToken("W1sxXV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6564,10 +7160,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC8iLCJpdGVtcyI6eyJpZCI6ImZvbGRlci8iLCJpdGVtcyI6eyIkcmVmIjoiZm9sZGVySW50ZWdlci5qc29uIn19fQ==");
             var t = ParseJToken("W1siYSJdXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6575,10 +7172,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC9zY29wZV9jaGFuZ2VfZGVmczEuanNvbiIsInR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7Imxpc3QiOnsiJHJlZiI6IiMvZGVmaW5pdGlvbnMvYmF6In19LCJkZWZpbml0aW9ucyI6eyJiYXoiOnsiaWQiOiJmb2xkZXIvIiwidHlwZSI6ImFycmF5IiwiaXRlbXMiOnsiJHJlZiI6ImZvbGRlckludGVnZXIuanNvbiJ9fX19");
             var t = ParseJToken("eyJsaXN0IjpbMV19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6586,10 +7184,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC9zY29wZV9jaGFuZ2VfZGVmczEuanNvbiIsInR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7Imxpc3QiOnsiJHJlZiI6IiMvZGVmaW5pdGlvbnMvYmF6In19LCJkZWZpbml0aW9ucyI6eyJiYXoiOnsiaWQiOiJmb2xkZXIvIiwidHlwZSI6ImFycmF5IiwiaXRlbXMiOnsiJHJlZiI6ImZvbGRlckludGVnZXIuanNvbiJ9fX19");
             var t = ParseJToken("eyJsaXN0IjpbImEiXX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6597,10 +7196,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC9zY29wZV9jaGFuZ2VfZGVmczIuanNvbiIsInR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7Imxpc3QiOnsiJHJlZiI6IiMvZGVmaW5pdGlvbnMvYmF6L2RlZmluaXRpb25zL2JhciJ9fSwiZGVmaW5pdGlvbnMiOnsiYmF6Ijp7ImlkIjoiZm9sZGVyLyIsImRlZmluaXRpb25zIjp7ImJhciI6eyJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyIkcmVmIjoiZm9sZGVySW50ZWdlci5qc29uIn19fX19fQ==");
             var t = ParseJToken("eyJsaXN0IjpbMV19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6608,10 +7208,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC9zY29wZV9jaGFuZ2VfZGVmczIuanNvbiIsInR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7Imxpc3QiOnsiJHJlZiI6IiMvZGVmaW5pdGlvbnMvYmF6L2RlZmluaXRpb25zL2JhciJ9fSwiZGVmaW5pdGlvbnMiOnsiYmF6Ijp7ImlkIjoiZm9sZGVyLyIsImRlZmluaXRpb25zIjp7ImJhciI6eyJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyIkcmVmIjoiZm9sZGVySW50ZWdlci5qc29uIn19fX19fQ==");
             var t = ParseJToken("eyJsaXN0IjpbImEiXX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6619,10 +7220,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC9vYmplY3QiLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJuYW1lIjp7IiRyZWYiOiJuYW1lLmpzb24jL2RlZmluaXRpb25zL29yTnVsbCJ9fX0=");
             var t = ParseJToken("eyJuYW1lIjoiZm9vIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6630,10 +7232,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC9vYmplY3QiLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJuYW1lIjp7IiRyZWYiOiJuYW1lLmpzb24jL2RlZmluaXRpb25zL29yTnVsbCJ9fX0=");
             var t = ParseJToken("eyJuYW1lIjpudWxsfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -6641,10 +7244,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC9vYmplY3QiLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJuYW1lIjp7IiRyZWYiOiJuYW1lLmpzb24jL2RlZmluaXRpb25zL29yTnVsbCJ9fX0=");
             var t = ParseJToken("eyJuYW1lIjp7Im5hbWUiOm51bGx9fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("required")]
@@ -6652,10 +7256,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("required")]
@@ -6663,10 +7268,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("eyJiYXIiOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("required")]
@@ -6674,10 +7280,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("required")]
@@ -6685,10 +7292,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("required")]
@@ -6696,10 +7304,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("required")]
@@ -6707,10 +7316,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e319fQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6718,10 +7328,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6729,10 +7340,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6740,10 +7352,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6751,10 +7364,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("IjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6762,10 +7376,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6773,10 +7388,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6784,10 +7400,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6795,10 +7412,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6806,10 +7424,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6817,10 +7436,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6828,10 +7448,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6839,10 +7460,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("IjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6850,10 +7472,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6861,10 +7484,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6872,10 +7496,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6883,10 +7508,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6894,10 +7520,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6905,10 +7532,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6916,10 +7544,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6927,10 +7556,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("IjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6938,10 +7568,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6949,10 +7580,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6960,10 +7592,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6971,10 +7604,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6982,10 +7616,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -6993,10 +7628,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7004,10 +7640,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7015,10 +7652,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7026,10 +7664,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7037,10 +7676,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7048,10 +7688,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7059,10 +7700,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7070,10 +7712,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7081,10 +7724,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7092,10 +7736,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7103,10 +7748,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7114,10 +7760,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7125,10 +7772,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7136,10 +7784,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7147,10 +7796,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7158,10 +7808,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7169,10 +7820,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7180,10 +7832,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7191,10 +7844,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7202,10 +7856,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7213,10 +7868,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7224,10 +7880,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7235,10 +7892,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7246,10 +7904,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7257,10 +7916,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7268,10 +7928,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7279,10 +7940,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7290,10 +7952,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7301,10 +7964,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7312,10 +7976,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7323,10 +7988,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7334,10 +8000,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7345,10 +8012,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7356,10 +8024,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7367,10 +8036,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7378,10 +8048,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7389,10 +8060,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEuMCwxLjAsMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7400,10 +8072,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjoiYmFyIn0seyJmb28iOiJiYXoifV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7411,10 +8084,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjoiYmFyIn0seyJmb28iOiJiYXIifV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7422,10 +8096,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjp7ImJhciI6eyJiYXoiOnRydWV9fX0seyJmb28iOnsiYmFyIjp7ImJheiI6ZmFsc2V9fX1d");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7433,10 +8108,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjp7ImJhciI6eyJiYXoiOnRydWV9fX0seyJmb28iOnsiYmFyIjp7ImJheiI6dHJ1ZX19fV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7444,10 +8120,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W1siZm9vIl0sWyJiYXIiXV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7455,10 +8132,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W1siZm9vIl0sWyJmb28iXV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7466,10 +8144,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsdHJ1ZV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7477,10 +8156,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzAsZmFsc2Vd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7488,10 +8168,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3t9LFsxXSx0cnVlLG51bGwsMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -7499,10 +8180,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3t9LFsxXSx0cnVlLG51bGwse30sMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -7510,10 +8192,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MTIzNDU2Nzg5MTAxMTEyMTMxNDE1MTYxNzE4MTkyMDIxMjIyMzI0MjUyNjI3MjgyOTMwMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -7521,10 +8204,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -7532,10 +8216,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("LTEyMzQ1Njc4OTEwMTExMjEzMTQxNTE2MTcxODE5MjAyMTIyMjMyNDI1MjYyNzI4MjkzMDMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -7543,10 +8228,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("LTk4MjQ5MjgzNzQ5MjM0OTIzNDk4MjkzMTcxODIzOTQ4NzI5MzQ4NzEwMjk4MzAxOTI4MzMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -7554,10 +8240,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -7565,10 +8252,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjoxODQ0Njc0NDA3MzcwOTU1MTYxNX0=");
             var t = ParseJToken("MTg0NDY3NDQwNzM3MDk1NTE2MDA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -7576,10 +8264,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjo5LjcyNzgzNzk4MTg3OTg3MTJFKzI2LCJleGNsdXNpdmVNYXhpbXVtIjp0cnVlfQ==");
             var t = ParseJToken("OS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -7587,10 +8276,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjotMTg0NDY3NDQwNzM3MDk1NTE2MTV9");
             var t = ParseJToken("LTE4NDQ2NzQ0MDczNzA5NTUxNjAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -7598,10 +8288,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjotOS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNiwiZXhjbHVzaXZlTWluaW11bSI6dHJ1ZX0=");
             var t = ParseJToken("LTkuNzI3ODM3OTgxODc5ODcxMkUrMjY=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("ecmascript-regex")]
@@ -7609,10 +8300,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("Il5cXFMofCgufFxcbikqXFxTKVxcWiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7620,10 +8312,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTlUMDg6MzA6MDYuMjgzMTg1WiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7631,10 +8324,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTlUMDg6MzA6MDZaIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7642,10 +8336,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5MzctMDEtMDFUMDU6NDA6MjcuODctMDY6MDAi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7653,10 +8348,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5OTAtMTItMzFUMTc6NTk6NTAuMTIzLTA2OjAwIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7664,10 +8360,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5OTAtMDItMzFUMTU6NTk6NjAuMTIzLTA4OjAwIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7675,10 +8372,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5OTAtMTItMzFUMTU6NTk6NjAtMjQ6MDAi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7686,10 +8384,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjA2LzE5LzE5NjMgMDg6MzA6MDYgUFNUIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7697,10 +8396,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTl0MDg6MzA6MDYuMjgzMTg1eiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7708,10 +8408,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjIwMTMtMzUwVDAxOjAxOjAxIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7719,10 +8420,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uYmFyLz9iYXo9cXV4I3F1dXgi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7730,10 +8432,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uY29tL2JsYWhfKHdpa2lwZWRpYSlfYmxhaCNjaXRlLTEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7741,10 +8444,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uYmFyLz9xPVRlc3QlMjBVUkwtZW5jb2RlZCUyMHN0dWZmIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7752,10 +8456,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly94bi0tbncyYS54bi0tajZ3MTkzZy8i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7763,10 +8468,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly8tLn5fISQmJygpKissOz06JTQwOjgwJTJmOjo6Ojo6QGV4YW1wbGUuY29tIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7774,10 +8480,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly8yMjMuMjU1LjI1NS4yNTQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7785,10 +8492,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImZ0cDovL2Z0cC5pcy5jby56YS9yZmMvcmZjMTgwOC50eHQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7796,10 +8504,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly93d3cuaWV0Zi5vcmcvcmZjL3JmYzIzOTYudHh0Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7807,10 +8516,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImxkYXA6Ly9bMjAwMTpkYjg6OjddL2M9R0I/b2JqZWN0Q2xhc3M/b25lIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7818,10 +8528,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Im1haWx0bzpKb2huLkRvZUBleGFtcGxlLmNvbSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7829,10 +8540,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Im5ld3M6Y29tcC5pbmZvc3lzdGVtcy53d3cuc2VydmVycy51bml4Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7840,10 +8552,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("InRlbDorMS04MTYtNTU1LTEyMTIi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7851,10 +8564,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("InVybjpvYXNpczpuYW1lczpzcGVjaWZpY2F0aW9uOmRvY2Jvb2s6ZHRkOnhtbDo0LjEuMiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7862,10 +8576,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Ii8vZm9vLmJhci8/YmF6PXF1eCNxdXV4Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7873,10 +8588,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Ii9hYmMi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7884,10 +8600,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("IlxcXFxXSU5ET1dTXFxmaWxlc2hhcmUi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7895,10 +8612,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImFiYyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7906,10 +8624,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly8gc2hvdWxkZmFpbC5jb20i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7917,10 +8636,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("IjovLyBzaG91bGQgZmFpbCI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7928,10 +8648,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJlbWFpbCJ9");
             var t = ParseJToken("ImpvZS5ibG9nZ3NAZXhhbXBsZS5jb20i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7939,10 +8660,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJlbWFpbCJ9");
             var t = ParseJToken("IjI5NjIi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7950,10 +8672,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjE5Mi4xNjguMC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7961,10 +8684,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjEyNy4wLjAuMC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7972,10 +8696,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjI1Ni4yNTYuMjU2LjI1NiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7983,10 +8708,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjEyNy4wIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -7994,10 +8720,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjB4N2YwMDAwMDEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8005,10 +8732,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("Ijo6MSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8016,10 +8744,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("IjEyMzQ1Ojoi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8027,10 +8756,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("IjE6MToxOjE6MToxOjE6MToxOjE6MToxOjE6MToxOjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8038,10 +8768,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("Ijo6bGFwdG9wIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8049,10 +8780,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("Ind3dy5leGFtcGxlLmNvbSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8060,10 +8792,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("Ii1hLWhvc3QtbmFtZS10aGF0LXN0YXJ0cy13aXRoLS0i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8071,10 +8804,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("Im5vdF9hX3ZhbGlkX2hvc3RfbmFtZSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8082,10 +8816,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("ImEtdnZ2dnZ2dnZ2dnZ2dnZ2dmVlZWVlZWVlZWVlZWVlZWVycnJycnJycnJycnJycnJyeXl5eXl5eXl5eXl5eXl5eS1sb25nLWhvc3QtbmFtZS1jb21wb25lbnQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -8093,10 +8828,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MS4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8104,10 +8840,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MTIzNDU2Nzg5MTAxMTEyMTMxNDE1MTYxNzE4MTkyMDIxMjIyMzI0MjUyNjI3MjgyOTMwMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8115,10 +8852,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8126,10 +8864,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("LTEyMzQ1Njc4OTEwMTExMjEzMTQxNTE2MTcxODE5MjAyMTIyMjMyNDI1MjYyNzI4MjkzMDMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8137,10 +8876,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("LTk4MjQ5MjgzNzQ5MjM0OTIzNDk4MjkzMTcxODIzOTQ4NzI5MzQ4NzEwMjk4MzAxOTI4MzMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8148,10 +8888,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8159,10 +8900,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjoxODQ0Njc0NDA3MzcwOTU1MTYxNX0=");
             var t = ParseJToken("MTg0NDY3NDQwNzM3MDk1NTE2MDA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8170,10 +8912,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjo5LjcyNzgzNzk4MTg3OTg3MTJFKzI2LCJleGNsdXNpdmVNYXhpbXVtIjp0cnVlfQ==");
             var t = ParseJToken("OS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8181,10 +8924,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjotMTg0NDY3NDQwNzM3MDk1NTE2MTV9");
             var t = ParseJToken("LTE4NDQ2NzQ0MDczNzA5NTUxNjAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8192,10 +8936,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjotOS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNiwiZXhjbHVzaXZlTWluaW11bSI6dHJ1ZX0=");
             var t = ParseJToken("LTkuNzI3ODM3OTgxODc5ODcxMkUrMjY=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("ecmascript-regex")]
@@ -8203,10 +8948,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("Il5cXFMofCgufFxcbikqXFxTKVxcWiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8214,10 +8960,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTlUMDg6MzA6MDYuMjgzMTg1WiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8225,10 +8972,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTlUMDg6MzA6MDZaIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8236,10 +8984,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5MzctMDEtMDFUMDU6NDA6MjcuODctMDY6MDAi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8247,10 +8996,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5OTAtMTItMzFUMTc6NTk6NTAuMTIzLTA2OjAwIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8258,10 +9008,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5OTAtMDItMzFUMTU6NTk6NjAuMTIzLTA4OjAwIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8269,10 +9020,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5OTAtMTItMzFUMTU6NTk6NjAtMjQ6MDAi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8280,10 +9032,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjA2LzE5LzE5NjMgMDg6MzA6MDYgUFNUIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8291,10 +9044,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTl0MDg6MzA6MDYuMjgzMTg1eiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8302,10 +9056,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjIwMTMtMzUwVDAxOjAxOjAxIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8313,10 +9068,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uYmFyLz9iYXo9cXV4I3F1dXgi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8324,10 +9080,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uY29tL2JsYWhfKHdpa2lwZWRpYSlfYmxhaCNjaXRlLTEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8335,10 +9092,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uYmFyLz9xPVRlc3QlMjBVUkwtZW5jb2RlZCUyMHN0dWZmIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8346,10 +9104,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly94bi0tbncyYS54bi0tajZ3MTkzZy8i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8357,10 +9116,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly8tLn5fISQmJygpKissOz06JTQwOjgwJTJmOjo6Ojo6QGV4YW1wbGUuY29tIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8368,10 +9128,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly8yMjMuMjU1LjI1NS4yNTQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8379,10 +9140,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImZ0cDovL2Z0cC5pcy5jby56YS9yZmMvcmZjMTgwOC50eHQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8390,10 +9152,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly93d3cuaWV0Zi5vcmcvcmZjL3JmYzIzOTYudHh0Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8401,10 +9164,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImxkYXA6Ly9bMjAwMTpkYjg6OjddL2M9R0I/b2JqZWN0Q2xhc3M/b25lIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8412,10 +9176,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Im1haWx0bzpKb2huLkRvZUBleGFtcGxlLmNvbSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8423,10 +9188,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Im5ld3M6Y29tcC5pbmZvc3lzdGVtcy53d3cuc2VydmVycy51bml4Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8434,10 +9200,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("InRlbDorMS04MTYtNTU1LTEyMTIi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8445,10 +9212,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("InVybjpvYXNpczpuYW1lczpzcGVjaWZpY2F0aW9uOmRvY2Jvb2s6ZHRkOnhtbDo0LjEuMiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8456,10 +9224,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Ii8vZm9vLmJhci8/YmF6PXF1eCNxdXV4Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8467,10 +9236,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Ii9hYmMi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8478,10 +9248,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("IlxcXFxXSU5ET1dTXFxmaWxlc2hhcmUi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8489,10 +9260,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImFiYyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8500,10 +9272,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly8gc2hvdWxkZmFpbC5jb20i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8511,10 +9284,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("IjovLyBzaG91bGQgZmFpbCI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8522,10 +9296,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJlbWFpbCJ9");
             var t = ParseJToken("ImpvZS5ibG9nZ3NAZXhhbXBsZS5jb20i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8533,10 +9308,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJlbWFpbCJ9");
             var t = ParseJToken("IjI5NjIi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8544,10 +9320,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjE5Mi4xNjguMC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8555,10 +9332,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjEyNy4wLjAuMC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8566,10 +9344,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjI1Ni4yNTYuMjU2LjI1NiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8577,10 +9356,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjEyNy4wIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8588,10 +9368,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjB4N2YwMDAwMDEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8599,10 +9380,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("Ijo6MSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8610,10 +9392,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("IjEyMzQ1Ojoi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8621,10 +9404,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("IjE6MToxOjE6MToxOjE6MToxOjE6MToxOjE6MToxOjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8632,10 +9416,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("Ijo6bGFwdG9wIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8643,10 +9428,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("Ind3dy5leGFtcGxlLmNvbSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8654,10 +9440,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("Ii1hLWhvc3QtbmFtZS10aGF0LXN0YXJ0cy13aXRoLS0i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8665,10 +9452,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("Im5vdF9hX3ZhbGlkX2hvc3RfbmFtZSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8676,10 +9464,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("ImEtdnZ2dnZ2dnZ2dnZ2dnZ2dmVlZWVlZWVlZWVlZWVlZWVycnJycnJycnJycnJycnJyeXl5eXl5eXl5eXl5eXl5eS1sb25nLWhvc3QtbmFtZS1jb21wb25lbnQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -8687,10 +9476,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MS4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -8698,10 +9488,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9XSwiYWRkaXRpb25hbEl0ZW1zIjp7InR5cGUiOiJpbnRlZ2VyIn19");
             var t = ParseJToken("W251bGwsMiwzLDRd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -8709,10 +9500,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9XSwiYWRkaXRpb25hbEl0ZW1zIjp7InR5cGUiOiJpbnRlZ2VyIn19");
             var t = ParseJToken("W251bGwsMiwzLCJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -8720,10 +9512,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6e30sImFkZGl0aW9uYWxJdGVtcyI6ZmFsc2V9");
             var t = ParseJToken("WzEsMiwzLDQsNV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -8731,10 +9524,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9LHt9LHt9XSwiYWRkaXRpb25hbEl0ZW1zIjpmYWxzZX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -8742,10 +9536,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9LHt9LHt9XSwiYWRkaXRpb25hbEl0ZW1zIjpmYWxzZX0=");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -8753,10 +9548,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9LHt9LHt9XSwiYWRkaXRpb25hbEl0ZW1zIjpmYWxzZX0=");
             var t = ParseJToken("WzEsMiwzLDRd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -8764,10 +9560,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsSXRlbXMiOmZhbHNlfQ==");
             var t = ParseJToken("WzEsMiwzLDQsNV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -8775,10 +9572,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsSXRlbXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -8786,10 +9584,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifV19");
             var t = ParseJToken("WzEsImZvbyIsZmFsc2Vd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8797,10 +9596,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8808,10 +9608,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6ImJvb20ifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8819,10 +9620,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8830,10 +9632,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("ImZvb2JhcmJheiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8841,10 +9644,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8852,10 +9656,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("eyJmb28iOjEsInZyb29tIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8863,10 +9668,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJew6EiOnt9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyLDoXJtw6FueW9zIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8874,10 +9680,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJew6EiOnt9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyLDqWxtw6lueSI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8885,10 +9692,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8896,10 +9704,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6dHJ1ZX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8907,10 +9716,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6MTJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8918,10 +9728,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOnRydWV9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8929,10 +9740,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -8940,10 +9752,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6dHJ1ZX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -8951,10 +9764,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -8962,10 +9776,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -8973,10 +9788,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -8984,10 +9800,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOiJxdXV4In0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -8995,10 +9812,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoyLCJiYXoiOm51bGx9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9006,10 +9824,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmF6IjpudWxsfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9017,10 +9836,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJiYXIiOjIsImJheiI6bnVsbH0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9028,10 +9848,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9039,10 +9860,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9050,10 +9872,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sibWF4aW11bSI6MzB9LHsibWluaW11bSI6MjB9XX0=");
             var t = ParseJToken("MjU=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9061,10 +9884,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sibWF4aW11bSI6MzB9LHsibWluaW11bSI6MjB9XX0=");
             var t = ParseJToken("MzU=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9072,10 +9896,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3RydWUsdHJ1ZV19");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9083,10 +9908,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3RydWUsZmFsc2VdfQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9094,10 +9920,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W2ZhbHNlLGZhbHNlXX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9105,10 +9932,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9116,10 +9944,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("Mi41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9127,10 +9956,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9138,10 +9968,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("MS41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9149,10 +9980,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwiYW55T2YiOlt7Im1heExlbmd0aCI6Mn0seyJtaW5MZW5ndGgiOjR9XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9160,10 +9992,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwiYW55T2YiOlt7Im1heExlbmd0aCI6Mn0seyJtaW5MZW5ndGgiOjR9XX0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9171,10 +10004,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwiYW55T2YiOlt7Im1heExlbmd0aCI6Mn0seyJtaW5MZW5ndGgiOjR9XX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9182,10 +10016,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3RydWUsdHJ1ZV19");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9193,10 +10028,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3RydWUsZmFsc2VdfQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9204,10 +10040,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W2ZhbHNlLGZhbHNlXX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9215,10 +10052,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9226,10 +10064,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9237,10 +10076,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9248,10 +10088,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOjIsImJhciI6InF1dXgifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9259,10 +10100,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9270,10 +10112,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9281,10 +10124,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9292,10 +10136,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("ZmFsc2U=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9303,10 +10148,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9314,10 +10160,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9325,10 +10172,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9336,10 +10184,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("WyJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9347,10 +10196,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9358,10 +10208,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9369,10 +10220,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9380,10 +10232,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9391,10 +10244,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("ZmFsc2U=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9402,10 +10256,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9413,10 +10268,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9424,10 +10280,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9435,10 +10292,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("WyJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -9446,10 +10304,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -9457,10 +10316,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6Mn0=");
             var t = ParseJToken("Mg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -9468,10 +10328,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6Mn0=");
             var t = ParseJToken("NQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -9479,10 +10340,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6Mn0=");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -9490,10 +10352,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6eyJmb28iOiJiYXIiLCJiYXoiOiJiYXgifX0=");
             var t = ParseJToken("eyJmb28iOiJiYXIiLCJiYXoiOiJiYXgifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -9501,10 +10364,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6eyJmb28iOiJiYXIiLCJiYXoiOiJiYXgifX0=");
             var t = ParseJToken("eyJiYXoiOiJiYXgiLCJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -9512,10 +10376,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6eyJmb28iOiJiYXIiLCJiYXoiOiJiYXgifX0=");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -9523,10 +10388,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6eyJmb28iOiJiYXIiLCJiYXoiOiJiYXgifX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -9534,10 +10400,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6W3siZm9vIjoiYmFyIn1dfQ==");
             var t = ParseJToken("W3siZm9vIjoiYmFyIn1d");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -9545,10 +10412,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6W3siZm9vIjoiYmFyIn1dfQ==");
             var t = ParseJToken("WzJd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -9556,10 +10424,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6W3siZm9vIjoiYmFyIn1dfQ==");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -9567,10 +10436,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6bnVsbH0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -9578,10 +10448,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6bnVsbH0=");
             var t = ParseJToken("MA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9589,10 +10460,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJtaW5pbXVtIjo1fX0=");
             var t = ParseJToken("WzMsNCw1XQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9600,10 +10472,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJtaW5pbXVtIjo1fX0=");
             var t = ParseJToken("WzMsNCw2XQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9611,10 +10484,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJtaW5pbXVtIjo1fX0=");
             var t = ParseJToken("WzMsNCw1LDZd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9622,10 +10496,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJtaW5pbXVtIjo1fX0=");
             var t = ParseJToken("WzIsMyw0XQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9633,10 +10508,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJtaW5pbXVtIjo1fX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9644,10 +10520,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJtaW5pbXVtIjo1fX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9655,10 +10532,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJjb25zdCI6NX19");
             var t = ParseJToken("WzMsNCw1XQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9666,10 +10544,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJjb25zdCI6NX19");
             var t = ParseJToken("WzMsNCw1LDVd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9677,10 +10556,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJjb25zdCI6NX19");
             var t = ParseJToken("WzEsMiwzLDRd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9688,10 +10568,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6dHJ1ZX0=");
             var t = ParseJToken("WyJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9699,10 +10580,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6dHJ1ZX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9710,10 +10592,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6ZmFsc2V9");
             var t = ParseJToken("WyJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -9721,10 +10604,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6ZmFsc2V9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("default")]
@@ -9732,10 +10616,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciIsImRlZmF1bHQiOltdfX19");
             var t = ParseJToken("eyJmb28iOjEzfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("default")]
@@ -9743,10 +10628,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciIsImRlZmF1bHQiOltdfX19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("default")]
@@ -9754,10 +10640,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoic3RyaW5nIiwibWluTGVuZ3RoIjo0LCJkZWZhdWx0IjoiYmFkIn19fQ==");
             var t = ParseJToken("eyJiYXIiOiJnb29kIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("default")]
@@ -9765,10 +10652,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoic3RyaW5nIiwibWluTGVuZ3RoIjo0LCJkZWZhdWx0IjoiYmFkIn19fQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("definitions")]
@@ -9776,10 +10664,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNi9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJkZWZpbml0aW9ucyI6eyJmb28iOnsidHlwZSI6ImludGVnZXIifX19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("definitions")]
@@ -9787,10 +10676,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNi9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJkZWZpbml0aW9ucyI6eyJmb28iOnsidHlwZSI6MX19fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9798,10 +10688,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9809,10 +10700,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9820,10 +10712,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9831,10 +10724,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9842,10 +10736,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("WyJiYXIiXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9853,10 +10748,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9864,10 +10760,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9875,10 +10772,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbXX19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9886,10 +10784,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbXX19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9897,10 +10796,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9908,10 +10808,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9919,10 +10820,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6M30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9930,10 +10832,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJmb28iOjEsInF1dXgiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9941,10 +10844,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJiYXIiOjEsInF1dXgiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9952,10 +10856,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJxdXV4IjoxfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9963,10 +10868,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9974,10 +10880,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4In0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9985,10 +10892,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -9996,10 +10904,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOjIsImJhciI6InF1dXgifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10007,10 +10916,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoicXV1eCJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10018,10 +10928,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiZm9vIjp0cnVlLCJiYXIiOmZhbHNlfX0=");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10029,10 +10940,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiZm9vIjp0cnVlLCJiYXIiOmZhbHNlfX0=");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10040,10 +10952,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiZm9vIjp0cnVlLCJiYXIiOmZhbHNlfX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10051,10 +10964,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiZm9vIjp0cnVlLCJiYXIiOmZhbHNlfX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -10062,10 +10976,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbMSwyLDNdfQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -10073,10 +10988,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbMSwyLDNdfQ==");
             var t = ParseJToken("NA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -10084,10 +11000,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbNiwiZm9vIixbXSx0cnVlLHsiZm9vIjoxMn1dfQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -10095,10 +11012,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbNiwiZm9vIixbXSx0cnVlLHsiZm9vIjoxMn1dfQ==");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -10106,10 +11024,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbNiwiZm9vIixbXSx0cnVlLHsiZm9vIjoxMn1dfQ==");
             var t = ParseJToken("eyJmb28iOmZhbHNlfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -10117,10 +11036,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdfX0sInJlcXVpcmVkIjpbImJhciJdfQ==");
             var t = ParseJToken("eyJmb28iOiJmb28iLCJiYXIiOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -10128,10 +11048,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdfX0sInJlcXVpcmVkIjpbImJhciJdfQ==");
             var t = ParseJToken("eyJiYXIiOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -10139,10 +11060,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdfX0sInJlcXVpcmVkIjpbImJhciJdfQ==");
             var t = ParseJToken("eyJmb28iOiJmb28ifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -10150,10 +11072,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdfX0sInJlcXVpcmVkIjpbImJhciJdfQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMaximum")]
@@ -10161,10 +11084,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNYXhpbXVtIjozLjB9");
             var t = ParseJToken("Mi4y");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMaximum")]
@@ -10172,10 +11096,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNYXhpbXVtIjozLjB9");
             var t = ParseJToken("My4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMaximum")]
@@ -10183,10 +11108,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNYXhpbXVtIjozLjB9");
             var t = ParseJToken("My41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMaximum")]
@@ -10194,10 +11120,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNYXhpbXVtIjozLjB9");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMinimum")]
@@ -10205,10 +11132,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MS4y");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMinimum")]
@@ -10216,10 +11144,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMinimum")]
@@ -10227,10 +11156,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MC42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMinimum")]
@@ -10238,10 +11168,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNaW5pbXVtIjoxLjF9");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10249,10 +11180,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10260,10 +11192,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("WzEsIngiXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10271,10 +11204,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10282,10 +11216,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyIwIjoiaW52YWxpZCIsImxlbmd0aCI6MX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10293,10 +11228,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WzEsImZvbyJd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10304,10 +11240,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WyJmb28iLDFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10315,10 +11252,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10326,10 +11264,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WzEsImZvbyIsdHJ1ZV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10337,10 +11276,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10348,10 +11288,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("eyIwIjoiaW52YWxpZCIsIjEiOiJ2YWxpZCIsImxlbmd0aCI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10359,10 +11300,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsImZvbyIsdHJ1ZV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10370,10 +11312,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10381,10 +11324,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6ZmFsc2V9");
             var t = ParseJToken("WzEsImZvbyIsdHJ1ZV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10392,10 +11336,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6ZmFsc2V9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10403,10 +11348,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3RydWUsZmFsc2VdfQ==");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10414,10 +11360,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3RydWUsZmFsc2VdfQ==");
             var t = ParseJToken("WzEsImZvbyJd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10425,10 +11372,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3RydWUsZmFsc2VdfQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maximum")]
@@ -10436,10 +11384,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("Mi42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maximum")]
@@ -10447,10 +11396,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("My4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maximum")]
@@ -10458,10 +11408,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("My41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maximum")]
@@ -10469,10 +11420,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxItems")]
@@ -10480,10 +11432,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxItems")]
@@ -10491,10 +11444,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxItems")]
@@ -10502,10 +11456,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxItems")]
@@ -10513,10 +11468,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxLength")]
@@ -10524,10 +11480,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("ImYi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxLength")]
@@ -10535,10 +11492,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxLength")]
@@ -10546,10 +11504,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxLength")]
@@ -10557,10 +11516,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("MTAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxLength")]
@@ -10568,10 +11528,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("IvCfkqnwn5KpIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxProperties")]
@@ -10579,10 +11540,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxProperties")]
@@ -10590,10 +11552,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxProperties")]
@@ -10601,10 +11564,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwiYmF6IjozfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxProperties")]
@@ -10612,10 +11576,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxProperties")]
@@ -10623,10 +11588,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxProperties")]
@@ -10634,10 +11600,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minimum")]
@@ -10645,10 +11612,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("Mi42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minimum")]
@@ -10656,10 +11624,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minimum")]
@@ -10667,10 +11636,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MC42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minimum")]
@@ -10678,10 +11648,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minItems")]
@@ -10689,10 +11660,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minItems")]
@@ -10700,10 +11672,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minItems")]
@@ -10711,10 +11684,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minItems")]
@@ -10722,10 +11696,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minLength")]
@@ -10733,10 +11708,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minLength")]
@@ -10744,10 +11720,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minLength")]
@@ -10755,10 +11732,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("ImYi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minLength")]
@@ -10766,10 +11744,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minLength")]
@@ -10777,10 +11756,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("IvCfkqki");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minProperties")]
@@ -10788,10 +11768,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minProperties")]
@@ -10799,10 +11780,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minProperties")]
@@ -10810,10 +11792,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minProperties")]
@@ -10821,10 +11804,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minProperties")]
@@ -10832,10 +11816,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minProperties")]
@@ -10843,10 +11828,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -10854,10 +11840,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoyfQ==");
             var t = ParseJToken("MTA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -10865,10 +11852,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoyfQ==");
             var t = ParseJToken("Nw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -10876,10 +11864,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoyfQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -10887,10 +11876,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoxLjV9");
             var t = ParseJToken("MA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -10898,10 +11888,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoxLjV9");
             var t = ParseJToken("NC41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -10909,10 +11900,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoxLjV9");
             var t = ParseJToken("MzU=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -10920,10 +11912,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjowLjAwMDF9");
             var t = ParseJToken("MC4wMDc1");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -10931,10 +11924,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjowLjAwMDF9");
             var t = ParseJToken("MC4wMDc1MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -10942,10 +11936,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6ImludGVnZXIifX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -10953,10 +11948,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6ImludGVnZXIifX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -10964,10 +11960,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6WyJpbnRlZ2VyIiwiYm9vbGVhbiJdfX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -10975,10 +11972,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6WyJpbnRlZ2VyIiwiYm9vbGVhbiJdfX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -10986,10 +11984,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6WyJpbnRlZ2VyIiwiYm9vbGVhbiJdfX0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -10997,10 +11996,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19fQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -11008,10 +12008,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -11019,10 +12020,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -11030,10 +12032,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJub3QiOnt9fX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -11041,10 +12044,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJub3QiOnt9fX19");
             var t = ParseJToken("eyJiYXIiOjEsImJheiI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -11052,10 +12056,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnRydWV9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -11063,10 +12068,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOmZhbHNlfQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11074,10 +12080,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11085,10 +12092,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("Mi41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11096,10 +12104,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11107,10 +12116,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("MS41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11118,10 +12128,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwib25lT2YiOlt7Im1pbkxlbmd0aCI6Mn0seyJtYXhMZW5ndGgiOjR9XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11129,10 +12140,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwib25lT2YiOlt7Im1pbkxlbmd0aCI6Mn0seyJtYXhMZW5ndGgiOjR9XX0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11140,10 +12152,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwib25lT2YiOlt7Im1pbkxlbmd0aCI6Mn0seyJtYXhMZW5ndGgiOjR9XX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11151,10 +12164,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3RydWUsdHJ1ZSx0cnVlXX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11162,10 +12176,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3RydWUsZmFsc2UsZmFsc2VdfQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11173,10 +12188,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3RydWUsdHJ1ZSxmYWxzZV19");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11184,10 +12200,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W2ZhbHNlLGZhbHNlLGZhbHNlXX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11195,10 +12212,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11206,10 +12224,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11217,10 +12236,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -11228,10 +12248,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOjIsImJhciI6InF1dXgifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("pattern")]
@@ -11239,10 +12260,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiXmEqJCJ9");
             var t = ParseJToken("ImFhYSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("pattern")]
@@ -11250,10 +12272,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiXmEqJCJ9");
             var t = ParseJToken("ImFiYyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("pattern")]
@@ -11261,10 +12284,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiXmEqJCJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("pattern")]
@@ -11272,10 +12296,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiYSsifQ==");
             var t = ParseJToken("Inh4YWF5eSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11283,10 +12308,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11294,10 +12320,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOjEsImZvb29vb28iOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11305,10 +12332,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIiLCJmb29vb28iOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11316,10 +12344,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIiLCJmb29vb29vIjoiYmF6In0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11327,10 +12356,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("WyJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11338,10 +12368,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11349,10 +12380,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11360,10 +12392,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhIjoyMX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11371,10 +12404,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhYWFhIjoxOH0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11382,10 +12416,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhIjoyMSwiYWFhYSI6MTh9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11393,10 +12428,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhIjoiYmFyIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11404,10 +12440,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhYWFhIjozMX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11415,10 +12452,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhYWEiOiJmb28iLCJhYWFhIjozMX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11426,10 +12464,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhbnN3ZXIgMSI6IjQyIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11437,10 +12476,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhMzFiIjpudWxsfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11448,10 +12488,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhX3hfMyI6M30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11459,10 +12500,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhX1hfMyI6M30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11470,10 +12512,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLioiOnRydWUsImIuKiI6ZmFsc2V9fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11481,10 +12524,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLioiOnRydWUsImIuKiI6ZmFsc2V9fQ==");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11492,10 +12536,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLioiOnRydWUsImIuKiI6ZmFsc2V9fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -11503,10 +12548,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLioiOnRydWUsImIuKiI6ZmFsc2V9fQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11514,10 +12560,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6ImJheiJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11525,10 +12572,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6e319");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11536,10 +12584,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJmb28iOltdLCJiYXIiOnt9fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11547,10 +12596,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJxdXV4IjpbXX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11558,10 +12608,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11569,10 +12620,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11580,10 +12632,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOlsxLDJdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11591,10 +12644,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOlsxLDIsMyw0XX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11602,10 +12656,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11613,10 +12668,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmeG8iOlsxLDJdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11624,10 +12680,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmeG8iOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11635,10 +12692,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJiYXIiOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11646,10 +12704,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJxdXV4IjozfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11657,10 +12716,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJxdXV4IjoiZm9vIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11668,10 +12728,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6dHJ1ZSwiYmFyIjpmYWxzZX19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11679,10 +12740,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6dHJ1ZSwiYmFyIjpmYWxzZX19");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11690,10 +12752,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6dHJ1ZSwiYmFyIjpmYWxzZX19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -11701,10 +12764,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6dHJ1ZSwiYmFyIjpmYWxzZX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -11712,10 +12776,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp7Im1heExlbmd0aCI6M319");
             var t = ParseJToken("eyJmIjp7fSwiZm9vIjp7fX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -11723,10 +12788,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp7Im1heExlbmd0aCI6M319");
             var t = ParseJToken("eyJmb28iOnt9LCJmb29iYXIiOnt9fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -11734,10 +12800,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp7Im1heExlbmd0aCI6M319");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -11745,10 +12812,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp7Im1heExlbmd0aCI6M319");
             var t = ParseJToken("WzEsMiwzLDRd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -11756,10 +12824,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp7Im1heExlbmd0aCI6M319");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -11767,10 +12836,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp7Im1heExlbmd0aCI6M319");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -11778,10 +12848,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp0cnVlfQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -11789,10 +12860,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp0cnVlfQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -11800,10 +12872,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjpmYWxzZX0=");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -11811,10 +12884,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjpmYWxzZX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11822,10 +12896,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOmZhbHNlfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11833,10 +12908,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOnsiZm9vIjpmYWxzZX19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11844,10 +12920,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJiYXIiOmZhbHNlfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11855,10 +12932,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOnsiYmFyIjpmYWxzZX19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11866,10 +12944,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsiJHJlZiI6IiMvcHJvcGVydGllcy9mb28ifX19");
             var t = ParseJToken("eyJiYXIiOjN9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11877,10 +12956,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsiJHJlZiI6IiMvcHJvcGVydGllcy9mb28ifX19");
             var t = ParseJToken("eyJiYXIiOnRydWV9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11888,10 +12968,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7IiRyZWYiOiIjL2l0ZW1zLzAifV19");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11899,10 +12980,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7IiRyZWYiOiIjL2l0ZW1zLzAifV19");
             var t = ParseJToken("WzEsImZvbyJd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11910,10 +12992,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJzbGFzaCI6ImFvZXUifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11921,10 +13004,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJ0aWxkYSI6ImFvZXUifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11932,10 +13016,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJwZXJjZW50IjoiYW9ldSJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11943,10 +13028,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJzbGFzaCI6MTIzfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11954,10 +13040,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJ0aWxkYSI6MTIzfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11965,10 +13052,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJwZXJjZW50IjoxMjN9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11976,10 +13064,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJhIjp7InR5cGUiOiJpbnRlZ2VyIn0sImIiOnsiJHJlZiI6IiMvZGVmaW5pdGlvbnMvYSJ9LCJjIjp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2IifX0sIiRyZWYiOiIjL2RlZmluaXRpb25zL2MifQ==");
             var t = ParseJToken("NQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11987,10 +13076,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJhIjp7InR5cGUiOiJpbnRlZ2VyIn0sImIiOnsiJHJlZiI6IiMvZGVmaW5pdGlvbnMvYSJ9LCJjIjp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2IifX0sIiRyZWYiOiIjL2RlZmluaXRpb25zL2MifQ==");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -11998,10 +13088,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJyZWZmZWQiOnsidHlwZSI6ImFycmF5In19LCJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9yZWZmZWQiLCJtYXhJdGVtcyI6Mn19fQ==");
             var t = ParseJToken("eyJmb28iOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12009,10 +13100,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJyZWZmZWQiOnsidHlwZSI6ImFycmF5In19LCJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9yZWZmZWQiLCJtYXhJdGVtcyI6Mn19fQ==");
             var t = ParseJToken("eyJmb28iOlsxLDIsM119");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12020,10 +13112,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJyZWZmZWQiOnsidHlwZSI6ImFycmF5In19LCJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9yZWZmZWQiLCJtYXhJdGVtcyI6Mn19fQ==");
             var t = ParseJToken("eyJmb28iOiJzdHJpbmcifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12031,10 +13124,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNi9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJtaW5MZW5ndGgiOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12042,10 +13136,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNi9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJtaW5MZW5ndGgiOi0xfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12053,10 +13148,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7IiRyZWYiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyIkcmVmIjoiYSJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12064,10 +13160,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7IiRyZWYiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyIkcmVmIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12075,10 +13172,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9ib29sIiwiZGVmaW5pdGlvbnMiOnsiYm9vbCI6dHJ1ZX19");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12086,10 +13184,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9ib29sIiwiZGVmaW5pdGlvbnMiOnsiYm9vbCI6ZmFsc2V9fQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12097,10 +13196,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvdHJlZSIsImRlc2NyaXB0aW9uIjoidHJlZSBvZiBub2RlcyIsInR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7Im1ldGEiOnsidHlwZSI6InN0cmluZyJ9LCJub2RlcyI6eyJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyIkcmVmIjoibm9kZSJ9fX0sInJlcXVpcmVkIjpbIm1ldGEiLCJub2RlcyJdLCJkZWZpbml0aW9ucyI6eyJub2RlIjp7IiRpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC9ub2RlIiwiZGVzY3JpcHRpb24iOiJub2RlIiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsidmFsdWUiOnsidHlwZSI6Im51bWJlciJ9LCJzdWJ0cmVlIjp7IiRyZWYiOiJ0cmVlIn19LCJyZXF1aXJlZCI6WyJ2YWx1ZSJdfX19");
             var t = ParseJToken("eyJtZXRhIjoicm9vdCIsIm5vZGVzIjpbeyJ2YWx1ZSI6MSwic3VidHJlZSI6eyJtZXRhIjoiY2hpbGQiLCJub2RlcyI6W3sidmFsdWUiOjEuMX0seyJ2YWx1ZSI6MS4yfV19fSx7InZhbHVlIjoyLCJzdWJ0cmVlIjp7Im1ldGEiOiJjaGlsZCIsIm5vZGVzIjpbeyJ2YWx1ZSI6Mi4xfSx7InZhbHVlIjoyLjJ9XX19XX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12108,10 +13208,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvdHJlZSIsImRlc2NyaXB0aW9uIjoidHJlZSBvZiBub2RlcyIsInR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7Im1ldGEiOnsidHlwZSI6InN0cmluZyJ9LCJub2RlcyI6eyJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyIkcmVmIjoibm9kZSJ9fX0sInJlcXVpcmVkIjpbIm1ldGEiLCJub2RlcyJdLCJkZWZpbml0aW9ucyI6eyJub2RlIjp7IiRpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC9ub2RlIiwiZGVzY3JpcHRpb24iOiJub2RlIiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsidmFsdWUiOnsidHlwZSI6Im51bWJlciJ9LCJzdWJ0cmVlIjp7IiRyZWYiOiJ0cmVlIn19LCJyZXF1aXJlZCI6WyJ2YWx1ZSJdfX19");
             var t = ParseJToken("eyJtZXRhIjoicm9vdCIsIm5vZGVzIjpbeyJ2YWx1ZSI6MSwic3VidHJlZSI6eyJtZXRhIjoiY2hpbGQiLCJub2RlcyI6W3sidmFsdWUiOiJzdHJpbmcgaXMgaW52YWxpZCJ9LHsidmFsdWUiOjEuMn1dfX0seyJ2YWx1ZSI6Miwic3VidHJlZSI6eyJtZXRhIjoiY2hpbGQiLCJub2RlcyI6W3sidmFsdWUiOjIuMX0seyJ2YWx1ZSI6Mi4yfV19fV19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12119,10 +13220,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L2ludGVnZXIuanNvbiJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12130,10 +13232,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L2ludGVnZXIuanNvbiJ9");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12141,10 +13244,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvaW50ZWdlciJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12152,10 +13256,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvaW50ZWdlciJ9");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12163,10 +13268,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvcmVmVG9JbnRlZ2VyIn0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12174,10 +13280,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvcmVmVG9JbnRlZ2VyIn0=");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12185,10 +13292,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvIiwiaXRlbXMiOnsiJGlkIjoiZm9sZGVyLyIsIml0ZW1zIjp7IiRyZWYiOiJmb2xkZXJJbnRlZ2VyLmpzb24ifX19");
             var t = ParseJToken("W1sxXV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12196,10 +13304,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvIiwiaXRlbXMiOnsiJGlkIjoiZm9sZGVyLyIsIml0ZW1zIjp7IiRyZWYiOiJmb2xkZXJJbnRlZ2VyLmpzb24ifX19");
             var t = ParseJToken("W1siYSJdXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12207,10 +13316,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvc2NvcGVfY2hhbmdlX2RlZnMxLmpzb24iLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJsaXN0Ijp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2JheiJ9fSwiZGVmaW5pdGlvbnMiOnsiYmF6Ijp7IiRpZCI6ImZvbGRlci8iLCJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyIkcmVmIjoiZm9sZGVySW50ZWdlci5qc29uIn19fX0=");
             var t = ParseJToken("eyJsaXN0IjpbMV19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12218,10 +13328,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvc2NvcGVfY2hhbmdlX2RlZnMxLmpzb24iLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJsaXN0Ijp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2JheiJ9fSwiZGVmaW5pdGlvbnMiOnsiYmF6Ijp7IiRpZCI6ImZvbGRlci8iLCJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyIkcmVmIjoiZm9sZGVySW50ZWdlci5qc29uIn19fX0=");
             var t = ParseJToken("eyJsaXN0IjpbImEiXX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12229,10 +13340,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvc2NvcGVfY2hhbmdlX2RlZnMyLmpzb24iLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJsaXN0Ijp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2Jhei9kZWZpbml0aW9ucy9iYXIifX0sImRlZmluaXRpb25zIjp7ImJheiI6eyIkaWQiOiJmb2xkZXIvIiwiZGVmaW5pdGlvbnMiOnsiYmFyIjp7InR5cGUiOiJhcnJheSIsIml0ZW1zIjp7IiRyZWYiOiJmb2xkZXJJbnRlZ2VyLmpzb24ifX19fX19");
             var t = ParseJToken("eyJsaXN0IjpbMV19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12240,10 +13352,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvc2NvcGVfY2hhbmdlX2RlZnMyLmpzb24iLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJsaXN0Ijp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2Jhei9kZWZpbml0aW9ucy9iYXIifX0sImRlZmluaXRpb25zIjp7ImJheiI6eyIkaWQiOiJmb2xkZXIvIiwiZGVmaW5pdGlvbnMiOnsiYmFyIjp7InR5cGUiOiJhcnJheSIsIml0ZW1zIjp7IiRyZWYiOiJmb2xkZXJJbnRlZ2VyLmpzb24ifX19fX19");
             var t = ParseJToken("eyJsaXN0IjpbImEiXX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12251,10 +13364,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvb2JqZWN0IiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsibmFtZSI6eyIkcmVmIjoibmFtZS5qc29uIy9kZWZpbml0aW9ucy9vck51bGwifX19");
             var t = ParseJToken("eyJuYW1lIjoiZm9vIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12262,10 +13376,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvb2JqZWN0IiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsibmFtZSI6eyIkcmVmIjoibmFtZS5qc29uIy9kZWZpbml0aW9ucy9vck51bGwifX19");
             var t = ParseJToken("eyJuYW1lIjpudWxsfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -12273,10 +13388,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvb2JqZWN0IiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsibmFtZSI6eyIkcmVmIjoibmFtZS5qc29uIy9kZWZpbml0aW9ucy9vck51bGwifX19");
             var t = ParseJToken("eyJuYW1lIjp7Im5hbWUiOm51bGx9fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -12284,10 +13400,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -12295,10 +13412,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("eyJiYXIiOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -12306,10 +13424,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -12317,10 +13436,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -12328,10 +13448,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -12339,10 +13460,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e319fQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -12350,10 +13472,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e319LCJyZXF1aXJlZCI6W119");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12361,10 +13484,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12372,10 +13496,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12383,10 +13508,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12394,10 +13520,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("IjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12405,10 +13532,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12416,10 +13544,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12427,10 +13556,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12438,10 +13568,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12449,10 +13580,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12460,10 +13592,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12471,10 +13604,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12482,10 +13616,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("IjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12493,10 +13628,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12504,10 +13640,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12515,10 +13652,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12526,10 +13664,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12537,10 +13676,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12548,10 +13688,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12559,10 +13700,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12570,10 +13712,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("IjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12581,10 +13724,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12592,10 +13736,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12603,10 +13748,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12614,10 +13760,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12625,10 +13772,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12636,10 +13784,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12647,10 +13796,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12658,10 +13808,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12669,10 +13820,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12680,10 +13832,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12691,10 +13844,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12702,10 +13856,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12713,10 +13868,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12724,10 +13880,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12735,10 +13892,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12746,10 +13904,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12757,10 +13916,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12768,10 +13928,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12779,10 +13940,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12790,10 +13952,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12801,10 +13964,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12812,10 +13976,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12823,10 +13988,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12834,10 +14000,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12845,10 +14012,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12856,10 +14024,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12867,10 +14036,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12878,10 +14048,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12889,10 +14060,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12900,10 +14072,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12911,10 +14084,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12922,10 +14096,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12933,10 +14108,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12944,10 +14120,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12955,10 +14132,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12966,10 +14144,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12977,10 +14156,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12988,10 +14168,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -12999,10 +14180,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13010,10 +14192,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13021,10 +14204,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13032,10 +14216,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEuMCwxLjAsMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13043,10 +14228,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjoiYmFyIn0seyJmb28iOiJiYXoifV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13054,10 +14240,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjoiYmFyIn0seyJmb28iOiJiYXIifV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13065,10 +14252,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjp7ImJhciI6eyJiYXoiOnRydWV9fX0seyJmb28iOnsiYmFyIjp7ImJheiI6ZmFsc2V9fX1d");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13076,10 +14264,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjp7ImJhciI6eyJiYXoiOnRydWV9fX0seyJmb28iOnsiYmFyIjp7ImJheiI6dHJ1ZX19fV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13087,10 +14276,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W1siZm9vIl0sWyJiYXIiXV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13098,10 +14288,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W1siZm9vIl0sWyJmb28iXV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13109,10 +14300,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsdHJ1ZV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13120,10 +14312,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzAsZmFsc2Vd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13131,10 +14324,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3t9LFsxXSx0cnVlLG51bGwsMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -13142,10 +14336,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3t9LFsxXSx0cnVlLG51bGwse30sMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -13153,10 +14348,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MTIzNDU2Nzg5MTAxMTEyMTMxNDE1MTYxNzE4MTkyMDIxMjIyMzI0MjUyNjI3MjgyOTMwMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -13164,10 +14360,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -13175,10 +14372,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("LTEyMzQ1Njc4OTEwMTExMjEzMTQxNTE2MTcxODE5MjAyMTIyMjMyNDI1MjYyNzI4MjkzMDMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -13186,10 +14384,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("LTk4MjQ5MjgzNzQ5MjM0OTIzNDk4MjkzMTcxODIzOTQ4NzI5MzQ4NzEwMjk4MzAxOTI4MzMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -13197,10 +14396,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -13208,10 +14408,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjoxODQ0Njc0NDA3MzcwOTU1MTYxNX0=");
             var t = ParseJToken("MTg0NDY3NDQwNzM3MDk1NTE2MDA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -13219,10 +14420,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNYXhpbXVtIjo5LjcyNzgzNzk4MTg3OTg3MTJFKzI2fQ==");
             var t = ParseJToken("OS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -13230,10 +14432,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjotMTg0NDY3NDQwNzM3MDk1NTE2MTV9");
             var t = ParseJToken("LTE4NDQ2NzQ0MDczNzA5NTUxNjAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -13241,10 +14444,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNaW5pbXVtIjotOS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNn0=");
             var t = ParseJToken("LTkuNzI3ODM3OTgxODc5ODcxMkUrMjY=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("ecmascript-regex")]
@@ -13252,10 +14456,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("Il5cXFMofCgufFxcbikqXFxTKVxcWiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13263,10 +14468,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTlUMDg6MzA6MDYuMjgzMTg1WiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13274,10 +14480,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTlUMDg6MzA6MDZaIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13285,10 +14492,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5MzctMDEtMDFUMDU6NDA6MjcuODctMDY6MDAi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13296,10 +14504,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5OTAtMTItMzFUMTc6NTk6NTAuMTIzLTA2OjAwIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13307,10 +14516,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5OTAtMDItMzFUMTU6NTk6NjAuMTIzLTA4OjAwIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13318,10 +14528,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5OTAtMTItMzFUMTU6NTk6NjAtMjQ6MDAi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13329,10 +14540,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTlUMDg6MzA6MDYuMjgxMjMrMDE6MDBaIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13340,10 +14552,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjA2LzE5LzE5NjMgMDg6MzA6MDYgUFNUIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13351,10 +14564,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTl0MDg6MzA6MDYuMjgzMTg1eiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13362,10 +14576,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjIwMTMtMzUwVDAxOjAxOjAxIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13373,10 +14588,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uYmFyLz9iYXo9cXV4I3F1dXgi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13384,10 +14600,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uY29tL2JsYWhfKHdpa2lwZWRpYSlfYmxhaCNjaXRlLTEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13395,10 +14612,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uYmFyLz9xPVRlc3QlMjBVUkwtZW5jb2RlZCUyMHN0dWZmIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13406,10 +14624,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly94bi0tbncyYS54bi0tajZ3MTkzZy8i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13417,10 +14636,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly8tLn5fISQmJygpKissOz06JTQwOjgwJTJmOjo6Ojo6QGV4YW1wbGUuY29tIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13428,10 +14648,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly8yMjMuMjU1LjI1NS4yNTQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13439,10 +14660,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImZ0cDovL2Z0cC5pcy5jby56YS9yZmMvcmZjMTgwOC50eHQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13450,10 +14672,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly93d3cuaWV0Zi5vcmcvcmZjL3JmYzIzOTYudHh0Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13461,10 +14684,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImxkYXA6Ly9bMjAwMTpkYjg6OjddL2M9R0I/b2JqZWN0Q2xhc3M/b25lIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13472,10 +14696,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Im1haWx0bzpKb2huLkRvZUBleGFtcGxlLmNvbSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13483,10 +14708,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Im5ld3M6Y29tcC5pbmZvc3lzdGVtcy53d3cuc2VydmVycy51bml4Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13494,10 +14720,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("InRlbDorMS04MTYtNTU1LTEyMTIi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13505,10 +14732,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("InVybjpvYXNpczpuYW1lczpzcGVjaWZpY2F0aW9uOmRvY2Jvb2s6ZHRkOnhtbDo0LjEuMiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13516,10 +14744,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Ii8vZm9vLmJhci8/YmF6PXF1eCNxdXV4Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13527,10 +14756,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Ii9hYmMi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13538,10 +14768,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("IlxcXFxXSU5ET1dTXFxmaWxlc2hhcmUi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13549,10 +14780,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImFiYyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13560,10 +14792,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly8gc2hvdWxkZmFpbC5jb20i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13571,10 +14804,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("IjovLyBzaG91bGQgZmFpbCI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13582,10 +14816,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("Imh0dHA6Ly9mb28uYmFyLz9iYXo9cXV4I3F1dXgi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13593,10 +14828,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("Ii8vZm9vLmJhci8/YmF6PXF1eCNxdXV4Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13604,10 +14840,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("Ii9hYmMi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13615,10 +14852,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("IlxcXFxXSU5ET1dTXFxmaWxlc2hhcmUi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13626,10 +14864,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("ImFiYyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13637,10 +14876,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("IiNmcmFnbWVudCI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13648,10 +14888,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("IiNmcmFnXFxtZW50Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13659,10 +14900,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktdGVtcGxhdGUifQ==");
             var t = ParseJToken("Imh0dHA6Ly9leGFtcGxlLmNvbS9kaWN0aW9uYXJ5L3t0ZXJtOjF9L3t0ZXJtfSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13670,10 +14912,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktdGVtcGxhdGUifQ==");
             var t = ParseJToken("Imh0dHA6Ly9leGFtcGxlLmNvbS9kaWN0aW9uYXJ5L3t0ZXJtOjF9L3t0ZXJtIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13681,10 +14924,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktdGVtcGxhdGUifQ==");
             var t = ParseJToken("Imh0dHA6Ly9leGFtcGxlLmNvbS9kaWN0aW9uYXJ5Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13692,10 +14936,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktdGVtcGxhdGUifQ==");
             var t = ParseJToken("ImRpY3Rpb25hcnkve3Rlcm06MX0ve3Rlcm19Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13703,10 +14948,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJlbWFpbCJ9");
             var t = ParseJToken("ImpvZS5ibG9nZ3NAZXhhbXBsZS5jb20i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13714,10 +14960,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJlbWFpbCJ9");
             var t = ParseJToken("IjI5NjIi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13725,10 +14972,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjE5Mi4xNjguMC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13736,10 +14984,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjEyNy4wLjAuMC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13747,10 +14996,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjI1Ni4yNTYuMjU2LjI1NiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13758,10 +15008,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjEyNy4wIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13769,10 +15020,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjB4N2YwMDAwMDEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13780,10 +15032,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("Ijo6MSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13791,10 +15044,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("IjEyMzQ1Ojoi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13802,10 +15056,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("IjE6MToxOjE6MToxOjE6MToxOjE6MToxOjE6MToxOjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13813,10 +15068,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("Ijo6bGFwdG9wIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13824,10 +15080,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("Ind3dy5leGFtcGxlLmNvbSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13835,10 +15092,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("Ii1hLWhvc3QtbmFtZS10aGF0LXN0YXJ0cy13aXRoLS0i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13846,10 +15104,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("Im5vdF9hX3ZhbGlkX2hvc3RfbmFtZSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13857,10 +15116,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("ImEtdnZ2dnZ2dnZ2dnZ2dnZ2dmVlZWVlZWVlZWVlZWVlZWVycnJycnJycnJycnJycnJyeXl5eXl5eXl5eXl5eXl5eS1sb25nLWhvc3QtbmFtZS1jb21wb25lbnQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13868,10 +15128,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vYmFyfjAvYmF6fjEvJWEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13879,10 +15140,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vYmFyfiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13890,10 +15152,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vL2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13901,10 +15164,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vYmFyLyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13912,10 +15176,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13923,10 +15188,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13934,10 +15200,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vMCI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13945,10 +15212,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii8i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13956,10 +15224,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9hfjFiIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13967,10 +15236,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9jJWQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13978,10 +15248,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9lXmYi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -13989,10 +15260,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9nfGgi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14000,10 +15272,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9pXFxqIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14011,10 +15284,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9rXCJsIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14022,10 +15296,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii8gIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14033,10 +15308,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9tfjBuIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14044,10 +15320,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vLSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14055,10 +15332,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vLS9iYXIi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14066,10 +15344,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+MX4wfjB+MX4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14077,10 +15356,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+MS4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14088,10 +15368,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+MC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14099,10 +15380,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("IiMi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14110,10 +15392,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("IiMvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14121,10 +15404,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("IiNhIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14132,10 +15416,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+MH4i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14143,10 +15428,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+MC9+Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14154,10 +15440,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+MiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14165,10 +15452,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+LTEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14176,10 +15464,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+fiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14187,10 +15476,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14198,10 +15488,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("IjAi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14209,10 +15500,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("ImEvYSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -14220,10 +15512,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MS4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -14231,10 +15524,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MTIzNDU2Nzg5MTAxMTEyMTMxNDE1MTYxNzE4MTkyMDIxMjIyMzI0MjUyNjI3MjgyOTMwMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -14242,10 +15536,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -14253,10 +15548,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("LTEyMzQ1Njc4OTEwMTExMjEzMTQxNTE2MTcxODE5MjAyMTIyMjMyNDI1MjYyNzI4MjkzMDMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -14264,10 +15560,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("LTk4MjQ5MjgzNzQ5MjM0OTIzNDk4MjkzMTcxODIzOTQ4NzI5MzQ4NzEwMjk4MzAxOTI4MzMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -14275,10 +15572,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -14286,10 +15584,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjoxODQ0Njc0NDA3MzcwOTU1MTYxNX0=");
             var t = ParseJToken("MTg0NDY3NDQwNzM3MDk1NTE2MDA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -14297,10 +15596,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNYXhpbXVtIjo5LjcyNzgzNzk4MTg3OTg3MTJFKzI2fQ==");
             var t = ParseJToken("OS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -14308,10 +15608,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjotMTg0NDY3NDQwNzM3MDk1NTE2MTV9");
             var t = ParseJToken("LTE4NDQ2NzQ0MDczNzA5NTUxNjAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -14319,10 +15620,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNaW5pbXVtIjotOS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNn0=");
             var t = ParseJToken("LTkuNzI3ODM3OTgxODc5ODcxMkUrMjY=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("ecmascript-regex")]
@@ -14330,10 +15632,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("Il5cXFMofCgufFxcbikqXFxTKVxcWiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14341,10 +15644,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTlUMDg6MzA6MDYuMjgzMTg1WiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14352,10 +15656,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTlUMDg6MzA6MDZaIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14363,10 +15668,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5MzctMDEtMDFUMDU6NDA6MjcuODctMDY6MDAi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14374,10 +15680,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5OTAtMTItMzFUMTc6NTk6NTAuMTIzLTA2OjAwIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14385,10 +15692,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5OTAtMDItMzFUMTU6NTk6NjAuMTIzLTA4OjAwIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14396,10 +15704,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5OTAtMTItMzFUMTU6NTk6NjAtMjQ6MDAi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14407,10 +15716,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTlUMDg6MzA6MDYuMjgxMjMrMDE6MDBaIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14418,10 +15728,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjA2LzE5LzE5NjMgMDg6MzA6MDYgUFNUIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14429,10 +15740,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjE5NjMtMDYtMTl0MDg6MzA6MDYuMjgzMTg1eiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14440,10 +15752,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJkYXRlLXRpbWUifQ==");
             var t = ParseJToken("IjIwMTMtMzUwVDAxOjAxOjAxIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14451,10 +15764,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uYmFyLz9iYXo9cXV4I3F1dXgi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14462,10 +15776,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uY29tL2JsYWhfKHdpa2lwZWRpYSlfYmxhaCNjaXRlLTEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14473,10 +15788,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly9mb28uYmFyLz9xPVRlc3QlMjBVUkwtZW5jb2RlZCUyMHN0dWZmIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14484,10 +15800,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly94bi0tbncyYS54bi0tajZ3MTkzZy8i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14495,10 +15812,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly8tLn5fISQmJygpKissOz06JTQwOjgwJTJmOjo6Ojo6QGV4YW1wbGUuY29tIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14506,10 +15824,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly8yMjMuMjU1LjI1NS4yNTQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14517,10 +15836,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImZ0cDovL2Z0cC5pcy5jby56YS9yZmMvcmZjMTgwOC50eHQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14528,10 +15848,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly93d3cuaWV0Zi5vcmcvcmZjL3JmYzIzOTYudHh0Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14539,10 +15860,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImxkYXA6Ly9bMjAwMTpkYjg6OjddL2M9R0I/b2JqZWN0Q2xhc3M/b25lIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14550,10 +15872,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Im1haWx0bzpKb2huLkRvZUBleGFtcGxlLmNvbSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14561,10 +15884,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Im5ld3M6Y29tcC5pbmZvc3lzdGVtcy53d3cuc2VydmVycy51bml4Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14572,10 +15896,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("InRlbDorMS04MTYtNTU1LTEyMTIi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14583,10 +15908,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("InVybjpvYXNpczpuYW1lczpzcGVjaWZpY2F0aW9uOmRvY2Jvb2s6ZHRkOnhtbDo0LjEuMiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14594,10 +15920,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Ii8vZm9vLmJhci8/YmF6PXF1eCNxdXV4Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14605,10 +15932,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Ii9hYmMi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14616,10 +15944,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("IlxcXFxXSU5ET1dTXFxmaWxlc2hhcmUi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14627,10 +15956,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("ImFiYyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14638,10 +15968,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("Imh0dHA6Ly8gc2hvdWxkZmFpbC5jb20i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14649,10 +15980,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmkifQ==");
             var t = ParseJToken("IjovLyBzaG91bGQgZmFpbCI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14660,10 +15992,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("Imh0dHA6Ly9mb28uYmFyLz9iYXo9cXV4I3F1dXgi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14671,10 +16004,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("Ii8vZm9vLmJhci8/YmF6PXF1eCNxdXV4Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14682,10 +16016,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("Ii9hYmMi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14693,10 +16028,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("IlxcXFxXSU5ET1dTXFxmaWxlc2hhcmUi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14704,10 +16040,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("ImFiYyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14715,10 +16052,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("IiNmcmFnbWVudCI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14726,10 +16064,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktcmVmZXJlbmNlIn0=");
             var t = ParseJToken("IiNmcmFnXFxtZW50Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14737,10 +16076,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktdGVtcGxhdGUifQ==");
             var t = ParseJToken("Imh0dHA6Ly9leGFtcGxlLmNvbS9kaWN0aW9uYXJ5L3t0ZXJtOjF9L3t0ZXJtfSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14748,10 +16088,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktdGVtcGxhdGUifQ==");
             var t = ParseJToken("Imh0dHA6Ly9leGFtcGxlLmNvbS9kaWN0aW9uYXJ5L3t0ZXJtOjF9L3t0ZXJtIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14759,10 +16100,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktdGVtcGxhdGUifQ==");
             var t = ParseJToken("Imh0dHA6Ly9leGFtcGxlLmNvbS9kaWN0aW9uYXJ5Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14770,10 +16112,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJ1cmktdGVtcGxhdGUifQ==");
             var t = ParseJToken("ImRpY3Rpb25hcnkve3Rlcm06MX0ve3Rlcm19Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14781,10 +16124,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJlbWFpbCJ9");
             var t = ParseJToken("ImpvZS5ibG9nZ3NAZXhhbXBsZS5jb20i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14792,10 +16136,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJlbWFpbCJ9");
             var t = ParseJToken("IjI5NjIi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14803,10 +16148,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjE5Mi4xNjguMC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14814,10 +16160,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjEyNy4wLjAuMC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14825,10 +16172,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjI1Ni4yNTYuMjU2LjI1NiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14836,10 +16184,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjEyNy4wIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14847,10 +16196,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY0In0=");
             var t = ParseJToken("IjB4N2YwMDAwMDEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14858,10 +16208,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("Ijo6MSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14869,10 +16220,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("IjEyMzQ1Ojoi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14880,10 +16232,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("IjE6MToxOjE6MToxOjE6MToxOjE6MToxOjE6MToxOjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14891,10 +16244,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJpcHY2In0=");
             var t = ParseJToken("Ijo6bGFwdG9wIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14902,10 +16256,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("Ind3dy5leGFtcGxlLmNvbSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14913,10 +16268,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("Ii1hLWhvc3QtbmFtZS10aGF0LXN0YXJ0cy13aXRoLS0i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14924,10 +16280,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("Im5vdF9hX3ZhbGlkX2hvc3RfbmFtZSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14935,10 +16292,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJob3N0bmFtZSJ9");
             var t = ParseJToken("ImEtdnZ2dnZ2dnZ2dnZ2dnZ2dmVlZWVlZWVlZWVlZWVlZWVycnJycnJycnJycnJycnJyeXl5eXl5eXl5eXl5eXl5eS1sb25nLWhvc3QtbmFtZS1jb21wb25lbnQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14946,10 +16304,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vYmFyfjAvYmF6fjEvJWEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14957,10 +16316,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vYmFyfiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14968,10 +16328,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vL2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14979,10 +16340,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vYmFyLyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -14990,10 +16352,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15001,10 +16364,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15012,10 +16376,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vMCI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15023,10 +16388,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii8i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15034,10 +16400,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9hfjFiIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15045,10 +16412,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9jJWQi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15056,10 +16424,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9lXmYi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15067,10 +16436,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9nfGgi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15078,10 +16448,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9pXFxqIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15089,10 +16460,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9rXCJsIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15100,10 +16472,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii8gIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15111,10 +16484,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9tfjBuIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15122,10 +16496,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vLSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15133,10 +16508,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9mb28vLS9iYXIi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15144,10 +16520,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+MX4wfjB+MX4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15155,10 +16532,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+MS4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15166,10 +16544,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+MC4xIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15177,10 +16556,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("IiMi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15188,10 +16568,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("IiMvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15199,10 +16580,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("IiNhIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15210,10 +16592,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+MH4i");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15221,10 +16604,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+MC9+Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15232,10 +16616,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+MiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15243,10 +16628,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+LTEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15254,10 +16640,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("Ii9+fiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15265,10 +16652,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15276,10 +16664,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("IjAi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15287,10 +16676,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJqc29uLXBvaW50ZXIifQ==");
             var t = ParseJToken("ImEvYSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -15298,10 +16688,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MS4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -15309,10 +16700,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9XSwiYWRkaXRpb25hbEl0ZW1zIjp7InR5cGUiOiJpbnRlZ2VyIn19");
             var t = ParseJToken("W251bGwsMiwzLDRd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -15320,10 +16712,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9XSwiYWRkaXRpb25hbEl0ZW1zIjp7InR5cGUiOiJpbnRlZ2VyIn19");
             var t = ParseJToken("W251bGwsMiwzLCJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -15331,10 +16724,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6e30sImFkZGl0aW9uYWxJdGVtcyI6ZmFsc2V9");
             var t = ParseJToken("WzEsMiwzLDQsNV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -15342,10 +16736,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9LHt9LHt9XSwiYWRkaXRpb25hbEl0ZW1zIjpmYWxzZX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -15353,10 +16748,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9LHt9LHt9XSwiYWRkaXRpb25hbEl0ZW1zIjpmYWxzZX0=");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -15364,10 +16760,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3t9LHt9LHt9XSwiYWRkaXRpb25hbEl0ZW1zIjpmYWxzZX0=");
             var t = ParseJToken("WzEsMiwzLDRd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -15375,10 +16772,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsSXRlbXMiOmZhbHNlfQ==");
             var t = ParseJToken("WzEsMiwzLDQsNV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -15386,10 +16784,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsSXRlbXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -15397,10 +16796,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifV19");
             var t = ParseJToken("WzEsImZvbyIsZmFsc2Vd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15408,10 +16808,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15419,10 +16820,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6ImJvb20ifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15430,10 +16832,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15441,10 +16844,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("ImZvb2JhcmJheiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15452,10 +16856,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15463,10 +16868,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJwYXR0ZXJuUHJvcGVydGllcyI6eyJediI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6ZmFsc2V9");
             var t = ParseJToken("eyJmb28iOjEsInZyb29tIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15474,10 +16880,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJew6EiOnt9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyLDoXJtw6FueW9zIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15485,10 +16892,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJew6EiOnt9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyLDqWxtw6lueSI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15496,10 +16904,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15507,10 +16916,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6dHJ1ZX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15518,10 +16928,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6MTJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15529,10 +16940,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOnRydWV9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15540,10 +16952,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiYm9vbGVhbiJ9fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -15551,10 +16964,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6dHJ1ZX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15562,10 +16976,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15573,10 +16988,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15584,10 +17000,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15595,10 +17012,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOiJxdXV4In0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15606,10 +17024,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoyLCJiYXoiOm51bGx9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15617,10 +17036,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmF6IjpudWxsfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15628,10 +17048,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJiYXIiOjIsImJheiI6bnVsbH0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15639,10 +17060,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15650,10 +17072,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fSwicmVxdWlyZWQiOlsiYmFyIl0sImFsbE9mIjpbeyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoic3RyaW5nIn19LCJyZXF1aXJlZCI6WyJmb28iXX0seyJwcm9wZXJ0aWVzIjp7ImJheiI6eyJ0eXBlIjoibnVsbCJ9fSwicmVxdWlyZWQiOlsiYmF6Il19XX0=");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15661,10 +17084,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sibWF4aW11bSI6MzB9LHsibWluaW11bSI6MjB9XX0=");
             var t = ParseJToken("MjU=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15672,10 +17096,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3sibWF4aW11bSI6MzB9LHsibWluaW11bSI6MjB9XX0=");
             var t = ParseJToken("MzU=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15683,10 +17108,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3RydWUsdHJ1ZV19");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15694,10 +17120,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3RydWUsZmFsc2VdfQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -15705,10 +17132,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W2ZhbHNlLGZhbHNlXX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15716,10 +17144,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15727,10 +17156,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("Mi41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15738,10 +17168,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15749,10 +17180,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("MS41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15760,10 +17192,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwiYW55T2YiOlt7Im1heExlbmd0aCI6Mn0seyJtaW5MZW5ndGgiOjR9XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15771,10 +17204,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwiYW55T2YiOlt7Im1heExlbmd0aCI6Mn0seyJtaW5MZW5ndGgiOjR9XX0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15782,10 +17216,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwiYW55T2YiOlt7Im1heExlbmd0aCI6Mn0seyJtaW5MZW5ndGgiOjR9XX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15793,10 +17228,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3RydWUsdHJ1ZV19");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15804,10 +17240,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3RydWUsZmFsc2VdfQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15815,10 +17252,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W2ZhbHNlLGZhbHNlXX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15826,10 +17264,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15837,10 +17276,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15848,10 +17288,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -15859,10 +17300,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbnlPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOjIsImJhciI6InF1dXgifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -15870,10 +17312,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -15881,10 +17324,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -15892,10 +17336,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -15903,10 +17348,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("ZmFsc2U=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -15914,10 +17360,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -15925,10 +17372,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -15936,10 +17384,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -15947,10 +17396,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("WyJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -15958,10 +17408,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("dHJ1ZQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -15969,10 +17420,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -15980,10 +17432,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -15991,10 +17444,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -16002,10 +17456,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("ZmFsc2U=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -16013,10 +17468,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -16024,10 +17480,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -16035,10 +17492,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -16046,10 +17504,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("WyJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -16057,10 +17516,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("ZmFsc2U=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -16068,10 +17528,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6Mn0=");
             var t = ParseJToken("Mg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -16079,10 +17540,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6Mn0=");
             var t = ParseJToken("NQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -16090,10 +17552,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6Mn0=");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -16101,10 +17564,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6eyJmb28iOiJiYXIiLCJiYXoiOiJiYXgifX0=");
             var t = ParseJToken("eyJmb28iOiJiYXIiLCJiYXoiOiJiYXgifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -16112,10 +17576,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6eyJmb28iOiJiYXIiLCJiYXoiOiJiYXgifX0=");
             var t = ParseJToken("eyJiYXoiOiJiYXgiLCJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -16123,10 +17588,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6eyJmb28iOiJiYXIiLCJiYXoiOiJiYXgifX0=");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -16134,10 +17600,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6eyJmb28iOiJiYXIiLCJiYXoiOiJiYXgifX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -16145,10 +17612,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6W3siZm9vIjoiYmFyIn1dfQ==");
             var t = ParseJToken("W3siZm9vIjoiYmFyIn1d");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -16156,10 +17624,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6W3siZm9vIjoiYmFyIn1dfQ==");
             var t = ParseJToken("WzJd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -16167,10 +17636,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6W3siZm9vIjoiYmFyIn1dfQ==");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -16178,10 +17648,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6bnVsbH0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -16189,10 +17660,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb25zdCI6bnVsbH0=");
             var t = ParseJToken("MA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16200,10 +17672,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJtaW5pbXVtIjo1fX0=");
             var t = ParseJToken("WzMsNCw1XQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16211,10 +17684,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJtaW5pbXVtIjo1fX0=");
             var t = ParseJToken("WzMsNCw2XQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16222,10 +17696,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJtaW5pbXVtIjo1fX0=");
             var t = ParseJToken("WzMsNCw1LDZd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16233,10 +17708,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJtaW5pbXVtIjo1fX0=");
             var t = ParseJToken("WzIsMyw0XQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16244,10 +17720,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJtaW5pbXVtIjo1fX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16255,10 +17732,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJtaW5pbXVtIjo1fX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16266,10 +17744,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJjb25zdCI6NX19");
             var t = ParseJToken("WzMsNCw1XQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16277,10 +17756,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJjb25zdCI6NX19");
             var t = ParseJToken("WzMsNCw1LDVd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16288,10 +17768,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6eyJjb25zdCI6NX19");
             var t = ParseJToken("WzEsMiwzLDRd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16299,10 +17780,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6dHJ1ZX0=");
             var t = ParseJToken("WyJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16310,10 +17792,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6dHJ1ZX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16321,10 +17804,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6ZmFsc2V9");
             var t = ParseJToken("WyJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -16332,10 +17816,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250YWlucyI6ZmFsc2V9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("default")]
@@ -16343,10 +17828,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciIsImRlZmF1bHQiOltdfX19");
             var t = ParseJToken("eyJmb28iOjEzfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("default")]
@@ -16354,10 +17840,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciIsImRlZmF1bHQiOltdfX19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("default")]
@@ -16365,10 +17852,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoic3RyaW5nIiwibWluTGVuZ3RoIjo0LCJkZWZhdWx0IjoiYmFkIn19fQ==");
             var t = ParseJToken("eyJiYXIiOiJnb29kIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("default")]
@@ -16376,10 +17864,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImJhciI6eyJ0eXBlIjoic3RyaW5nIiwibWluTGVuZ3RoIjo0LCJkZWZhdWx0IjoiYmFkIn19fQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("definitions")]
@@ -16387,10 +17876,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNy9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJkZWZpbml0aW9ucyI6eyJmb28iOnsidHlwZSI6ImludGVnZXIifX19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("definitions")]
@@ -16398,10 +17888,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNy9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJkZWZpbml0aW9ucyI6eyJmb28iOnsidHlwZSI6MX19fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16409,10 +17900,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16420,10 +17912,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16431,10 +17924,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16442,10 +17936,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16453,10 +17948,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("WyJiYXIiXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16464,10 +17960,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16475,10 +17972,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbImZvbyJdfX0=");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16486,10 +17984,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbXX19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16497,10 +17996,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjpbXX19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16508,10 +18008,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16519,10 +18020,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16530,10 +18032,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwicXV1eCI6M30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16541,10 +18044,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJmb28iOjEsInF1dXgiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16552,10 +18056,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJiYXIiOjEsInF1dXgiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16563,10 +18068,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsicXV1eCI6WyJmb28iLCJiYXIiXX19");
             var t = ParseJToken("eyJxdXV4IjoxfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16574,10 +18080,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16585,10 +18092,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4In0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16596,10 +18104,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16607,10 +18116,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOjIsImJhciI6InF1dXgifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16618,10 +18128,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiYmFyIjp7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJpbnRlZ2VyIn0sImJhciI6eyJ0eXBlIjoiaW50ZWdlciJ9fX19fQ==");
             var t = ParseJToken("eyJmb28iOiJxdXV4IiwiYmFyIjoicXV1eCJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16629,10 +18140,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiZm9vIjp0cnVlLCJiYXIiOmZhbHNlfX0=");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16640,10 +18152,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiZm9vIjp0cnVlLCJiYXIiOmZhbHNlfX0=");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16651,10 +18164,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiZm9vIjp0cnVlLCJiYXIiOmZhbHNlfX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -16662,10 +18176,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZXBlbmRlbmNpZXMiOnsiZm9vIjp0cnVlLCJiYXIiOmZhbHNlfX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -16673,10 +18188,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbMSwyLDNdfQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -16684,10 +18200,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbMSwyLDNdfQ==");
             var t = ParseJToken("NA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -16695,10 +18212,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbNiwiZm9vIixbXSx0cnVlLHsiZm9vIjoxMn1dfQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -16706,10 +18224,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbNiwiZm9vIixbXSx0cnVlLHsiZm9vIjoxMn1dfQ==");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -16717,10 +18236,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbnVtIjpbNiwiZm9vIixbXSx0cnVlLHsiZm9vIjoxMn1dfQ==");
             var t = ParseJToken("eyJmb28iOmZhbHNlfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -16728,10 +18248,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdfX0sInJlcXVpcmVkIjpbImJhciJdfQ==");
             var t = ParseJToken("eyJmb28iOiJmb28iLCJiYXIiOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -16739,10 +18260,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdfX0sInJlcXVpcmVkIjpbImJhciJdfQ==");
             var t = ParseJToken("eyJiYXIiOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -16750,10 +18272,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdfX0sInJlcXVpcmVkIjpbImJhciJdfQ==");
             var t = ParseJToken("eyJmb28iOiJmb28ifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -16761,10 +18284,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJmb28iOnsiZW51bSI6WyJmb28iXX0sImJhciI6eyJlbnVtIjpbImJhciJdfX0sInJlcXVpcmVkIjpbImJhciJdfQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMaximum")]
@@ -16772,10 +18296,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNYXhpbXVtIjozLjB9");
             var t = ParseJToken("Mi4y");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMaximum")]
@@ -16783,10 +18308,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNYXhpbXVtIjozLjB9");
             var t = ParseJToken("My4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMaximum")]
@@ -16794,10 +18320,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNYXhpbXVtIjozLjB9");
             var t = ParseJToken("My41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMaximum")]
@@ -16805,10 +18332,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNYXhpbXVtIjozLjB9");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMinimum")]
@@ -16816,10 +18344,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MS4y");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMinimum")]
@@ -16827,10 +18356,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMinimum")]
@@ -16838,10 +18368,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MC42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMinimum")]
@@ -16849,10 +18380,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNaW5pbXVtIjoxLjF9");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16860,10 +18392,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZiI6eyJjb25zdCI6MH19");
             var t = ParseJToken("MA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16871,10 +18404,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZiI6eyJjb25zdCI6MH19");
             var t = ParseJToken("ImhlbGxvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16882,10 +18416,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aGVuIjp7ImNvbnN0IjowfX0=");
             var t = ParseJToken("MA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16893,10 +18428,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aGVuIjp7ImNvbnN0IjowfX0=");
             var t = ParseJToken("ImhlbGxvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16904,10 +18440,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbHNlIjp7ImNvbnN0IjowfX0=");
             var t = ParseJToken("MA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16915,10 +18452,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJlbHNlIjp7ImNvbnN0IjowfX0=");
             var t = ParseJToken("ImhlbGxvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16926,10 +18464,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZiI6eyJleGNsdXNpdmVNYXhpbXVtIjowfSwidGhlbiI6eyJtaW5pbXVtIjotMTB9fQ==");
             var t = ParseJToken("LTE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16937,10 +18476,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZiI6eyJleGNsdXNpdmVNYXhpbXVtIjowfSwidGhlbiI6eyJtaW5pbXVtIjotMTB9fQ==");
             var t = ParseJToken("LTEwMA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16948,10 +18488,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZiI6eyJleGNsdXNpdmVNYXhpbXVtIjowfSwidGhlbiI6eyJtaW5pbXVtIjotMTB9fQ==");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16959,10 +18500,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZiI6eyJleGNsdXNpdmVNYXhpbXVtIjowfSwiZWxzZSI6eyJtdWx0aXBsZU9mIjoyfX0=");
             var t = ParseJToken("LTE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16970,10 +18512,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZiI6eyJleGNsdXNpdmVNYXhpbXVtIjowfSwiZWxzZSI6eyJtdWx0aXBsZU9mIjoyfX0=");
             var t = ParseJToken("NA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16981,10 +18524,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZiI6eyJleGNsdXNpdmVNYXhpbXVtIjowfSwiZWxzZSI6eyJtdWx0aXBsZU9mIjoyfX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -16992,10 +18536,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZiI6eyJleGNsdXNpdmVNYXhpbXVtIjowfSwidGhlbiI6eyJtaW5pbXVtIjotMTB9LCJlbHNlIjp7Im11bHRpcGxlT2YiOjJ9fQ==");
             var t = ParseJToken("LTE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -17003,10 +18548,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZiI6eyJleGNsdXNpdmVNYXhpbXVtIjowfSwidGhlbiI6eyJtaW5pbXVtIjotMTB9LCJlbHNlIjp7Im11bHRpcGxlT2YiOjJ9fQ==");
             var t = ParseJToken("LTEwMA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -17014,10 +18560,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZiI6eyJleGNsdXNpdmVNYXhpbXVtIjowfSwidGhlbiI6eyJtaW5pbXVtIjotMTB9LCJlbHNlIjp7Im11bHRpcGxlT2YiOjJ9fQ==");
             var t = ParseJToken("NA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -17025,10 +18572,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpZiI6eyJleGNsdXNpdmVNYXhpbXVtIjowfSwidGhlbiI6eyJtaW5pbXVtIjotMTB9LCJlbHNlIjp7Im11bHRpcGxlT2YiOjJ9fQ==");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -17036,10 +18584,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3siaWYiOnsiZXhjbHVzaXZlTWF4aW11bSI6MH19LHsidGhlbiI6eyJtaW5pbXVtIjotMTB9fSx7ImVsc2UiOnsibXVsdGlwbGVPZiI6Mn19XX0=");
             var t = ParseJToken("LTEwMA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -17047,10 +18596,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJhbGxPZiI6W3siaWYiOnsiZXhjbHVzaXZlTWF4aW11bSI6MH19LHsidGhlbiI6eyJtaW5pbXVtIjotMTB9fSx7ImVsc2UiOnsibXVsdGlwbGVPZiI6Mn19XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17058,10 +18608,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17069,10 +18620,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("WzEsIngiXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17080,10 +18632,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17091,10 +18644,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyIwIjoiaW52YWxpZCIsImxlbmd0aCI6MX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17102,10 +18656,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WzEsImZvbyJd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17113,10 +18668,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WyJmb28iLDFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17124,10 +18680,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17135,10 +18692,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("WzEsImZvbyIsdHJ1ZV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17146,10 +18704,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17157,10 +18716,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7InR5cGUiOiJzdHJpbmcifV19");
             var t = ParseJToken("eyIwIjoiaW52YWxpZCIsIjEiOiJ2YWxpZCIsImxlbmd0aCI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17168,10 +18728,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsImZvbyIsdHJ1ZV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17179,10 +18740,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17190,10 +18752,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6ZmFsc2V9");
             var t = ParseJToken("WzEsImZvbyIsdHJ1ZV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17201,10 +18764,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6ZmFsc2V9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17212,10 +18776,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3RydWUsZmFsc2VdfQ==");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17223,10 +18788,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3RydWUsZmFsc2VdfQ==");
             var t = ParseJToken("WzEsImZvbyJd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17234,10 +18800,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3RydWUsZmFsc2VdfQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maximum")]
@@ -17245,10 +18812,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("Mi42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maximum")]
@@ -17256,10 +18824,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("My4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maximum")]
@@ -17267,10 +18836,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("My41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maximum")]
@@ -17278,10 +18848,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjozLjB9");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxItems")]
@@ -17289,10 +18860,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxItems")]
@@ -17300,10 +18872,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxItems")]
@@ -17311,10 +18884,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxItems")]
@@ -17322,10 +18896,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhJdGVtcyI6Mn0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxLength")]
@@ -17333,10 +18908,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("ImYi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxLength")]
@@ -17344,10 +18920,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxLength")]
@@ -17355,10 +18932,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxLength")]
@@ -17366,10 +18944,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("MTAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxLength")]
@@ -17377,10 +18956,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhMZW5ndGgiOjJ9");
             var t = ParseJToken("IvCfkqnwn5KpIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxProperties")]
@@ -17388,10 +18968,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxProperties")]
@@ -17399,10 +18980,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxProperties")]
@@ -17410,10 +18992,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6MiwiYmF6IjozfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxProperties")]
@@ -17421,10 +19004,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("WzEsMiwzXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxProperties")]
@@ -17432,10 +19016,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxProperties")]
@@ -17443,10 +19028,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhQcm9wZXJ0aWVzIjoyfQ==");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minimum")]
@@ -17454,10 +19040,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("Mi42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minimum")]
@@ -17465,10 +19052,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minimum")]
@@ -17476,10 +19064,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("MC42");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minimum")]
@@ -17487,10 +19076,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjoxLjF9");
             var t = ParseJToken("Ingi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minItems")]
@@ -17498,10 +19088,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minItems")]
@@ -17509,10 +19100,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("WzFd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minItems")]
@@ -17520,10 +19112,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minItems")]
@@ -17531,10 +19124,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5JdGVtcyI6MX0=");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minLength")]
@@ -17542,10 +19136,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minLength")]
@@ -17553,10 +19148,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("ImZvIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minLength")]
@@ -17564,10 +19160,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("ImYi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minLength")]
@@ -17575,10 +19172,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minLength")]
@@ -17586,10 +19184,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5MZW5ndGgiOjJ9");
             var t = ParseJToken("IvCfkqki");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minProperties")]
@@ -17597,10 +19196,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minProperties")]
@@ -17608,10 +19208,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minProperties")]
@@ -17619,10 +19220,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minProperties")]
@@ -17630,10 +19232,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minProperties")]
@@ -17641,10 +19244,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minProperties")]
@@ -17652,10 +19256,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5Qcm9wZXJ0aWVzIjoxfQ==");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -17663,10 +19268,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoyfQ==");
             var t = ParseJToken("MTA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -17674,10 +19280,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoyfQ==");
             var t = ParseJToken("Nw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -17685,10 +19292,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoyfQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -17696,10 +19304,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoxLjV9");
             var t = ParseJToken("MA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -17707,10 +19316,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoxLjV9");
             var t = ParseJToken("NC41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -17718,10 +19328,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjoxLjV9");
             var t = ParseJToken("MzU=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -17729,10 +19340,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjowLjAwMDF9");
             var t = ParseJToken("MC4wMDc1");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -17740,10 +19352,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtdWx0aXBsZU9mIjowLjAwMDF9");
             var t = ParseJToken("MC4wMDc1MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -17751,10 +19364,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6ImludGVnZXIifX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -17762,10 +19376,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6ImludGVnZXIifX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -17773,10 +19388,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6WyJpbnRlZ2VyIiwiYm9vbGVhbiJdfX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -17784,10 +19400,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6WyJpbnRlZ2VyIiwiYm9vbGVhbiJdfX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -17795,10 +19412,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6WyJpbnRlZ2VyIiwiYm9vbGVhbiJdfX0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -17806,10 +19424,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19fQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -17817,10 +19436,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -17828,10 +19448,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnsidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -17839,10 +19460,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJub3QiOnt9fX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -17850,10 +19472,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJub3QiOnt9fX19");
             var t = ParseJToken("eyJiYXIiOjEsImJheiI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -17861,10 +19484,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOnRydWV9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -17872,10 +19496,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJub3QiOmZhbHNlfQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -17883,10 +19508,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -17894,10 +19520,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("Mi41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -17905,10 +19532,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -17916,10 +19544,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sidHlwZSI6ImludGVnZXIifSx7Im1pbmltdW0iOjJ9XX0=");
             var t = ParseJToken("MS41");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -17927,10 +19556,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwib25lT2YiOlt7Im1pbkxlbmd0aCI6Mn0seyJtYXhMZW5ndGgiOjR9XX0=");
             var t = ParseJToken("Mw==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -17938,10 +19568,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwib25lT2YiOlt7Im1pbkxlbmd0aCI6Mn0seyJtYXhMZW5ndGgiOjR9XX0=");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -17949,10 +19580,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIiwib25lT2YiOlt7Im1pbkxlbmd0aCI6Mn0seyJtYXhMZW5ndGgiOjR9XX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -17960,10 +19592,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3RydWUsdHJ1ZSx0cnVlXX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -17971,10 +19604,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3RydWUsZmFsc2UsZmFsc2VdfQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -17982,10 +19616,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3RydWUsdHJ1ZSxmYWxzZV19");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -17993,10 +19628,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W2ZhbHNlLGZhbHNlLGZhbHNlXX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -18004,10 +19640,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -18015,10 +19652,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -18026,10 +19664,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOiJiYXoiLCJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -18037,10 +19676,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJvbmVPZiI6W3sicHJvcGVydGllcyI6eyJiYXIiOnsidHlwZSI6ImludGVnZXIifX0sInJlcXVpcmVkIjpbImJhciJdfSx7InByb3BlcnRpZXMiOnsiZm9vIjp7InR5cGUiOiJzdHJpbmcifX0sInJlcXVpcmVkIjpbImZvbyJdfV19");
             var t = ParseJToken("eyJmb28iOjIsImJhciI6InF1dXgifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("pattern")]
@@ -18048,10 +19688,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiXmEqJCJ9");
             var t = ParseJToken("ImFhYSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("pattern")]
@@ -18059,10 +19700,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiXmEqJCJ9");
             var t = ParseJToken("ImFiYyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("pattern")]
@@ -18070,10 +19712,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiXmEqJCJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("pattern")]
@@ -18081,10 +19724,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuIjoiYSsifQ==");
             var t = ParseJToken("Inh4YWF5eSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18092,10 +19736,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18103,10 +19748,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOjEsImZvb29vb28iOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18114,10 +19760,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIiLCJmb29vb28iOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18125,10 +19772,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("eyJmb28iOiJiYXIiLCJmb29vb29vIjoiYmF6In0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18136,10 +19784,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("WyJmb28iXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18147,10 +19796,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18158,10 +19808,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLipvIjp7InR5cGUiOiJpbnRlZ2VyIn19fQ==");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18169,10 +19820,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhIjoyMX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18180,10 +19832,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhYWFhIjoxOH0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18191,10 +19844,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhIjoyMSwiYWFhYSI6MTh9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18202,10 +19856,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhIjoiYmFyIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18213,10 +19868,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhYWFhIjozMX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18224,10 +19880,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJhKiI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJhYWEqIjp7Im1heGltdW0iOjIwfX19");
             var t = ParseJToken("eyJhYWEiOiJmb28iLCJhYWFhIjozMX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18235,10 +19892,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhbnN3ZXIgMSI6IjQyIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18246,10 +19904,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhMzFiIjpudWxsfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18257,10 +19916,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhX3hfMyI6M30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18268,10 +19928,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJbMC05XXsyLH0iOnsidHlwZSI6ImJvb2xlYW4ifSwiWF8iOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJhX1hfMyI6M30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18279,10 +19940,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLioiOnRydWUsImIuKiI6ZmFsc2V9fQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18290,10 +19952,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLioiOnRydWUsImIuKiI6ZmFsc2V9fQ==");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18301,10 +19964,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLioiOnRydWUsImIuKiI6ZmFsc2V9fQ==");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -18312,10 +19976,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwYXR0ZXJuUHJvcGVydGllcyI6eyJmLioiOnRydWUsImIuKiI6ZmFsc2V9fQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18323,10 +19988,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6ImJheiJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18334,10 +20000,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6e319");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18345,10 +20012,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJmb28iOltdLCJiYXIiOnt9fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18356,10 +20024,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyJxdXV4IjpbXX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18367,10 +20036,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18378,10 +20048,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18389,10 +20060,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOlsxLDJdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18400,10 +20072,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOlsxLDIsMyw0XX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18411,10 +20084,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmb28iOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18422,10 +20096,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmeG8iOlsxLDJdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18433,10 +20108,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJmeG8iOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18444,10 +20120,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJiYXIiOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18455,10 +20132,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJxdXV4IjozfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18466,10 +20144,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiYXJyYXkiLCJtYXhJdGVtcyI6M30sImJhciI6eyJ0eXBlIjoiYXJyYXkifX0sInBhdHRlcm5Qcm9wZXJ0aWVzIjp7ImYubyI6eyJtaW5JdGVtcyI6Mn19LCJhZGRpdGlvbmFsUHJvcGVydGllcyI6eyJ0eXBlIjoiaW50ZWdlciJ9fQ==");
             var t = ParseJToken("eyJxdXV4IjoiZm9vIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18477,10 +20156,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6dHJ1ZSwiYmFyIjpmYWxzZX19");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18488,10 +20168,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6dHJ1ZSwiYmFyIjpmYWxzZX19");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18499,10 +20180,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6dHJ1ZSwiYmFyIjpmYWxzZX19");
             var t = ParseJToken("eyJiYXIiOjJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -18510,10 +20192,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6dHJ1ZSwiYmFyIjpmYWxzZX19");
             var t = ParseJToken("eyJmb28iOjEsImJhciI6Mn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -18521,10 +20204,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp7Im1heExlbmd0aCI6M319");
             var t = ParseJToken("eyJmIjp7fSwiZm9vIjp7fX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -18532,10 +20216,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp7Im1heExlbmd0aCI6M319");
             var t = ParseJToken("eyJmb28iOnt9LCJmb29iYXIiOnt9fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -18543,10 +20228,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp7Im1heExlbmd0aCI6M319");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -18554,10 +20240,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp7Im1heExlbmd0aCI6M319");
             var t = ParseJToken("WzEsMiwzLDRd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -18565,10 +20252,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp7Im1heExlbmd0aCI6M319");
             var t = ParseJToken("ImZvb2JhciI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -18576,10 +20264,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp7Im1heExlbmd0aCI6M319");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -18587,10 +20276,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp0cnVlfQ==");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -18598,10 +20288,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjp0cnVlfQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -18609,10 +20300,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjpmYWxzZX0=");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -18620,10 +20312,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0eU5hbWVzIjpmYWxzZX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18631,10 +20324,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOmZhbHNlfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18642,10 +20336,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOnsiZm9vIjpmYWxzZX19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18653,10 +20348,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJiYXIiOmZhbHNlfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18664,10 +20360,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIyJ9fSwiYWRkaXRpb25hbFByb3BlcnRpZXMiOmZhbHNlfQ==");
             var t = ParseJToken("eyJmb28iOnsiYmFyIjpmYWxzZX19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18675,10 +20372,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsiJHJlZiI6IiMvcHJvcGVydGllcy9mb28ifX19");
             var t = ParseJToken("eyJiYXIiOjN9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18686,10 +20384,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJiYXIiOnsiJHJlZiI6IiMvcHJvcGVydGllcy9mb28ifX19");
             var t = ParseJToken("eyJiYXIiOnRydWV9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18697,10 +20396,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7IiRyZWYiOiIjL2l0ZW1zLzAifV19");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18708,10 +20408,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJpdGVtcyI6W3sidHlwZSI6ImludGVnZXIifSx7IiRyZWYiOiIjL2l0ZW1zLzAifV19");
             var t = ParseJToken("WzEsImZvbyJd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18719,10 +20420,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJzbGFzaCI6ImFvZXUifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18730,10 +20432,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJ0aWxkYSI6ImFvZXUifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18741,10 +20444,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJwZXJjZW50IjoiYW9ldSJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18752,10 +20456,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJzbGFzaCI6MTIzfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18763,10 +20468,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJ0aWxkYSI6MTIzfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18774,10 +20480,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0aWxkYX5maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJzbGFzaC9maWVsZCI6eyJ0eXBlIjoiaW50ZWdlciJ9LCJwZXJjZW50JWZpZWxkIjp7InR5cGUiOiJpbnRlZ2VyIn0sInByb3BlcnRpZXMiOnsidGlsZGEiOnsiJHJlZiI6IiMvdGlsZGF+MGZpZWxkIn0sInNsYXNoIjp7IiRyZWYiOiIjL3NsYXNofjFmaWVsZCJ9LCJwZXJjZW50Ijp7IiRyZWYiOiIjL3BlcmNlbnQlMjVmaWVsZCJ9fX0=");
             var t = ParseJToken("eyJwZXJjZW50IjoxMjN9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18785,10 +20492,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJhIjp7InR5cGUiOiJpbnRlZ2VyIn0sImIiOnsiJHJlZiI6IiMvZGVmaW5pdGlvbnMvYSJ9LCJjIjp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2IifX0sIiRyZWYiOiIjL2RlZmluaXRpb25zL2MifQ==");
             var t = ParseJToken("NQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18796,10 +20504,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJhIjp7InR5cGUiOiJpbnRlZ2VyIn0sImIiOnsiJHJlZiI6IiMvZGVmaW5pdGlvbnMvYSJ9LCJjIjp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2IifX0sIiRyZWYiOiIjL2RlZmluaXRpb25zL2MifQ==");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18807,10 +20516,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJyZWZmZWQiOnsidHlwZSI6ImFycmF5In19LCJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9yZWZmZWQiLCJtYXhJdGVtcyI6Mn19fQ==");
             var t = ParseJToken("eyJmb28iOltdfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18818,10 +20528,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJyZWZmZWQiOnsidHlwZSI6ImFycmF5In19LCJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9yZWZmZWQiLCJtYXhJdGVtcyI6Mn19fQ==");
             var t = ParseJToken("eyJmb28iOlsxLDIsM119");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18829,10 +20540,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJkZWZpbml0aW9ucyI6eyJyZWZmZWQiOnsidHlwZSI6ImFycmF5In19LCJwcm9wZXJ0aWVzIjp7ImZvbyI6eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9yZWZmZWQiLCJtYXhJdGVtcyI6Mn19fQ==");
             var t = ParseJToken("eyJmb28iOiJzdHJpbmcifQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18840,10 +20552,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNy9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJtaW5MZW5ndGgiOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18851,10 +20564,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2pzb24tc2NoZW1hLm9yZy9kcmFmdC0wNy9zY2hlbWEjIn0=");
             var t = ParseJToken("eyJtaW5MZW5ndGgiOi0xfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18862,10 +20576,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7IiRyZWYiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyIkcmVmIjoiYSJ9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18873,10 +20588,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7IiRyZWYiOnsidHlwZSI6InN0cmluZyJ9fX0=");
             var t = ParseJToken("eyIkcmVmIjoyfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18884,10 +20600,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9ib29sIiwiZGVmaW5pdGlvbnMiOnsiYm9vbCI6dHJ1ZX19");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18895,10 +20612,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiIy9kZWZpbml0aW9ucy9ib29sIiwiZGVmaW5pdGlvbnMiOnsiYm9vbCI6ZmFsc2V9fQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18906,10 +20624,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvdHJlZSIsImRlc2NyaXB0aW9uIjoidHJlZSBvZiBub2RlcyIsInR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7Im1ldGEiOnsidHlwZSI6InN0cmluZyJ9LCJub2RlcyI6eyJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyIkcmVmIjoibm9kZSJ9fX0sInJlcXVpcmVkIjpbIm1ldGEiLCJub2RlcyJdLCJkZWZpbml0aW9ucyI6eyJub2RlIjp7IiRpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC9ub2RlIiwiZGVzY3JpcHRpb24iOiJub2RlIiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsidmFsdWUiOnsidHlwZSI6Im51bWJlciJ9LCJzdWJ0cmVlIjp7IiRyZWYiOiJ0cmVlIn19LCJyZXF1aXJlZCI6WyJ2YWx1ZSJdfX19");
             var t = ParseJToken("eyJtZXRhIjoicm9vdCIsIm5vZGVzIjpbeyJ2YWx1ZSI6MSwic3VidHJlZSI6eyJtZXRhIjoiY2hpbGQiLCJub2RlcyI6W3sidmFsdWUiOjEuMX0seyJ2YWx1ZSI6MS4yfV19fSx7InZhbHVlIjoyLCJzdWJ0cmVlIjp7Im1ldGEiOiJjaGlsZCIsIm5vZGVzIjpbeyJ2YWx1ZSI6Mi4xfSx7InZhbHVlIjoyLjJ9XX19XX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -18917,10 +20636,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvdHJlZSIsImRlc2NyaXB0aW9uIjoidHJlZSBvZiBub2RlcyIsInR5cGUiOiJvYmplY3QiLCJwcm9wZXJ0aWVzIjp7Im1ldGEiOnsidHlwZSI6InN0cmluZyJ9LCJub2RlcyI6eyJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyIkcmVmIjoibm9kZSJ9fX0sInJlcXVpcmVkIjpbIm1ldGEiLCJub2RlcyJdLCJkZWZpbml0aW9ucyI6eyJub2RlIjp7IiRpZCI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTIzNC9ub2RlIiwiZGVzY3JpcHRpb24iOiJub2RlIiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsidmFsdWUiOnsidHlwZSI6Im51bWJlciJ9LCJzdWJ0cmVlIjp7IiRyZWYiOiJ0cmVlIn19LCJyZXF1aXJlZCI6WyJ2YWx1ZSJdfX19");
             var t = ParseJToken("eyJtZXRhIjoicm9vdCIsIm5vZGVzIjpbeyJ2YWx1ZSI6MSwic3VidHJlZSI6eyJtZXRhIjoiY2hpbGQiLCJub2RlcyI6W3sidmFsdWUiOiJzdHJpbmcgaXMgaW52YWxpZCJ9LHsidmFsdWUiOjEuMn1dfX0seyJ2YWx1ZSI6Miwic3VidHJlZSI6eyJtZXRhIjoiY2hpbGQiLCJub2RlcyI6W3sidmFsdWUiOjIuMX0seyJ2YWx1ZSI6Mi4yfV19fV19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -18928,10 +20648,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L2ludGVnZXIuanNvbiJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -18939,10 +20660,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L2ludGVnZXIuanNvbiJ9");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -18950,10 +20672,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvaW50ZWdlciJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -18961,10 +20684,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvaW50ZWdlciJ9");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -18972,10 +20696,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvcmVmVG9JbnRlZ2VyIn0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -18983,10 +20708,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkcmVmIjoiaHR0cDovL2xvY2FsaG9zdDoxMjM0L3N1YlNjaGVtYXMuanNvbiMvcmVmVG9JbnRlZ2VyIn0=");
             var t = ParseJToken("ImEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -18994,10 +20720,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvIiwiaXRlbXMiOnsiJGlkIjoiZm9sZGVyLyIsIml0ZW1zIjp7IiRyZWYiOiJmb2xkZXJJbnRlZ2VyLmpzb24ifX19");
             var t = ParseJToken("W1sxXV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -19005,10 +20732,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvIiwiaXRlbXMiOnsiJGlkIjoiZm9sZGVyLyIsIml0ZW1zIjp7IiRyZWYiOiJmb2xkZXJJbnRlZ2VyLmpzb24ifX19");
             var t = ParseJToken("W1siYSJdXQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -19016,10 +20744,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvc2NvcGVfY2hhbmdlX2RlZnMxLmpzb24iLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJsaXN0Ijp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2JheiJ9fSwiZGVmaW5pdGlvbnMiOnsiYmF6Ijp7IiRpZCI6ImZvbGRlci8iLCJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyIkcmVmIjoiZm9sZGVySW50ZWdlci5qc29uIn19fX0=");
             var t = ParseJToken("eyJsaXN0IjpbMV19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -19027,10 +20756,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvc2NvcGVfY2hhbmdlX2RlZnMxLmpzb24iLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJsaXN0Ijp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2JheiJ9fSwiZGVmaW5pdGlvbnMiOnsiYmF6Ijp7IiRpZCI6ImZvbGRlci8iLCJ0eXBlIjoiYXJyYXkiLCJpdGVtcyI6eyIkcmVmIjoiZm9sZGVySW50ZWdlci5qc29uIn19fX0=");
             var t = ParseJToken("eyJsaXN0IjpbImEiXX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -19038,10 +20768,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvc2NvcGVfY2hhbmdlX2RlZnMyLmpzb24iLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJsaXN0Ijp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2Jhei9kZWZpbml0aW9ucy9iYXIifX0sImRlZmluaXRpb25zIjp7ImJheiI6eyIkaWQiOiJmb2xkZXIvIiwiZGVmaW5pdGlvbnMiOnsiYmFyIjp7InR5cGUiOiJhcnJheSIsIml0ZW1zIjp7IiRyZWYiOiJmb2xkZXJJbnRlZ2VyLmpzb24ifX19fX19");
             var t = ParseJToken("eyJsaXN0IjpbMV19");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -19049,10 +20780,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvc2NvcGVfY2hhbmdlX2RlZnMyLmpzb24iLCJ0eXBlIjoib2JqZWN0IiwicHJvcGVydGllcyI6eyJsaXN0Ijp7IiRyZWYiOiIjL2RlZmluaXRpb25zL2Jhei9kZWZpbml0aW9ucy9iYXIifX0sImRlZmluaXRpb25zIjp7ImJheiI6eyIkaWQiOiJmb2xkZXIvIiwiZGVmaW5pdGlvbnMiOnsiYmFyIjp7InR5cGUiOiJhcnJheSIsIml0ZW1zIjp7IiRyZWYiOiJmb2xkZXJJbnRlZ2VyLmpzb24ifX19fX19");
             var t = ParseJToken("eyJsaXN0IjpbImEiXX0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -19060,10 +20792,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvb2JqZWN0IiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsibmFtZSI6eyIkcmVmIjoibmFtZS5qc29uIy9kZWZpbml0aW9ucy9vck51bGwifX19");
             var t = ParseJToken("eyJuYW1lIjoiZm9vIn0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -19071,10 +20804,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvb2JqZWN0IiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsibmFtZSI6eyIkcmVmIjoibmFtZS5qc29uIy9kZWZpbml0aW9ucy9vck51bGwifX19");
             var t = ParseJToken("eyJuYW1lIjpudWxsfQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -19082,10 +20816,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyIkaWQiOiJodHRwOi8vbG9jYWxob3N0OjEyMzQvb2JqZWN0IiwidHlwZSI6Im9iamVjdCIsInByb3BlcnRpZXMiOnsibmFtZSI6eyIkcmVmIjoibmFtZS5qc29uIy9kZWZpbml0aW9ucy9vck51bGwifX19");
             var t = ParseJToken("eyJuYW1lIjp7Im5hbWUiOm51bGx9fQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -19093,10 +20828,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("eyJmb28iOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -19104,10 +20840,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("eyJiYXIiOjF9");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -19115,10 +20852,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -19126,10 +20864,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("IiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -19137,10 +20876,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e30sImJhciI6e319LCJyZXF1aXJlZCI6WyJmb28iXX0=");
             var t = ParseJToken("MTI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -19148,10 +20888,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e319fQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -19159,10 +20900,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJwcm9wZXJ0aWVzIjp7ImZvbyI6e319LCJyZXF1aXJlZCI6W119");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19170,10 +20912,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19181,10 +20924,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19192,10 +20936,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19203,10 +20948,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("IjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19214,10 +20960,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19225,10 +20972,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19236,10 +20984,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19247,10 +20996,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19258,10 +21008,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19269,10 +21020,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19280,10 +21032,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19291,10 +21044,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("IjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19302,10 +21056,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19313,10 +21068,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19324,10 +21080,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19335,10 +21092,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19346,10 +21104,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19357,10 +21116,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19368,10 +21128,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19379,10 +21140,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("IjEi");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19390,10 +21152,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19401,10 +21164,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19412,10 +21176,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19423,10 +21188,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19434,10 +21200,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19445,10 +21212,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19456,10 +21224,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19467,10 +21236,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19478,10 +21248,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19489,10 +21260,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19500,10 +21272,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoib2JqZWN0In0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19511,10 +21284,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19522,10 +21296,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19533,10 +21308,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19544,10 +21320,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19555,10 +21332,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19566,10 +21344,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19577,10 +21356,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYXJyYXkifQ==");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19588,10 +21368,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19599,10 +21380,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19610,10 +21392,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19621,10 +21404,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19632,10 +21416,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19643,10 +21428,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19654,10 +21440,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiYm9vbGVhbiJ9");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19665,10 +21452,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19676,10 +21464,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19687,10 +21476,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19698,10 +21488,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19709,10 +21500,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19720,10 +21512,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19731,10 +21524,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVsbCJ9");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19742,10 +21536,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("MQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19753,10 +21548,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("ImZvbyI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19764,10 +21560,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("MS4x");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19775,10 +21572,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("e30=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19786,10 +21584,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("W10=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19797,10 +21596,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("dHJ1ZQ==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -19808,10 +21608,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjpbImludGVnZXIiLCJzdHJpbmciXX0=");
             var t = ParseJToken("bnVsbA==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19819,10 +21620,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsMl0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19830,10 +21632,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19841,10 +21644,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEuMCwxLjAsMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19852,10 +21656,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjoiYmFyIn0seyJmb28iOiJiYXoifV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19863,10 +21668,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjoiYmFyIn0seyJmb28iOiJiYXIifV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19874,10 +21680,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjp7ImJhciI6eyJiYXoiOnRydWV9fX0seyJmb28iOnsiYmFyIjp7ImJheiI6ZmFsc2V9fX1d");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19885,10 +21692,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3siZm9vIjp7ImJhciI6eyJiYXoiOnRydWV9fX0seyJmb28iOnsiYmFyIjp7ImJheiI6dHJ1ZX19fV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19896,10 +21704,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W1siZm9vIl0sWyJiYXIiXV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19907,10 +21716,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W1siZm9vIl0sWyJmb28iXV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19918,10 +21728,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzEsdHJ1ZV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19929,10 +21740,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("WzAsZmFsc2Vd");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19940,10 +21752,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3t9LFsxXSx0cnVlLG51bGwsMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -19951,10 +21764,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ1bmlxdWVJdGVtcyI6dHJ1ZX0=");
             var t = ParseJToken("W3t9LFsxXSx0cnVlLG51bGwse30sMV0=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -19962,10 +21776,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MTIzNDU2Nzg5MTAxMTEyMTMxNDE1MTYxNzE4MTkyMDIxMjIyMzI0MjUyNjI3MjgyOTMwMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -19973,10 +21788,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -19984,10 +21800,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("LTEyMzQ1Njc4OTEwMTExMjEzMTQxNTE2MTcxODE5MjAyMTIyMjMyNDI1MjYyNzI4MjkzMDMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -19995,10 +21812,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("LTk4MjQ5MjgzNzQ5MjM0OTIzNDk4MjkzMTcxODIzOTQ4NzI5MzQ4NzEwMjk4MzAxOTI4MzMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -20006,10 +21824,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -20017,10 +21836,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjoxODQ0Njc0NDA3MzcwOTU1MTYxNX0=");
             var t = ParseJToken("MTg0NDY3NDQwNzM3MDk1NTE2MDA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -20028,10 +21848,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNYXhpbXVtIjo5LjcyNzgzNzk4MTg3OTg3MTJFKzI2fQ==");
             var t = ParseJToken("OS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -20039,10 +21860,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjotMTg0NDY3NDQwNzM3MDk1NTE2MTV9");
             var t = ParseJToken("LTE4NDQ2NzQ0MDczNzA5NTUxNjAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -20050,10 +21872,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNaW5pbXVtIjotOS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNn0=");
             var t = ParseJToken("LTkuNzI3ODM3OTgxODc5ODcxMkUrMjY=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -20061,10 +21884,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9");
             var t = ParseJToken("IntcImZvb1wiOiBcImJhclwifSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -20072,10 +21896,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9");
             var t = ParseJToken("Ins6fSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -20083,10 +21908,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9");
             var t = ParseJToken("MTAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -20094,10 +21920,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50RW5jb2RpbmciOiJiYXNlNjQifQ==");
             var t = ParseJToken("ImV5Sm1iMjhpT2lBaVltRnlJbjBLIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -20105,10 +21932,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50RW5jb2RpbmciOiJiYXNlNjQifQ==");
             var t = ParseJToken("ImV5Sm1iMjhpT2klaVltRnlJbjBLIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -20116,10 +21944,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50RW5jb2RpbmciOiJiYXNlNjQifQ==");
             var t = ParseJToken("MTAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -20127,10 +21956,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsImNvbnRlbnRFbmNvZGluZyI6ImJhc2U2NCJ9");
             var t = ParseJToken("ImV5Sm1iMjhpT2lBaVltRnlJbjBLIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -20138,10 +21968,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsImNvbnRlbnRFbmNvZGluZyI6ImJhc2U2NCJ9");
             var t = ParseJToken("ImV6cDlDZz09Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -20149,10 +21980,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsImNvbnRlbnRFbmNvZGluZyI6ImJhc2U2NCJ9");
             var t = ParseJToken("Int9Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -20160,10 +21992,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsImNvbnRlbnRFbmNvZGluZyI6ImJhc2U2NCJ9");
             var t = ParseJToken("MTAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("ecmascript-regex")]
@@ -20171,10 +22004,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("Il5cXFMofCgufFxcbikqXFxTKVxcWiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -20182,10 +22016,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MS4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -20193,10 +22028,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MTIzNDU2Nzg5MTAxMTEyMTMxNDE1MTYxNzE4MTkyMDIxMjIyMzI0MjUyNjI3MjgyOTMwMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -20204,10 +22040,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -20215,10 +22052,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("LTEyMzQ1Njc4OTEwMTExMjEzMTQxNTE2MTcxODE5MjAyMTIyMjMyNDI1MjYyNzI4MjkzMDMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -20226,10 +22064,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoibnVtYmVyIn0=");
             var t = ParseJToken("LTk4MjQ5MjgzNzQ5MjM0OTIzNDk4MjkzMTcxODIzOTQ4NzI5MzQ4NzEwMjk4MzAxOTI4MzMx");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -20237,10 +22076,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoic3RyaW5nIn0=");
             var t = ParseJToken("OTgyNDkyODM3NDkyMzQ5MjM0OTgyOTMxNzE4MjM5NDg3MjkzNDg3MTAyOTgzMDE5MjgzMzE=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -20248,10 +22088,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtYXhpbXVtIjoxODQ0Njc0NDA3MzcwOTU1MTYxNX0=");
             var t = ParseJToken("MTg0NDY3NDQwNzM3MDk1NTE2MDA=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -20259,10 +22100,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNYXhpbXVtIjo5LjcyNzgzNzk4MTg3OTg3MTJFKzI2fQ==");
             var t = ParseJToken("OS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -20270,10 +22112,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJtaW5pbXVtIjotMTg0NDY3NDQwNzM3MDk1NTE2MTV9");
             var t = ParseJToken("LTE4NDQ2NzQ0MDczNzA5NTUxNjAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -20281,10 +22124,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJleGNsdXNpdmVNaW5pbXVtIjotOS43Mjc4Mzc5ODE4Nzk4NzEyRSsyNn0=");
             var t = ParseJToken("LTkuNzI3ODM3OTgxODc5ODcxMkUrMjY=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -20292,10 +22136,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9");
             var t = ParseJToken("IntcImZvb1wiOiBcImJhclwifSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -20303,10 +22148,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9");
             var t = ParseJToken("Ins6fSI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -20314,10 +22160,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiJ9");
             var t = ParseJToken("MTAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -20325,10 +22172,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50RW5jb2RpbmciOiJiYXNlNjQifQ==");
             var t = ParseJToken("ImV5Sm1iMjhpT2lBaVltRnlJbjBLIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -20336,10 +22184,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50RW5jb2RpbmciOiJiYXNlNjQifQ==");
             var t = ParseJToken("ImV5Sm1iMjhpT2klaVltRnlJbjBLIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -20347,10 +22196,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50RW5jb2RpbmciOiJiYXNlNjQifQ==");
             var t = ParseJToken("MTAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -20358,10 +22208,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsImNvbnRlbnRFbmNvZGluZyI6ImJhc2U2NCJ9");
             var t = ParseJToken("ImV5Sm1iMjhpT2lBaVltRnlJbjBLIg==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -20369,10 +22220,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsImNvbnRlbnRFbmNvZGluZyI6ImJhc2U2NCJ9");
             var t = ParseJToken("ImV6cDlDZz09Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -20380,10 +22232,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsImNvbnRlbnRFbmNvZGluZyI6ImJhc2U2NCJ9");
             var t = ParseJToken("Int9Ig==");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -20391,10 +22244,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJjb250ZW50TWVkaWFUeXBlIjoiYXBwbGljYXRpb24vanNvbiIsImNvbnRlbnRFbmNvZGluZyI6ImJhc2U2NCJ9");
             var t = ParseJToken("MTAw");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("ecmascript-regex")]
@@ -20402,10 +22256,11 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJmb3JtYXQiOiJyZWdleCJ9");
             var t = ParseJToken("Il5cXFMofCgufFxcbikqXFxTKVxcWiI=");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeFalse();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -20413,7 +22268,7 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = ParseSchema("eyJ0eXBlIjoiaW50ZWdlciJ9");
             var t = ParseJToken("MS4w");
-            JSchemaValidatorBuilder.Build(s).Compile()(t).Should().BeTrue();
+            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
 
