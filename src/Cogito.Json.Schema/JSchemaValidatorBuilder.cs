@@ -772,7 +772,21 @@ namespace Cogito.Json.Schema
             if (schema.Pattern == null)
                 return null;
 
-            throw new NotImplementedException();
+            return OnlyWhen(
+                IsTokenType(o, JTokenType.String),
+                CallThis(nameof(Pattern), Expression.Constant(schema.Pattern), Expression.Convert(o, typeof(string))));
+        }
+
+        static bool Pattern(string pattern, string value)
+        {
+            try
+            {
+                return Regex.IsMatch(value, pattern);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         static Expression BuildPatternProperties(JSchema schema, Expression o)
@@ -813,8 +827,6 @@ namespace Cogito.Json.Schema
             var itr = Expression.Variable(typeof(IEnumerator<JProperty>));
             var brk = Expression.Label(typeof(bool));
 
-            var mvn = typeof(IEnumerator).GetMethod(nameof(IEnumerator.MoveNext));
-
             return OnlyWhen(
                 IsTokenType(o, JTokenType.Object),
                 Expression.Block(
@@ -822,7 +834,7 @@ namespace Cogito.Json.Schema
                     Expression.Assign(itr, Expression.Call(val, nameof(IEnumerable<JProperty>.GetEnumerator), null)),
                     Expression.Loop(
                         Expression.IfThenElse(
-                            Expression.Not(Expression.Call(itr, mvn)),
+                            Expression.Not(Expression.Call(itr, typeof(IEnumerator).GetMethod(nameof(IEnumerator.MoveNext)))),
                             Expression.Break(brk, True),
                             Expression.IfThen(
                                 Expression.Not(

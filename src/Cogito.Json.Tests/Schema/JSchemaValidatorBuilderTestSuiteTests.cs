@@ -1,20 +1,13 @@
-using System;
-using System.IO;
-using System.Text;
-
 using Cogito.Json.Schema;
 
 using FluentAssertions;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Schema;
-
 namespace Cogito.Json.Tests.Schema
 {
 
+    [Ignore]
     public partial class JSchemaValidatorBuilderTestSuiteTests
     {
 
