@@ -16,7 +16,7 @@ namespace Cogito.Json.Schema.Minimization
         /// <summary>
         /// Default set of reducers.
         /// </summary>
-        public readonly static IReadOnlyCollection<JSchemaReducer> DefaultReducers =
+        public static readonly IReadOnlyCollection<JSchemaReducer> DefaultReducers =
             typeof(JSchemaReducingTransformer).Assembly.GetTypes()
                 .Where(i => typeof(JSchemaReducer).IsAssignableFrom(i))
                 .Where(i => i.IsAbstract == false)
