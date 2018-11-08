@@ -255,8 +255,6 @@ namespace Cogito.Json.Schema
                         .Concat(v.Select(i => Expression.Assign(i.Value, compile[i.Key])))
                         .Append(e));
 
-            e = global::ExpressionOptimizer.doReduction(e);
-
             return e;
         }
 
