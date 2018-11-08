@@ -7,7 +7,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Cogito.Json.Tests.Schema
 {
 
-    [Ignore]
     public partial class JSchemaValidatorBuilderTestSuiteTests
     {
 

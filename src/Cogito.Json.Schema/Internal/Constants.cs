@@ -6,6 +6,16 @@ namespace Cogito.Json.Schema.Internal
     static class Constants
     {
 
+        public static class SchemaVersions
+        {
+
+            public static readonly Uri Draft3 = new Uri("http://json-schema.org/draft-03/schema#");
+            public static readonly Uri Draft4 = new Uri("http://json-schema.org/draft-04/schema#");
+            public static readonly Uri Draft6 = new Uri("http://json-schema.org/draft-06/schema#");
+            public static readonly Uri Draft7 = new Uri("http://json-schema.org/draft-07/schema#");
+
+        }
+
         public static class Formats
         {
 
@@ -34,16 +44,6 @@ namespace Cogito.Json.Schema.Internal
         {
 
             public const string Base64 = "base64";
-
-        }
-
-        public static class SchemaVersions
-        {
-
-            public static readonly Uri Draft3 = new Uri("http://json-schema.org/draft-03/schema#");
-            public static readonly Uri Draft4 = new Uri("http://json-schema.org/draft-04/schema#");
-            public static readonly Uri Draft6 = new Uri("http://json-schema.org/draft-06/schema#");
-            public static readonly Uri Draft7 = new Uri("http://json-schema.org/draft-07/schema#");
 
         }
 

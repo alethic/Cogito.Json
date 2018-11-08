@@ -8,21 +8,21 @@ using System.Numerics;
 namespace Cogito.Json.Schema.Internal
 {
 
-    internal static class MathHelpers
+    static class MathHelpers
     {
 
-        private static readonly double DecimalDoubleMaxValue;
-        private static readonly double DecimalDoubleMinValue;
+        static readonly double DecimalDoubleMaxValue;
+        static readonly double DecimalDoubleMinValue;
 
-        private static readonly double DoubleEpsilon;
-        private static readonly decimal DecimalEpsilon;
-        private static readonly decimal DecimalTolerance;
-        private static readonly double DoubleTolerance;
+        static readonly double DoubleEpsilon;
+        static readonly decimal DecimalEpsilon;
+        static readonly decimal DecimalTolerance;
+        static readonly double DoubleTolerance;
 #if !(NET20 || NET35 || PORTABLE) || NETSTANDARD1_3 || NETSTANDARD2_0
-        private static readonly BigInteger BigIntegerDecimalMaxValue;
-        private static readonly BigInteger BigIntegerDecimalMinValue;
+        static readonly BigInteger BigIntegerDecimalMaxValue;
+        static readonly BigInteger BigIntegerDecimalMinValue;
 
-        private static readonly BigInteger BigIntegerDoubleMaxValue;
+        static readonly BigInteger BigIntegerDoubleMaxValue;
 #endif
 
         static MathHelpers()
@@ -71,16 +71,12 @@ namespace Cogito.Json.Schema.Internal
                 {
                     var decimalMultipleOf = Convert.ToDecimal(multipleOf);
                     if (decimalMultipleOf == 0)
-                    {
                         return true;
-                    }
 
                     // check that the division result doesn't exceed a decimal so there is no overflow while calculating remainder
                     var division = integerAsDouble / multipleOf;
                     if (FitsInDecimal(division))
-                    {
                         return IsIntegerMultiple(integer, decimalMultipleOf);
-                    }
                 }
             }
 
@@ -88,26 +84,19 @@ namespace Cogito.Json.Schema.Internal
 #if !(NET20 || NET35 || PORTABLE) || NETSTANDARD1_3 || NETSTANDARD2_0
             if (integer is BigInteger i2)
             {
-                bool divisibleNonInteger = !IsZero(System.Math.Abs(multipleOf - System.Math.Truncate(multipleOf)));
-
+                var divisibleNonInteger = !IsZero(System.Math.Abs(multipleOf - System.Math.Truncate(multipleOf)));
                 if (divisibleNonInteger)
                 {
                     // biginteger only supports operations against other integers
                     // this will lose any decimal point on MultipleOf
                     // so raise an error if MultipleOf is not an integer and value is not zero
                     if (i2 <= BigIntegerDoubleMaxValue)
-                    {
                         isMultiple = IsRemainderMultiple((double)i2 % multipleOf, multipleOf);
-                    }
                     else
-                    {
                         isMultiple = i2 == 0;
-                    }
                 }
                 else
-                {
                     isMultiple = i2 % new BigInteger(multipleOf) == 0;
-                }
             }
             else
 #endif
@@ -118,14 +107,13 @@ namespace Cogito.Json.Schema.Internal
             return isMultiple;
         }
 
-        private static bool IsIntegerMultiple(object integer, decimal multipleOf)
+        static bool IsIntegerMultiple(object integer, decimal multipleOf)
         {
             bool isMultiple;
 #if !(NET20 || NET35 || PORTABLE) || NETSTANDARD1_3 || NETSTANDARD2_0
             if (integer is BigInteger i)
             {
-                bool divisibleNonInteger = !IsZero(System.Math.Abs(multipleOf - System.Math.Truncate(multipleOf)));
-
+                var divisibleNonInteger = !IsZero(System.Math.Abs(multipleOf - System.Math.Truncate(multipleOf)));
                 if (divisibleNonInteger)
                 {
                     // biginteger only supports operations against other integers
@@ -181,50 +169,42 @@ namespace Cogito.Json.Schema.Internal
         public static bool IsDoubleMultiple(decimal value, decimal multipleOf)
         {
             if (multipleOf == 0)
-            {
                 return false;
-            }
 
             var remainder = value % multipleOf;
 
             return IsRemainderMultiple(remainder, multipleOf);
         }
 
-        private static bool IsRemainderMultiple(decimal remainder, decimal multipleOf)
+        static bool IsRemainderMultiple(decimal remainder, decimal multipleOf)
         {
-            decimal absRemainder = System.Math.Abs(remainder);
+            var absRemainder = System.Math.Abs(remainder);
 
             if (absRemainder <= DecimalTolerance)
-            {
                 return true;
-            }
+
             if (System.Math.Abs(multipleOf) - absRemainder <= DecimalTolerance)
-            {
                 return true;
-            }
 
             return false;
         }
 
-        private static bool IsRemainderMultiple(double remainder, double multipleOf)
+        static bool IsRemainderMultiple(double remainder, double multipleOf)
         {
-            double absRemainder = System.Math.Abs(remainder);
+            var absRemainder = System.Math.Abs(remainder);
 
             if (absRemainder <= DoubleTolerance)
-            {
                 return true;
-            }
+
             if (System.Math.Abs(multipleOf) - absRemainder <= DoubleTolerance)
-            {
                 return true;
-            }
 
             return false;
         }
 
-        private static bool FitsInDecimal(double d)
+        static bool FitsInDecimal(double d)
         {
-            return (d < DecimalDoubleMaxValue && d > DecimalDoubleMinValue);
+            return d < DecimalDoubleMaxValue && d > DecimalDoubleMinValue;
         }
 
         public static bool IsZero(decimal value)

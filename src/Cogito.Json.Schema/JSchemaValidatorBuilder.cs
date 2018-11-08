@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -7,7 +6,6 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-using Cogito.Collections;
 using Cogito.Json.Schema.Internal;
 
 using Newtonsoft.Json.Linq;
@@ -22,77 +20,9 @@ namespace Cogito.Json.Schema
     public class JSchemaValidatorBuilder
     {
 
-        static readonly PropertyInfo JToken_Type = typeof(JToken).GetProperty(nameof(JToken.Type));
-        static readonly MethodInfo JToken_DeepEqual = typeof(JToken).GetMethod(nameof(JToken.DeepEquals));
-        static readonly MethodInfo JObject_GetValue = typeof(JObject).GetMethod(nameof(JObject.GetValue), new[] { typeof(string) });
-
         static readonly Expression True = Expression.Constant(true);
         static readonly Expression False = Expression.Constant(false);
         static readonly Expression Null = Expression.Constant(null);
-
-        static Expression Reduce(Expression e)
-        {
-            e = e.Reduce();
-
-            {
-                if (e.NodeType == ExpressionType.AndAlso && e is BinaryExpression u)
-                {
-                    if (u.Left.NodeType == ExpressionType.Constant && u.Left is ConstantExpression l)
-                    {
-                        if (l.Value is bool b1 && b1)
-                            return Reduce(u.Right);
-
-                        if (l.Value is bool b2 && !b2)
-                            return False;
-                    }
-
-                    if (u.Right.NodeType == ExpressionType.Constant && u.Right is ConstantExpression r)
-                    {
-                        if (r.Value is bool b1 && b1)
-                            return Reduce(u.Left);
-
-                        if (r.Value is bool b2 && !b2)
-                            return False;
-                    }
-                }
-            }
-
-            {
-                if (e.NodeType == ExpressionType.OrElse && e is BinaryExpression u)
-                {
-                    if (u.Left.NodeType == ExpressionType.Constant && u.Left is ConstantExpression l)
-                    {
-                        if (l.Value is bool b1 && b1)
-                            return True;
-
-                        if (l.Value is bool b2 && !b2)
-                            return Reduce(u.Right);
-                    }
-
-                    if (u.Right.NodeType == ExpressionType.Constant && u.Right is ConstantExpression r)
-                    {
-                        if (r.Value is bool b1 && b1)
-                            return True;
-
-                        if (r.Value is bool b2 && !b2)
-                            return Reduce(u.Left);
-                    }
-                }
-            }
-
-            if (e.NodeType == ExpressionType.Negate && e is UnaryExpression n)
-            {
-                // nested negation, flip
-                if (n.Operand.NodeType == ExpressionType.Negate && n.Operand is UnaryExpression n2)
-                    return Reduce(n2);
-
-                // nested constant boolean, flip
-                if (n.Operand.NodeType == ExpressionType.Constant && n.Operand is ConstantExpression c)
-                    return c.Value is bool b && b ? False : True;
-            }
-
-            return e;
-        }
 
         /// <summary>
         /// Builds an expression that returns <c>true</c> if the expression is of a given type.
@@ -117,7 +47,7 @@ namespace Cogito.Json.Schema
         /// <param name="o"></param>
         /// <returns></returns>
         static Expression TokenType(Expression o) =>
-            Expression.Property(o, JToken_Type);
+            Expression.Property(o, typeof(JToken).GetProperty(nameof(JToken.Type)));
 
         /// <summary>
         /// Returns an expression that returns <c>true</c> if the specified expression of the the given token type.
@@ -137,7 +67,7 @@ namespace Cogito.Json.Schema
         static Expression DeepEqual(Expression a, Expression b) =>
             Expression.AndAlso(
                 Expression.Equal(TokenType(a), TokenType(b)),
-                Expression.Call(JToken_DeepEqual, a, b));
+                Expression.Call(typeof(JToken).GetMethod(nameof(JToken.DeepEquals)), a, b));
 
         /// <summary>
         /// Returns an expression that returns the item at the specified index.
@@ -234,55 +164,41 @@ namespace Cogito.Json.Schema
                 Expression.Constant(0));
 
         /// <summary>
-        /// Maintains a cache of <see cref="JSchema"/> objects, pointing to their current implementation.
+        /// Returns an expression that returns <c>true</c>
         /// </summary>
-        readonly Dictionary<JSchema, Expression> delayed = new Dictionary<JSchema, Expression>();
-
-        /// <summary>
-        /// Builds an expression tree that implements validation of JSON.
-        /// </summary>
-        /// <param name="schema"></param>
+        /// <param name="test"></param>
+        /// <param name="ifTrue"></param>
         /// <returns></returns>
-        public Expression<Func<JToken, bool>> Build(JSchema schema)
+        static Expression IfThenElseTrue(Expression test, Expression ifTrue)
         {
-            if (schema == null)
-                throw new ArgumentNullException(nameof(schema));
-
-            var o = Expression.Parameter(typeof(JToken), "o");
-            var e = Reduce(Build(schema, o));
-            return Expression.Lambda<Func<JToken, bool>>(e, o);
+            return Expression.Condition(test, ifTrue, True);
         }
 
         /// <summary>
-        /// Builds an expression tree that implements validation of JSON.
+        /// Returns an expression that returns <c>true</c> if all of the given expressions returns <c>true</c>.
         /// </summary>
-        /// <param name="schema"></param>
+        /// <param name="expressions"></param>
         /// <returns></returns>
-        public Expression Build(JSchema schema, Expression o)
-        {
-            if (schema == null)
-                throw new ArgumentNullException(nameof(schema));
-            if (o == null)
-                throw new ArgumentNullException(nameof(o));
-
-            return EvalSchema(schema, o);
-        }
-
-        static Expression OnlyWhen(Expression @if, Expression then)
-        {
-            return Expression.Condition(@if, then, True);
-        }
-
         static Expression AllOf(IEnumerable<Expression> expressions)
         {
-            return expressions.Aggregate(True, (a, b) => Reduce(Expression.AndAlso(a, b)));
+            return expressions.Aggregate(True, (a, b) => Expression.AndAlso(a, b));
         }
 
+        /// <summary>
+        /// Returns an expression that returns <c>true</c> if any of the given expressions returns <c>true</c>.
+        /// </summary>
+        /// <param name="expressions"></param>
+        /// <returns></returns>
         static Expression AnyOf(IEnumerable<Expression> expressions)
         {
-            return expressions.Aggregate(False, (a, b) => Reduce(Expression.OrElse(a, b)));
+            return expressions.Aggregate(False, (a, b) => Expression.OrElse(a, b));
         }
 
+        /// <summary>
+        /// Returns an expression that returns <c>true</c> if one of the given expressions returns <c>true</c>.
+        /// </summary>
+        /// <param name="expressions"></param>
+        /// <returns></returns>
         static Expression OneOf(IEnumerable<Expression> expressions)
         {
             var rsl = Expression.Variable(typeof(bool));
@@ -300,6 +216,55 @@ namespace Cogito.Json.Schema
         }
 
         /// <summary>
+        /// Builds an expression tree that implements validation of JSON.
+        /// </summary>
+        /// <param name="schema"></param>
+        /// <returns></returns>
+        public Expression<Func<JToken, bool>> Build(JSchema schema)
+        {
+            if (schema == null)
+                throw new ArgumentNullException(nameof(schema));
+
+            var o = Expression.Parameter(typeof(JToken), "o");
+            var e = Build(schema, o);
+            return Expression.Lambda<Func<JToken, bool>>(e, o);
+        }
+
+        /// <summary>
+        /// Builds an expression tree that implements validation of JSON against another expression which provides the
+        /// target of the validation.
+        /// </summary>
+        /// <param name="schema"></param>
+        /// <returns></returns>
+        public Expression Build(JSchema schema, Expression o)
+        {
+            if (schema == null)
+                throw new ArgumentNullException(nameof(schema));
+            if (o == null)
+                throw new ArgumentNullException(nameof(o));
+
+            // evaluate expression
+            var e = EvalSchema(schema, o);
+
+            // if any recursed, generate assignment of delegates in block
+            var v = delayed.Where(i => i.Value != null).ToArray();
+            if (v.Length > 0)
+                e = Expression.Block(
+                    v.Select(i => i.Value).ToArray(),
+                    Enumerable.Empty<Expression>()
+                        .Concat(v.Select(i => Expression.Assign(i.Value, compile[i.Key])))
+                        .Append(e));
+
+            e = global::ExpressionOptimizer.doReduction(e);
+
+            return e;
+        }
+
+
+        readonly Dictionary<JSchema, ParameterExpression> delayed = new Dictionary<JSchema, ParameterExpression>();
+        readonly Dictionary<JSchema, LambdaExpression> compile = new Dictionary<JSchema, LambdaExpression>();
+
+        /// <summary>
         /// Returns an expression that invokes the validation of the given schema.
         /// </summary>
         /// <param name="schema"></param>
@@ -307,26 +272,50 @@ namespace Cogito.Json.Schema
         /// <returns></returns>
         Expression EvalSchema(JSchema schema, Expression o)
         {
-            // schema has already been processed
+            // evaluating of this schema is already in progress, return future variable to delegate
             if (delayed.TryGetValue(schema, out var e))
-                return e;
+            {
+                // we are recursed, but have not yet allocated a variable, do so
+                if (e is null)
+                    e = delayed[schema] = Expression.Variable(typeof(Func<JToken, bool>));
 
-            // expression begins life as a function variable returning bool
+                // return call to eventually populated delegate variable
+                return Expression.Invoke(e, o);
+            }
+
+            // insert null entry to detect future recursion
+            delayed[schema] = null;
+
+            // build the actual invocation of the validation
             var p = Expression.Parameter(typeof(JToken));
             var b = BuildSchemaBody(schema, p);
-            delayed[schema] = e = Expression.Lambda<Func<JToken, bool>>(BuildSchemaBody(schema), p);
+            var f = Expression.Lambda<Func<JToken, bool>>(b, p);
 
-            return Expression.Invoke(GetOrCreateSchemaFunc(schema), o);
+            // we did recurse, store away our finished lambda
+            if (delayed.TryGetValue(schema, out var e2) && e2 != null)
+            {
+                compile[schema] = f;
+                return Expression.Invoke(e2, o);
+            }
+
+            // was never actually recursed, remove
+            if (delayed[schema] == null)
+                delayed.Remove(schema);
+
+            // return invocation of validator
+            return Expression.Invoke(f, o);
         }
 
+
         /// <summary>
-        /// Gets or creates the expression function to evaluate the given <see cref="JSchema"/>.
+        /// Returns an expression that returns a delegate to evaluate the schema.
         /// </summary>
         /// <param name="schema"></param>
         /// <returns></returns>
-        LambdaExpression GetOrCreateSchemaFunc(JSchema schema)
+        Expression EvalSchemaFunc(JSchema schema)
         {
-            return delayed.GetOrAdd(schema, s => BuildSchemaFunc(s));
+            var p = Expression.Parameter(typeof(JToken));
+            return Expression.Lambda<Func<JToken, bool>>(EvalSchema(schema, p), p);
         }
 
         /// <summary>
@@ -334,18 +323,13 @@ namespace Cogito.Json.Schema
         /// </summary>
         /// <param name="schema"></param>
         /// <returns></returns>
-        Expression<Func<JToken, bool>> BuildSchemaFunc(JSchema schema)
+        Expression BuildSchemaBody(JSchema schema, Expression o)
         {
-            var o = Expression.Parameter(typeof(JToken), "o");
-            var e = AllOf(BuildSchemaExpressions(schema, o).Where(i => i != null).Select(i => Reduce(i)));
-            var l = Expression.Lambda<Func<JToken, bool>>(e, o);
-
-            return l;
+            return AllOf(BuildSchemaExpressions(schema, o).Where(i => i != null));
         }
 
         IEnumerable<Expression> BuildSchemaExpressions(JSchema schema, Expression o)
         {
-            yield return BuildAdditionalProperties(schema, o);
             yield return BuildAllOf(schema, o);
             yield return BuildAnyOf(schema, o);
             yield return BuildConst(schema, o);
@@ -367,7 +351,6 @@ namespace Cogito.Json.Schema
             yield return BuildNot(schema, o);
             yield return BuildOneOf(schema, o);
             yield return BuildPattern(schema, o);
-            yield return BuildPatternProperties(schema, o);
             yield return BuildProperties(schema, o);
             yield return BuildPropertyNames(schema, o);
             yield return BuildRequired(schema, o);
@@ -375,14 +358,6 @@ namespace Cogito.Json.Schema
             yield return BuildUniqueItems(schema, o);
             yield return BuildValid(schema, o);
             yield return BuildIfThenElse(schema, o);
-        }
-
-        Expression BuildAdditionalProperties(JSchema schema, Expression o)
-        {
-            if (schema.AdditionalProperties == null && schema.AllowAdditionalProperties == true)
-                return null;
-
-            throw new NotImplementedException();
         }
 
         Expression BuildAllOf(JSchema schema, Expression o)
@@ -419,7 +394,7 @@ namespace Cogito.Json.Schema
             var brk = Expression.Label(typeof(bool));
             var len = Expression.Property(val, nameof(JArray.Count));
 
-            return OnlyWhen(
+            return IfThenElseTrue(
                 IsTokenType(o, JTokenType.Array),
                 Expression.Block(
                     new[] { idx },
@@ -443,7 +418,7 @@ namespace Cogito.Json.Schema
             return CallThis(nameof(IsBase64String), Expression.Convert(o, typeof(string)));
         }
 
-        bool IsBase64String(string value) =>
+        static bool IsBase64String(string value) =>
            StringHelpers.IsBase64String(value);
 
         Expression BuildDependencies(JSchema schema, Expression o)
@@ -468,7 +443,7 @@ namespace Cogito.Json.Schema
             if (schema.Format == null)
                 return null;
 
-            return OnlyWhen(
+            return IfThenElseTrue(
                 IsTokenType(o, JTokenType.String),
                 ValidateFormat(schema.Format, Expression.Convert(o, typeof(string))));
         }
@@ -578,34 +553,32 @@ namespace Cogito.Json.Schema
             return true;
         }
 
+        /// <summary>
+        /// Evaluates whether each item in the array from the offset.
+        /// </summary>
+        /// <param name="val"></param>
+        /// <param name="off"></param>
+        /// <param name="sch"></param>
+        /// <returns></returns>
+        static bool CompareLocal(JArray val, int off, Func<JToken, bool> sch)
+        {
+            for (var idx = off; idx < val.Count; idx++)
+                if (!sch(val[idx]))
+                    return false;
+
+            return true;
+        }
+
         Expression BuildItems(JSchema schema, Expression o)
         {
-            // compares the array items in val to the schema in sch from offset
-            Expression Compare(Expression val, Expression off, JSchema sch)
-            {
-                var idx = Expression.Variable(typeof(int));
-                var brk = Expression.Label(typeof(bool));
-                var len = Expression.Property(val, nameof(JArray.Count));
-
-                return Expression.Block(
-                    new[] { idx },
-                    Expression.Assign(idx, off),
-                    Expression.Loop(
-                        Expression.IfThenElse(
-                            Expression.Not(Expression.LessThan(idx, len)),
-                            Expression.Break(brk, True),
-                            Expression.IfThenElse(
-                                Expression.Not(EvalSchema(sch, FromItemIndex(val, idx))),
-                                Expression.Break(brk, False),
-                                Expression.PostIncrementAssign(idx))),
-                        brk));
-            }
+            Expression CompareExpr(Expression val, Expression off, JSchema sch) =>
+                CallThis(nameof(CompareLocal), val, off, EvalSchemaFunc(sch));
 
             // compare single schema item to all array items
             if (schema.ItemsPositionValidation == false && schema.Items.Count > 0)
-                return Expression.OrElse(
-                    Expression.Not(IsTokenType(o, JTokenType.Array)),
-                    Compare(Expression.Convert(o, typeof(JArray)), Expression.Constant(0), schema.Items[0]));
+                return IfThenElseTrue(
+                    IsTokenType(o, JTokenType.Array),
+                    CompareExpr(Expression.Convert(o, typeof(JArray)), Expression.Constant(0), schema.Items[0]));
 
             if (schema.ItemsPositionValidation == true)
             {
@@ -629,7 +602,7 @@ namespace Cogito.Json.Schema
                 if (schema.AdditionalItems != null)
                     return Expression.AndAlso(
                         cmp,
-                        Compare(val, Expression.Constant(schema.Items.Count), schema.AdditionalItems));
+                        CompareExpr(val, Expression.Constant(schema.Items.Count), schema.AdditionalItems));
 
                 // basic comparison, additional items are allowed, but no validated
                 return cmp;
@@ -666,7 +639,7 @@ namespace Cogito.Json.Schema
             if (schema.MaximumItems == null)
                 return null;
 
-            return OnlyWhen(
+            return IfThenElseTrue(
                 IsTokenType(o, JTokenType.Array),
                 Expression.LessThanOrEqual(
                     Expression.Convert(Expression.Property(Expression.Convert(o, typeof(JArray)), nameof(JArray.Count)), typeof(long)),
@@ -678,7 +651,7 @@ namespace Cogito.Json.Schema
             if (schema.MaximumLength == null)
                 return null;
 
-            return OnlyWhen(
+            return IfThenElseTrue(
                 IsTokenType(o, JTokenType.String),
                 Expression.LessThanOrEqual(
                     Expression.Convert(StringLength(o), typeof(long)),
@@ -690,7 +663,7 @@ namespace Cogito.Json.Schema
             if (schema.MaximumProperties == null)
                 return null;
 
-            return OnlyWhen(
+            return IfThenElseTrue(
                 IsTokenType(o, JTokenType.Object),
                 Expression.LessThanOrEqual(
                     Expression.Convert(
@@ -729,7 +702,7 @@ namespace Cogito.Json.Schema
             if (schema.MinimumItems == null)
                 return null;
 
-            return OnlyWhen(
+            return IfThenElseTrue(
                 IsTokenType(o, JTokenType.Array),
                 Expression.GreaterThanOrEqual(
                     Expression.Convert(Expression.Property(Expression.Convert(o, typeof(JArray)), nameof(JArray.Count)), typeof(long)),
@@ -742,7 +715,7 @@ namespace Cogito.Json.Schema
                 return null;
 
 
-            return OnlyWhen(
+            return IfThenElseTrue(
                 IsTokenType(o, JTokenType.String),
                 Expression.GreaterThanOrEqual(
                     Expression.Convert(StringLength(o), typeof(long)),
@@ -754,7 +727,7 @@ namespace Cogito.Json.Schema
             if (schema.MinimumProperties == null)
                 return null;
 
-            return OnlyWhen(
+            return IfThenElseTrue(
                 IsTokenType(o, JTokenType.Object),
                 Expression.GreaterThanOrEqual(
                     Expression.Convert(
@@ -770,7 +743,7 @@ namespace Cogito.Json.Schema
             if (schema.MultipleOf == null)
                 return null;
 
-            return OnlyWhen(
+            return IfThenElseTrue(
                 IsSchemaType(o, JSchemaType.Integer | JSchemaType.Number),
                 CallThis(nameof(MultipleOf),
                     Expression.Convert(o, typeof(JValue)),
@@ -817,12 +790,12 @@ namespace Cogito.Json.Schema
             if (schema.Pattern == null)
                 return null;
 
-            return OnlyWhen(
+            return IfThenElseTrue(
                 IsTokenType(o, JTokenType.String),
                 CallThis(nameof(Pattern), Expression.Constant(schema.Pattern), Expression.Convert(o, typeof(string))));
         }
 
-        bool Pattern(string pattern, string value)
+        static bool Pattern(string pattern, string value)
         {
             try
             {
@@ -834,24 +807,46 @@ namespace Cogito.Json.Schema
             }
         }
 
-        Expression BuildPatternProperties(JSchema schema, Expression o)
-        {
-            if (schema.PatternProperties == null ||
-                schema.PatternProperties.Count == 0)
-                return null;
-
-            throw new NotImplementedException();
-        }
-
         Expression BuildProperties(JSchema schema, Expression o)
         {
-            if (schema.Properties.Count == 0)
-                return null;
+            return AllOf(BuildPropertiesAll(schema, o).Where(i => i != null));
+        }
 
-            return OnlyWhen(
-                IsTokenType(o, JTokenType.Object),
-                AllOf(schema.Properties.Select(i =>
-                    BuildProperty(i.Key, i.Value, Expression.Convert(o, typeof(JObject))))));
+        IEnumerable<Expression> BuildPropertiesAll(JSchema schema, Expression o)
+        {
+            if (schema.Properties.Count > 0)
+                yield return IfThenElseTrue(
+                    IsTokenType(o, JTokenType.Object),
+                    AllOf(schema.Properties.Select(i =>
+                        BuildProperty(i.Key, i.Value, Expression.Convert(o, typeof(JObject))))));
+
+            if (schema.PatternProperties.Count > 0)
+                yield return IfThenElseTrue(
+                    IsTokenType(o, JTokenType.Object),
+                        AllOf(schema.PatternProperties.Select(i =>
+                            BuildPatternProperty(i.Key, i.Value, Expression.Convert(o, typeof(JObject))))));
+
+            if (schema.AllowAdditionalProperties == false)
+            {
+                yield return IfThenElseTrue(
+                    IsTokenType(o, JTokenType.Object),
+                    CallThis(
+                        nameof(AllowAdditionalProperties),
+                        Expression.Constant(schema),
+                        Expression.Convert(o, typeof(JObject))));
+            }
+            else if (schema.AdditionalProperties != null)
+            {
+                var p = Expression.Parameter(typeof(JToken));
+
+                yield return IfThenElseTrue(
+                    IsTokenType(o, JTokenType.Object),
+                    CallThis(
+                        nameof(AdditionalProperties),
+                        Expression.Constant(schema),
+                        Expression.Convert(o, typeof(JObject)),
+                        EvalSchemaFunc(schema.AdditionalProperties)));
+            }
         }
 
         Expression BuildProperty(string propertyName, JSchema propertySchema, Expression o)
@@ -859,8 +854,52 @@ namespace Cogito.Json.Schema
             if (o.Type != typeof(JObject))
                 throw new ArgumentException(nameof(o));
 
-            var v = Expression.Call(o, JObject_GetValue, Expression.Constant(propertyName));
-            return Expression.Condition(IsNull(v), True, EvalSchema(propertySchema, v));
+            return CallThis(nameof(Property), Expression.Constant(propertyName), EvalSchemaFunc(propertySchema), o);
+        }
+
+        static bool Property(string propertyName, Func<JToken, bool> propertySchema, JObject o)
+        {
+            if (o.TryGetValue(propertyName, out var p))
+                return propertySchema(p);
+
+            return true;
+        }
+
+        Expression BuildPatternProperty(string propertyPattern, JSchema propertySchema, Expression o)
+        {
+            if (o.Type != typeof(JObject))
+                throw new ArgumentException(nameof(o));
+
+            return CallThis(nameof(PatternProperty), Expression.Constant(propertyPattern), EvalSchemaFunc(propertySchema), o);
+        }
+
+        static bool PatternProperty(string propertyPattern, Func<JToken, bool> propertySchema, JObject o)
+        {
+            foreach (var p in o.Properties())
+                if (Regex.IsMatch(p.Name, propertyPattern))
+                    if (!propertySchema(p.Value))
+                        return false;
+
+            return true;
+        }
+
+        static bool AllowAdditionalProperties(JSchema schema, JObject o)
+        {
+            foreach (var p in o.Properties())
+                if (schema.Properties.ContainsKey(p.Name) == false)
+                    return false;
+
+            return true;
+        }
+
+        static bool AdditionalProperties(JSchema schema, JObject o, Func<JToken, bool> additionalPropertiesSchema)
+        {
+            foreach (var p in o.Properties())
+                if (schema.Properties.ContainsKey(p.Name) == false)
+                    if (additionalPropertiesSchema(p.Value) == false)
+                        return false;
+
+            return true;
         }
 
         Expression BuildPropertyNames(JSchema schema, Expression o)
@@ -868,30 +907,20 @@ namespace Cogito.Json.Schema
             if (schema.PropertyNames == null)
                 return null;
 
-            var val = Expression.Convert(Expression.Call(Expression.Convert(o, typeof(JObject)), nameof(JObject.Properties), null), typeof(IEnumerable<JProperty>));
-            var itr = Expression.Variable(typeof(IEnumerator<JProperty>));
-            var brk = Expression.Label(typeof(bool));
-
-            return OnlyWhen(
+            return IfThenElseTrue(
                 IsTokenType(o, JTokenType.Object),
-                Expression.Block(
-                    new[] { itr },
-                    Expression.Assign(itr, Expression.Call(val, nameof(IEnumerable<JProperty>.GetEnumerator), null)),
-                    Expression.Loop(
-                        Expression.IfThenElse(
-                            Expression.Not(Expression.Call(itr, typeof(IEnumerator).GetMethod(nameof(IEnumerator.MoveNext)))),
-                            Expression.Break(brk, True),
-                            Expression.IfThen(
-                                Expression.Not(
-                                    EvalSchema(
-                                        schema.PropertyNames,
-                                        Expression.Convert(
-                                            Expression.Property(
-                                                Expression.Property(itr, nameof(IEnumerator<JProperty>.Current)),
-                                                nameof(JProperty.Name)),
-                                            typeof(JToken)))),
-                                Expression.Break(brk, False))),
-                        brk)));
+                CallThis(nameof(PropertyNames),
+                    Expression.Convert(o, typeof(JObject)),
+                    EvalSchemaFunc(schema.PropertyNames)));
+        }
+
+        static bool PropertyNames(JObject o, Func<JToken, bool> schema)
+        {
+            foreach (var p in o.Properties())
+                if (!schema(p.Name))
+                    return false;
+
+            return true;
         }
 
         Expression BuildRequired(JSchema schema, Expression o)
@@ -899,7 +928,7 @@ namespace Cogito.Json.Schema
             if (schema.Required.Count == 0)
                 return null;
 
-            return OnlyWhen(
+            return IfThenElseTrue(
                 IsTokenType(o, JTokenType.Object),
                 AllOf(schema.Required.Select(i => BuildRequired(i, o))));
         }
@@ -912,8 +941,7 @@ namespace Cogito.Json.Schema
                 Expression.Constant(propertyName));
         }
 
-        static bool ContainsKey(JObject o, string propertyName) =>
-           o.ContainsKey(propertyName);
+        static bool ContainsKey(JObject o, string propertyName) => o.ContainsKey(propertyName);
 
         Expression BuildType(JSchema schema, Expression o)
         {
@@ -928,25 +956,19 @@ namespace Cogito.Json.Schema
             if (schema.UniqueItems == false)
                 return null;
 
-            throw new NotImplementedException();
+            return IfThenElseTrue(
+                IsTokenType(o, JTokenType.Array),
+                CallThis(nameof(UniqueItems), Expression.Constant(schema), Expression.Convert(o, typeof(JArray))));
+        }
 
-            //var val = Expression.Convert(o, typeof(JArray));
-            //var idx = Expression.Variable(typeof(int));
-            //var brk = Expression.Label(typeof(bool));
-            //var len = Expression.Property(val, nameof(JArray.Count));
+        static bool UniqueItems(JSchema schema, JArray a)
+        {
+            for (var i = 0; i < a.Count; i++)
+                for (var j = i + 1; j < a.Count; j++)
+                    if (JToken.DeepEquals(a[i], a[j]))
+                        return false;
 
-            //return Expression.Block(
-            //    new[] { idx },
-            //    Expression.Assign(idx, Expression.Constant(0)),
-            //    Expression.Loop(
-            //        Expression.IfThenElse(
-            //            Expression.Not(Expression.LessThan(idx, len)),
-            //            Expression.Break(brk, True),
-            //            Expression.IfThenElse(
-            //                Expression.Not(BuildSchema(schema.UniqueItems, FromItemIndex(val, idx))),
-            //                Expression.Break(brk, False),
-            //                Expression.PostIncrementAssign(idx))),
-            //        brk));
+            return true;
         }
 
         Expression BuildValid(JSchema schema, Expression o)

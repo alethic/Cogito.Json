@@ -11,7 +11,7 @@ namespace Cogito.Json.Schema.Internal
     static class ColorHelpers
     {
 
-        private static readonly List<string> NamedColors = new List<string>
+        static readonly List<string> NamedColors = new List<string>
         {
             "aqua",
             "black",
@@ -35,14 +35,10 @@ namespace Cogito.Json.Schema.Internal
         public static bool IsValid(string s)
         {
             if (string.IsNullOrEmpty(s))
-            {
                 return false;
-            }
 
             if (NamedColors.Contains(s))
-            {
                 return true;
-            }
 
             if (s[0] == '#')
             {

@@ -1,10 +1,12 @@
-﻿using System.IO;
+﻿using System;
+using System.Diagnostics;
+using System.IO;
 using Cogito.Json.Schema;
 
 using FluentAssertions;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
@@ -61,12 +63,56 @@ namespace Cogito.Json.Tests.Schema
         }
 
         [TestMethod]
+        public void Should_validate_recursive_ref()
+        {
+            var s = JSchema.Parse("{ 'properties': { 'Prop1': { '$ref': '#' }, 'Prop2': { 'const': 'value' } } }");
+            var o = new JObject() { ["Prop1"] = new JObject() { ["Prop1"] = null } };
+            var r = new JSchemaValidatorBuilder().Build(s).Compile().Invoke(o);
+            r.Should().BeTrue();
+        }
+
+        [TestMethod]
         public void Can_load_really_big_schema()
         {
             var s = JSchema.Parse(File.ReadAllText(Path.Combine(Path.GetDirectoryName(typeof(JSchemaValidatorBuilderTests).Assembly.Location), "Schema", "ecourt_com_151.json")));
-            var o = new JObject { };
-            var v = new JSchemaValidatorBuilder().Build(s).Compile();
-            var r = v.Invoke(o);
+
+            var sdkf = typeof(JSchemaValidatorBuilderTests).Assembly.GetManifestResourceStream("Cogito.Json.Tests.Schema.efm.json");
+            var o = JObject.ReadFrom(new JsonTextReader(new StreamReader(sdkf)));
+
+
+            var v = new JSchemaValidatorBuilder().Build(s);
+
+            //BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic;
+            //PropertyInfo debugViewProp = typeof(Expression).GetProperty("DebugView", flags);
+            //MethodInfo debugViewGetter = debugViewProp.GetGetMethod(nonPublic: true);
+            //string debugView = (string)debugViewGetter.Invoke(v, null);
+
+            var a = v.Compile();
+            a.Invoke(o);
+            var sw = new Stopwatch();
+
+            var t = TimeSpan.Zero;
+            for (var i = 0; i < 1000; i++)
+            {
+                sw.Start();
+                var r = a.Invoke(o);
+                sw.Stop();
+                t += sw.Elapsed;
+                sw.Reset();
+            }
+            Console.WriteLine("Average on Fast Validator: " + new TimeSpan((long)(t.Ticks / 1000d)));
+
+
+            t = TimeSpan.Zero;
+            for (var i = 0; i < 1000; i++)
+            {
+                sw.Start();
+                var r = o.IsValid(s);
+                sw.Stop();
+                t += sw.Elapsed;
+                sw.Reset();
+            }
+            Console.WriteLine("Average on Slow Validator: " + new TimeSpan((long)(t.Ticks / 1000d)));
         }
 
     }
