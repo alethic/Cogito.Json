@@ -8,16 +8,16 @@ using Cogito.Json.Schema.Internal;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
-namespace Cogito.Json.Schema.Validation
+namespace Cogito.Json.Schema.Validation.Builders
 {
 
     /// <summary>
     /// Implements validation of the 'format' JSON schema test.
     /// </summary>
-    public class FormatExpressionProvider : ExpressionProviderBase
+    public class FormatExpressionBuilder : ExpressionBuilderBase
     {
 
-        public override Expression Build(JSchema schema, Expression token)
+        public override Expression Build(JSchemaExpressionBuilder builder, JSchema schema, Expression token)
         {
             if (schema.Format == null)
                 return null;

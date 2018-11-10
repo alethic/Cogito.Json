@@ -9,10 +9,12 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 
 using Cogito.Json.Schema.Internal;
+using Cogito.Json.Schema.Validation.Builders;
 
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
+
 using TinyIoC;
 
 namespace Cogito.Json.Schema.Validation
@@ -257,17 +259,17 @@ namespace Cogito.Json.Schema.Validation
         /// <returns></returns>
         public static JSchemaExpressionBuilder CreateDefault()
         {
-            return new JSchemaExpressionBuilder(DefaultIoCContainer.Value.ResolveAll<IJSchemaExpressionProvider>());
+            return new JSchemaExpressionBuilder(DefaultIoCContainer.Value.ResolveAll<IExpressionBuilder>());
         }
 
-        readonly IEnumerable<IJSchemaExpressionProvider> providers;
+        readonly IEnumerable<IExpressionBuilder> providers;
         readonly Dictionary<JSchema, ParameterExpression> delayed = new Dictionary<JSchema, ParameterExpression>();
         readonly Dictionary<JSchema, LambdaExpression> compile = new Dictionary<JSchema, LambdaExpression>();
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public JSchemaExpressionBuilder(IEnumerable<IJSchemaExpressionProvider> providers)
+        public JSchemaExpressionBuilder(IEnumerable<IExpressionBuilder> providers)
         {
             this.providers = providers?.ToList() ?? throw new ArgumentNullException(nameof(providers));
         }
@@ -301,7 +303,7 @@ namespace Cogito.Json.Schema.Validation
                 throw new ArgumentNullException(nameof(o));
 
             // evaluate expression
-            var e = EvalSchema(schema, o);
+            var e = Eval(schema, o);
 
             // if any recursed, generate assignment of delegates in block
             var v = delayed.Where(i => i.Value != null).ToArray();
@@ -319,34 +321,34 @@ namespace Cogito.Json.Schema.Validation
         /// Returns an expression that invokes the validation of the given schema.
         /// </summary>
         /// <param name="schema"></param>
-        /// <param name="o"></param>
+        /// <param name="token"></param>
         /// <returns></returns>
-        Expression EvalSchema(JSchema schema, Expression o)
+        public Expression Eval(JSchema schema, Expression token)
         {
             // evaluating of this schema is already in progress, return future variable to delegate
-            if (delayed.TryGetValue(schema, out var e))
+            if (delayed.TryGetValue(schema, out var expr))
             {
                 // we are recursed, but have not yet allocated a variable, do so
-                if (e is null)
-                    e = delayed[schema] = Expression.Variable(typeof(Func<JToken, bool>));
+                if (expr is null)
+                    expr = delayed[schema] = Expression.Variable(typeof(Func<JToken, bool>));
 
                 // return call to eventually populated delegate variable
-                return Expression.Invoke(e, o);
+                return Expression.Invoke(expr, token);
             }
 
             // insert null entry to detect future recursion
             delayed[schema] = null;
 
             // build the actual invocation of the validation
-            var p = Expression.Parameter(typeof(JToken));
-            var b = BuildSchemaBody(schema, p);
-            var f = Expression.Lambda<Func<JToken, bool>>(b, p);
+            var parm = Expression.Parameter(typeof(JToken));
+            var body = BuildSchemaBody(schema, parm);
+            var func = Expression.Lambda<Func<JToken, bool>>(body, parm);
 
             // we did recurse, store away our finished lambda
-            if (delayed.TryGetValue(schema, out var e2) && e2 != null)
+            if (delayed.TryGetValue(schema, out var expr2) && expr2 != null)
             {
-                compile[schema] = f;
-                return Expression.Invoke(e2, o);
+                compile[schema] = func;
+                return Expression.Invoke(expr2, token);
             }
 
             // was never actually recursed, remove
@@ -354,9 +356,8 @@ namespace Cogito.Json.Schema.Validation
                 delayed.Remove(schema);
 
             // return invocation of validator
-            return Expression.Invoke(f, o);
+            return Expression.Invoke(func, token);
         }
-
 
         /// <summary>
         /// Returns an expression that returns a delegate to evaluate the schema.
@@ -366,7 +367,7 @@ namespace Cogito.Json.Schema.Validation
         Expression EvalSchemaFunc(JSchema schema)
         {
             var p = Expression.Parameter(typeof(JToken));
-            return Expression.Lambda<Func<JToken, bool>>(EvalSchema(schema, p), p);
+            return Expression.Lambda<Func<JToken, bool>>(Eval(schema, p), p);
         }
 
         /// <summary>
@@ -405,7 +406,6 @@ namespace Cogito.Json.Schema.Validation
             yield return BuildMinimumProperties(schema, token);
             yield return BuildMultipleOf(schema, token);
             yield return BuildNot(schema, token);
-            yield return BuildOneOf(schema, token);
             yield return BuildPattern(schema, token);
             yield return BuildProperties(schema, token);
             yield return BuildPropertyNames(schema, token);
@@ -416,7 +416,7 @@ namespace Cogito.Json.Schema.Validation
             yield return BuildIfThenElse(schema, token);
 
             foreach (var provider in providers)
-                if (provider.Build(schema, token) is Expression e)
+                if (provider.Build(this, schema, token) is Expression e)
                     yield return e;
         }
 
@@ -425,7 +425,7 @@ namespace Cogito.Json.Schema.Validation
             if (schema.AllOf.Count == 0)
                 return null;
 
-            return AllOf(schema.AllOf.Select(i => EvalSchema(i, o)));
+            return AllOf(schema.AllOf.Select(i => Eval(i, o)));
         }
 
         Expression BuildAnyOf(JSchema schema, Expression o)
@@ -433,7 +433,7 @@ namespace Cogito.Json.Schema.Validation
             if (schema.AnyOf.Count == 0)
                 return null;
 
-            return AnyOf(schema.AnyOf.Select(i => EvalSchema(i, o)));
+            return AnyOf(schema.AnyOf.Select(i => Eval(i, o)));
         }
 
         Expression BuildConst(JSchema schema, Expression o)
@@ -464,7 +464,7 @@ namespace Cogito.Json.Schema.Validation
                             Expression.Not(Expression.LessThan(idx, len)),
                             Expression.Break(brk, False),
                             Expression.IfThenElse(
-                                EvalSchema(schema.Contains, FromItemIndex(val, idx)),
+                                Eval(schema.Contains, FromItemIndex(val, idx)),
                                 Expression.Break(brk, True),
                                 Expression.PostIncrementAssign(idx))),
                         brk)));
@@ -640,7 +640,7 @@ namespace Cogito.Json.Schema.Validation
 
         Expression BuildDependency(JSchema required, Expression o)
         {
-            return EvalSchema(required, o);
+            return Eval(required, o);
         }
 
         Expression BuildEnum(JSchema schema, Expression o)
@@ -688,7 +688,7 @@ namespace Cogito.Json.Schema.Validation
                     .Select((i, j) =>
                         Expression.OrElse(
                             Expression.LessThanOrEqual(len, Expression.Constant(j)),
-                            EvalSchema(i, FromItemIndex(val, j)))));
+                            Eval(i, FromItemIndex(val, j)))));
 
                 // additional items are not allowed, esure size is equal, and match
                 if (schema.AllowAdditionalItems == false)
@@ -879,15 +879,7 @@ namespace Cogito.Json.Schema.Validation
             if (schema.Not == null)
                 return null;
 
-            return Expression.Not(EvalSchema(schema.Not, o));
-        }
-
-        Expression BuildOneOf(JSchema schema, Expression o)
-        {
-            if (schema.OneOf.Count == 0)
-                return null;
-
-            return OneOf(schema.OneOf.Select(i => EvalSchema(i, o)));
+            return Expression.Not(Eval(schema.Not, o));
         }
 
         Expression BuildPattern(JSchema schema, Expression o)
@@ -1095,9 +1087,9 @@ namespace Cogito.Json.Schema.Validation
                 return null;
 
             return Expression.Condition(
-                EvalSchema(schema.If, o),
-                schema.Then != null ? EvalSchema(schema.Then, o) : True,
-                schema.Else != null ? EvalSchema(schema.Else, o) : True);
+                Eval(schema.If, o),
+                schema.Then != null ? Eval(schema.Then, o) : True,
+                schema.Else != null ? Eval(schema.Else, o) : True);
         }
 
     }
