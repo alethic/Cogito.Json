@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using Cogito.Json.Schema;
+
+using Cogito.Json.Schema.Validation;
 
 using FluentAssertions;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
@@ -22,7 +24,7 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = new JSchema() { Const = 1 };
             var o = new JValue(1);
-            var r = new JSchemaValidatorBuilder().Build(s).Compile().Invoke(o);
+            var r = JSchemaExpressionBuilder.CreateDefault().Build(s).Compile().Invoke(o);
             r.Should().BeTrue();
         }
 
@@ -31,7 +33,7 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = new JSchema() { Const = 1 };
             var o = new JValue(2);
-            var r = new JSchemaValidatorBuilder().Build(s).Compile().Invoke(o);
+            var r = JSchemaExpressionBuilder.CreateDefault().Build(s).Compile().Invoke(o);
             r.Should().BeFalse();
         }
 
@@ -40,7 +42,7 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = new JSchema() { Properties = { ["Prop"] = new JSchema() { Const = 1 } } };
             var o = new JObject() { ["Prop"] = 1 };
-            var r = new JSchemaValidatorBuilder().Build(s).Compile().Invoke(o);
+            var r = JSchemaExpressionBuilder.CreateDefault().Build(s).Compile().Invoke(o);
             r.Should().BeTrue();
         }
 
@@ -49,7 +51,7 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = new JSchema() { Properties = { ["Prop"] = new JSchema() { Const = 1 } } };
             var o = new JObject() { ["Prop"] = 2 };
-            var r = new JSchemaValidatorBuilder().Build(s).Compile().Invoke(o);
+            var r = JSchemaExpressionBuilder.CreateDefault().Build(s).Compile().Invoke(o);
             r.Should().BeFalse();
         }
 
@@ -58,7 +60,7 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = new JSchema() { Properties = { ["Prop1"] = new JSchema() { Const = 1 } } };
             var o = new JObject() { ["Prop2"] = 2 };
-            var r = new JSchemaValidatorBuilder().Build(s).Compile().Invoke(o);
+            var r = JSchemaExpressionBuilder.CreateDefault().Build(s).Compile().Invoke(o);
             r.Should().BeTrue();
         }
 
@@ -67,7 +69,7 @@ namespace Cogito.Json.Tests.Schema
         {
             var s = JSchema.Parse("{ 'properties': { 'Prop1': { '$ref': '#' }, 'Prop2': { 'const': 'value' } } }");
             var o = new JObject() { ["Prop1"] = new JObject() { ["Prop1"] = null } };
-            var r = new JSchemaValidatorBuilder().Build(s).Compile().Invoke(o);
+            var r = JSchemaExpressionBuilder.CreateDefault().Build(s).Compile().Invoke(o);
             r.Should().BeTrue();
         }
 
@@ -80,7 +82,7 @@ namespace Cogito.Json.Tests.Schema
             var o = JObject.ReadFrom(new JsonTextReader(new StreamReader(sdkf)));
 
 
-            var v = new JSchemaValidatorBuilder().Build(s);
+            var v = JSchemaExpressionBuilder.CreateDefault().Build(s);
 
             //BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic;
             //PropertyInfo debugViewProp = typeof(Expression).GetProperty("DebugView", flags);

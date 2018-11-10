@@ -14,6 +14,7 @@
 using System;
 
 using Cogito.Json.Schema;
+using Cogito.Json.Schema.Validation;
 
 using FluentAssertions;
 
@@ -105,13 +106,13 @@ void WriteTestFile(Uri version, FileInfo file, string suiteName, string category
             if (v2)
             {
 #>
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
 <#+
             }
             else
             {
 #>
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
 <#+
             }
 #>

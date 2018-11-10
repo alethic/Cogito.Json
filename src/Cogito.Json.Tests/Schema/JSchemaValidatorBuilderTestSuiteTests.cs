@@ -1,6 +1,7 @@
 using System;
 
 using Cogito.Json.Schema;
+using Cogito.Json.Schema.Validation;
 
 using FluentAssertions;
 
@@ -22,7 +23,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -35,7 +36,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -48,7 +49,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -61,7 +62,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -74,7 +75,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -87,7 +88,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -100,7 +101,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -113,7 +114,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -126,7 +127,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -139,7 +140,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -152,7 +153,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -165,7 +166,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -178,7 +179,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -191,7 +192,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -204,7 +205,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -217,7 +218,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -230,7 +231,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -243,7 +244,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -256,7 +257,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -269,7 +270,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -282,7 +283,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -295,7 +296,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -308,7 +309,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -321,7 +322,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -334,7 +335,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -347,7 +348,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -360,7 +361,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -373,7 +374,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -386,7 +387,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -399,7 +400,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -412,7 +413,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -425,7 +426,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -438,7 +439,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -451,7 +452,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -464,7 +465,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -477,7 +478,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -490,7 +491,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -503,7 +504,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -516,7 +517,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -529,7 +530,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -542,7 +543,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -555,7 +556,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -568,7 +569,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -581,7 +582,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -594,7 +595,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -607,7 +608,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -620,7 +621,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -633,7 +634,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -646,7 +647,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -659,7 +660,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -672,7 +673,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -685,7 +686,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -698,7 +699,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -711,7 +712,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -724,7 +725,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -737,7 +738,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -750,7 +751,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -763,7 +764,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -776,7 +777,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -789,7 +790,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -802,7 +803,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -815,7 +816,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -828,7 +829,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -841,7 +842,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -854,7 +855,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -867,7 +868,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -880,7 +881,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -893,7 +894,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -906,7 +907,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -919,7 +920,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -932,7 +933,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -945,7 +946,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -958,7 +959,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -971,7 +972,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -984,7 +985,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -997,7 +998,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1010,7 +1011,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1023,7 +1024,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1036,7 +1037,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1049,7 +1050,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1062,7 +1063,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1075,7 +1076,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1088,7 +1089,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1101,7 +1102,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1114,7 +1115,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1127,7 +1128,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1140,7 +1141,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1153,7 +1154,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1166,7 +1167,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1179,7 +1180,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1192,7 +1193,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1205,7 +1206,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1218,7 +1219,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1231,7 +1232,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1244,7 +1245,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1257,7 +1258,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1270,7 +1271,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1283,7 +1284,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1296,7 +1297,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1309,7 +1310,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1322,7 +1323,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1335,7 +1336,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1348,7 +1349,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1361,7 +1362,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1374,7 +1375,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1387,7 +1388,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1400,7 +1401,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1413,7 +1414,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1426,7 +1427,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1439,7 +1440,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1452,7 +1453,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1465,7 +1466,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1478,7 +1479,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1491,7 +1492,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1504,7 +1505,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1517,7 +1518,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1530,7 +1531,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1543,7 +1544,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1556,7 +1557,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1569,7 +1570,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1582,7 +1583,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1595,7 +1596,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1608,7 +1609,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1621,7 +1622,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1634,7 +1635,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1647,7 +1648,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1660,7 +1661,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1673,7 +1674,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1686,7 +1687,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1699,7 +1700,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1712,7 +1713,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1725,7 +1726,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1738,7 +1739,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1751,7 +1752,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1764,7 +1765,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1777,7 +1778,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1790,7 +1791,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1803,7 +1804,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1816,7 +1817,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1829,7 +1830,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1842,7 +1843,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1855,7 +1856,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1868,7 +1869,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1881,7 +1882,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1894,7 +1895,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1907,7 +1908,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1920,7 +1921,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1933,7 +1934,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1946,7 +1947,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1959,7 +1960,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1972,7 +1973,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -1985,7 +1986,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -1998,7 +1999,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2011,7 +2012,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2024,7 +2025,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2037,7 +2038,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2050,7 +2051,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2063,7 +2064,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2076,7 +2077,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2089,7 +2090,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2102,7 +2103,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2115,7 +2116,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2128,7 +2129,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2141,7 +2142,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2154,7 +2155,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2167,7 +2168,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2180,7 +2181,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2193,7 +2194,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2206,7 +2207,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2219,7 +2220,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2232,7 +2233,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2245,7 +2246,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2258,7 +2259,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2271,7 +2272,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2284,7 +2285,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2297,7 +2298,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2310,7 +2311,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2323,7 +2324,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2336,7 +2337,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2349,7 +2350,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2362,7 +2363,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2375,7 +2376,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2388,7 +2389,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2401,7 +2402,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2414,7 +2415,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2427,7 +2428,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2440,7 +2441,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2453,7 +2454,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2466,7 +2467,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2479,7 +2480,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2492,7 +2493,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2505,7 +2506,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2518,7 +2519,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2531,7 +2532,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2544,7 +2545,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2557,7 +2558,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2570,7 +2571,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2583,7 +2584,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2596,7 +2597,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2609,7 +2610,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2622,7 +2623,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2635,7 +2636,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2648,7 +2649,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2661,7 +2662,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2674,7 +2675,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2687,7 +2688,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2700,7 +2701,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2713,7 +2714,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2726,7 +2727,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2739,7 +2740,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2752,7 +2753,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2765,7 +2766,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2778,7 +2779,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2791,7 +2792,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2804,7 +2805,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2817,7 +2818,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2830,7 +2831,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2843,7 +2844,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2856,7 +2857,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2869,7 +2870,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2882,7 +2883,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2895,7 +2896,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2908,7 +2909,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -2921,7 +2922,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2934,7 +2935,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2947,7 +2948,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2960,7 +2961,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2973,7 +2974,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2986,7 +2987,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -2999,7 +3000,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3012,7 +3013,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3025,7 +3026,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3038,7 +3039,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3051,7 +3052,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3064,7 +3065,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3077,7 +3078,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3090,7 +3091,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3103,7 +3104,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3116,7 +3117,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3129,7 +3130,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3142,7 +3143,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3155,7 +3156,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3168,7 +3169,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3181,7 +3182,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3194,7 +3195,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3207,7 +3208,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3220,7 +3221,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3233,7 +3234,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3246,7 +3247,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3259,7 +3260,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3272,7 +3273,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3285,7 +3286,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3298,7 +3299,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3311,7 +3312,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3324,7 +3325,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3337,7 +3338,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3350,7 +3351,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3363,7 +3364,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3376,7 +3377,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3389,7 +3390,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3402,7 +3403,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3415,7 +3416,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3428,7 +3429,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3441,7 +3442,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3454,7 +3455,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3467,7 +3468,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3480,7 +3481,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3493,7 +3494,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3506,7 +3507,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3519,7 +3520,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3532,7 +3533,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3545,7 +3546,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3558,7 +3559,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3571,7 +3572,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3584,7 +3585,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3597,7 +3598,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -3611,7 +3612,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3624,7 +3625,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -3638,7 +3639,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3651,7 +3652,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3664,7 +3665,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3677,7 +3678,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3690,7 +3691,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3703,7 +3704,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3716,7 +3717,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3729,7 +3730,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3742,7 +3743,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3755,7 +3756,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3768,7 +3769,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3781,7 +3782,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3794,7 +3795,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3807,7 +3808,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3820,7 +3821,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3833,7 +3834,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3846,7 +3847,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3859,7 +3860,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3872,7 +3873,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3885,7 +3886,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3898,7 +3899,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3911,7 +3912,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3924,7 +3925,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3937,7 +3938,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3950,7 +3951,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3963,7 +3964,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -3976,7 +3977,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -3989,7 +3990,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4002,7 +4003,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4015,7 +4016,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4028,7 +4029,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4041,7 +4042,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4054,7 +4055,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4067,7 +4068,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4080,7 +4081,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -4094,7 +4095,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -4108,7 +4109,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4121,7 +4122,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-03/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4134,7 +4135,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4147,7 +4148,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4160,7 +4161,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4173,7 +4174,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4186,7 +4187,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4199,7 +4200,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4212,7 +4213,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4225,7 +4226,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4238,7 +4239,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4251,7 +4252,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4264,7 +4265,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4277,7 +4278,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4290,7 +4291,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4303,7 +4304,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4316,7 +4317,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4329,7 +4330,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4342,7 +4343,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4355,7 +4356,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4368,7 +4369,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4381,7 +4382,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4394,7 +4395,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4407,7 +4408,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4420,7 +4421,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4433,7 +4434,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4446,7 +4447,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4459,7 +4460,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4472,7 +4473,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4485,7 +4486,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4498,7 +4499,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4511,7 +4512,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4524,7 +4525,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4537,7 +4538,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4550,7 +4551,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4563,7 +4564,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4576,7 +4577,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4589,7 +4590,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4602,7 +4603,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4615,7 +4616,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4628,7 +4629,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4641,7 +4642,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4654,7 +4655,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4667,7 +4668,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4680,7 +4681,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4693,7 +4694,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4706,7 +4707,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4719,7 +4720,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4732,7 +4733,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4745,7 +4746,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4758,7 +4759,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4771,7 +4772,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4784,7 +4785,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4797,7 +4798,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4810,7 +4811,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4823,7 +4824,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4836,7 +4837,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4849,7 +4850,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4862,7 +4863,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4875,7 +4876,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4888,7 +4889,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4901,7 +4902,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4914,7 +4915,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4927,7 +4928,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4940,7 +4941,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4953,7 +4954,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -4966,7 +4967,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4979,7 +4980,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -4992,7 +4993,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5005,7 +5006,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5018,7 +5019,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5031,7 +5032,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5044,7 +5045,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5057,7 +5058,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5070,7 +5071,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5083,7 +5084,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5096,7 +5097,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5109,7 +5110,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5122,7 +5123,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5135,7 +5136,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5148,7 +5149,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5161,7 +5162,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5174,7 +5175,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -5188,7 +5189,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5201,7 +5202,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5214,7 +5215,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5227,7 +5228,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5240,7 +5241,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5253,7 +5254,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -5267,7 +5268,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5280,7 +5281,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5293,7 +5294,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5306,7 +5307,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5319,7 +5320,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5332,7 +5333,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5345,7 +5346,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5358,7 +5359,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5371,7 +5372,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5384,7 +5385,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5397,7 +5398,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5410,7 +5411,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5423,7 +5424,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5436,7 +5437,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5449,7 +5450,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5462,7 +5463,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5475,7 +5476,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5488,7 +5489,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5501,7 +5502,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5514,7 +5515,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5527,7 +5528,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5540,7 +5541,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5553,7 +5554,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5566,7 +5567,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5579,7 +5580,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5592,7 +5593,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5605,7 +5606,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5618,7 +5619,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5631,7 +5632,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5644,7 +5645,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5657,7 +5658,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5670,7 +5671,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5683,7 +5684,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5696,7 +5697,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5709,7 +5710,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5722,7 +5723,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5735,7 +5736,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5748,7 +5749,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5761,7 +5762,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5774,7 +5775,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5787,7 +5788,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5800,7 +5801,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5813,7 +5814,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5826,7 +5827,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5839,7 +5840,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5852,7 +5853,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5865,7 +5866,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5878,7 +5879,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5891,7 +5892,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5904,7 +5905,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5917,7 +5918,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5930,7 +5931,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5943,7 +5944,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -5956,7 +5957,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5969,7 +5970,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5982,7 +5983,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -5995,7 +5996,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6008,7 +6009,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6021,7 +6022,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6034,7 +6035,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6047,7 +6048,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6060,7 +6061,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6073,7 +6074,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6086,7 +6087,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6099,7 +6100,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6112,7 +6113,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6125,7 +6126,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6138,7 +6139,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6151,7 +6152,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6164,7 +6165,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6177,7 +6178,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6190,7 +6191,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6203,7 +6204,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6216,7 +6217,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6229,7 +6230,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6242,7 +6243,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6255,7 +6256,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6268,7 +6269,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6281,7 +6282,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6294,7 +6295,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6307,7 +6308,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6320,7 +6321,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6333,7 +6334,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6346,7 +6347,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6359,7 +6360,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6372,7 +6373,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6385,7 +6386,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6398,7 +6399,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6411,7 +6412,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6424,7 +6425,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6437,7 +6438,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6450,7 +6451,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6463,7 +6464,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6476,7 +6477,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6489,7 +6490,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6502,7 +6503,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6515,7 +6516,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6528,7 +6529,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6541,7 +6542,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6554,7 +6555,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6567,7 +6568,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6580,7 +6581,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6593,7 +6594,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6606,7 +6607,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6619,7 +6620,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6632,7 +6633,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6645,7 +6646,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6658,7 +6659,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6671,7 +6672,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6684,7 +6685,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6697,7 +6698,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6710,7 +6711,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6723,7 +6724,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6736,7 +6737,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6749,7 +6750,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6762,7 +6763,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6775,7 +6776,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6788,7 +6789,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6801,7 +6802,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6814,7 +6815,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6827,7 +6828,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6840,7 +6841,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6853,7 +6854,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6866,7 +6867,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6879,7 +6880,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6892,7 +6893,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6905,7 +6906,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6918,7 +6919,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6931,7 +6932,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6944,7 +6945,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6957,7 +6958,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -6970,7 +6971,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6983,7 +6984,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -6996,7 +6997,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7009,7 +7010,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7022,7 +7023,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7035,7 +7036,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7048,7 +7049,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7061,7 +7062,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7074,7 +7075,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7087,7 +7088,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7100,7 +7101,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7113,7 +7114,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7126,7 +7127,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7139,7 +7140,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7152,7 +7153,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7165,7 +7166,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7178,7 +7179,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7191,7 +7192,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7204,7 +7205,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7217,7 +7218,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7230,7 +7231,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7243,7 +7244,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7256,7 +7257,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7269,7 +7270,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7282,7 +7283,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7295,7 +7296,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7308,7 +7309,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7321,7 +7322,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7334,7 +7335,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7347,7 +7348,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7360,7 +7361,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7373,7 +7374,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7386,7 +7387,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7399,7 +7400,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7412,7 +7413,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7425,7 +7426,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7438,7 +7439,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7451,7 +7452,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7464,7 +7465,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7477,7 +7478,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7490,7 +7491,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7503,7 +7504,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7516,7 +7517,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7529,7 +7530,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7542,7 +7543,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7555,7 +7556,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7568,7 +7569,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7581,7 +7582,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7594,7 +7595,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7607,7 +7608,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7620,7 +7621,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7633,7 +7634,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7646,7 +7647,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7659,7 +7660,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7672,7 +7673,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7685,7 +7686,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7698,7 +7699,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7711,7 +7712,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7724,7 +7725,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7737,7 +7738,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7750,7 +7751,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7763,7 +7764,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7776,7 +7777,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7789,7 +7790,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7802,7 +7803,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7815,7 +7816,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7828,7 +7829,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7841,7 +7842,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7854,7 +7855,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7867,7 +7868,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7880,7 +7881,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7893,7 +7894,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7906,7 +7907,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7919,7 +7920,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -7932,7 +7933,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7945,7 +7946,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7958,7 +7959,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7971,7 +7972,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7984,7 +7985,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -7997,7 +7998,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8010,7 +8011,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8023,7 +8024,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8036,7 +8037,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8049,7 +8050,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8062,7 +8063,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8075,7 +8076,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8088,7 +8089,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8101,7 +8102,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8114,7 +8115,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8127,7 +8128,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8140,7 +8141,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8153,7 +8154,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8166,7 +8167,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8179,7 +8180,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8192,7 +8193,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8205,7 +8206,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8218,7 +8219,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8231,7 +8232,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8244,7 +8245,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8257,7 +8258,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8270,7 +8271,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8283,7 +8284,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8296,7 +8297,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8309,7 +8310,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8322,7 +8323,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8335,7 +8336,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8348,7 +8349,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -8362,7 +8363,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8375,7 +8376,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -8389,7 +8390,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8402,7 +8403,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -8416,7 +8417,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8429,7 +8430,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8442,7 +8443,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8455,7 +8456,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8468,7 +8469,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8481,7 +8482,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8494,7 +8495,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8507,7 +8508,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8520,7 +8521,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8533,7 +8534,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8546,7 +8547,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8559,7 +8560,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8572,7 +8573,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8585,7 +8586,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8598,7 +8599,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8611,7 +8612,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8624,7 +8625,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8637,7 +8638,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8650,7 +8651,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8663,7 +8664,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8676,7 +8677,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8689,7 +8690,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8702,7 +8703,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8715,7 +8716,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8728,7 +8729,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8741,7 +8742,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8754,7 +8755,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8767,7 +8768,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8780,7 +8781,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8793,7 +8794,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8806,7 +8807,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8819,7 +8820,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8832,7 +8833,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8845,7 +8846,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8858,7 +8859,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8871,7 +8872,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8884,7 +8885,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8897,7 +8898,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8910,7 +8911,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8923,7 +8924,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8936,7 +8937,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -8949,7 +8950,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8962,7 +8963,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8975,7 +8976,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -8988,7 +8989,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-04/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9001,7 +9002,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9014,7 +9015,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9027,7 +9028,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9040,7 +9041,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9053,7 +9054,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9066,7 +9067,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9079,7 +9080,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9092,7 +9093,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9105,7 +9106,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9118,7 +9119,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9131,7 +9132,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9144,7 +9145,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9157,7 +9158,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9170,7 +9171,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9183,7 +9184,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9196,7 +9197,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9209,7 +9210,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9222,7 +9223,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9235,7 +9236,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9248,7 +9249,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9261,7 +9262,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9274,7 +9275,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9287,7 +9288,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9300,7 +9301,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9313,7 +9314,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9326,7 +9327,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9339,7 +9340,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9352,7 +9353,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9365,7 +9366,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9378,7 +9379,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9391,7 +9392,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9404,7 +9405,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9417,7 +9418,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9430,7 +9431,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9443,7 +9444,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9456,7 +9457,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9469,7 +9470,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9482,7 +9483,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9495,7 +9496,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9508,7 +9509,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9521,7 +9522,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9534,7 +9535,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9547,7 +9548,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9560,7 +9561,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9573,7 +9574,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9586,7 +9587,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9599,7 +9600,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9612,7 +9613,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9625,7 +9626,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9638,7 +9639,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9651,7 +9652,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9664,7 +9665,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9677,7 +9678,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9690,7 +9691,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9703,7 +9704,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9716,7 +9717,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9729,7 +9730,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9742,7 +9743,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9755,7 +9756,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9768,7 +9769,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9781,7 +9782,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9794,7 +9795,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9807,7 +9808,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9820,7 +9821,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9833,7 +9834,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9846,7 +9847,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9859,7 +9860,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9872,7 +9873,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9885,7 +9886,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9898,7 +9899,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9911,7 +9912,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9924,7 +9925,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9937,7 +9938,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9950,7 +9951,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -9963,7 +9964,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9976,7 +9977,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -9989,7 +9990,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10002,7 +10003,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10015,7 +10016,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10028,7 +10029,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10041,7 +10042,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10054,7 +10055,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10067,7 +10068,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10080,7 +10081,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10093,7 +10094,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10106,7 +10107,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10119,7 +10120,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10132,7 +10133,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10145,7 +10146,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10158,7 +10159,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10171,7 +10172,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10184,7 +10185,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10197,7 +10198,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10210,7 +10211,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10223,7 +10224,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10236,7 +10237,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10249,7 +10250,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10262,7 +10263,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10275,7 +10276,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10288,7 +10289,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10301,7 +10302,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10314,7 +10315,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10327,7 +10328,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10340,7 +10341,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10353,7 +10354,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10366,7 +10367,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10379,7 +10380,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10392,7 +10393,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10405,7 +10406,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10418,7 +10419,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10431,7 +10432,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10444,7 +10445,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10457,7 +10458,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10470,7 +10471,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10483,7 +10484,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10496,7 +10497,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10509,7 +10510,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10522,7 +10523,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10535,7 +10536,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10548,7 +10549,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10561,7 +10562,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10574,7 +10575,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10587,7 +10588,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10600,7 +10601,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10613,7 +10614,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10626,7 +10627,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10639,7 +10640,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10652,7 +10653,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10665,7 +10666,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10678,7 +10679,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10691,7 +10692,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10704,7 +10705,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10717,7 +10718,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10730,7 +10731,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10743,7 +10744,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10756,7 +10757,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10769,7 +10770,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10782,7 +10783,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10795,7 +10796,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10808,7 +10809,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10821,7 +10822,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10834,7 +10835,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10847,7 +10848,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10860,7 +10861,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -10874,7 +10875,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10887,7 +10888,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10900,7 +10901,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -10913,7 +10914,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10926,7 +10927,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10939,7 +10940,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -10953,7 +10954,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10966,7 +10967,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10979,7 +10980,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -10992,7 +10993,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11005,7 +11006,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11018,7 +11019,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11031,7 +11032,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11044,7 +11045,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11057,7 +11058,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11070,7 +11071,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11083,7 +11084,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11096,7 +11097,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11109,7 +11110,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11122,7 +11123,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11135,7 +11136,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11148,7 +11149,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11161,7 +11162,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11174,7 +11175,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11187,7 +11188,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11200,7 +11201,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11213,7 +11214,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11226,7 +11227,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11239,7 +11240,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11252,7 +11253,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11265,7 +11266,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11278,7 +11279,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11291,7 +11292,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11304,7 +11305,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11317,7 +11318,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11330,7 +11331,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11343,7 +11344,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11356,7 +11357,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11369,7 +11370,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11382,7 +11383,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11395,7 +11396,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11408,7 +11409,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11421,7 +11422,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11434,7 +11435,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11447,7 +11448,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11460,7 +11461,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11473,7 +11474,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11486,7 +11487,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11499,7 +11500,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11512,7 +11513,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11525,7 +11526,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11538,7 +11539,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11551,7 +11552,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11564,7 +11565,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11577,7 +11578,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11590,7 +11591,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11603,7 +11604,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11616,7 +11617,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11629,7 +11630,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11642,7 +11643,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11655,7 +11656,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11668,7 +11669,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11681,7 +11682,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11694,7 +11695,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11707,7 +11708,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11720,7 +11721,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11733,7 +11734,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11746,7 +11747,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11759,7 +11760,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11772,7 +11773,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11785,7 +11786,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11798,7 +11799,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11811,7 +11812,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11824,7 +11825,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11837,7 +11838,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11850,7 +11851,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11863,7 +11864,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11876,7 +11877,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11889,7 +11890,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11902,7 +11903,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11915,7 +11916,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11928,7 +11929,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11941,7 +11942,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11954,7 +11955,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11967,7 +11968,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -11980,7 +11981,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -11993,7 +11994,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12006,7 +12007,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12019,7 +12020,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12032,7 +12033,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12045,7 +12046,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12058,7 +12059,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12071,7 +12072,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12084,7 +12085,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12097,7 +12098,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12110,7 +12111,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12123,7 +12124,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12136,7 +12137,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12149,7 +12150,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12162,7 +12163,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12175,7 +12176,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12188,7 +12189,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12201,7 +12202,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12214,7 +12215,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12227,7 +12228,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12240,7 +12241,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12253,7 +12254,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12266,7 +12267,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12279,7 +12280,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12292,7 +12293,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12305,7 +12306,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12318,7 +12319,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12331,7 +12332,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12344,7 +12345,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12357,7 +12358,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12370,7 +12371,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12383,7 +12384,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12396,7 +12397,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12409,7 +12410,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12422,7 +12423,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12435,7 +12436,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12448,7 +12449,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12461,7 +12462,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12474,7 +12475,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12487,7 +12488,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12500,7 +12501,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12513,7 +12514,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12526,7 +12527,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12539,7 +12540,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12552,7 +12553,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12565,7 +12566,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12578,7 +12579,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12591,7 +12592,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12604,7 +12605,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12617,7 +12618,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12630,7 +12631,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12643,7 +12644,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12656,7 +12657,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12669,7 +12670,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12682,7 +12683,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12695,7 +12696,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12708,7 +12709,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12721,7 +12722,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12734,7 +12735,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12747,7 +12748,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12760,7 +12761,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12773,7 +12774,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12786,7 +12787,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12799,7 +12800,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12812,7 +12813,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12825,7 +12826,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12838,7 +12839,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12851,7 +12852,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12864,7 +12865,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12877,7 +12878,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12890,7 +12891,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12903,7 +12904,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12916,7 +12917,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12929,7 +12930,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12942,7 +12943,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12955,7 +12956,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12968,7 +12969,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -12981,7 +12982,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -12994,7 +12995,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13007,7 +13008,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13020,7 +13021,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13033,7 +13034,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13046,7 +13047,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13059,7 +13060,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13072,7 +13073,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13085,7 +13086,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13098,7 +13099,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13111,7 +13112,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13124,7 +13125,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13137,7 +13138,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13150,7 +13151,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13163,7 +13164,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13176,7 +13177,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13189,7 +13190,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13202,7 +13203,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13215,7 +13216,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13228,7 +13229,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13241,7 +13242,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13254,7 +13255,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13267,7 +13268,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13280,7 +13281,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13293,7 +13294,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13306,7 +13307,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13319,7 +13320,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13332,7 +13333,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13345,7 +13346,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13358,7 +13359,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13371,7 +13372,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13384,7 +13385,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13397,7 +13398,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13410,7 +13411,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13423,7 +13424,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13436,7 +13437,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13449,7 +13450,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13462,7 +13463,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13475,7 +13476,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13488,7 +13489,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13501,7 +13502,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13514,7 +13515,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13527,7 +13528,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13540,7 +13541,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13553,7 +13554,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13566,7 +13567,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13579,7 +13580,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13592,7 +13593,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13605,7 +13606,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13618,7 +13619,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13631,7 +13632,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13644,7 +13645,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13657,7 +13658,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13670,7 +13671,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13683,7 +13684,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13696,7 +13697,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13709,7 +13710,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13722,7 +13723,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13735,7 +13736,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13748,7 +13749,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13761,7 +13762,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13774,7 +13775,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13787,7 +13788,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13800,7 +13801,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13813,7 +13814,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13826,7 +13827,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13839,7 +13840,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13852,7 +13853,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13865,7 +13866,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13878,7 +13879,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13891,7 +13892,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -13904,7 +13905,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13917,7 +13918,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13930,7 +13931,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13943,7 +13944,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13956,7 +13957,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13969,7 +13970,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13982,7 +13983,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -13995,7 +13996,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14008,7 +14009,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14021,7 +14022,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14034,7 +14035,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14047,7 +14048,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14060,7 +14061,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14073,7 +14074,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14086,7 +14087,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14099,7 +14100,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14112,7 +14113,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14125,7 +14126,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14138,7 +14139,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14151,7 +14152,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14164,7 +14165,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14177,7 +14178,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14190,7 +14191,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14203,7 +14204,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14216,7 +14217,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14229,7 +14230,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14242,7 +14243,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14255,7 +14256,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14268,7 +14269,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14281,7 +14282,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14294,7 +14295,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14307,7 +14308,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14320,7 +14321,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -14334,7 +14335,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14347,7 +14348,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -14361,7 +14362,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14374,7 +14375,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -14388,7 +14389,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14401,7 +14402,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14414,7 +14415,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14427,7 +14428,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14440,7 +14441,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14453,7 +14454,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14466,7 +14467,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14479,7 +14480,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14492,7 +14493,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14505,7 +14506,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14518,7 +14519,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14531,7 +14532,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14544,7 +14545,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14557,7 +14558,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14570,7 +14571,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14583,7 +14584,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14596,7 +14597,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14609,7 +14610,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14622,7 +14623,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14635,7 +14636,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14648,7 +14649,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14661,7 +14662,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14674,7 +14675,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14687,7 +14688,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14700,7 +14701,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14713,7 +14714,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14726,7 +14727,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14739,7 +14740,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14752,7 +14753,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14765,7 +14766,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14778,7 +14779,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14791,7 +14792,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14804,7 +14805,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14817,7 +14818,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14830,7 +14831,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14843,7 +14844,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14856,7 +14857,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14869,7 +14870,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14882,7 +14883,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14895,7 +14896,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14908,7 +14909,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14921,7 +14922,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14934,7 +14935,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14947,7 +14948,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -14960,7 +14961,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14973,7 +14974,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14986,7 +14987,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -14999,7 +15000,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15012,7 +15013,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15025,7 +15026,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15038,7 +15039,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15051,7 +15052,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15064,7 +15065,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15077,7 +15078,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15090,7 +15091,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15103,7 +15104,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15116,7 +15117,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15129,7 +15130,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15142,7 +15143,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15155,7 +15156,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15168,7 +15169,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15181,7 +15182,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15194,7 +15195,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15207,7 +15208,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15220,7 +15221,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15233,7 +15234,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15246,7 +15247,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15259,7 +15260,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15272,7 +15273,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15285,7 +15286,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15298,7 +15299,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15311,7 +15312,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15324,7 +15325,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15337,7 +15338,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15350,7 +15351,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15363,7 +15364,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15376,7 +15377,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15389,7 +15390,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15402,7 +15403,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15415,7 +15416,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15428,7 +15429,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15441,7 +15442,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15454,7 +15455,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15467,7 +15468,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15480,7 +15481,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15493,7 +15494,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15506,7 +15507,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15519,7 +15520,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15532,7 +15533,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-06/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15545,7 +15546,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15558,7 +15559,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15571,7 +15572,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15584,7 +15585,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15597,7 +15598,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15610,7 +15611,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15623,7 +15624,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15636,7 +15637,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15649,7 +15650,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15662,7 +15663,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15675,7 +15676,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15688,7 +15689,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15701,7 +15702,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15714,7 +15715,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15727,7 +15728,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15740,7 +15741,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15753,7 +15754,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15766,7 +15767,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15779,7 +15780,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15792,7 +15793,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15805,7 +15806,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15818,7 +15819,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15831,7 +15832,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15844,7 +15845,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15857,7 +15858,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15870,7 +15871,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15883,7 +15884,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15896,7 +15897,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15909,7 +15910,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15922,7 +15923,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15935,7 +15936,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15948,7 +15949,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15961,7 +15962,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -15974,7 +15975,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -15987,7 +15988,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16000,7 +16001,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16013,7 +16014,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16026,7 +16027,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16039,7 +16040,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16052,7 +16053,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16065,7 +16066,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16078,7 +16079,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16091,7 +16092,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16104,7 +16105,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16117,7 +16118,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16130,7 +16131,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16143,7 +16144,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16156,7 +16157,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16169,7 +16170,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16182,7 +16183,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16195,7 +16196,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16208,7 +16209,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16221,7 +16222,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16234,7 +16235,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16247,7 +16248,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16260,7 +16261,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16273,7 +16274,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16286,7 +16287,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16299,7 +16300,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16312,7 +16313,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16325,7 +16326,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16338,7 +16339,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16351,7 +16352,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16364,7 +16365,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16377,7 +16378,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16390,7 +16391,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16403,7 +16404,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16416,7 +16417,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16429,7 +16430,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16442,7 +16443,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16455,7 +16456,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16468,7 +16469,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16481,7 +16482,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16494,7 +16495,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16507,7 +16508,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16520,7 +16521,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16533,7 +16534,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16546,7 +16547,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16559,7 +16560,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16572,7 +16573,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16585,7 +16586,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16598,7 +16599,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16611,7 +16612,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16624,7 +16625,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16637,7 +16638,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16650,7 +16651,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16663,7 +16664,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16676,7 +16677,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16689,7 +16690,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16702,7 +16703,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16715,7 +16716,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16728,7 +16729,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16741,7 +16742,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16754,7 +16755,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16767,7 +16768,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16780,7 +16781,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16793,7 +16794,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16806,7 +16807,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16819,7 +16820,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16832,7 +16833,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16845,7 +16846,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16858,7 +16859,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16871,7 +16872,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16884,7 +16885,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -16897,7 +16898,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16910,7 +16911,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16923,7 +16924,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16936,7 +16937,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16949,7 +16950,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16962,7 +16963,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16975,7 +16976,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -16988,7 +16989,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17001,7 +17002,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17014,7 +17015,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17027,7 +17028,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17040,7 +17041,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17053,7 +17054,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17066,7 +17067,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17079,7 +17080,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17092,7 +17093,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17105,7 +17106,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17118,7 +17119,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17131,7 +17132,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17144,7 +17145,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17157,7 +17158,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17170,7 +17171,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17183,7 +17184,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17196,7 +17197,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17209,7 +17210,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17222,7 +17223,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17235,7 +17236,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17248,7 +17249,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17261,7 +17262,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17274,7 +17275,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17287,7 +17288,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17300,7 +17301,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17313,7 +17314,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17326,7 +17327,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17339,7 +17340,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17352,7 +17353,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17365,7 +17366,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17378,7 +17379,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17391,7 +17392,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17404,7 +17405,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17417,7 +17418,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17430,7 +17431,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17443,7 +17444,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17456,7 +17457,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17469,7 +17470,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17482,7 +17483,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17495,7 +17496,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17508,7 +17509,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17521,7 +17522,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17534,7 +17535,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17547,7 +17548,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17560,7 +17561,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17573,7 +17574,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17586,7 +17587,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17599,7 +17600,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17612,7 +17613,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17625,7 +17626,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17638,7 +17639,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -17652,7 +17653,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17665,7 +17666,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17678,7 +17679,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17691,7 +17692,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17704,7 +17705,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17717,7 +17718,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -17731,7 +17732,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17744,7 +17745,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17757,7 +17758,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17770,7 +17771,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17783,7 +17784,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17796,7 +17797,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17809,7 +17810,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17822,7 +17823,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17835,7 +17836,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17848,7 +17849,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17861,7 +17862,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17874,7 +17875,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17887,7 +17888,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17900,7 +17901,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17913,7 +17914,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17926,7 +17927,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17939,7 +17940,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17952,7 +17953,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17965,7 +17966,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -17978,7 +17979,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -17991,7 +17992,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18004,7 +18005,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18017,7 +18018,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18030,7 +18031,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18043,7 +18044,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18056,7 +18057,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18069,7 +18070,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18082,7 +18083,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18095,7 +18096,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18108,7 +18109,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18121,7 +18122,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18134,7 +18135,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18147,7 +18148,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18160,7 +18161,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18173,7 +18174,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18186,7 +18187,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18199,7 +18200,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18212,7 +18213,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18225,7 +18226,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18238,7 +18239,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18251,7 +18252,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18264,7 +18265,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18277,7 +18278,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18290,7 +18291,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18303,7 +18304,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18316,7 +18317,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18329,7 +18330,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18342,7 +18343,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18355,7 +18356,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18368,7 +18369,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18381,7 +18382,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18394,7 +18395,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18407,7 +18408,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18420,7 +18421,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18433,7 +18434,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18446,7 +18447,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18459,7 +18460,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18472,7 +18473,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18485,7 +18486,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18498,7 +18499,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18511,7 +18512,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18524,7 +18525,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18537,7 +18538,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18550,7 +18551,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18563,7 +18564,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18576,7 +18577,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18589,7 +18590,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18602,7 +18603,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18615,7 +18616,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18628,7 +18629,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18641,7 +18642,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18654,7 +18655,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18667,7 +18668,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18680,7 +18681,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18693,7 +18694,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18706,7 +18707,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18719,7 +18720,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18732,7 +18733,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18745,7 +18746,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18758,7 +18759,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18771,7 +18772,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18784,7 +18785,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18797,7 +18798,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18810,7 +18811,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18823,7 +18824,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18836,7 +18837,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18849,7 +18850,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18862,7 +18863,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18875,7 +18876,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18888,7 +18889,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18901,7 +18902,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18914,7 +18915,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18927,7 +18928,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18940,7 +18941,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18953,7 +18954,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -18966,7 +18967,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18979,7 +18980,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -18992,7 +18993,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19005,7 +19006,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19018,7 +19019,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19031,7 +19032,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19044,7 +19045,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19057,7 +19058,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19070,7 +19071,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19083,7 +19084,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19096,7 +19097,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19109,7 +19110,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19122,7 +19123,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19135,7 +19136,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19148,7 +19149,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19161,7 +19162,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19174,7 +19175,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19187,7 +19188,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19200,7 +19201,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19213,7 +19214,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19226,7 +19227,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19239,7 +19240,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19252,7 +19253,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19265,7 +19266,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19278,7 +19279,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19291,7 +19292,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19304,7 +19305,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19317,7 +19318,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19330,7 +19331,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19343,7 +19344,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19356,7 +19357,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19369,7 +19370,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19382,7 +19383,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19395,7 +19396,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19408,7 +19409,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19421,7 +19422,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19434,7 +19435,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19447,7 +19448,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19460,7 +19461,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19473,7 +19474,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19486,7 +19487,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19499,7 +19500,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19512,7 +19513,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19525,7 +19526,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19538,7 +19539,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19551,7 +19552,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19564,7 +19565,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19577,7 +19578,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19590,7 +19591,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19603,7 +19604,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19616,7 +19617,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19629,7 +19630,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19642,7 +19643,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19655,7 +19656,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19668,7 +19669,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19681,7 +19682,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19694,7 +19695,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19707,7 +19708,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19720,7 +19721,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19733,7 +19734,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19746,7 +19747,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19759,7 +19760,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19772,7 +19773,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19785,7 +19786,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19798,7 +19799,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19811,7 +19812,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19824,7 +19825,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19837,7 +19838,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19850,7 +19851,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19863,7 +19864,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19876,7 +19877,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19889,7 +19890,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19902,7 +19903,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19915,7 +19916,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19928,7 +19929,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19941,7 +19942,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19954,7 +19955,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19967,7 +19968,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -19980,7 +19981,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -19993,7 +19994,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20006,7 +20007,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20019,7 +20020,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20032,7 +20033,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20045,7 +20046,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20058,7 +20059,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20071,7 +20072,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20084,7 +20085,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20097,7 +20098,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20110,7 +20111,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20123,7 +20124,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20136,7 +20137,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20149,7 +20150,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20162,7 +20163,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20175,7 +20176,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20188,7 +20189,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20201,7 +20202,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20214,7 +20215,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20227,7 +20228,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20240,7 +20241,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20253,7 +20254,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20266,7 +20267,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20279,7 +20280,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20292,7 +20293,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20305,7 +20306,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20318,7 +20319,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20331,7 +20332,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20344,7 +20345,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20357,7 +20358,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20370,7 +20371,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20383,7 +20384,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20396,7 +20397,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20409,7 +20410,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20422,7 +20423,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20435,7 +20436,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20448,7 +20449,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20461,7 +20462,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20474,7 +20475,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20487,7 +20488,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20500,7 +20501,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20513,7 +20514,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20526,7 +20527,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20539,7 +20540,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20552,7 +20553,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20565,7 +20566,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20578,7 +20579,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20591,7 +20592,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20604,7 +20605,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20617,7 +20618,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20630,7 +20631,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20643,7 +20644,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20656,7 +20657,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20669,7 +20670,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20682,7 +20683,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20695,7 +20696,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20708,7 +20709,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20721,7 +20722,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20734,7 +20735,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20747,7 +20748,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20760,7 +20761,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20773,7 +20774,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20786,7 +20787,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20799,7 +20800,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20812,7 +20813,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20825,7 +20826,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20838,7 +20839,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20851,7 +20852,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20864,7 +20865,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20877,7 +20878,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20890,7 +20891,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20903,7 +20904,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20916,7 +20917,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20929,7 +20930,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20942,7 +20943,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20955,7 +20956,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20968,7 +20969,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -20981,7 +20982,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -20994,7 +20995,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21007,7 +21008,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21020,7 +21021,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21033,7 +21034,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21046,7 +21047,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21059,7 +21060,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21072,7 +21073,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21085,7 +21086,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21098,7 +21099,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -21112,7 +21113,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21125,7 +21126,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -21139,7 +21140,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21152,7 +21153,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21165,7 +21166,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21178,7 +21179,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21191,7 +21192,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21204,7 +21205,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21217,7 +21218,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21230,7 +21231,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21243,7 +21244,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21256,7 +21257,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21269,7 +21270,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21282,7 +21283,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -21296,7 +21297,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21309,7 +21310,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21322,7 +21323,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21335,7 +21336,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21348,7 +21349,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21361,7 +21362,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21374,7 +21375,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21387,7 +21388,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21400,7 +21401,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21413,7 +21414,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21426,7 +21427,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21439,7 +21440,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21452,7 +21453,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21465,7 +21466,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21478,7 +21479,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21491,7 +21492,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21504,7 +21505,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21517,7 +21518,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21530,7 +21531,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21543,7 +21544,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21556,7 +21557,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21569,7 +21570,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21582,7 +21583,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -21596,7 +21597,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21609,7 +21610,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21622,7 +21623,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21635,7 +21636,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21648,7 +21649,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21661,7 +21662,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21674,7 +21675,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21687,7 +21688,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21700,7 +21701,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21713,7 +21714,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21726,7 +21727,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21739,7 +21740,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21752,7 +21753,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -21766,7 +21767,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -21780,7 +21781,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -21794,7 +21795,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -21808,7 +21809,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [Ignore]
@@ -21822,7 +21823,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -21836,7 +21837,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -21850,7 +21851,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21863,7 +21864,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21876,7 +21877,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [Ignore]
@@ -21890,7 +21891,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21903,7 +21904,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21916,7 +21917,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21929,7 +21930,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21942,7 +21943,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21955,7 +21956,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21968,7 +21969,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -21981,7 +21982,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -21994,7 +21995,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22007,7 +22008,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22020,7 +22021,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22033,7 +22034,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22046,7 +22047,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22059,7 +22060,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22072,7 +22073,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22085,7 +22086,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22098,7 +22099,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22111,7 +22112,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22124,7 +22125,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22137,7 +22138,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22150,7 +22151,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22163,7 +22164,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22176,7 +22177,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22189,7 +22190,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22202,7 +22203,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22215,7 +22216,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22228,7 +22229,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22241,7 +22242,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22254,7 +22255,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22267,7 +22268,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22280,7 +22281,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22293,7 +22294,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22306,7 +22307,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22319,7 +22320,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22332,7 +22333,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22345,7 +22346,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22358,7 +22359,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22371,7 +22372,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22384,7 +22385,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22397,7 +22398,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22410,7 +22411,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22423,7 +22424,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22436,7 +22437,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22449,7 +22450,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22462,7 +22463,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22475,7 +22476,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22488,7 +22489,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22501,7 +22502,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22514,7 +22515,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22527,7 +22528,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22540,7 +22541,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22553,7 +22554,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22566,7 +22567,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22579,7 +22580,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22592,7 +22593,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22605,7 +22606,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22618,7 +22619,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22631,7 +22632,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22644,7 +22645,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22657,7 +22658,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22670,7 +22671,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22683,7 +22684,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22696,7 +22697,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22709,7 +22710,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22722,7 +22723,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22735,7 +22736,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22748,7 +22749,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22761,7 +22762,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22774,7 +22775,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22787,7 +22788,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22800,7 +22801,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22813,7 +22814,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22826,7 +22827,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeTrue();
         }
 
         [TestMethod]
@@ -22839,7 +22840,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22852,7 +22853,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22865,7 +22866,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22878,7 +22879,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22891,7 +22892,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
         [TestMethod]
@@ -22904,7 +22905,7 @@ namespace Cogito.Json.Tests.Schema
 
             s.SchemaVersion = new Uri("http://json-schema.org/draft-07/schema#");
 
-            new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
+            JSchemaExpressionBuilder.CreateDefault().Build(s).Compile()(t).Should().BeFalse();
         }
 
 

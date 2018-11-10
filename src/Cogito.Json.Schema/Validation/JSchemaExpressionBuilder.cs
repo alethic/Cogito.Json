@@ -13,14 +13,15 @@ using Cogito.Json.Schema.Internal;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
+using TinyIoC;
 
-namespace Cogito.Json.Schema
+namespace Cogito.Json.Schema.Validation
 {
 
     /// <summary>
     /// Provides support for compiling expression trees implementing JSON schema validation.
     /// </summary>
-    public class JSchemaValidatorBuilder
+    public class JSchemaExpressionBuilder
     {
 
         static readonly Expression True = Expression.Constant(true);
@@ -99,7 +100,7 @@ namespace Cogito.Json.Schema
         /// <returns></returns>
         static Expression CallThis(string methodName, params Expression[] args) =>
             Expression.Call(
-                typeof(JSchemaValidatorBuilder).GetMethod(methodName, BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public),
+                typeof(JSchemaExpressionBuilder).GetMethod(methodName, BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.Public),
                 args);
 
         /// <summary>
@@ -232,16 +233,43 @@ namespace Cogito.Json.Schema
                 Expression.Label(brk, rsl));
         }
 
+        static readonly Lazy<TinyIoCContainer> DefaultIoCContainer = new Lazy<TinyIoCContainer>(CreateDefaultIoCContainer);
+
+        /// <summary>
+        /// Creates a new TinyIoC instance with the default validation configuration.
+        /// </summary>
+        /// <returns></returns>
+        static TinyIoCContainer CreateDefaultIoCContainer()
+        {
+            var c = new TinyIoCContainer();
+
+            c.AutoRegister(
+                new[] { typeof(JSchemaExpressionBuilder).Assembly },
+                DuplicateImplementationActions.RegisterMultiple,
+                i => i.Namespace.StartsWith("Cogito.Json.Schema.Validation"));
+
+            return c;
+        }
+
+        /// <summary>
+        /// Creates a new instance of the expression builder with the default configuration.
+        /// </summary>
+        /// <returns></returns>
+        public static JSchemaExpressionBuilder CreateDefault()
+        {
+            return new JSchemaExpressionBuilder(DefaultIoCContainer.Value.ResolveAll<IJSchemaExpressionProvider>());
+        }
+
+        readonly IEnumerable<IJSchemaExpressionProvider> providers;
         readonly Dictionary<JSchema, ParameterExpression> delayed = new Dictionary<JSchema, ParameterExpression>();
         readonly Dictionary<JSchema, LambdaExpression> compile = new Dictionary<JSchema, LambdaExpression>();
-        readonly Func<JSchema, Expression, Expression> buildSchemaFunc = null;
 
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
-        public JSchemaValidatorBuilder(Func<JSchema, Expression, Expression> buildSchemaFunc = null)
+        public JSchemaExpressionBuilder(IEnumerable<IJSchemaExpressionProvider> providers)
         {
-            this.buildSchemaFunc = buildSchemaFunc;
+            this.providers = providers?.ToList() ?? throw new ArgumentNullException(nameof(providers));
         }
 
         /// <summary>
@@ -348,39 +376,48 @@ namespace Cogito.Json.Schema
         /// <returns></returns>
         Expression BuildSchemaBody(JSchema schema, Expression o)
         {
-            return buildSchemaFunc?.Invoke(schema, o) ?? AllOf(BuildSchemaExpressions(schema, o).Where(i => i != null));
+            return AllOf(BuildSchemaExpressions(schema, o).Where(i => i != null));
         }
 
-        IEnumerable<Expression> BuildSchemaExpressions(JSchema schema, Expression o)
+        /// <summary>
+        /// Acquires the expressions that contribute to validity of the given schema against the given token.
+        /// </summary>
+        /// <param name="schema"></param>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        IEnumerable<Expression> BuildSchemaExpressions(JSchema schema, Expression token)
         {
-            yield return BuildAllOf(schema, o);
-            yield return BuildAnyOf(schema, o);
-            yield return BuildConst(schema, o);
-            yield return BuildContains(schema, o);
-            yield return BuildContent(schema, o);
-            yield return BuildDependencies(schema, o);
-            yield return BuildEnum(schema, o);
-            yield return BuildFormat(schema, o);
-            yield return BuildItems(schema, o);
-            yield return BuildMaximum(schema, o);
-            yield return BuildMaximumItems(schema, o);
-            yield return BuildMaximumLength(schema, o);
-            yield return BuildMaximumProperties(schema, o);
-            yield return BuildMinimum(schema, o);
-            yield return BuildMinimumItems(schema, o);
-            yield return BuildMinimumLength(schema, o);
-            yield return BuildMinimumProperties(schema, o);
-            yield return BuildMultipleOf(schema, o);
-            yield return BuildNot(schema, o);
-            yield return BuildOneOf(schema, o);
-            yield return BuildPattern(schema, o);
-            yield return BuildProperties(schema, o);
-            yield return BuildPropertyNames(schema, o);
-            yield return BuildRequired(schema, o);
-            yield return BuildType(schema, o);
-            yield return BuildUniqueItems(schema, o);
-            yield return BuildValid(schema, o);
-            yield return BuildIfThenElse(schema, o);
+            yield return BuildAllOf(schema, token);
+            yield return BuildAnyOf(schema, token);
+            yield return BuildConst(schema, token);
+            yield return BuildContains(schema, token);
+            yield return BuildContent(schema, token);
+            yield return BuildDependencies(schema, token);
+            yield return BuildEnum(schema, token);
+            yield return BuildItems(schema, token);
+            yield return BuildMaximum(schema, token);
+            yield return BuildMaximumItems(schema, token);
+            yield return BuildMaximumLength(schema, token);
+            yield return BuildMaximumProperties(schema, token);
+            yield return BuildMinimum(schema, token);
+            yield return BuildMinimumItems(schema, token);
+            yield return BuildMinimumLength(schema, token);
+            yield return BuildMinimumProperties(schema, token);
+            yield return BuildMultipleOf(schema, token);
+            yield return BuildNot(schema, token);
+            yield return BuildOneOf(schema, token);
+            yield return BuildPattern(schema, token);
+            yield return BuildProperties(schema, token);
+            yield return BuildPropertyNames(schema, token);
+            yield return BuildRequired(schema, token);
+            yield return BuildType(schema, token);
+            yield return BuildUniqueItems(schema, token);
+            yield return BuildValid(schema, token);
+            yield return BuildIfThenElse(schema, token);
+
+            foreach (var provider in providers)
+                if (provider.Build(schema, token) is Expression e)
+                    yield return e;
         }
 
         Expression BuildAllOf(JSchema schema, Expression o)
@@ -612,153 +649,6 @@ namespace Cogito.Json.Schema
                 return null;
 
             return AnyOf(schema.Enum.Select(i => DeepEqual(o, Expression.Constant(i))));
-        }
-
-        static Expression BuildFormat(JSchema schema, Expression o)
-        {
-            if (schema.Format == null)
-                return null;
-
-            return IfThenElseTrue(
-                IsTokenType(o, JTokenType.String),
-                ValidateFormat(schema.Format, Expression.Convert(o, typeof(string))));
-        }
-
-        static Expression ValidateFormat(string format, Expression o)
-        {
-            switch (format)
-            {
-                case Constants.Formats.Color:
-                    return CallThis(nameof(ValidateColor), o);
-                case Constants.Formats.Hostname:
-                case Constants.Formats.Draft3Hostname:
-                    return CallThis(nameof(ValidateHostname), o);
-                case Constants.Formats.IdnHostname:
-                    return CallThis(nameof(ValidateIdnHostname), o);
-                case Constants.Formats.IPv4:
-                case Constants.Formats.Draft3IPv4:
-                    return CallThis(nameof(ValidateIPv4), o);
-                case Constants.Formats.IPv6:
-                    return CallThis(nameof(ValidateIPv6), o);
-                case Constants.Formats.Email:
-                    return CallThis(nameof(ValidateEmail), o);
-                case Constants.Formats.IdnEmail:
-                    return CallThis(nameof(ValidateIdnEmail), o);
-                case Constants.Formats.Uri:
-                    return CallThis(nameof(ValidateUri), o);
-                case Constants.Formats.UriReference:
-                    return CallThis(nameof(ValidateUriReference), o);
-                case Constants.Formats.UriTemplate:
-                    return CallThis(nameof(ValidateUriTemplate), o);
-                case Constants.Formats.Iri:
-                    return CallThis(nameof(ValidateIri), o);
-                case Constants.Formats.IriReference:
-                    return CallThis(nameof(ValidateIriReference), o);
-                case Constants.Formats.JsonPointer:
-                    return CallThis(nameof(ValidateJsonPointer), o);
-                case Constants.Formats.RelativeJsonPointer:
-                    return CallThis(nameof(ValidateRelativeJsonPointer), o);
-                case Constants.Formats.Date:
-                    return CallThis(nameof(ValidateDate), o);
-                case Constants.Formats.Time:
-                    return CallThis(nameof(ValidateTime), o);
-                case Constants.Formats.DateTime:
-                    return CallThis(nameof(ValidateDateTime), o);
-                case Constants.Formats.UtcMilliseconds:
-                    return CallThis(nameof(ValidateUtcMilliseconds), o);
-                case Constants.Formats.Regex:
-                    return CallThis(nameof(ValidateRegex), o);
-                default:
-                    return True;
-            }
-        }
-
-        static bool ValidateEmail(string value) =>
-            EmailHelpers.Validate(value, false);
-
-        static bool ValidateIdnEmail(string value) =>
-            EmailHelpers.Validate(value, true);
-
-        static bool ValidateUri(string value) =>
-            Uri.IsWellFormedUriString(value, UriKind.Absolute);
-
-        static bool ValidateUriReference(string value) =>
-            FormatHelpers.ValidateUriReference(value);
-
-        static bool ValidateIri(string value) =>
-            Uri.IsWellFormedUriString(value, UriKind.Absolute);
-
-        static bool ValidateIriReference(string value) =>
-            FormatHelpers.ValidateIriReference(value);
-
-        static bool ValidateUriTemplate(string value) =>
-            FormatHelpers.ValidateUriTemplate(value);
-
-        static bool ValidateJsonPointer(string value) =>
-            FormatHelpers.ValidateJsonPointer(value);
-
-        static bool ValidateRelativeJsonPointer(string value) =>
-            FormatHelpers.ValidateRelativeJsonPointer(value);
-
-        static bool ValidateDate(string value) =>
-            DateTime.TryParseExact(value, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var _);
-
-        static bool ValidateTime(string value) =>
-            DateTime.TryParseExact(value, "HH:mm:ss.FFFFFFFK", CultureInfo.InvariantCulture, DateTimeStyles.None, out var _);
-
-        static bool ValidateDateTime(string value) =>
-            DateTime.TryParseExact(value, @"yyyy-MM-dd\THH:mm:ss.FFFFFFFK", CultureInfo.InvariantCulture, DateTimeStyles.None, out var _) ||
-            DateTime.TryParseExact(value.ToUpper(), @"yyyy-MM-dd\THH:mm:ss.FFFFFFFK", CultureInfo.InvariantCulture, DateTimeStyles.None, out var _);
-
-        static bool ValidateUtcMilliseconds(string value) =>
-            double.TryParse(value, NumberStyles.Number, CultureInfo.InvariantCulture, out var _);
-
-        static bool ValidateRegex(string value)
-        {
-            try
-            {
-                new Regex(value, RegexOptions.ECMAScript);
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-
-        static bool ValidateHostname(string value)
-        {
-            return HostnameRegex.IsMatch(value);
-        }
-
-        static readonly Regex HostnameRegex =
-            new Regex(@"^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|-){0,61}[0-9A-Za-z])?(?:\.[0-9A-Za-z](?:(?:[0-9A-Za-z]|-){0,61}[0-9A-Za-z])?)*\.?$",
-                RegexOptions.CultureInvariant | RegexOptions.Compiled);
-
-        static bool ValidateIdnHostname(string value)
-        {
-            return IdnHostnameRegex.IsMatch(value);
-        }
-
-        static readonly Regex IdnHostnameRegex =
-            new Regex(@"^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|-){0,61}[0-9A-Za-z])?(?:\.[0-9A-Za-z](?:(?:[0-9A-Za-z]|-){0,61}[0-9A-Za-z])?)*\.?$",
-                RegexOptions.CultureInvariant | RegexOptions.Compiled);
-
-        static bool ValidateColor(string value) => ColorHelpers.IsValid(value);
-
-        static bool ValidateIPv6(string value) => Uri.CheckHostName(value) == UriHostNameType.IPv6;
-
-        static bool ValidateIPv4(string value)
-        {
-            var parts = value.Split('.');
-            if (parts.Length != 4)
-                return false;
-
-            for (var i = 0; i < parts.Length; i++)
-                if (!int.TryParse(parts[i], NumberStyles.Integer, CultureInfo.InvariantCulture, out var num) || num < 0 || num > 255)
-                    return false;
-
-            return true;
         }
 
         /// <summary>
