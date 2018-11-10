@@ -4,10 +4,12 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Numerics;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
 using Cogito.Json.Schema.Internal;
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
@@ -669,7 +671,8 @@ namespace Cogito.Json.Schema
             DateTime.TryParseExact(value, "HH:mm:ss.FFFFFFFK", CultureInfo.InvariantCulture, DateTimeStyles.None, out var _);
 
         static bool ValidateDateTime(string value) =>
-            DateTime.TryParseExact(value, @"yyyy-MM-dd\THH:mm:ss.FFFFFFFK", CultureInfo.InvariantCulture, DateTimeStyles.None, out var _);
+            DateTime.TryParseExact(value, @"yyyy-MM-dd\THH:mm:ss.FFFFFFFK", CultureInfo.InvariantCulture, DateTimeStyles.None, out var _) ||
+            DateTime.TryParseExact(value.ToUpper(), @"yyyy-MM-dd\THH:mm:ss.FFFFFFFK", CultureInfo.InvariantCulture, DateTimeStyles.None, out var _);
 
         static bool ValidateUtcMilliseconds(string value) =>
             double.TryParse(value, NumberStyles.Number, CultureInfo.InvariantCulture, out var _);
@@ -783,9 +786,16 @@ namespace Cogito.Json.Schema
                 TokenType(o),
                 True,
                 Expression.SwitchCase(
-                    Comparer(
-                        Expression.Convert(o, typeof(int)),
-                        Expression.Constant((int)schema.Maximum)),
+                    Expression.Condition(
+                        Expression.TypeIs(
+                            Expression.Property(Expression.Convert(o, typeof(JValue)), nameof(JValue.Value)),
+                            typeof(BigInteger)),
+                        Comparer(
+                            Expression.Convert(Expression.Property(Expression.Convert(o, typeof(JValue)), nameof(JValue.Value)), typeof(BigInteger)),
+                            Expression.Constant((BigInteger)schema.Maximum)),
+                        Comparer(
+                            Expression.Convert(o, typeof(int)),
+                            Expression.Constant((int)schema.Maximum))),
                     Expression.Constant(JTokenType.Integer)),
                 Expression.SwitchCase(
                     Comparer(
@@ -1046,7 +1056,8 @@ namespace Cogito.Json.Schema
         static bool AllowAdditionalProperties(JSchema schema, JObject o)
         {
             foreach (var p in o.Properties())
-                if (schema.Properties.ContainsKey(p.Name) == false)
+                if (schema.Properties.ContainsKey(p.Name) == false &&
+                    schema.PatternProperties.Any(i => Regex.IsMatch(p.Name, i.Key)) == false)
                     return false;
 
             return true;
@@ -1055,7 +1066,8 @@ namespace Cogito.Json.Schema
         static bool AdditionalProperties(JSchema schema, JObject o, Func<JToken, bool> additionalPropertiesSchema)
         {
             foreach (var p in o.Properties())
-                if (schema.Properties.ContainsKey(p.Name) == false)
+                if (schema.Properties.ContainsKey(p.Name) == false &&
+                    schema.PatternProperties.Any(i => Regex.IsMatch(p.Name, i.Key)) == false)
                     if (additionalPropertiesSchema(p.Value) == false)
                         return false;
 
