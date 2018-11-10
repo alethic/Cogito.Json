@@ -92,8 +92,10 @@ namespace Cogito.Json.Tests.Schema
         /// <returns></returns>
         static JSchema ParseSchema(string value)
         {
+            var s = new StreamReader(new MemoryStream(Convert.FromBase64String(value))).ReadToEnd();
+
             return JSchema.Load(
-                new JsonTextReader(new StreamReader(new MemoryStream(Convert.FromBase64String(value))))
+                new JsonTextReader(new StringReader(s))
                 {
                     DateParseHandling = DateParseHandling.None
                 },

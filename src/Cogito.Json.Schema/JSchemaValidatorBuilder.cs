@@ -681,7 +681,7 @@ namespace Cogito.Json.Schema
         {
             try
             {
-                new Regex(value);
+                new Regex(value, RegexOptions.ECMAScript);
                 return true;
             }
             catch

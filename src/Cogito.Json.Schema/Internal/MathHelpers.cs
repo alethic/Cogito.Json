@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Globalization;
 #if !(NET20 || NET35 || PORTABLE) || NETSTANDARD1_3 || NETSTANDARD2_0
 using System.Numerics;
@@ -207,12 +206,12 @@ namespace Cogito.Json.Schema.Internal
             return d < DecimalDoubleMaxValue && d > DecimalDoubleMinValue;
         }
 
-        public static bool IsZero(decimal value)
+        static bool IsZero(decimal value)
         {
             return System.Math.Abs(value) < 20 * DecimalEpsilon;
         }
 
-        public static bool IsZero(double value)
+        static bool IsZero(double value)
         {
             return System.Math.Abs(value) < 20.0 * DoubleEpsilon;
         }
