@@ -157,14 +157,28 @@ namespace Cogito.Json.Schema
         /// <param name="o"></param>
         /// <param name="t"></param>
         /// <returns></returns>
-        static Expression IsSchemaType(Expression o, JSchemaType t) =>
-            Expression.NotEqual(
-                Expression.And(
-                    Expression.Constant((int)t),
-                    Expression.Convert(
-                        CallThis(nameof(SchemaTypeForTokenType), TokenType(o)),
-                        typeof(int))),
-                Expression.Constant(0));
+        static Expression IsSchemaType(JSchema schema, Expression o, JSchemaType t) =>
+            CallThis(nameof(IsSchemaTypeFunc), Expression.Constant(schema), o, Expression.Constant(t));
+
+        /// <summary>
+        /// Returns <c>true</c> if the token is of the specified schema type.
+        /// </summary>
+        /// <param name="o"></param>
+        /// <param name="t"></param>
+        /// <returns></returns>
+        static bool IsSchemaTypeFunc(JSchema schema, JToken o, JSchemaType t)
+        {
+            if (schema.SchemaVersion == Constants.SchemaVersions.Draft3 ||
+                schema.SchemaVersion == Constants.SchemaVersions.Draft4)
+                if (o.Type == JTokenType.Float && (t & JSchemaType.Integer) != 0 && (double)o % 1 == 0)
+                    return false;
+
+            //  handle cases of floating point values, tested against integer, that are actually even integers
+            if (o.Type == JTokenType.Float && (t & JSchemaType.Integer) != 0 && (double)o % 1 == 0)
+                return true;
+
+            return (t & SchemaTypeForTokenType(o.Type)) != 0;
+        }
 
         /// <summary>
         /// Returns an expression that returns <c>true</c>
@@ -619,6 +633,8 @@ namespace Cogito.Json.Schema
                 case Constants.Formats.Hostname:
                 case Constants.Formats.Draft3Hostname:
                     return CallThis(nameof(ValidateHostname), o);
+                case Constants.Formats.IdnHostname:
+                    return CallThis(nameof(ValidateIdnHostname), o);
                 case Constants.Formats.IPv4:
                 case Constants.Formats.Draft3IPv4:
                     return CallThis(nameof(ValidateIPv4), o);
@@ -626,14 +642,22 @@ namespace Cogito.Json.Schema
                     return CallThis(nameof(ValidateIPv6), o);
                 case Constants.Formats.Email:
                     return CallThis(nameof(ValidateEmail), o);
+                case Constants.Formats.IdnEmail:
+                    return CallThis(nameof(ValidateIdnEmail), o);
                 case Constants.Formats.Uri:
                     return CallThis(nameof(ValidateUri), o);
                 case Constants.Formats.UriReference:
                     return CallThis(nameof(ValidateUriReference), o);
                 case Constants.Formats.UriTemplate:
                     return CallThis(nameof(ValidateUriTemplate), o);
+                case Constants.Formats.Iri:
+                    return CallThis(nameof(ValidateIri), o);
+                case Constants.Formats.IriReference:
+                    return CallThis(nameof(ValidateIriReference), o);
                 case Constants.Formats.JsonPointer:
                     return CallThis(nameof(ValidateJsonPointer), o);
+                case Constants.Formats.RelativeJsonPointer:
+                    return CallThis(nameof(ValidateRelativeJsonPointer), o);
                 case Constants.Formats.Date:
                     return CallThis(nameof(ValidateDate), o);
                 case Constants.Formats.Time:
@@ -650,6 +674,9 @@ namespace Cogito.Json.Schema
         }
 
         static bool ValidateEmail(string value) =>
+            EmailHelpers.Validate(value, false);
+
+        static bool ValidateIdnEmail(string value) =>
             EmailHelpers.Validate(value, true);
 
         static bool ValidateUri(string value) =>
@@ -658,11 +685,20 @@ namespace Cogito.Json.Schema
         static bool ValidateUriReference(string value) =>
             FormatHelpers.ValidateUriReference(value);
 
+        static bool ValidateIri(string value) =>
+            Uri.IsWellFormedUriString(value, UriKind.Absolute);
+
+        static bool ValidateIriReference(string value) =>
+            FormatHelpers.ValidateIriReference(value);
+
         static bool ValidateUriTemplate(string value) =>
             FormatHelpers.ValidateUriTemplate(value);
 
         static bool ValidateJsonPointer(string value) =>
             FormatHelpers.ValidateJsonPointer(value);
+
+        static bool ValidateRelativeJsonPointer(string value) =>
+            FormatHelpers.ValidateRelativeJsonPointer(value);
 
         static bool ValidateDate(string value) =>
             DateTime.TryParseExact(value, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out var _);
@@ -696,6 +732,15 @@ namespace Cogito.Json.Schema
         }
 
         static readonly Regex HostnameRegex =
+            new Regex(@"^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|-){0,61}[0-9A-Za-z])?(?:\.[0-9A-Za-z](?:(?:[0-9A-Za-z]|-){0,61}[0-9A-Za-z])?)*\.?$",
+                RegexOptions.CultureInvariant | RegexOptions.Compiled);
+
+        static bool ValidateIdnHostname(string value)
+        {
+            return IdnHostnameRegex.IsMatch(value);
+        }
+
+        static readonly Regex IdnHostnameRegex =
             new Regex(@"^(?=.{1,255}$)[0-9A-Za-z](?:(?:[0-9A-Za-z]|-){0,61}[0-9A-Za-z])?(?:\.[0-9A-Za-z](?:(?:[0-9A-Za-z]|-){0,61}[0-9A-Za-z])?)*\.?$",
                 RegexOptions.CultureInvariant | RegexOptions.Compiled);
 
@@ -914,7 +959,7 @@ namespace Cogito.Json.Schema
                 return null;
 
             return IfThenElseTrue(
-                IsSchemaType(o, JSchemaType.Integer | JSchemaType.Number),
+                IsSchemaType(schema, o, JSchemaType.Integer | JSchemaType.Number),
                 CallThis(nameof(MultipleOf),
                     Expression.Convert(o, typeof(JValue)),
                     Expression.Constant((double)schema.MultipleOf)));
@@ -1120,7 +1165,7 @@ namespace Cogito.Json.Schema
             if (schema.Type == null)
                 return null;
 
-            return IsSchemaType(o, (JSchemaType)schema.Type);
+            return IsSchemaType(schema, o, (JSchemaType)schema.Type);
         }
 
         Expression BuildUniqueItems(JSchema schema, Expression o)

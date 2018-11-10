@@ -11,6 +11,8 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="Newtonsoft.Json" #>
 <#@ import namespace="Newtonsoft.Json.Linq" #>
+using System;
+
 using Cogito.Json.Schema;
 
 using FluentAssertions;
@@ -24,30 +26,11 @@ namespace Cogito.Json.Tests.Schema
     {
 
 <#
-
-foreach (var suiteDir in new DirectoryInfo(Path.Combine(Host.ResolvePath(""), "JSON-Schema-Test-Suite", "tests")).GetDirectories())
-{
-    foreach (var testFile in suiteDir.GetFiles(@"*.json"))
-    {
-        WriteTestFile(testFile, suiteDir.Name, Path.GetFileNameWithoutExtension(testFile.Name));
-    }
-
-    foreach (var subDir1 in suiteDir.GetDirectories())
-    {
-        foreach (var testFile in subDir1.GetFiles(@"*.json"))
-        {
-            WriteTestFile(testFile, suiteDir.Name + "_" + subDir1.Name, Path.GetFileNameWithoutExtension(testFile.Name));
-        }
-
-        foreach (var subDir2 in suiteDir.GetDirectories())
-        {
-            foreach (var testFile in subDir2.GetFiles(@"*.json"))
-            {
-                WriteTestFile(testFile, suiteDir.Name + "_" + subDir1.Name + "_" + subDir2.Name, Path.GetFileNameWithoutExtension(testFile.Name));
-            }
-        }
-    }
-}
+    
+TestSuite(new Uri("http://json-schema.org/draft-03/schema#"), "draft3");
+TestSuite(new Uri("http://json-schema.org/draft-04/schema#"), "draft4");
+TestSuite(new Uri("http://json-schema.org/draft-06/schema#"), "draft6");
+TestSuite(new Uri("http://json-schema.org/draft-07/schema#"), "draft7");
 
 #>
 
@@ -57,7 +40,25 @@ foreach (var suiteDir in new DirectoryInfo(Path.Combine(Host.ResolvePath(""), "J
 
 <#+
 
-void WriteTestFile(FileInfo file, string suiteName, string categoryName)
+void TestSuite(Uri version, string name)
+{
+    var suiteDir = new DirectoryInfo(Path.Combine(Host.ResolvePath(""), "JSON-Schema-Test-Suite", "tests", name));
+
+    foreach (var testFile in suiteDir.GetFiles(@"*.json"))
+        WriteTestFile(version, testFile, suiteDir.Name, Path.GetFileNameWithoutExtension(testFile.Name));
+
+    foreach (var subDir1 in suiteDir.GetDirectories())
+    {
+        foreach (var testFile in subDir1.GetFiles(@"*.json"))
+            WriteTestFile(version, testFile, suiteDir.Name + "_" + subDir1.Name, Path.GetFileNameWithoutExtension(testFile.Name));
+
+        foreach (var subDir2 in subDir1.GetDirectories())
+            foreach (var testFile in subDir2.GetFiles(@"*.json"))
+                WriteTestFile(version, testFile, suiteDir.Name + "_" + subDir1.Name + "_" + subDir2.Name, Path.GetFileNameWithoutExtension(testFile.Name));
+    }
+}
+
+void WriteTestFile(Uri version, FileInfo file, string suiteName, string categoryName)
 {
     int i = 0;
 
@@ -68,6 +69,7 @@ void WriteTestFile(FileInfo file, string suiteName, string categoryName)
         var d = (string)group["description"];
         var s = (JToken)group["schema"];
         var t = (JArray)group["tests"];
+        var o = (bool?)group["ignore"];
 
         int j = 0;
 
@@ -78,8 +80,17 @@ void WriteTestFile(FileInfo file, string suiteName, string categoryName)
             var d2 = (string)test["description"];
             var t2 = (JToken)test["data"];
             var v2 = (bool)test["valid"];
+            var o2 = (bool?)test["ignore"];
 #>
 
+<#+
+            if (o == true || o2 == true)
+            {
+#>
+        [Ignore]
+<#+
+            }
+#>
         [TestMethod]
         [TestCategory("<#= suiteName #>")]
         [TestCategory("<#= categoryName #>")]
@@ -87,6 +98,9 @@ void WriteTestFile(FileInfo file, string suiteName, string categoryName)
         {
             var s = ParseSchema("<#= EncodeToken(s) #>");
             var t = ParseJToken("<#= EncodeToken(t2) #>");
+
+            s.SchemaVersion = new Uri("<#= version #>");
+
 <#+
             if (v2)
             {

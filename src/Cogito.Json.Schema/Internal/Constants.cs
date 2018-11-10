@@ -22,6 +22,7 @@ namespace Cogito.Json.Schema.Internal
             public const string Draft3Hostname = "host-name";
             public const string Draft3IPv4 = "ip-address";
             public const string Hostname = "hostname";
+            public const string IdnHostname = "idn-hostname";
             public const string DateTime = "date-time";
             public const string Date = "date";
             public const string Time = "time";
@@ -33,10 +34,14 @@ namespace Cogito.Json.Schema.Internal
             public const string Uri = "uri";
             public const string UriReference = "uri-reference";
             public const string UriTemplate = "uri-template";
+            public const string Iri = "iri";
+            public const string IriReference = "iri-reference";
             public const string JsonPointer = "json-pointer";
+            public const string RelativeJsonPointer = "relative-json-pointer";
             public const string IPv6 = "ipv6";
             public const string IPv4 = "ipv4";
             public const string Email = "email";
+            public const string IdnEmail = "idn-email";
 
         }
 
