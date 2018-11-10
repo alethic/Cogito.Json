@@ -16,7 +16,8 @@
             {
                 "description": "a valid IRI with URL-encoded stuff",
                 "data": "http://ƒøø.ßår/?q=Test%20URL-encoded%20stuff",
-                "valid": true
+                "valid": true,
+                "ignore":  true
             },
             {
                 "description": "a valid IRI with many special characters",

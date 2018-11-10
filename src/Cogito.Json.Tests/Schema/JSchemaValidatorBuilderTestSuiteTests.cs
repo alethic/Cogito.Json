@@ -5177,6 +5177,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -5255,6 +5256,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -10861,6 +10863,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -10939,6 +10942,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -17637,6 +17641,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -17715,6 +17720,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -21579,6 +21585,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_format")]
         [TestCategory("idn-hostname")]
@@ -21748,6 +21755,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_format")]
         [TestCategory("iri-reference")]
@@ -21761,6 +21769,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_format")]
         [TestCategory("iri-reference")]
@@ -21774,6 +21783,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_format")]
         [TestCategory("iri-reference")]
@@ -21787,6 +21797,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_format")]
         [TestCategory("iri-reference")]
@@ -21800,6 +21811,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeFalse();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_format")]
         [TestCategory("iri-reference")]
@@ -21813,6 +21825,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_format")]
         [TestCategory("iri-reference")]
@@ -21826,6 +21839,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_format")]
         [TestCategory("iri-reference")]
@@ -21865,6 +21879,7 @@ namespace Cogito.Json.Tests.Schema
             new JSchemaValidatorBuilder().Build(s).Compile()(t).Should().BeTrue();
         }
 
+        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_format")]
         [TestCategory("iri")]
