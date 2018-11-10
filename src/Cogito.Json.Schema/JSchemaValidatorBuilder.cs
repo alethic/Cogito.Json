@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
 using Cogito.Json.Schema.Internal;
-
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Schema;
 
@@ -340,7 +341,7 @@ namespace Cogito.Json.Schema
             yield return BuildAnyOf(schema, o);
             yield return BuildConst(schema, o);
             yield return BuildContains(schema, o);
-            yield return BuildContentEncoding(schema, o);
+            yield return BuildContent(schema, o);
             yield return BuildDependencies(schema, o);
             yield return BuildEnum(schema, o);
             yield return BuildFormat(schema, o);
@@ -416,16 +417,126 @@ namespace Cogito.Json.Schema
                         brk)));
         }
 
-        Expression BuildContentEncoding(JSchema schema, Expression o)
+        Expression BuildContent(JSchema schema, Expression o)
         {
-            if (schema.ContentEncoding == null)
+            // no content related validation
+            if (schema.ContentEncoding == null &&
+                schema.ContentMediaType == null)
                 return null;
 
-            return CallThis(nameof(IsBase64String), Expression.Convert(o, typeof(string)));
+            switch (schema.ContentEncoding)
+            {
+                case Constants.ContentEncodings.Base64:
+                    return
+                        IfThenElseTrue(
+                            IsTokenType(o, JTokenType.String),
+                            CallThis(
+                                nameof(ContentBase64),
+                                Expression.Convert(o, typeof(string)),
+                                Expression.Constant(schema.ContentMediaType, typeof(string))));
+                case null:
+                    return IfThenElseTrue(
+                        IsTokenType(o, JTokenType.String),
+                        CallThis(
+                            nameof(ContentMediaTypeString),
+                            Expression.Convert(o, typeof(string)),
+                            Expression.Constant(schema.ContentMediaType, typeof(string))));
+                default:
+                    return null;
+            }
         }
 
-        static bool IsBase64String(string value) =>
-           StringHelpers.IsBase64String(value);
+        /// <summary>
+        /// Attempts to validate Base64 content.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="mediaType"></param>
+        /// <returns></returns>
+        static bool ContentBase64(string value, string mediaType)
+        {
+            return StringHelpers.IsBase64String(value) && ContentMediaTypeBinary(Convert.FromBase64String(value), mediaType);
+        }
+
+        /// <summary>
+        /// Attempts to validate the given content according to the specified media type.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="mediaType"></param>
+        /// <returns></returns>
+        static bool ContentMediaTypeBinary(byte[] value, string mediaType)
+        {
+            switch (mediaType)
+            {
+                case null:
+                    return true;
+                case "application/json":
+                    return ContentMediaTypeIsJson(value);
+                default:
+                    throw new NotImplementedException();
+            }
+        }
+
+        /// <summary>
+        /// Attempts to validate the given string content according to the specified media type.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="mediaType"></param>
+        /// <returns></returns>
+        static bool ContentMediaTypeString(string value, string mediaType)
+        {
+            switch (mediaType)
+            {
+                case null:
+                    return true;
+                case "application/json":
+                    return ContentMediaTypeIsJson(new StringReader(value));
+                default:
+                    throw new NotImplementedException();
+            }
+        }
+
+        /// <summary>
+        /// Validates that the given byte stream is JSON.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        static bool ContentMediaTypeIsJson(byte[] value)
+        {
+            try
+            {
+                return ContentMediaTypeIsJson(new StreamReader(new MemoryStream(value)));
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Validates that the given text reader is JSON.
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns></returns>
+        static bool ContentMediaTypeIsJson(TextReader reader)
+        {
+            try
+            {
+                var j = new JsonTextReader(reader)
+                {
+                    DateParseHandling = DateParseHandling.None
+                };
+
+                // try to read across document
+                while (j.Read())
+                    continue;
+
+                return true;
+            }
+            catch (JsonReaderException)
+            {
+                return false;
+            }
+        }
 
         Expression BuildDependencies(JSchema schema, Expression o)
         {
