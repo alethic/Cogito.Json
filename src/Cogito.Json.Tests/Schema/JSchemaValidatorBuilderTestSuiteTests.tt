@@ -80,7 +80,6 @@ void WriteTestFile(FileInfo file, string suiteName, string categoryName)
             var v2 = (bool)test["valid"];
 #>
 
-        [Ignore]
         [TestMethod]
         [TestCategory("<#= suiteName #>")]
         [TestCategory("<#= categoryName #>")]

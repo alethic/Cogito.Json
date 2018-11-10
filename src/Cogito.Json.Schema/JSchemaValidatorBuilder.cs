@@ -215,6 +215,18 @@ namespace Cogito.Json.Schema
                 Expression.Label(brk, rsl));
         }
 
+        readonly Dictionary<JSchema, ParameterExpression> delayed = new Dictionary<JSchema, ParameterExpression>();
+        readonly Dictionary<JSchema, LambdaExpression> compile = new Dictionary<JSchema, LambdaExpression>();
+        readonly Func<JSchema, Expression, Expression> buildSchemaFunc = null;
+
+        /// <summary>
+        /// Initializes a new instance.
+        /// </summary>
+        public JSchemaValidatorBuilder(Func<JSchema, Expression, Expression> buildSchemaFunc = null)
+        {
+            this.buildSchemaFunc = buildSchemaFunc;
+        }
+
         /// <summary>
         /// Builds an expression tree that implements validation of JSON.
         /// </summary>
@@ -259,10 +271,6 @@ namespace Cogito.Json.Schema
 
             return e;
         }
-
-
-        readonly Dictionary<JSchema, ParameterExpression> delayed = new Dictionary<JSchema, ParameterExpression>();
-        readonly Dictionary<JSchema, LambdaExpression> compile = new Dictionary<JSchema, LambdaExpression>();
 
         /// <summary>
         /// Returns an expression that invokes the validation of the given schema.
@@ -325,7 +333,7 @@ namespace Cogito.Json.Schema
         /// <returns></returns>
         Expression BuildSchemaBody(JSchema schema, Expression o)
         {
-            return AllOf(BuildSchemaExpressions(schema, o).Where(i => i != null));
+            return buildSchemaFunc?.Invoke(schema, o) ?? AllOf(BuildSchemaExpressions(schema, o).Where(i => i != null));
         }
 
         IEnumerable<Expression> BuildSchemaExpressions(JSchema schema, Expression o)

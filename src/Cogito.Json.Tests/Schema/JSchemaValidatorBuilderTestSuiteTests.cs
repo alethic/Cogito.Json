@@ -11,7 +11,6 @@ namespace Cogito.Json.Tests.Schema
     {
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -23,7 +22,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -35,7 +33,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -47,7 +44,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -59,7 +55,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -71,7 +66,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -83,7 +77,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -95,7 +88,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalItems")]
@@ -107,7 +99,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -119,7 +110,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -131,7 +121,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -143,7 +132,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -155,7 +143,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -167,7 +154,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -179,7 +165,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -191,7 +176,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -203,7 +187,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -215,7 +198,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -227,7 +209,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -239,7 +220,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -251,7 +231,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -263,7 +242,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("additionalProperties")]
@@ -275,7 +253,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("default")]
@@ -287,7 +264,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("default")]
@@ -299,7 +275,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("default")]
@@ -311,7 +286,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("default")]
@@ -323,7 +297,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -335,7 +308,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -347,7 +319,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -359,7 +330,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -371,7 +341,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -383,7 +352,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -395,7 +363,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -407,7 +374,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -419,7 +385,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -431,7 +396,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -443,7 +407,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -455,7 +418,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -467,7 +429,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -479,7 +440,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -491,7 +451,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -503,7 +462,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -515,7 +473,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("dependencies")]
@@ -527,7 +484,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -539,7 +495,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -551,7 +506,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -563,7 +517,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -575,7 +528,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -587,7 +539,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -599,7 +550,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -611,7 +561,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -623,7 +572,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("disallow")]
@@ -635,7 +583,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -647,7 +594,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -659,7 +605,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -671,7 +616,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -683,7 +627,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -695,7 +638,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -707,7 +649,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -719,7 +660,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("divisibleBy")]
@@ -731,7 +671,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -743,7 +682,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -755,7 +693,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -767,7 +704,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -779,7 +715,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -791,7 +726,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -803,7 +737,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -815,7 +748,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -827,7 +759,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("enum")]
@@ -839,7 +770,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -851,7 +781,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -863,7 +792,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -875,7 +803,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -887,7 +814,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -899,7 +825,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -911,7 +836,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -923,7 +847,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -935,7 +858,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -947,7 +869,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("extends")]
@@ -959,7 +880,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("items")]
@@ -971,7 +891,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("items")]
@@ -983,7 +902,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("items")]
@@ -995,7 +913,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("items")]
@@ -1007,7 +924,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("items")]
@@ -1019,7 +935,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maximum")]
@@ -1031,7 +946,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maximum")]
@@ -1043,7 +957,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maximum")]
@@ -1055,7 +968,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maximum")]
@@ -1067,7 +979,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maximum")]
@@ -1079,7 +990,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxItems")]
@@ -1091,7 +1001,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxItems")]
@@ -1103,7 +1012,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxItems")]
@@ -1115,7 +1023,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxItems")]
@@ -1127,7 +1034,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxLength")]
@@ -1139,7 +1045,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxLength")]
@@ -1151,7 +1056,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxLength")]
@@ -1163,7 +1067,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxLength")]
@@ -1175,7 +1078,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("maxLength")]
@@ -1187,7 +1089,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minimum")]
@@ -1199,7 +1100,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minimum")]
@@ -1211,7 +1111,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minimum")]
@@ -1223,7 +1122,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minimum")]
@@ -1235,7 +1133,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minimum")]
@@ -1247,7 +1144,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minItems")]
@@ -1259,7 +1155,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minItems")]
@@ -1271,7 +1166,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minItems")]
@@ -1283,7 +1177,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minItems")]
@@ -1295,7 +1188,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minLength")]
@@ -1307,7 +1199,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minLength")]
@@ -1319,7 +1210,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minLength")]
@@ -1331,7 +1221,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minLength")]
@@ -1343,7 +1232,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("minLength")]
@@ -1355,7 +1243,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("pattern")]
@@ -1367,7 +1254,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("pattern")]
@@ -1379,7 +1265,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("pattern")]
@@ -1391,7 +1276,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("pattern")]
@@ -1403,7 +1287,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1415,7 +1298,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1427,7 +1309,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1439,7 +1320,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1451,7 +1331,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1463,7 +1342,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1475,7 +1353,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1487,7 +1364,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1499,7 +1375,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1511,7 +1386,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1523,7 +1397,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1535,7 +1408,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1547,7 +1419,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1559,7 +1430,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1571,7 +1441,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1583,7 +1452,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("patternProperties")]
@@ -1595,7 +1463,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1607,7 +1474,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1619,7 +1485,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1631,7 +1496,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1643,7 +1507,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1655,7 +1518,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1667,7 +1529,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1679,7 +1540,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1691,7 +1551,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1703,7 +1562,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1715,7 +1573,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1727,7 +1584,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1739,7 +1595,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1751,7 +1606,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("properties")]
@@ -1763,7 +1617,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1775,7 +1628,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1787,7 +1639,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1799,7 +1650,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1811,7 +1661,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1823,7 +1672,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1835,7 +1683,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1847,7 +1694,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1859,7 +1705,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1871,7 +1716,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1883,7 +1727,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1895,7 +1738,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1907,7 +1749,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1919,7 +1760,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1931,7 +1771,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1943,7 +1782,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1955,7 +1793,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1967,7 +1804,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1979,7 +1815,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -1991,7 +1826,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -2003,7 +1837,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("ref")]
@@ -2015,7 +1848,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -2027,7 +1859,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -2039,7 +1870,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -2051,7 +1881,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -2063,7 +1892,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -2075,7 +1903,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -2087,7 +1914,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -2099,7 +1925,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("refRemote")]
@@ -2111,7 +1936,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("required")]
@@ -2123,7 +1947,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("required")]
@@ -2135,7 +1958,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("required")]
@@ -2147,7 +1969,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("required")]
@@ -2159,7 +1980,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2171,7 +1991,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2183,7 +2002,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2195,7 +2013,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2207,7 +2024,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2219,7 +2035,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2231,7 +2046,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2243,7 +2057,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2255,7 +2068,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2267,7 +2079,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2279,7 +2090,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2291,7 +2101,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2303,7 +2112,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2315,7 +2123,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2327,7 +2134,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2339,7 +2145,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2351,7 +2156,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2363,7 +2167,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2375,7 +2178,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2387,7 +2189,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2399,7 +2200,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2411,7 +2211,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2423,7 +2222,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2435,7 +2233,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2447,7 +2244,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2459,7 +2255,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2471,7 +2266,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2483,7 +2277,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2495,7 +2288,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2507,7 +2299,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2519,7 +2310,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2531,7 +2321,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2543,7 +2332,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2555,7 +2343,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2567,7 +2354,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2579,7 +2365,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2591,7 +2376,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2603,7 +2387,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2615,7 +2398,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2627,7 +2409,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2639,7 +2420,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2651,7 +2431,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2663,7 +2442,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2675,7 +2453,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2687,7 +2464,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2699,7 +2475,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2711,7 +2486,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2723,7 +2497,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2735,7 +2508,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2747,7 +2519,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2759,7 +2530,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2771,7 +2541,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2783,7 +2552,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2795,7 +2563,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2807,7 +2574,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2819,7 +2585,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2831,7 +2596,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2843,7 +2607,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2855,7 +2618,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2867,7 +2629,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2879,7 +2640,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2891,7 +2651,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2903,7 +2662,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2915,7 +2673,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2927,7 +2684,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2939,7 +2695,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2951,7 +2706,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2963,7 +2717,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2975,7 +2728,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2987,7 +2739,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -2999,7 +2750,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -3011,7 +2761,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -3023,7 +2772,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -3035,7 +2783,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -3047,7 +2794,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -3059,7 +2805,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -3071,7 +2816,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -3083,7 +2827,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -3095,7 +2838,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("type")]
@@ -3107,7 +2849,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3119,7 +2860,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3131,7 +2871,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3143,7 +2882,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3155,7 +2893,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3167,7 +2904,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3179,7 +2915,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3191,7 +2926,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3203,7 +2937,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3215,7 +2948,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3227,7 +2959,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3239,7 +2970,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3251,7 +2981,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3")]
         [TestCategory("uniqueItems")]
@@ -3263,7 +2992,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3275,7 +3003,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3287,7 +3014,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3299,7 +3025,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3311,7 +3036,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3323,7 +3047,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3335,7 +3058,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3347,7 +3069,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3359,7 +3080,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("bignum")]
@@ -3371,7 +3091,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3383,7 +3102,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3395,7 +3113,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3407,7 +3124,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3419,7 +3135,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3431,7 +3146,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3443,7 +3157,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3455,7 +3168,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3467,7 +3179,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3479,7 +3190,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3491,7 +3201,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3503,7 +3212,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3515,7 +3223,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3527,7 +3234,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3539,7 +3245,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3551,7 +3256,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3563,7 +3267,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3575,7 +3278,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3587,7 +3289,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3599,7 +3300,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3611,7 +3311,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3623,7 +3322,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3635,7 +3333,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3647,7 +3344,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3659,7 +3355,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3671,7 +3366,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3683,7 +3377,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3695,7 +3388,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3707,7 +3399,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3719,7 +3410,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3731,7 +3421,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3743,7 +3432,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3755,7 +3443,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("format")]
@@ -3767,7 +3454,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("jsregex")]
@@ -3779,7 +3465,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("jsregex")]
@@ -3791,7 +3476,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -3803,7 +3487,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3815,7 +3498,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3827,7 +3509,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3839,7 +3520,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3851,7 +3531,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3863,7 +3542,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3875,7 +3553,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3887,7 +3564,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3899,7 +3575,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("bignum")]
@@ -3911,7 +3586,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3923,7 +3597,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3935,7 +3608,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3947,7 +3619,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3959,7 +3630,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3971,7 +3641,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3983,7 +3652,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -3995,7 +3663,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4007,7 +3674,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4019,7 +3685,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4031,7 +3696,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4043,7 +3707,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4055,7 +3718,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4067,7 +3729,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4079,7 +3740,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4091,7 +3751,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4103,7 +3762,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4115,7 +3773,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4127,7 +3784,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4139,7 +3795,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4151,7 +3806,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4163,7 +3817,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4175,7 +3828,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4187,7 +3839,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4199,7 +3850,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4211,7 +3861,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4223,7 +3872,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4235,7 +3883,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4247,7 +3894,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4259,7 +3905,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4271,7 +3916,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4283,7 +3927,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4295,7 +3938,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("format")]
@@ -4307,7 +3949,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("jsregex")]
@@ -4319,7 +3960,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("jsregex")]
@@ -4331,7 +3971,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft3_optional_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -4343,7 +3982,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4355,7 +3993,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4367,7 +4004,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4379,7 +4015,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4391,7 +4026,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4403,7 +4037,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4415,7 +4048,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4427,7 +4059,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4439,7 +4070,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalItems")]
@@ -4451,7 +4081,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4463,7 +4092,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4475,7 +4103,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4487,7 +4114,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4499,7 +4125,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4511,7 +4136,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4523,7 +4147,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4535,7 +4158,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4547,7 +4169,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4559,7 +4180,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4571,7 +4191,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4583,7 +4202,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4595,7 +4213,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4607,7 +4224,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("additionalProperties")]
@@ -4619,7 +4235,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4631,7 +4246,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4643,7 +4257,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4655,7 +4268,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4667,7 +4279,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4679,7 +4290,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4691,7 +4301,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4703,7 +4312,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4715,7 +4323,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4727,7 +4334,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4739,7 +4345,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("allOf")]
@@ -4751,7 +4356,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4763,7 +4367,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4775,7 +4378,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4787,7 +4389,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4799,7 +4400,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4811,7 +4411,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4823,7 +4422,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4835,7 +4433,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4847,7 +4444,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4859,7 +4455,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4871,7 +4466,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("anyOf")]
@@ -4883,7 +4477,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("default")]
@@ -4895,7 +4488,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("default")]
@@ -4907,7 +4499,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("default")]
@@ -4919,7 +4510,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("default")]
@@ -4931,7 +4521,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("definitions")]
@@ -4943,7 +4532,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("definitions")]
@@ -4955,7 +4543,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4967,7 +4554,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4979,7 +4565,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -4991,7 +4576,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5003,7 +4587,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5015,7 +4598,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5027,7 +4609,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5039,7 +4620,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5051,7 +4631,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5063,7 +4642,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5075,7 +4653,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5087,7 +4664,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5099,7 +4675,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5111,7 +4686,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5123,7 +4697,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5135,7 +4708,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5147,7 +4719,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5159,7 +4730,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("dependencies")]
@@ -5171,7 +4741,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -5183,7 +4752,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -5195,7 +4763,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -5207,7 +4774,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -5219,7 +4785,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -5231,7 +4796,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -5243,7 +4807,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -5255,7 +4818,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -5267,7 +4829,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("enum")]
@@ -5279,7 +4840,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -5291,7 +4851,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -5303,7 +4862,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -5315,7 +4873,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -5327,7 +4884,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -5339,7 +4895,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -5351,7 +4906,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -5363,7 +4917,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -5375,7 +4928,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -5387,7 +4939,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("items")]
@@ -5399,7 +4950,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5411,7 +4961,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5423,7 +4972,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5435,7 +4983,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5447,7 +4994,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5459,7 +5005,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5471,7 +5016,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5483,7 +5027,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5495,7 +5038,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5507,7 +5049,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maximum")]
@@ -5519,7 +5060,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxItems")]
@@ -5531,7 +5071,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxItems")]
@@ -5543,7 +5082,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxItems")]
@@ -5555,7 +5093,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxItems")]
@@ -5567,7 +5104,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxLength")]
@@ -5579,7 +5115,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxLength")]
@@ -5591,7 +5126,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxLength")]
@@ -5603,7 +5137,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxLength")]
@@ -5615,7 +5148,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxLength")]
@@ -5627,7 +5159,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxProperties")]
@@ -5639,7 +5170,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxProperties")]
@@ -5651,7 +5181,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxProperties")]
@@ -5663,7 +5192,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxProperties")]
@@ -5675,7 +5203,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxProperties")]
@@ -5687,7 +5214,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("maxProperties")]
@@ -5699,7 +5225,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5711,7 +5236,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5723,7 +5247,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5735,7 +5258,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5747,7 +5269,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5759,7 +5280,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5771,7 +5291,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5783,7 +5302,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5795,7 +5313,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5807,7 +5324,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minimum")]
@@ -5819,7 +5335,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minItems")]
@@ -5831,7 +5346,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minItems")]
@@ -5843,7 +5357,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minItems")]
@@ -5855,7 +5368,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minItems")]
@@ -5867,7 +5379,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minLength")]
@@ -5879,7 +5390,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minLength")]
@@ -5891,7 +5401,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minLength")]
@@ -5903,7 +5412,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minLength")]
@@ -5915,7 +5423,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minLength")]
@@ -5927,7 +5434,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minProperties")]
@@ -5939,7 +5445,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minProperties")]
@@ -5951,7 +5456,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minProperties")]
@@ -5963,7 +5467,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minProperties")]
@@ -5975,7 +5478,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minProperties")]
@@ -5987,7 +5489,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("minProperties")]
@@ -5999,7 +5500,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -6011,7 +5511,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -6023,7 +5522,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -6035,7 +5533,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -6047,7 +5544,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -6059,7 +5555,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -6071,7 +5566,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -6083,7 +5577,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("multipleOf")]
@@ -6095,7 +5588,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -6107,7 +5599,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -6119,7 +5610,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -6131,7 +5621,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -6143,7 +5632,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -6155,7 +5643,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -6167,7 +5654,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -6179,7 +5665,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -6191,7 +5676,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -6203,7 +5687,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("not")]
@@ -6215,7 +5698,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -6227,7 +5709,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -6239,7 +5720,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -6251,7 +5731,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -6263,7 +5742,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -6275,7 +5753,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -6287,7 +5764,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -6299,7 +5775,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -6311,7 +5786,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -6323,7 +5797,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -6335,7 +5808,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("oneOf")]
@@ -6347,7 +5819,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("pattern")]
@@ -6359,7 +5830,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("pattern")]
@@ -6371,7 +5841,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("pattern")]
@@ -6383,7 +5852,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("pattern")]
@@ -6395,7 +5863,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6407,7 +5874,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6419,7 +5885,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6431,7 +5896,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6443,7 +5907,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6455,7 +5918,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6467,7 +5929,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6479,7 +5940,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6491,7 +5951,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6503,7 +5962,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6515,7 +5973,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6527,7 +5984,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6539,7 +5995,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6551,7 +6006,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6563,7 +6017,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6575,7 +6028,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6587,7 +6039,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("patternProperties")]
@@ -6599,7 +6050,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6611,7 +6061,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6623,7 +6072,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6635,7 +6083,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6647,7 +6094,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6659,7 +6105,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6671,7 +6116,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6683,7 +6127,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6695,7 +6138,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6707,7 +6149,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6719,7 +6160,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6731,7 +6171,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6743,7 +6182,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6755,7 +6193,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("properties")]
@@ -6767,7 +6204,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6779,7 +6215,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6791,7 +6226,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6803,7 +6237,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6815,7 +6248,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6827,7 +6259,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6839,7 +6270,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6851,7 +6281,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6863,7 +6292,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6875,7 +6303,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6887,7 +6314,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6899,7 +6325,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6911,7 +6336,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6923,7 +6347,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6935,7 +6358,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6947,7 +6369,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6959,7 +6380,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6971,7 +6391,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6983,7 +6402,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -6995,7 +6413,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -7007,7 +6424,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -7019,7 +6435,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -7031,7 +6446,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -7043,7 +6457,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -7055,7 +6468,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("ref")]
@@ -7067,7 +6479,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7079,7 +6490,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7091,7 +6501,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7103,7 +6512,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7115,7 +6523,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7127,7 +6534,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7139,7 +6545,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7151,7 +6556,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7163,7 +6567,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7175,7 +6578,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7187,7 +6589,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7199,7 +6600,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7211,7 +6611,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7223,7 +6622,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7235,7 +6633,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("refRemote")]
@@ -7247,7 +6644,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("required")]
@@ -7259,7 +6655,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("required")]
@@ -7271,7 +6666,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("required")]
@@ -7283,7 +6677,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("required")]
@@ -7295,7 +6688,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("required")]
@@ -7307,7 +6699,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("required")]
@@ -7319,7 +6710,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7331,7 +6721,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7343,7 +6732,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7355,7 +6743,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7367,7 +6754,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7379,7 +6765,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7391,7 +6776,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7403,7 +6787,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7415,7 +6798,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7427,7 +6809,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7439,7 +6820,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7451,7 +6831,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7463,7 +6842,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7475,7 +6853,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7487,7 +6864,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7499,7 +6875,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7511,7 +6886,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7523,7 +6897,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7535,7 +6908,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7547,7 +6919,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7559,7 +6930,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7571,7 +6941,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7583,7 +6952,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7595,7 +6963,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7607,7 +6974,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7619,7 +6985,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7631,7 +6996,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7643,7 +7007,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7655,7 +7018,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7667,7 +7029,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7679,7 +7040,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7691,7 +7051,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7703,7 +7062,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7715,7 +7073,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7727,7 +7084,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7739,7 +7095,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7751,7 +7106,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7763,7 +7117,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7775,7 +7128,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7787,7 +7139,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7799,7 +7150,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7811,7 +7161,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7823,7 +7172,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7835,7 +7183,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7847,7 +7194,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7859,7 +7205,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7871,7 +7216,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7883,7 +7227,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7895,7 +7238,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7907,7 +7249,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7919,7 +7260,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7931,7 +7271,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7943,7 +7282,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7955,7 +7293,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7967,7 +7304,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7979,7 +7315,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -7991,7 +7326,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -8003,7 +7337,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -8015,7 +7348,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("type")]
@@ -8027,7 +7359,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8039,7 +7370,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8051,7 +7381,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8063,7 +7392,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8075,7 +7403,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8087,7 +7414,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8099,7 +7425,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8111,7 +7436,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8123,7 +7447,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8135,7 +7458,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8147,7 +7469,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8159,7 +7480,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8171,7 +7491,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4")]
         [TestCategory("uniqueItems")]
@@ -8183,7 +7502,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -8195,7 +7513,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -8207,7 +7524,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -8219,7 +7535,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -8231,7 +7546,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -8243,7 +7557,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -8255,7 +7568,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -8267,7 +7579,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -8279,7 +7590,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("bignum")]
@@ -8291,7 +7601,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("ecmascript-regex")]
@@ -8303,7 +7612,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8315,7 +7623,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8327,7 +7634,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8339,7 +7645,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8351,7 +7656,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8363,7 +7667,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8375,7 +7678,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8387,7 +7689,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8399,7 +7700,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8411,7 +7711,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8423,7 +7722,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8435,7 +7733,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8447,7 +7744,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8459,7 +7755,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8471,7 +7766,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8483,7 +7777,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8495,7 +7788,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8507,7 +7799,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8519,7 +7810,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8531,7 +7821,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8543,7 +7832,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8555,7 +7843,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8567,7 +7854,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8579,7 +7865,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8591,7 +7876,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8603,7 +7887,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8615,7 +7898,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8627,7 +7909,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8639,7 +7920,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8651,7 +7931,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8663,7 +7942,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8675,7 +7953,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8687,7 +7964,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8699,7 +7975,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8711,7 +7986,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8723,7 +7997,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8735,7 +8008,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8747,7 +8019,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8759,7 +8030,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8771,7 +8041,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8783,7 +8052,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8795,7 +8063,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8807,7 +8074,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("format")]
@@ -8819,7 +8085,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -8831,7 +8096,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8843,7 +8107,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8855,7 +8118,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8867,7 +8129,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8879,7 +8140,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8891,7 +8151,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8903,7 +8162,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8915,7 +8173,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8927,7 +8184,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("bignum")]
@@ -8939,7 +8195,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("ecmascript-regex")]
@@ -8951,7 +8206,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8963,7 +8217,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8975,7 +8228,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8987,7 +8239,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -8999,7 +8250,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9011,7 +8261,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9023,7 +8272,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9035,7 +8283,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9047,7 +8294,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9059,7 +8305,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9071,7 +8316,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9083,7 +8327,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9095,7 +8338,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9107,7 +8349,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9119,7 +8360,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9131,7 +8371,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9143,7 +8382,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9155,7 +8393,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9167,7 +8404,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9179,7 +8415,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9191,7 +8426,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9203,7 +8437,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9215,7 +8448,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9227,7 +8459,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9239,7 +8470,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9251,7 +8481,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9263,7 +8492,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9275,7 +8503,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9287,7 +8514,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9299,7 +8525,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9311,7 +8536,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9323,7 +8547,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9335,7 +8558,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9347,7 +8569,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9359,7 +8580,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9371,7 +8591,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9383,7 +8602,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9395,7 +8613,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9407,7 +8624,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9419,7 +8635,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9431,7 +8646,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9443,7 +8657,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9455,7 +8668,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("format")]
@@ -9467,7 +8679,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft4_optional_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -9479,7 +8690,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -9491,7 +8701,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -9503,7 +8712,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -9515,7 +8723,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -9527,7 +8734,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -9539,7 +8745,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -9551,7 +8756,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -9563,7 +8767,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -9575,7 +8778,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalItems")]
@@ -9587,7 +8789,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9599,7 +8800,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9611,7 +8811,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9623,7 +8822,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9635,7 +8833,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9647,7 +8844,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9659,7 +8855,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9671,7 +8866,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9683,7 +8877,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9695,7 +8888,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9707,7 +8899,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9719,7 +8910,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9731,7 +8921,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9743,7 +8932,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("additionalProperties")]
@@ -9755,7 +8943,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9767,7 +8954,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9779,7 +8965,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9791,7 +8976,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9803,7 +8987,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9815,7 +8998,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9827,7 +9009,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9839,7 +9020,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9851,7 +9031,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9863,7 +9042,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9875,7 +9053,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9887,7 +9064,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9899,7 +9075,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9911,7 +9086,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("allOf")]
@@ -9923,7 +9097,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9935,7 +9108,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9947,7 +9119,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9959,7 +9130,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9971,7 +9141,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9983,7 +9152,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -9995,7 +9163,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -10007,7 +9174,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -10019,7 +9185,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -10031,7 +9196,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -10043,7 +9207,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -10055,7 +9218,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -10067,7 +9229,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -10079,7 +9240,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("anyOf")]
@@ -10091,7 +9251,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10103,7 +9262,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10115,7 +9273,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10127,7 +9284,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10139,7 +9295,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10151,7 +9306,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10163,7 +9317,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10175,7 +9328,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10187,7 +9339,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10199,7 +9350,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10211,7 +9361,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10223,7 +9372,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10235,7 +9383,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10247,7 +9394,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10259,7 +9405,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10271,7 +9416,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10283,7 +9427,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10295,7 +9438,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("boolean_schema")]
@@ -10307,7 +9449,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -10319,7 +9460,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -10331,7 +9471,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -10343,7 +9482,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -10355,7 +9493,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -10367,7 +9504,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -10379,7 +9515,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -10391,7 +9526,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -10403,7 +9537,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -10415,7 +9548,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -10427,7 +9559,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -10439,7 +9570,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("const")]
@@ -10451,7 +9581,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10463,7 +9592,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10475,7 +9603,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10487,7 +9614,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10499,7 +9625,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10511,7 +9636,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10523,7 +9647,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10535,7 +9658,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10547,7 +9669,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10559,7 +9680,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10571,7 +9691,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10583,7 +9702,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10595,7 +9713,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("contains")]
@@ -10607,7 +9724,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("default")]
@@ -10619,7 +9735,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("default")]
@@ -10631,7 +9746,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("default")]
@@ -10643,7 +9757,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("default")]
@@ -10655,7 +9768,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("definitions")]
@@ -10667,7 +9779,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("definitions")]
@@ -10679,7 +9790,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10691,7 +9801,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10703,7 +9812,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10715,7 +9823,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10727,7 +9834,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10739,7 +9845,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10751,7 +9856,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10763,7 +9867,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10775,7 +9878,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10787,7 +9889,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10799,7 +9900,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10811,7 +9911,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10823,7 +9922,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10835,7 +9933,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10847,7 +9944,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10859,7 +9955,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10871,7 +9966,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10883,7 +9977,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10895,7 +9988,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10907,7 +9999,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10919,7 +10010,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10931,7 +10021,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10943,7 +10032,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10955,7 +10043,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("dependencies")]
@@ -10967,7 +10054,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -10979,7 +10065,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -10991,7 +10076,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -11003,7 +10087,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -11015,7 +10098,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -11027,7 +10109,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -11039,7 +10120,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -11051,7 +10131,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -11063,7 +10142,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("enum")]
@@ -11075,7 +10153,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMaximum")]
@@ -11087,7 +10164,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMaximum")]
@@ -11099,7 +10175,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMaximum")]
@@ -11111,7 +10186,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMaximum")]
@@ -11123,7 +10197,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMinimum")]
@@ -11135,7 +10208,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMinimum")]
@@ -11147,7 +10219,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMinimum")]
@@ -11159,7 +10230,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("exclusiveMinimum")]
@@ -11171,7 +10241,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11183,7 +10252,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11195,7 +10263,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11207,7 +10274,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11219,7 +10285,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11231,7 +10296,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11243,7 +10307,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11255,7 +10318,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11267,7 +10329,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11279,7 +10340,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11291,7 +10351,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11303,7 +10362,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11315,7 +10373,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11327,7 +10384,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11339,7 +10395,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11351,7 +10406,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11363,7 +10417,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("items")]
@@ -11375,7 +10428,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maximum")]
@@ -11387,7 +10439,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maximum")]
@@ -11399,7 +10450,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maximum")]
@@ -11411,7 +10461,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maximum")]
@@ -11423,7 +10472,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxItems")]
@@ -11435,7 +10483,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxItems")]
@@ -11447,7 +10494,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxItems")]
@@ -11459,7 +10505,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxItems")]
@@ -11471,7 +10516,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxLength")]
@@ -11483,7 +10527,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxLength")]
@@ -11495,7 +10538,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxLength")]
@@ -11507,7 +10549,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxLength")]
@@ -11519,7 +10560,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxLength")]
@@ -11531,7 +10571,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxProperties")]
@@ -11543,7 +10582,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxProperties")]
@@ -11555,7 +10593,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxProperties")]
@@ -11567,7 +10604,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxProperties")]
@@ -11579,7 +10615,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxProperties")]
@@ -11591,7 +10626,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("maxProperties")]
@@ -11603,7 +10637,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minimum")]
@@ -11615,7 +10648,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minimum")]
@@ -11627,7 +10659,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minimum")]
@@ -11639,7 +10670,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minimum")]
@@ -11651,7 +10681,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minItems")]
@@ -11663,7 +10692,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minItems")]
@@ -11675,7 +10703,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minItems")]
@@ -11687,7 +10714,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minItems")]
@@ -11699,7 +10725,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minLength")]
@@ -11711,7 +10736,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minLength")]
@@ -11723,7 +10747,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minLength")]
@@ -11735,7 +10758,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minLength")]
@@ -11747,7 +10769,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minLength")]
@@ -11759,7 +10780,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minProperties")]
@@ -11771,7 +10791,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minProperties")]
@@ -11783,7 +10802,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minProperties")]
@@ -11795,7 +10813,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minProperties")]
@@ -11807,7 +10824,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minProperties")]
@@ -11819,7 +10835,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("minProperties")]
@@ -11831,7 +10846,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -11843,7 +10857,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -11855,7 +10868,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -11867,7 +10879,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -11879,7 +10890,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -11891,7 +10901,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -11903,7 +10912,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -11915,7 +10923,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("multipleOf")]
@@ -11927,7 +10934,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -11939,7 +10945,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -11951,7 +10956,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -11963,7 +10967,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -11975,7 +10978,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -11987,7 +10989,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -11999,7 +11000,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -12011,7 +11011,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -12023,7 +11022,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -12035,7 +11033,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -12047,7 +11044,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -12059,7 +11055,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("not")]
@@ -12071,7 +11066,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12083,7 +11077,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12095,7 +11088,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12107,7 +11099,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12119,7 +11110,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12131,7 +11121,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12143,7 +11132,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12155,7 +11143,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12167,7 +11154,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12179,7 +11165,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12191,7 +11176,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12203,7 +11187,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12215,7 +11198,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12227,7 +11209,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12239,7 +11220,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("oneOf")]
@@ -12251,7 +11231,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("pattern")]
@@ -12263,7 +11242,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("pattern")]
@@ -12275,7 +11253,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("pattern")]
@@ -12287,7 +11264,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("pattern")]
@@ -12299,7 +11275,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12311,7 +11286,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12323,7 +11297,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12335,7 +11308,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12347,7 +11319,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12359,7 +11330,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12371,7 +11341,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12383,7 +11352,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12395,7 +11363,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12407,7 +11374,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12419,7 +11385,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12431,7 +11396,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12443,7 +11407,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12455,7 +11418,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12467,7 +11429,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12479,7 +11440,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12491,7 +11451,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12503,7 +11462,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12515,7 +11473,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12527,7 +11484,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12539,7 +11495,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("patternProperties")]
@@ -12551,7 +11506,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12563,7 +11517,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12575,7 +11528,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12587,7 +11539,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12599,7 +11550,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12611,7 +11561,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12623,7 +11572,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12635,7 +11583,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12647,7 +11594,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12659,7 +11605,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12671,7 +11616,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12683,7 +11627,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12695,7 +11638,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12707,7 +11649,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12719,7 +11660,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12731,7 +11671,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12743,7 +11682,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12755,7 +11693,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("properties")]
@@ -12767,7 +11704,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -12779,7 +11715,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -12791,7 +11726,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -12803,7 +11737,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -12815,7 +11748,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -12827,7 +11759,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -12839,7 +11770,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -12851,7 +11781,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -12863,7 +11792,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -12875,7 +11803,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("propertyNames")]
@@ -12887,7 +11814,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12899,7 +11825,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12911,7 +11836,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12923,7 +11847,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12935,7 +11858,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12947,7 +11869,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12959,7 +11880,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12971,7 +11891,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12983,7 +11902,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -12995,7 +11913,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13007,7 +11924,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13019,7 +11935,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13031,7 +11946,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13043,7 +11957,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13055,7 +11968,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13067,7 +11979,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13079,7 +11990,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13091,7 +12001,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13103,7 +12012,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13115,7 +12023,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13127,7 +12034,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13139,7 +12045,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13151,7 +12056,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13163,7 +12067,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13175,7 +12078,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13187,7 +12089,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13199,7 +12100,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("ref")]
@@ -13211,7 +12111,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13223,7 +12122,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13235,7 +12133,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13247,7 +12144,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13259,7 +12155,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13271,7 +12166,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13283,7 +12177,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13295,7 +12188,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13307,7 +12199,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13319,7 +12210,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13331,7 +12221,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13343,7 +12232,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13355,7 +12243,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13367,7 +12254,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13379,7 +12265,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("refRemote")]
@@ -13391,7 +12276,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -13403,7 +12287,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -13415,7 +12298,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -13427,7 +12309,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -13439,7 +12320,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -13451,7 +12331,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -13463,7 +12342,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("required")]
@@ -13475,7 +12353,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13487,7 +12364,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13499,7 +12375,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13511,7 +12386,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13523,7 +12397,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13535,7 +12408,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13547,7 +12419,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13559,7 +12430,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13571,7 +12441,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13583,7 +12452,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13595,7 +12463,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13607,7 +12474,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13619,7 +12485,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13631,7 +12496,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13643,7 +12507,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13655,7 +12518,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13667,7 +12529,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13679,7 +12540,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13691,7 +12551,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13703,7 +12562,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13715,7 +12573,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13727,7 +12584,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13739,7 +12595,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13751,7 +12606,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13763,7 +12617,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13775,7 +12628,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13787,7 +12639,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13799,7 +12650,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13811,7 +12661,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13823,7 +12672,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13835,7 +12683,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13847,7 +12694,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13859,7 +12705,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13871,7 +12716,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13883,7 +12727,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13895,7 +12738,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13907,7 +12749,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13919,7 +12760,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13931,7 +12771,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13943,7 +12782,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13955,7 +12793,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13967,7 +12804,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13979,7 +12815,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -13991,7 +12826,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14003,7 +12837,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14015,7 +12848,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14027,7 +12859,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14039,7 +12870,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14051,7 +12881,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14063,7 +12892,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14075,7 +12903,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14087,7 +12914,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14099,7 +12925,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14111,7 +12936,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14123,7 +12947,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14135,7 +12958,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14147,7 +12969,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14159,7 +12980,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14171,7 +12991,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("type")]
@@ -14183,7 +13002,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14195,7 +13013,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14207,7 +13024,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14219,7 +13035,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14231,7 +13046,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14243,7 +13057,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14255,7 +13068,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14267,7 +13079,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14279,7 +13090,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14291,7 +13101,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14303,7 +13112,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14315,7 +13123,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14327,7 +13134,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6")]
         [TestCategory("uniqueItems")]
@@ -14339,7 +13145,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -14351,7 +13156,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -14363,7 +13167,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -14375,7 +13178,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -14387,7 +13189,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -14399,7 +13200,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -14411,7 +13211,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -14423,7 +13222,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -14435,7 +13233,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("bignum")]
@@ -14447,7 +13244,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("ecmascript-regex")]
@@ -14459,7 +13255,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14471,7 +13266,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14483,7 +13277,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14495,7 +13288,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14507,7 +13299,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14519,7 +13310,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14531,7 +13321,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14543,7 +13332,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14555,7 +13343,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14567,7 +13354,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14579,7 +13365,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14591,7 +13376,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14603,7 +13387,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14615,7 +13398,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14627,7 +13409,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14639,7 +13420,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14651,7 +13431,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14663,7 +13442,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14675,7 +13453,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14687,7 +13464,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14699,7 +13475,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14711,7 +13486,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14723,7 +13497,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14735,7 +13508,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14747,7 +13519,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14759,7 +13530,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14771,7 +13541,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14783,7 +13552,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14795,7 +13563,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14807,7 +13574,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14819,7 +13585,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14831,7 +13596,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14843,7 +13607,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14855,7 +13618,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14867,7 +13629,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14879,7 +13640,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14891,7 +13651,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14903,7 +13662,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14915,7 +13673,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14927,7 +13684,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14939,7 +13695,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14951,7 +13706,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14963,7 +13717,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14975,7 +13728,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14987,7 +13739,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -14999,7 +13750,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15011,7 +13761,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15023,7 +13772,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15035,7 +13783,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15047,7 +13794,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15059,7 +13805,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15071,7 +13816,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15083,7 +13827,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15095,7 +13838,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15107,7 +13849,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15119,7 +13860,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15131,7 +13871,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15143,7 +13882,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15155,7 +13893,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15167,7 +13904,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15179,7 +13915,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15191,7 +13926,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15203,7 +13937,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15215,7 +13948,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15227,7 +13959,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15239,7 +13970,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15251,7 +13981,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15263,7 +13992,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15275,7 +14003,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15287,7 +14014,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15299,7 +14025,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15311,7 +14036,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15323,7 +14047,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15335,7 +14058,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15347,7 +14069,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15359,7 +14080,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15371,7 +14091,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15383,7 +14102,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15395,7 +14113,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15407,7 +14124,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15419,7 +14135,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15431,7 +14146,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15443,7 +14157,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15455,7 +14168,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15467,7 +14179,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15479,7 +14190,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15491,7 +14201,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("format")]
@@ -15503,7 +14212,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -15515,7 +14223,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -15527,7 +14234,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -15539,7 +14245,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -15551,7 +14256,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -15563,7 +14267,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -15575,7 +14278,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -15587,7 +14289,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -15599,7 +14300,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -15611,7 +14311,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("bignum")]
@@ -15623,7 +14322,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("ecmascript-regex")]
@@ -15635,7 +14333,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15647,7 +14344,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15659,7 +14355,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15671,7 +14366,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15683,7 +14377,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15695,7 +14388,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15707,7 +14399,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15719,7 +14410,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15731,7 +14421,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15743,7 +14432,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15755,7 +14443,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15767,7 +14454,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15779,7 +14465,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15791,7 +14476,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15803,7 +14487,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15815,7 +14498,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15827,7 +14509,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15839,7 +14520,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15851,7 +14531,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15863,7 +14542,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15875,7 +14553,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15887,7 +14564,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15899,7 +14575,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15911,7 +14586,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15923,7 +14597,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15935,7 +14608,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15947,7 +14619,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15959,7 +14630,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15971,7 +14641,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15983,7 +14652,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -15995,7 +14663,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16007,7 +14674,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16019,7 +14685,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16031,7 +14696,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16043,7 +14707,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16055,7 +14718,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16067,7 +14729,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16079,7 +14740,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16091,7 +14751,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16103,7 +14762,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16115,7 +14773,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16127,7 +14784,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16139,7 +14795,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16151,7 +14806,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16163,7 +14817,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16175,7 +14828,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16187,7 +14839,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16199,7 +14850,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16211,7 +14861,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16223,7 +14872,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16235,7 +14883,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16247,7 +14894,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16259,7 +14905,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16271,7 +14916,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16283,7 +14927,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16295,7 +14938,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16307,7 +14949,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16319,7 +14960,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16331,7 +14971,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16343,7 +14982,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16355,7 +14993,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16367,7 +15004,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16379,7 +15015,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16391,7 +15026,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16403,7 +15037,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16415,7 +15048,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16427,7 +15059,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16439,7 +15070,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16451,7 +15081,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16463,7 +15092,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16475,7 +15103,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16487,7 +15114,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16499,7 +15125,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16511,7 +15136,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16523,7 +15147,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16535,7 +15158,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16547,7 +15169,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16559,7 +15180,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16571,7 +15191,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16583,7 +15202,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16595,7 +15213,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16607,7 +15224,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16619,7 +15235,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16631,7 +15246,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16643,7 +15257,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16655,7 +15268,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16667,7 +15279,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("format")]
@@ -16679,7 +15290,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft6_optional_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -16691,7 +15301,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -16703,7 +15312,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -16715,7 +15323,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -16727,7 +15334,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -16739,7 +15345,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -16751,7 +15356,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -16763,7 +15367,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -16775,7 +15378,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -16787,7 +15389,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalItems")]
@@ -16799,7 +15400,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16811,7 +15411,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16823,7 +15422,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16835,7 +15433,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16847,7 +15444,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16859,7 +15455,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16871,7 +15466,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16883,7 +15477,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16895,7 +15488,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16907,7 +15499,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16919,7 +15510,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16931,7 +15521,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16943,7 +15532,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16955,7 +15543,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("additionalProperties")]
@@ -16967,7 +15554,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -16979,7 +15565,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -16991,7 +15576,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -17003,7 +15587,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -17015,7 +15598,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -17027,7 +15609,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -17039,7 +15620,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -17051,7 +15631,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -17063,7 +15642,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -17075,7 +15653,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -17087,7 +15664,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -17099,7 +15675,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -17111,7 +15686,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -17123,7 +15697,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("allOf")]
@@ -17135,7 +15708,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17147,7 +15719,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17159,7 +15730,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17171,7 +15741,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17183,7 +15752,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17195,7 +15763,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17207,7 +15774,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17219,7 +15785,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17231,7 +15796,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17243,7 +15807,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17255,7 +15818,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17267,7 +15829,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17279,7 +15840,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17291,7 +15851,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("anyOf")]
@@ -17303,7 +15862,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17315,7 +15873,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17327,7 +15884,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17339,7 +15895,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17351,7 +15906,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17363,7 +15917,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17375,7 +15928,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17387,7 +15939,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17399,7 +15950,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17411,7 +15961,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17423,7 +15972,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17435,7 +15983,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17447,7 +15994,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17459,7 +16005,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17471,7 +16016,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17483,7 +16027,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17495,7 +16038,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17507,7 +16049,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("boolean_schema")]
@@ -17519,7 +16060,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -17531,7 +16071,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -17543,7 +16082,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -17555,7 +16093,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -17567,7 +16104,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -17579,7 +16115,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -17591,7 +16126,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -17603,7 +16137,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -17615,7 +16148,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -17627,7 +16159,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -17639,7 +16170,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -17651,7 +16181,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("const")]
@@ -17663,7 +16192,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17675,7 +16203,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17687,7 +16214,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17699,7 +16225,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17711,7 +16236,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17723,7 +16247,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17735,7 +16258,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17747,7 +16269,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17759,7 +16280,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17771,7 +16291,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17783,7 +16302,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17795,7 +16313,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17807,7 +16324,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("contains")]
@@ -17819,7 +16335,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("default")]
@@ -17831,7 +16346,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("default")]
@@ -17843,7 +16357,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("default")]
@@ -17855,7 +16368,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("default")]
@@ -17867,7 +16379,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("definitions")]
@@ -17879,7 +16390,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("definitions")]
@@ -17891,7 +16401,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -17903,7 +16412,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -17915,7 +16423,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -17927,7 +16434,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -17939,7 +16445,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -17951,7 +16456,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -17963,7 +16467,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -17975,7 +16478,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -17987,7 +16489,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -17999,7 +16500,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18011,7 +16511,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18023,7 +16522,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18035,7 +16533,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18047,7 +16544,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18059,7 +16555,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18071,7 +16566,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18083,7 +16577,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18095,7 +16588,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18107,7 +16599,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18119,7 +16610,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18131,7 +16621,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18143,7 +16632,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18155,7 +16643,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18167,7 +16654,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("dependencies")]
@@ -18179,7 +16665,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -18191,7 +16676,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -18203,7 +16687,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -18215,7 +16698,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -18227,7 +16709,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -18239,7 +16720,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -18251,7 +16731,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -18263,7 +16742,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -18275,7 +16753,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("enum")]
@@ -18287,7 +16764,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMaximum")]
@@ -18299,7 +16775,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMaximum")]
@@ -18311,7 +16786,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMaximum")]
@@ -18323,7 +16797,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMaximum")]
@@ -18335,7 +16808,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMinimum")]
@@ -18347,7 +16819,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMinimum")]
@@ -18359,7 +16830,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMinimum")]
@@ -18371,7 +16841,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("exclusiveMinimum")]
@@ -18383,7 +16852,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18395,7 +16863,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18407,7 +16874,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18419,7 +16885,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18431,7 +16896,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18443,7 +16907,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18455,7 +16918,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18467,7 +16929,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18479,7 +16940,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18491,7 +16951,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18503,7 +16962,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18515,7 +16973,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18527,7 +16984,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18539,7 +16995,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18551,7 +17006,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18563,7 +17017,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18575,7 +17028,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18587,7 +17039,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("if-then-else")]
@@ -18599,7 +17050,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18611,7 +17061,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18623,7 +17072,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18635,7 +17083,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18647,7 +17094,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18659,7 +17105,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18671,7 +17116,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18683,7 +17127,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18695,7 +17138,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18707,7 +17149,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18719,7 +17160,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18731,7 +17171,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18743,7 +17182,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18755,7 +17193,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18767,7 +17204,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18779,7 +17215,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18791,7 +17226,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("items")]
@@ -18803,7 +17237,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maximum")]
@@ -18815,7 +17248,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maximum")]
@@ -18827,7 +17259,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maximum")]
@@ -18839,7 +17270,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maximum")]
@@ -18851,7 +17281,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxItems")]
@@ -18863,7 +17292,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxItems")]
@@ -18875,7 +17303,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxItems")]
@@ -18887,7 +17314,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxItems")]
@@ -18899,7 +17325,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxLength")]
@@ -18911,7 +17336,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxLength")]
@@ -18923,7 +17347,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxLength")]
@@ -18935,7 +17358,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxLength")]
@@ -18947,7 +17369,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxLength")]
@@ -18959,7 +17380,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxProperties")]
@@ -18971,7 +17391,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxProperties")]
@@ -18983,7 +17402,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxProperties")]
@@ -18995,7 +17413,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxProperties")]
@@ -19007,7 +17424,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxProperties")]
@@ -19019,7 +17435,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("maxProperties")]
@@ -19031,7 +17446,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minimum")]
@@ -19043,7 +17457,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minimum")]
@@ -19055,7 +17468,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minimum")]
@@ -19067,7 +17479,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minimum")]
@@ -19079,7 +17490,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minItems")]
@@ -19091,7 +17501,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minItems")]
@@ -19103,7 +17512,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minItems")]
@@ -19115,7 +17523,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minItems")]
@@ -19127,7 +17534,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minLength")]
@@ -19139,7 +17545,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minLength")]
@@ -19151,7 +17556,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minLength")]
@@ -19163,7 +17567,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minLength")]
@@ -19175,7 +17578,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minLength")]
@@ -19187,7 +17589,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minProperties")]
@@ -19199,7 +17600,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minProperties")]
@@ -19211,7 +17611,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minProperties")]
@@ -19223,7 +17622,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minProperties")]
@@ -19235,7 +17633,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minProperties")]
@@ -19247,7 +17644,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("minProperties")]
@@ -19259,7 +17655,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -19271,7 +17666,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -19283,7 +17677,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -19295,7 +17688,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -19307,7 +17699,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -19319,7 +17710,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -19331,7 +17721,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -19343,7 +17732,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("multipleOf")]
@@ -19355,7 +17743,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -19367,7 +17754,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -19379,7 +17765,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -19391,7 +17776,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -19403,7 +17787,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -19415,7 +17798,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -19427,7 +17809,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -19439,7 +17820,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -19451,7 +17831,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -19463,7 +17842,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -19475,7 +17853,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -19487,7 +17864,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("not")]
@@ -19499,7 +17875,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19511,7 +17886,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19523,7 +17897,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19535,7 +17908,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19547,7 +17919,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19559,7 +17930,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19571,7 +17941,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19583,7 +17952,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19595,7 +17963,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19607,7 +17974,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19619,7 +17985,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19631,7 +17996,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19643,7 +18007,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19655,7 +18018,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19667,7 +18029,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("oneOf")]
@@ -19679,7 +18040,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("pattern")]
@@ -19691,7 +18051,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("pattern")]
@@ -19703,7 +18062,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("pattern")]
@@ -19715,7 +18073,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("pattern")]
@@ -19727,7 +18084,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19739,7 +18095,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19751,7 +18106,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19763,7 +18117,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19775,7 +18128,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19787,7 +18139,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19799,7 +18150,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19811,7 +18161,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19823,7 +18172,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19835,7 +18183,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19847,7 +18194,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19859,7 +18205,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19871,7 +18216,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19883,7 +18227,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19895,7 +18238,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19907,7 +18249,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19919,7 +18260,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19931,7 +18271,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19943,7 +18282,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19955,7 +18293,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19967,7 +18304,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("patternProperties")]
@@ -19979,7 +18315,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -19991,7 +18326,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20003,7 +18337,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20015,7 +18348,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20027,7 +18359,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20039,7 +18370,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20051,7 +18381,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20063,7 +18392,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20075,7 +18403,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20087,7 +18414,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20099,7 +18425,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20111,7 +18436,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20123,7 +18447,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20135,7 +18458,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20147,7 +18469,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20159,7 +18480,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20171,7 +18491,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20183,7 +18502,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("properties")]
@@ -20195,7 +18513,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -20207,7 +18524,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -20219,7 +18535,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -20231,7 +18546,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -20243,7 +18557,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -20255,7 +18568,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -20267,7 +18579,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -20279,7 +18590,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -20291,7 +18601,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -20303,7 +18612,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("propertyNames")]
@@ -20315,7 +18623,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20327,7 +18634,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20339,7 +18645,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20351,7 +18656,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20363,7 +18667,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20375,7 +18678,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20387,7 +18689,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20399,7 +18700,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20411,7 +18711,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20423,7 +18722,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20435,7 +18733,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20447,7 +18744,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20459,7 +18755,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20471,7 +18766,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20483,7 +18777,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20495,7 +18788,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20507,7 +18799,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20519,7 +18810,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20531,7 +18821,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20543,7 +18832,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20555,7 +18843,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20567,7 +18854,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20579,7 +18865,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20591,7 +18876,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20603,7 +18887,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20615,7 +18898,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20627,7 +18909,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("ref")]
@@ -20639,7 +18920,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20651,7 +18931,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20663,7 +18942,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20675,7 +18953,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20687,7 +18964,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20699,7 +18975,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20711,7 +18986,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20723,7 +18997,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20735,7 +19008,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20747,7 +19019,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20759,7 +19030,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20771,7 +19041,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20783,7 +19052,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20795,7 +19063,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20807,7 +19074,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("refRemote")]
@@ -20819,7 +19085,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -20831,7 +19096,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -20843,7 +19107,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -20855,7 +19118,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -20867,7 +19129,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -20879,7 +19140,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -20891,7 +19151,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("required")]
@@ -20903,7 +19162,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -20915,7 +19173,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -20927,7 +19184,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -20939,7 +19195,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -20951,7 +19206,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -20963,7 +19217,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -20975,7 +19228,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -20987,7 +19239,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -20999,7 +19250,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21011,7 +19261,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21023,7 +19272,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21035,7 +19283,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21047,7 +19294,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21059,7 +19305,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21071,7 +19316,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21083,7 +19327,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21095,7 +19338,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21107,7 +19349,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21119,7 +19360,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21131,7 +19371,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21143,7 +19382,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21155,7 +19393,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21167,7 +19404,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21179,7 +19415,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21191,7 +19426,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21203,7 +19437,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21215,7 +19448,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21227,7 +19459,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21239,7 +19470,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21251,7 +19481,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21263,7 +19492,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21275,7 +19503,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21287,7 +19514,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21299,7 +19525,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21311,7 +19536,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21323,7 +19547,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21335,7 +19558,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21347,7 +19569,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21359,7 +19580,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21371,7 +19591,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21383,7 +19602,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21395,7 +19613,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21407,7 +19624,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21419,7 +19635,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21431,7 +19646,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21443,7 +19657,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21455,7 +19668,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21467,7 +19679,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21479,7 +19690,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21491,7 +19701,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21503,7 +19712,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21515,7 +19723,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21527,7 +19734,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21539,7 +19745,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21551,7 +19756,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21563,7 +19767,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21575,7 +19778,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21587,7 +19789,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21599,7 +19800,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("type")]
@@ -21611,7 +19811,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21623,7 +19822,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21635,7 +19833,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21647,7 +19844,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21659,7 +19855,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21671,7 +19866,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21683,7 +19877,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21695,7 +19888,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21707,7 +19899,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21719,7 +19910,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21731,7 +19921,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21743,7 +19932,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21755,7 +19943,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7")]
         [TestCategory("uniqueItems")]
@@ -21767,7 +19954,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -21779,7 +19965,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -21791,7 +19976,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -21803,7 +19987,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -21815,7 +19998,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -21827,7 +20009,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -21839,7 +20020,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -21851,7 +20031,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -21863,7 +20042,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("bignum")]
@@ -21875,7 +20053,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -21887,7 +20064,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -21899,7 +20075,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -21911,7 +20086,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -21923,7 +20097,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -21935,7 +20108,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -21947,7 +20119,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -21959,7 +20130,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -21971,7 +20141,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -21983,7 +20152,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("content")]
@@ -21995,7 +20163,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("ecmascript-regex")]
@@ -22007,7 +20174,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional")]
         [TestCategory("zeroTerminatedFloats")]
@@ -22019,7 +20185,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -22031,7 +20196,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -22043,7 +20207,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -22055,7 +20218,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -22067,7 +20229,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -22079,7 +20240,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -22091,7 +20251,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -22103,7 +20262,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -22115,7 +20273,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("bignum")]
@@ -22127,7 +20284,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -22139,7 +20295,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -22151,7 +20306,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -22163,7 +20317,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -22175,7 +20328,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -22187,7 +20339,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -22199,7 +20350,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -22211,7 +20361,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -22223,7 +20372,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -22235,7 +20383,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("content")]
@@ -22247,7 +20394,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("ecmascript-regex")]
@@ -22259,7 +20405,6 @@ namespace Cogito.Json.Tests.Schema
         }
 
 
-        [Ignore]
         [TestMethod]
         [TestCategory("draft7_optional_optional")]
         [TestCategory("zeroTerminatedFloats")]
