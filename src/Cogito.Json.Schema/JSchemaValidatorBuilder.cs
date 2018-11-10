@@ -433,7 +433,50 @@ namespace Cogito.Json.Schema
                 schema.Dependencies.Count == 0)
                 return null;
 
-            throw new NotImplementedException();
+            return IfThenElseTrue(
+                IsTokenType(o, JTokenType.Object),
+                AllOf(schema.Dependencies.Select(i => BuildDependencyItem(i.Key, i.Value, o))));
+        }
+
+        Expression BuildDependencyItem(string propertyName, object dependencyValue, Expression o)
+        {
+            return IfThenElseTrue(
+                CallThis(nameof(ContainsKey),
+                    Expression.Convert(o, typeof(JObject)),
+                    Expression.Constant(propertyName)),
+                BuildDependencyItem(dependencyValue, o));
+        }
+
+        Expression BuildDependencyItem(object dependencyValue, Expression o)
+        {
+            switch (dependencyValue)
+            {
+                case JArray a:
+                    return BuildDependency(a.Select(i => (string)i).ToArray(), o);
+                case string[] a2:
+                    return BuildDependency(a2, o);
+                case IList<string> a3:
+                    return BuildDependency(a3.ToArray(), o);
+                case JSchema s:
+                    return BuildDependency(s, o);
+                default:
+                    throw new NotSupportedException();
+            }
+        }
+
+        Expression BuildDependency(string[] required, Expression o)
+        {
+            return AllOf(
+                required.Select(i =>
+                    CallThis(
+                        nameof(ContainsKey),
+                        Expression.Convert(o, typeof(JObject)),
+                        Expression.Constant(i))));
+        }
+
+        Expression BuildDependency(JSchema required, Expression o)
+        {
+            return EvalSchema(required, o);
         }
 
         Expression BuildEnum(JSchema schema, Expression o)
