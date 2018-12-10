@@ -29,7 +29,7 @@ namespace Cogito.Json
             foreach (var i in expressions)
                 e = e == null ? i : Expression.AndAlso(e, i);
 
-            return e;
+            return e ?? True;
         }
 
         /// <summary>
