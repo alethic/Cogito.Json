@@ -64,6 +64,17 @@ namespace Cogito.Json
         /// <returns></returns>
         public Expression Build(JToken template, Expression target)
         {
+            var v = Expression.Variable(target.Type);
+
+            return Expression.Block(
+                typeof(bool),
+                new[] { v },
+                Expression.Assign(v, target),
+                Eval(template, v));
+        }
+
+        Expression Eval(JToken template, ParameterExpression target)
+        {
             if (template == null)
                 throw new ArgumentNullException(nameof(template));
             if (target == null)
