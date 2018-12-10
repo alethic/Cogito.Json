@@ -1,4 +1,7 @@
-﻿using FluentAssertions;
+﻿using System.IO;
+
+using FluentAssertions;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using Newtonsoft.Json.Linq;
@@ -9,6 +12,28 @@ namespace Cogito.Json.Tests
     [TestClass]
     public class JTokenEqualityExpressionBuilderTests
     {
+
+        [TestMethod]
+        public void Should_evaluate_fairly_large_object_as_true()
+        {
+            var o = JObject.Parse(File.ReadAllText(Path.Combine(Directory.GetParent(typeof(JTokenEqualityExpressionBuilderTests).Assembly.Location).FullName, "efm.json")));
+            var b = new JTokenEqualityExpressionBuilder();
+            var e = b.Build(o);
+            var m = e.Compile();
+            m.Invoke(o).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_evaluate_fairly_large_object_as_false()
+        {
+            var o = JObject.Parse(File.ReadAllText(Path.Combine(Directory.GetParent(typeof(JTokenEqualityExpressionBuilderTests).Assembly.Location).FullName, "efm.json")));
+            var b = new JTokenEqualityExpressionBuilder();
+            var e = b.Build(o);
+            var m = e.Compile();
+
+            o["Next"] = 123;
+            m.Invoke(o).Should().BeFalse();
+        }
 
         [TestMethod]
         public void Should_evaluate_simple_object_as_false()
@@ -26,6 +51,15 @@ namespace Cogito.Json.Tests
             var e = b.Build(new JObject() { ["Foo"] = "Bar" });
             var m = e.Compile();
             m.Invoke(new JObject() { ["Foo"] = "Bar" }).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_evaluate_object_with_two_properties_as_true()
+        {
+            var b = new JTokenEqualityExpressionBuilder();
+            var e = b.Build(new JObject() { ["Foo"] = "Bar", ["Joe"] = 123 });
+            var m = e.Compile();
+            m.Invoke(new JObject() { ["Foo"] = "Bar", ["Joe"] = 123 }).Should().BeTrue();
         }
 
         [TestMethod]

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 
 using Newtonsoft.Json.Linq;
@@ -15,10 +14,6 @@ namespace Cogito.Json
     public class JTokenEqualityExpressionBuilder
     {
 
-        static readonly Expression True = Expression.Constant(true);
-        static readonly Expression False = Expression.Constant(false);
-        static readonly Expression Null = Expression.Constant(null);
-
         /// <summary>
         /// Returns an expression that returns <c>true</c> if all of the given expressions returns <c>true</c>.
         /// </summary>
@@ -26,7 +21,12 @@ namespace Cogito.Json
         /// <returns></returns>
         static Expression AllOf(IEnumerable<Expression> expressions)
         {
-            return expressions.Aggregate(True, (a, b) => Expression.AndAlso(a, b));
+            Expression e = null;
+
+            foreach (var i in expressions)
+                e = e == null ? i : Expression.AndAlso(i, e);
+
+            return e;
         }
 
         /// <summary>
@@ -89,10 +89,7 @@ namespace Cogito.Json
 
         Expression BuildArray(JArray template, Expression target)
         {
-            return AllOf(
-                Expression.Equal(Expression.Constant(JTokenType.Array), Expression.Property(target, nameof(JToken.Type))),
-                Expression.Equal(Expression.Constant(template.Count), Expression.Property(Expression.Convert(target, typeof(JArray)), nameof(JArray.Count))),
-                AllOf(BuildArrayEval(template, target)));
+            return AllOf(BuildArrayEval(template, target));
         }
 
         /// <summary>
@@ -104,6 +101,9 @@ namespace Cogito.Json
         IEnumerable<Expression> BuildArrayEval(JArray template, Expression target)
         {
             var t = Expression.Convert(target, typeof(JArray));
+
+            yield return Expression.Equal(Expression.Constant(JTokenType.Array), Expression.Property(target, nameof(JToken.Type)));
+            yield return Expression.Equal(Expression.Constant(template.Count), Expression.Property(t, nameof(JArray.Count)));
 
             for (var i = 0; i < template.Count; i++)
                 yield return Build(template[i], Expression.Property(t, "Item", Expression.Constant(i)));
@@ -131,12 +131,7 @@ namespace Cogito.Json
 
         Expression BuildObject(JObject template, Expression target)
         {
-            var t = Expression.Convert(target, typeof(JObject));
-
-            return AllOf(
-                Expression.Equal(Expression.Constant(JTokenType.Object), Expression.Property(target, nameof(JToken.Type))),
-                Expression.Equal(Expression.Constant(template.Count), Expression.Property(t, nameof(JObject.Count))),
-                AllOf(BuildObjectEval(template, target)));
+            return AllOf(BuildObjectEval(template, target));
         }
 
         /// <summary>
@@ -147,12 +142,15 @@ namespace Cogito.Json
         /// <returns></returns>
         IEnumerable<Expression> BuildObjectEval(JObject template, Expression target)
         {
-            var o = Expression.Convert(target, typeof(JObject));
+            var t = Expression.Convert(target, typeof(JObject));
+
+            yield return Expression.Equal(Expression.Constant(JTokenType.Object), Expression.Property(target, nameof(JToken.Type)));
+            yield return Expression.Equal(Expression.Constant(template.Count), Expression.Property(t, nameof(JObject.Count)));
 
             foreach (var p in template.Properties())
                 yield return Expression.AndAlso(
-                    Expression.IsTrue(Expression.Call(o, nameof(JObject.ContainsKey), new Type[0], new[] { Expression.Constant(p.Name) })),
-                    Build(p.Value, Expression.Call(o, nameof(JObject.GetValue), new Type[0], new[] { Expression.Constant(p.Name) })));
+                    Expression.IsTrue(Expression.Call(t, nameof(JObject.ContainsKey), new Type[0], new[] { Expression.Constant(p.Name) })),
+                    Build(p.Value, Expression.Call(t, nameof(JObject.GetValue), new Type[0], new[] { Expression.Constant(p.Name) })));
         }
 
         Expression BuildString(JValue template, Expression target)
