@@ -152,6 +152,15 @@ namespace Cogito.Json.Tests
             m.Invoke(new JArray() { true, true }).Should().BeFalse();
         }
 
+        [TestMethod]
+        public void Thing()
+        {
+            var b = new JTokenEqualityExpressionBuilder();
+            var e = b.Build(JObject.Parse("{'foo': 12}"));
+            var m = e.Compile();
+            m.Invoke(JValue.CreateNull()).Should().BeFalse();
+        }
+
     }
 
 }
