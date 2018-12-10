@@ -141,7 +141,11 @@ namespace Cogito.Json
         Expression BuildObject(JObject template, Expression target)
         {
             return Expression.Condition(
-                Expression.Equal(Expression.Constant(JTokenType.Object), Expression.Property(target, nameof(JToken.Type))),
+                Expression.AndAlso(
+                    Expression.TypeIs(target, typeof(JObject)),
+                    Expression.Equal(
+                        Expression.Constant(JTokenType.Object),
+                        Expression.Property(target, nameof(JToken.Type)))),
                 AllOf(BuildObjectEval(template, Expression.Convert(target, typeof(JObject)))),
                 False);
         }
