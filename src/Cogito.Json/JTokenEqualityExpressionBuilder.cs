@@ -125,12 +125,40 @@ namespace Cogito.Json
 
         Expression BuildFloat(JValue template, Expression target)
         {
-            return BuildValue<double>(JTokenType.Float, template, target);
+            var t = Expression.Convert(target, typeof(JValue));
+
+            return Expression.Switch(
+                Expression.Property(target, nameof(JToken.Type)),
+                False,
+                Expression.SwitchCase(
+                    Expression.Equal(
+                        Expression.Convert(Expression.Property(t, nameof(JValue.Value)), typeof(double)),
+                        Expression.Constant((double)template.Value)),
+                    Expression.Constant(JTokenType.Float)),
+                Expression.SwitchCase(
+                    Expression.Equal(
+                        Expression.Convert(Expression.Convert(Expression.Property(t, nameof(JValue.Value)), typeof(long)), typeof(double)),
+                        Expression.Constant((double)template.Value)),
+                    Expression.Constant(JTokenType.Integer)));
         }
 
         Expression BuildInteger(JValue template, Expression target)
         {
-            return BuildValue<long>(JTokenType.Integer, template, target);
+            var t = Expression.Convert(target, typeof(JValue));
+
+            return Expression.Switch(
+                Expression.Property(target, nameof(JToken.Type)),
+                False,
+                Expression.SwitchCase(
+                    Expression.Equal(
+                        Expression.Convert(Expression.Property(t, nameof(JValue.Value)), typeof(long)),
+                        Expression.Constant((long)template.Value)),
+                    Expression.Constant(JTokenType.Integer)),
+                Expression.SwitchCase(
+                    Expression.Equal(
+                        Expression.Convert(Expression.Property(t, nameof(JValue.Value)), typeof(double)),
+                        Expression.Constant((double)(long)template.Value)),
+                    Expression.Constant(JTokenType.Float)));
         }
 
         Expression BuildNull(JValue template, Expression target)

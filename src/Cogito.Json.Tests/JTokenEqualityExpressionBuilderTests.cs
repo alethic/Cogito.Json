@@ -170,6 +170,24 @@ namespace Cogito.Json.Tests
             m.Invoke(JObject.Parse("{'foo': false}")).Should().BeFalse();
         }
 
+        [TestMethod]
+        public void Should_compare_integers_as_equal_if_difference_is_decimal_only_ltr ()
+        {
+            var b = new JTokenEqualityExpressionBuilder();
+            var e = b.Build(JToken.Parse("0"));
+            var m = e.Compile();
+            m.Invoke(JToken.Parse("0.0")).Should().BeTrue();
+        }
+
+        [TestMethod]
+        public void Should_compare_integers_as_equal_if_difference_is_decimal_only()
+        {
+            var b = new JTokenEqualityExpressionBuilder();
+            var e = b.Build(JToken.Parse("0.0"));
+            var m = e.Compile();
+            m.Invoke(JToken.Parse("0")).Should().BeTrue();
+        }
+
     }
 
 }
