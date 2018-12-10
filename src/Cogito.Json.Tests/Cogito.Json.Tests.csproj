@@ -14,23 +14,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="Schema\JSON-Schema-Test-Suite\remotes\**\*.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Schema\JSON-Schema-Test-Suite\tests\**\*.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="Schema\efm.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Schema\efm.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Appveyor.TestLogger" Version="2.0.0" />
     <PackageReference Include="FluentAssertions" Version="5.4.2" />
     <PackageReference Include="FluentAssertions.Json" Version="5.0.0" />
@@ -40,42 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cogito.Json.Schema\Cogito.Json.Schema.csproj" />
     <ProjectReference Include="..\Cogito.Json\Cogito.Json.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Schema\JSchemaValidatorBuilderTestSuiteTests.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>JSchemaValidatorBuilderTestSuiteTests.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Schema\ecourt_com_151.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Schema\JSchemaValidatorBuilderTestSuiteTests.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>JSchemaValidatorBuilderTestSuiteTests.cs</LastGenOutput>
-    </None>
-    <None Update="Schema\schema-draft-03.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Schema\schema-draft-04.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Schema\schema-draft-06.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Schema\schema-draft-07.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
 </Project>

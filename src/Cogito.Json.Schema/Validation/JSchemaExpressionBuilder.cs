@@ -407,7 +407,6 @@ namespace Cogito.Json.Schema.Validation
             yield return BuildMultipleOf(schema, token);
             yield return BuildNot(schema, token);
             yield return BuildPattern(schema, token);
-            yield return BuildProperties(schema, token);
             yield return BuildPropertyNames(schema, token);
             yield return BuildRequired(schema, token);
             yield return BuildType(schema, token);
@@ -902,103 +901,6 @@ namespace Cogito.Json.Schema.Validation
             {
                 return false;
             }
-        }
-
-        Expression BuildProperties(JSchema schema, Expression o)
-        {
-            return AllOf(BuildPropertiesAll(schema, o).Where(i => i != null));
-        }
-
-        IEnumerable<Expression> BuildPropertiesAll(JSchema schema, Expression o)
-        {
-            if (schema.Properties.Count > 0)
-                yield return IfThenElseTrue(
-                    IsTokenType(o, JTokenType.Object),
-                    AllOf(schema.Properties.Select(i =>
-                        BuildProperty(i.Key, i.Value, Expression.Convert(o, typeof(JObject))))));
-
-            if (schema.PatternProperties.Count > 0)
-                yield return IfThenElseTrue(
-                    IsTokenType(o, JTokenType.Object),
-                        AllOf(schema.PatternProperties.Select(i =>
-                            BuildPatternProperty(i.Key, i.Value, Expression.Convert(o, typeof(JObject))))));
-
-            if (schema.AllowAdditionalProperties == false)
-            {
-                yield return IfThenElseTrue(
-                    IsTokenType(o, JTokenType.Object),
-                    CallThis(
-                        nameof(AllowAdditionalProperties),
-                        Expression.Constant(schema),
-                        Expression.Convert(o, typeof(JObject))));
-            }
-            else if (schema.AdditionalProperties != null)
-            {
-                var p = Expression.Parameter(typeof(JToken));
-
-                yield return IfThenElseTrue(
-                    IsTokenType(o, JTokenType.Object),
-                    CallThis(
-                        nameof(AdditionalProperties),
-                        Expression.Constant(schema),
-                        Expression.Convert(o, typeof(JObject)),
-                        EvalSchemaFunc(schema.AdditionalProperties)));
-            }
-        }
-
-        Expression BuildProperty(string propertyName, JSchema propertySchema, Expression o)
-        {
-            if (o.Type != typeof(JObject))
-                throw new ArgumentException(nameof(o));
-
-            return CallThis(nameof(Property), Expression.Constant(propertyName), EvalSchemaFunc(propertySchema), o);
-        }
-
-        static bool Property(string propertyName, Func<JToken, bool> propertySchema, JObject o)
-        {
-            if (o.TryGetValue(propertyName, out var p))
-                return propertySchema(p);
-
-            return true;
-        }
-
-        Expression BuildPatternProperty(string propertyPattern, JSchema propertySchema, Expression o)
-        {
-            if (o.Type != typeof(JObject))
-                throw new ArgumentException(nameof(o));
-
-            return CallThis(nameof(PatternProperty), Expression.Constant(propertyPattern), EvalSchemaFunc(propertySchema), o);
-        }
-
-        static bool PatternProperty(string propertyPattern, Func<JToken, bool> propertySchema, JObject o)
-        {
-            foreach (var p in o.Properties())
-                if (Regex.IsMatch(p.Name, propertyPattern))
-                    if (!propertySchema(p.Value))
-                        return false;
-
-            return true;
-        }
-
-        static bool AllowAdditionalProperties(JSchema schema, JObject o)
-        {
-            foreach (var p in o.Properties())
-                if (schema.Properties.ContainsKey(p.Name) == false &&
-                    schema.PatternProperties.Any(i => Regex.IsMatch(p.Name, i.Key)) == false)
-                    return false;
-
-            return true;
-        }
-
-        static bool AdditionalProperties(JSchema schema, JObject o, Func<JToken, bool> additionalPropertiesSchema)
-        {
-            foreach (var p in o.Properties())
-                if (schema.Properties.ContainsKey(p.Name) == false &&
-                    schema.PatternProperties.Any(i => Regex.IsMatch(p.Name, i.Key)) == false)
-                    if (additionalPropertiesSchema(p.Value) == false)
-                        return false;
-
-            return true;
         }
 
         Expression BuildPropertyNames(JSchema schema, Expression o)
