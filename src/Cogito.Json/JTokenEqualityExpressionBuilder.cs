@@ -178,13 +178,10 @@ namespace Cogito.Json
             var t = Expression.Convert(target, typeof(JValue));
             var v = Expression.Convert(Expression.Property(t, nameof(JValue.Value)), typeof(T));
 
-            return Expression.AndAlso(
-                Expression.Equal(
-                    Expression.Constant(template.Type),
-                    Expression.Property(t, nameof(JValue.Type))),
-                Expression.Equal(
-                    Expression.Constant((T)template.Value),
-                    v));
+            return Expression.Condition(
+                Expression.TypeIs(target, typeof(JValue)),
+                Expression.Equal(Expression.Constant((T)template.Value), v),
+                False);
         }
 
     }
