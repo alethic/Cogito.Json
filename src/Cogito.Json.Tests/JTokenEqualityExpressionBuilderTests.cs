@@ -153,12 +153,21 @@ namespace Cogito.Json.Tests
         }
 
         [TestMethod]
-        public void Thing()
+        public void Can_compare_against_null()
         {
             var b = new JTokenEqualityExpressionBuilder();
             var e = b.Build(JObject.Parse("{'foo': 12}"));
             var m = e.Compile();
             m.Invoke(JValue.CreateNull()).Should().BeFalse();
+        }
+
+        [TestMethod]
+        public void Can_compare_against_badly_typed_properties()
+        {
+            var b = new JTokenEqualityExpressionBuilder();
+            var e = b.Build(JObject.Parse("{'foo': 12}"));
+            var m = e.Compile();
+            m.Invoke(JObject.Parse("{'foo': false}")).Should().BeFalse();
         }
 
     }

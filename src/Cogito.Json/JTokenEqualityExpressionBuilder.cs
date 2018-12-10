@@ -96,8 +96,8 @@ namespace Cogito.Json
                 Expression.AndAlso(
                     Expression.TypeIs(target, typeof(JArray)),
                     Expression.Equal(
-                        Expression.Constant(JTokenType.Array),
-                        Expression.Property(target, nameof(JToken.Type)))),
+                        Expression.Property(target, nameof(JToken.Type)),
+                        Expression.Constant(JTokenType.Array))),
                 AllOf(BuildArrayEval(template, Expression.Convert(target, typeof(JArray)))),
                 False);
         }
@@ -111,8 +111,8 @@ namespace Cogito.Json
         IEnumerable<Expression> BuildArrayEval(JArray template, Expression target)
         {
             yield return Expression.Equal(
-                Expression.Constant(template.Count),
-                Expression.Property(target, nameof(JArray.Count)));
+                Expression.Property(target, nameof(JArray.Count)),
+                Expression.Constant(template.Count));
 
             for (var i = 0; i < template.Count; i++)
                 yield return Build(template[i], Expression.Property(target, "Item", Expression.Constant(i)));
@@ -120,22 +120,22 @@ namespace Cogito.Json
 
         Expression BuildBoolean(JValue template, Expression target)
         {
-            return BuildValue<bool>(template, target);
+            return BuildValue<bool>(JTokenType.Boolean, template, target);
         }
 
         Expression BuildFloat(JValue template, Expression target)
         {
-            return BuildValue<double>(template, target);
+            return BuildValue<double>(JTokenType.Float, template, target);
         }
 
         Expression BuildInteger(JValue template, Expression target)
         {
-            return BuildValue<long>(template, target);
+            return BuildValue<long>(JTokenType.Integer, template, target);
         }
 
         Expression BuildNull(JValue template, Expression target)
         {
-            return BuildValue<object>(template, target);
+            return BuildValue<object>(JTokenType.Null, template, target);
         }
 
         Expression BuildObject(JObject template, Expression target)
@@ -144,8 +144,8 @@ namespace Cogito.Json
                 Expression.AndAlso(
                     Expression.TypeIs(target, typeof(JObject)),
                     Expression.Equal(
-                        Expression.Constant(JTokenType.Object),
-                        Expression.Property(target, nameof(JToken.Type)))),
+                        Expression.Property(target, nameof(JToken.Type)),
+                        Expression.Constant(JTokenType.Object))),
                 AllOf(BuildObjectEval(template, Expression.Convert(target, typeof(JObject)))),
                 False);
         }
@@ -159,27 +159,42 @@ namespace Cogito.Json
         IEnumerable<Expression> BuildObjectEval(JObject template, Expression target)
         {
             yield return Expression.Equal(
-                Expression.Constant(template.Count),
-                Expression.Property(target, nameof(JObject.Count)));
+                Expression.Property(target, nameof(JObject.Count)),
+                Expression.Constant(template.Count));
 
             foreach (var p in template.Properties())
                 yield return Expression.AndAlso(
-                    Expression.IsTrue(Expression.Call(target, nameof(JObject.ContainsKey), new Type[0], new[] { Expression.Constant(p.Name) })),
-                    Build(p.Value, Expression.Call(target, nameof(JObject.GetValue), new Type[0], new[] { Expression.Constant(p.Name) })));
+                    Expression.IsTrue(
+                        Expression.Call(
+                            target,
+                            nameof(JObject.ContainsKey),
+                            new Type[0],
+                            new[] { Expression.Constant(p.Name) })),
+                    Build(
+                        p.Value,
+                        Expression.Call(
+                            target,
+                            nameof(JObject.GetValue),
+                            new Type[0],
+                            new[] { Expression.Constant(p.Name) })));
         }
 
         Expression BuildString(JValue template, Expression target)
         {
-            return BuildValue<string>(template, target);
+            return BuildValue<string>(JTokenType.String, template, target);
         }
 
-        Expression BuildValue<T>(JValue template, Expression target)
+        Expression BuildValue<T>(JTokenType type, JValue template, Expression target)
         {
             var t = Expression.Convert(target, typeof(JValue));
             var v = Expression.Convert(Expression.Property(t, nameof(JValue.Value)), typeof(T));
 
             return Expression.Condition(
-                Expression.TypeIs(target, typeof(JValue)),
+                Expression.AndAlso(
+                    Expression.TypeIs(target, typeof(JValue)),
+                    Expression.Equal(
+                        Expression.Property(target, nameof(JToken.Type)),
+                        Expression.Constant(type))),
                 Expression.Equal(Expression.Constant((T)template.Value), v),
                 False);
         }
