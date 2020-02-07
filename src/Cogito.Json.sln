@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27625.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29721.120
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cogito.Json", "Cogito.Json\Cogito.Json.csproj", "{FD69B5DA-6E5F-4751-892F-69A990AA1288}"
 EndProject
@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		..\.editorconfig = ..\.editorconfig
 		..\appveyor.yml = ..\appveyor.yml
+		Directory.Build.props = Directory.Build.props
 	EndProjectSection
 EndProject
 Global
